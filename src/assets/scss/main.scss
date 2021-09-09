@@ -1,0 +1,17 @@
+$font_var: 20px;
+
+@font-face {
+  font-family: 'Roboto', sans-serif;
+  src: url('../fonts/roboto-regular.ttf') format('ttf'),
+    url('../fonts/roboto-regular.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hello {
+  color: red;
+  font-size: $font_var;
+  font-family: 'Roboto', sans-serif;
+  background: url('../icons/icon.png');
+  background-repeat: no-repeat;
+}
