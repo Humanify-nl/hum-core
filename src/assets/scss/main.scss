@@ -1,17 +1,23 @@
-$font_var: 20px;
+@use "sass:math";
 
-@font-face {
-  font-family: 'Roboto', sans-serif;
-  src: url('../fonts/roboto-regular.ttf') format('ttf'),
-    url('../fonts/roboto-regular.ttf') format('ttf');
-  font-weight: 400;
-  font-style: normal;
-}
+@import "partials/base";
 
-.hello {
-  color: red;
-  font-size: $font_var;
-  font-family: 'Roboto', sans-serif;
-  background: url('../icons/icon.png');
-  background-repeat: no-repeat;
-}
+@import "modules/base-styles";
+@import "modules/brand-color";
+@import "modules/helpers";
+
+@import "vendor/include-media";
+
+@import "partials/reset";
+@import "partials/layout";
+@import "partials/form";
+@import "partials/blocks-base";
+@import "partials/blocks-core";
+@import "partials/blocks-plugin";
+@import "partials/blocks-custom";
+@import "partials/site-header";
+@import "partials/navigation";
+@import "partials/post-summary";
+@import "partials/archive";
+@import "partials/singular";
+@import "partials/site-footer";
