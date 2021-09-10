@@ -6,6 +6,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 const DependencyExtractionWebpackPlugin = require( '@wordpress/dependency-extraction-webpack-plugin' );
+const CopyPlugin = require("copy-webpack-plugin");
 //https://webpack.js.org/plugins/mini-css-extract-plugin/#minimizing-for-production
 
 module.exports = {
@@ -37,6 +38,14 @@ module.exports = {
     new DependencyExtractionWebpackPlugin( {
       injectPolyfill: true,
       combineAssets: true,
+    }),
+    // copy files (excempt from build)
+    new CopyPlugin({
+      patterns: [
+        {
+          from: 'icons/*.svg',
+        },
+      ],
     }),
   ],
   /*

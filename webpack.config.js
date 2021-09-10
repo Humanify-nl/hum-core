@@ -4,6 +4,7 @@ const outputPath = 'dist';
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   context: path.resolve(__dirname, 'src/' + assetPath),
@@ -25,6 +26,14 @@ module.exports = {
     // extract and write css
     new MiniCssExtractPlugin({
       filename: 'css/[name].css'
+    }),
+    // copy files (excempt from build)
+    new CopyPlugin({
+      patterns: [
+        {
+          from: 'icons/*.svg',
+        },
+      ],
     }),
   ],
   /*
