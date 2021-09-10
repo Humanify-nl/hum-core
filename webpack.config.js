@@ -27,11 +27,23 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'css/[name].css'
     }),
-    // copy files (excempt from build)
+    // copy files excempt from build process
     new CopyPlugin({
       patterns: [
+        // assets
         {
           from: 'icons/*.svg',
+        },
+        // template files
+        {
+          from: path.resolve(__dirname, 'src/'),
+          to: path.resolve(__dirname, 'dist/'),
+          globOptions: {
+           ignore: [
+             // Ignore all files in assets dir
+             '**/assets/**',
+           ],
+         },
         },
       ],
     }),
