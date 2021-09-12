@@ -105,11 +105,11 @@
 	}
 }
 
-@if( $persistant_mobile ) {
+@if( $persistent_mobile ) {
 	@include media("<=mobile_menu") {
 
 		.site-container {
-			padding-top: $persistant_mobile;
+			padding-top: $persistent_mobile;
 		}
 
 		.site-header {
@@ -127,7 +127,7 @@
 			.admin-bar {
 
 				.site-container {
-					padding-top: 32px + $persistant_mobile;
+					padding-top: 32px + $persistent_mobile;
 				}
 
 				.site-header {
