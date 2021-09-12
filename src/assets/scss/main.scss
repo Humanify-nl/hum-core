@@ -1,13 +1,7 @@
 @use "sass:math";
 
 @import "partials/base";
-
-@import "modules/base-styles";
 @import "modules/brand-color";
-@import "modules/helpers";
-
-@import "vendor/include-media";
-
 @import "partials/reset";
 @import "partials/layout";
 @import "partials/form";
