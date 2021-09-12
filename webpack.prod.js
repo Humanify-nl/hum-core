@@ -16,6 +16,7 @@ module.exports = {
     bundle: '/js' + '/bundle.js',
     main: '/scss' + '/main.scss',
     editor: '/scss' + '/editor.scss',
+    layout: '/scss' + '/editor-layout.scss',
   },
   devtool: 'source-map',
   plugins: [
@@ -75,6 +76,7 @@ module.exports = {
       // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
       `...`,
       new CssMinimizerPlugin({
+        exclude: /style.css$/,
         minimizerOptions: {
           preset: [
             "default",

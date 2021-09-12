@@ -13,6 +13,7 @@ module.exports = {
      bundle: '/js' + '/bundle.js',
      main: '/scss' + '/main.scss',
      editor: '/scss' + '/editor.scss',
+     layout: '/scss' + '/editor-layout.scss',
    },
   plugins: [
     // generates a new index.html
