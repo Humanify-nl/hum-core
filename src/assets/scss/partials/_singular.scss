@@ -22,7 +22,7 @@
 		margin-bottom: 0;
 	}
 
-	.full-width-content &,
+	.content-fullwidth &,
 	.content & {
 		&.alignwide {
 			margin: calc( 2 * #{$block-margin} ) calc(50% - 50vw);
