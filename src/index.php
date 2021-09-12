@@ -9,11 +9,11 @@
 get_header();
 
 tha_content_before();
-?>
 
-	<div class="<?php hum_class( 'content-area', 'wrap', apply_filters( 'hum_content_area_wrap', true ) ) ?>">
+	echo '<div class="' . hum_class( 'content-area', 'wrap', apply_filters( 'hum_content_area_wrap', true ) ) . '">';
 
-		<?php tha_content_wrap_before(); ?>
+		tha_content_wrap_before();
+		?>
 
 		<main class="site-main" role="main">
 
@@ -28,11 +28,10 @@ tha_content_before();
 		<?php
 		get_sidebar();
 		tha_content_wrap_after();
-		?>
 
-	</div>
 
-<?php
+	echo '</div>';
+
 tha_content_after();
 
 get_footer();
