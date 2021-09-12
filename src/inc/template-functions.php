@@ -5,11 +5,11 @@
  * @package hum-core
  */
 
-
-include_once( get_template_directory() . '/inc/theme-functions/utility.php' );
-include_once( get_template_directory() . '/inc/theme-functions/navigation.php' );
-include_once( get_template_directory() . '/inc/theme-functions/loop.php' );
-include_once( get_template_directory() . '/inc/theme-functions/entry.php' );
-include_once( get_template_directory() . '/inc/theme-functions/archive.php' );
-include_once( get_template_directory() . '/inc/theme-functions/footer.php' );
-include_once( get_template_directory() . '/inc/theme-functions/social-links.php' );
+include_once( get_template_directory() . '/inc/template-functions/utility.php' );
+include_once( get_template_directory() . '/inc/template-functions/layout.php' );
+include_once( get_template_directory() . '/inc/template-functions/navigation.php' );
+include_once( get_template_directory() . '/inc/template-functions/loop.php' );
+include_once( get_template_directory() . '/inc/template-functions/entry.php' );
+include_once( get_template_directory() . '/inc/template-functions/archive.php' );
+include_once( get_template_directory() . '/inc/template-functions/footer.php' );
+include_once( get_template_directory() . '/inc/template-functions/social-links.php' );
