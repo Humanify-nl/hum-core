@@ -7,16 +7,13 @@
  */
 ?>
 <!doctype html>
+<?php tha_html_before(); ?>
 <html <?php language_attributes(); ?>>
 
 <head>
-
 	<?php tha_head_top(); ?>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php wp_head(); ?>
   <?php tha_head_bottom(); ?>
-
 </head>
 
 <body <?php body_class();?>>
@@ -34,10 +31,8 @@ tha_body_top();
 
 	<?php
 	tha_header_before();
-	get_template_part( 'template-parts-old/site/site', 'header' );
+	get_template_part( 'template-parts/site', 'header' );
 	tha_header_after();
 	?>
 
 	<div id="content" class="site-content">
-		<div id="primary" class="content-area">
-			<main id="main" class="site-main" role="main">

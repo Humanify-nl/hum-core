@@ -7,9 +7,7 @@
  */
 ?>
 
-			</main><!-- #main -->
-		</div><!-- #primary -->
-	</div><!-- #content -->
+	</div><!-- .site-content -->
 
 	<?php tha_footer_before(); ?>
 	<footer id="colophon" class="site-footer" role="contentinfo">
