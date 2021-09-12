@@ -8,10 +8,10 @@
 function hum_scripts() {
 
   // JS scripts
-  wp_enqueue_script( 'hum-global-js',
-    get_template_directory_uri() . '/assets/js/global.js',
+  wp_enqueue_script( 'hum-bundle-js',
+    get_template_directory_uri() . '/assets/js/bundle.js',
     array( 'jquery' ),
-    filemtime( get_template_directory() . '/assets/js/global.js' ),
+    filemtime( get_template_directory() . '/assets/js/bundle.js' ),
     true
   );
 
@@ -23,15 +23,20 @@ function hum_scripts() {
   // Move jQuery to footer
   if( ! is_admin() ) {
     wp_deregister_script( 'jquery' );
-    wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, NULL, true );
+    wp_register_script( 'jquery',
+      includes_url( '/js/jquery/jquery.js' ),
+      false,
+      NULL,
+      true
+    );
     wp_enqueue_script( 'jquery' );
   }
 
   // Main CSS style
   wp_enqueue_style( 'hum-style',
-    get_template_directory_uri() . '/assets/css/main.css',
+    get_template_directory_uri() . '/assets/css/main.min.css',
     array(),
-    filemtime( get_template_directory() . '/assets/css/main.css' )
+    filemtime( get_template_directory() . '/assets/css/main.min.css' )
   );
 
 }

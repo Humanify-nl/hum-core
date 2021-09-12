@@ -1,76 +1,54 @@
 <?php
 /**
- * WordPress Cleanup
+ * WordPress modification
  *
- * @package      EAStarter
- * @author       Bill Erickson
- * @since        1.0.0
- * @license      GPL-2.0+
-**/
+ * @package hum-core
+ */
+
 
 /**
-* Dont Update the Theme
-*
-* If there is a theme in the repo with the same name, this prevents WP from prompting an update.
-*
-* @since  1.0.0
-* @author Bill Erickson
-* @link   http://www.billerickson.net/excluding-theme-from-updates
-* @param  array $r Existing request arguments
-* @param  string $url Request URL
-* @return array Amended request arguments
-*/
-function ea_dont_update_theme( $r, $url ) {
-	if ( 0 !== strpos( $url, 'https://api.wordpress.org/themes/update-check/1.1/' ) )
-		return $r; // Not a theme update request. Bail immediately.
-	$themes = json_decode( $r['body']['themes'] );
-	$child = get_option( 'stylesheet' );
-	unset( $themes->themes->$child );
-	$r['body']['themes'] = json_encode( $themes );
-	return $r;
-}
-add_filter( 'http_request_args', 'ea_dont_update_theme', 5, 2 );
-
-/**
- * Header Meta Tags
+ * Header Meta
  *
  */
-function ea_header_meta_tags() {
+function hum_header_meta() {
 	echo '<meta charset="' . get_bloginfo( 'charset' ) . '">';
 	echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
 	echo '<link rel="profile" href="http://gmpg.org/xfn/11">';
 	echo '<link rel="pingback" href="' . get_bloginfo( 'pingback_url' ) . '">';
 }
-add_action( 'wp_head', 'ea_header_meta_tags' );
+add_action( 'wp_head', 'hum_header_meta' );
+
 
 /**
  * Dequeue jQuery Migrate
  *
  */
-function ea_dequeue_jquery_migrate( &$scripts ){
+function hum_dequeue_jquery_migrate( &$scripts ){
 	if( !is_admin() ) {
 		$scripts->remove( 'jquery');
 		$scripts->add( 'jquery', false, array( 'jquery-core' ), '1.10.2' );
 	}
 }
-add_filter( 'wp_default_scripts', 'ea_dequeue_jquery_migrate' );
+add_filter( 'wp_default_scripts', 'hum_dequeue_jquery_migrate' );
+
 
 /**
  * Singular body class
  *
  */
-function ea_singular_body_class( $classes ) {
+function hum_singular_body_class( $classes ) {
 	if( is_singular() )
 		$classes[] = 'singular';
 	return $classes;
 }
-add_filter( 'body_class', 'ea_singular_body_class' );
+add_filter( 'body_class', 'hum_singular_body_class' );
+
 
 /**
  * Clean body classes
  *
  */
-function ea_clean_body_classes( $classes ) {
+function hum_clean_body_class( $classes ) {
 
 	$allowed_classes = [
 		'singular',
@@ -78,7 +56,7 @@ function ea_clean_body_classes( $classes ) {
 		'page',
 		'archive',
 		'admin-bar',
-		'full-width-content',
+		'content-fullwidth',
 		'content-sidebar',
 		'content',
 	];
@@ -86,13 +64,14 @@ function ea_clean_body_classes( $classes ) {
 	return array_intersect( $classes, $allowed_classes );
 
 }
-add_filter( 'body_class', 'ea_clean_body_classes', 20 );
+add_filter( 'body_class', 'hum_clean_body_class', 20 );
+
 
 /**
  * Clean Nav Menu Classes
  *
  */
-function ea_clean_nav_menu_classes( $classes ) {
+function hum_clean_nav_class( $classes ) {
 	if( ! is_array( $classes ) )
 		return $classes;
 
@@ -125,13 +104,14 @@ function ea_clean_nav_menu_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'nav_menu_css_class', 'ea_clean_nav_menu_classes', 5 );
+add_filter( 'nav_menu_css_class', 'hum_clean_nav_class', 5 );
+
 
 /**
  * Clean Post Classes
  *
  */
-function ea_clean_post_classes( $classes ) {
+function hum_clean_post_class( $classes ) {
 
 	if( ! is_array( $classes ) )
 		return $classes;
@@ -143,13 +123,14 @@ function ea_clean_post_classes( $classes ) {
 
 	return array_intersect( $classes, $allowed_classes );
 }
-add_filter( 'post_class', 'ea_clean_post_classes', 5 );
+add_filter( 'post_class', 'hum_clean_post_class', 5 );
+
 
 /**
  * Archive Title, remove prefix
  *
  */
-function ea_archive_title_remove_prefix( $title ) {
+function hum_archive_title_remove_prefix( $title ) {
 	$title_pieces = explode( ': ', $title );
 	if( count( $title_pieces ) > 1 ) {
 		unset( $title_pieces[0] );
@@ -157,52 +138,41 @@ function ea_archive_title_remove_prefix( $title ) {
 	}
 	return $title;
 }
-add_filter( 'get_the_archive_title', 'ea_archive_title_remove_prefix' );
+add_filter( 'get_the_archive_title', 'hum_archive_title_remove_prefix' );
 
-/**
- * Staff comment class
- *
- */
-function ea_staff_comment_class( $classes, $class, $comment_id, $comment, $post_id ) {
-	if( empty( $comment->user_id ) )
-		return $classes;
-	$staff_roles = array( 'comment_manager', 'author', 'editor', 'administrator' );
-	$staff_roles = apply_filters( 'ea_staff_roles', $staff_roles );
-	$user = get_userdata( $comment->user_id );
-	if( !empty( array_intersect( $user->roles, $staff_roles ) ) )
-		$classes[] = 'staff';
-	return $classes;
-}
-add_filter( 'comment_class', 'ea_staff_comment_class', 10, 5 );
+
 
 /**
  * Remove avatars from comment list
  *
  */
-function ea_remove_avatars_from_comments( $avatar ) {
+function hum_remove_avatars_from_comments( $avatar ) {
 	global $in_comment_loop;
 	return $in_comment_loop ? '' : $avatar;
 }
-add_filter( 'get_avatar', 'ea_remove_avatars_from_comments' );
+add_filter( 'get_avatar', 'hum_remove_avatars_from_comments' );
+
 
 /**
  * Comment form, button class
  *
  */
-function ea_comment_form_button_class( $args ) {
+function hum_comment_form_button_class( $args ) {
 	$args['class_submit'] = 'submit wp-block-button__link';
 	return $args;
 }
-add_filter( 'comment_form_defaults', 'ea_comment_form_button_class' );
+add_filter( 'comment_form_defaults', 'hum_comment_form_button_class' );
+
 
 /**
  * Excerpt More
  *
  */
-function ea_excerpt_more() {
+function hum_excerpt_more() {
 	return '&hellip;';
 }
-add_filter( 'excerpt_more', 'ea_excerpt_more' );
+add_filter( 'excerpt_more', 'hum_excerpt_more' );
+
 
 // Remove inline CSS for emoji
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
