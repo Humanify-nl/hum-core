@@ -17,6 +17,7 @@ module.exports = {
     main: '/scss' + '/main.scss',
     editor: '/scss' + '/editor.scss',
     layout: '/scss' + '/editor-layout.scss',
+    admin: '/scss' + '/admin.scss',
   },
   devtool: 'source-map',
   plugins: [
