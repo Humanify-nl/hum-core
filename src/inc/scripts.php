@@ -41,3 +41,19 @@ function hum_scripts() {
 
 }
 add_action( 'wp_enqueue_scripts', 'hum_scripts' );
+
+
+/**
+ * Load admin stylesheet
+ *
+ */
+if ( ! function_exists('hum_admin_style') ) {
+
+ 	function hum_admin_style() {
+
+ 		wp_enqueue_style('hum_admin_style',
+ 		get_stylesheet_directory_uri() .'/assets/css/admin.min.css', false, '1.0', 'all' );
+ 	}
+
+ 	add_action('admin_print_styles', 'hum_admin_style');
+}
