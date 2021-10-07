@@ -1,0 +1,295 @@
+/*--------------------------------------------------------------
+## ACF row
+--------------------------------------------------------------*/
+// the main acf postbox
+.inside.acf-fields {
+  color: color(wp,titles);
+
+  // both
+  &:not(.-left) > .acf-field {
+    padding: 20px 24px;
+
+    > .acf-label label {
+      font-size: 12px;
+    }
+  }
+
+
+  // group fields
+  > .acf-field-group {
+
+    // style tabs
+    .acf-tab-group {
+      li.active {
+
+        .acf-tab-button {
+          box-shadow: -1px 1px 2px rgba(1,1,1,0.1);
+        }
+      }
+    }
+
+    //
+    .-sidebar {
+
+      > .acf-field {
+        padding: 20px 24px;
+      }
+
+      .acf-field-message {
+        padding-bottom: 8px;
+        padding-top: 31px;
+
+        .acf-label {
+          margin-bottom: 0;
+          label {
+            margin-bottom: 0;
+          }
+        }
+        .acf-input p {
+          margin-top: 0;
+          margin-bottom: 0.75em;
+          &:first-child {
+            margin-bottom: 0;
+          }
+        }
+        .acf-label + .acf-input {
+          margin-top: 0.25rem;
+        }
+      }
+
+      .acf-field-tab + .acf-field-message {
+        padding-top: 20px;
+      }
+
+
+      // accordion
+      > .acf-accordion {
+        border-left: 1px solid #d5d9dd;
+
+        &.first-child {
+          border-top: none;
+        }
+
+        .acf-accordion-title {
+          padding: 12px 24px;
+        }
+
+        .acf-accordion-content {
+          .acf-fields {
+            background-color: #fcfcfc;
+
+            > .acf-field {
+              background-color: #fcfcfc;
+              padding-left: 24px;
+              padding-right: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  // repeater
+  .acf-field-repeater {
+
+    .acf-table {
+
+      .acf-row {
+        // repeater row
+      }
+
+      // repeater row sides
+      .acf-row-handle {
+        border-bottom: 8px solid color(wp, border-acf);
+        border-top: 8px solid color(wp, border-acf);
+
+        .span {
+          // numbers
+
+        }
+      }
+
+      // left side
+      .acf-row-handle.order {
+        border-top-color: #f4f4f4;
+        border-bottom-color: #f4f4f4;
+      }
+
+      // repeater row fields
+      .acf-fields {
+        border-bottom: 8px solid color(wp, border-acf);
+        border-top: 8px solid color(wp, border-acf);
+      }
+    }
+
+  }
+
+
+  // flex fields
+  .acf-field-flexible-content {
+
+    .layout {
+      box-shadow: 0px 1px 5px -1px rgba(3, 3, 3, 0.25);
+      border: none;
+      margin: 20px 0 0;
+      &:first-child {
+        margin-top: 0;
+      }
+
+      // layout header bar
+      .acf-fc-layout-handle {
+      }
+      // circle numbers
+      .acf-fc-layout-order {
+        background-color: color(wp, titles);
+        color: color(wp, white);
+      }
+
+      // sidebar tabs
+      .-sidebar {
+        > .acf-field {
+          padding: 20px 24px;
+          border-top: none;
+        }
+
+        // accordion
+        > .acf-accordion {
+          border-top: 1px solid #d5d9dd;
+          border-left: 1px solid #d5d9dd;
+
+          &.first-child {
+            border-top: none;
+          }
+
+          .acf-accordion-title {
+            padding: 12px 24px;
+          }
+
+          .acf-accordion-content {
+            .acf-fields {
+              background-color: #fcfcfc;
+
+              > .acf-field {
+                background-color: #fcfcfc;
+                padding-left: 24px;
+                padding-right: 24px;
+              }
+            }
+          }
+        }
+
+        .acf-field-message {
+          padding-bottom: 0;
+          padding-top: 0;
+          border-bottom: 1px solid #eeeeee;
+
+          .acf-label {
+            margin-bottom: 0;
+            label {
+              margin-bottom: 0;
+              padding-top: 20px;
+            }
+          }
+
+          .acf-input {
+            p {
+              margin-top: 0;
+              margin-bottom: 0.75em;
+              padding-bottom: 16px;
+              &:first-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+
+          .acf-label + .acf-input {
+            margin-top: 0.25rem;
+          }
+        }
+      }
+
+      > .acf-fields .acf-field-group {
+        padding: 20px 24px;
+        background-color: color(wp, postbox);
+
+        > .acf-label label {
+          font-size: 12px;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          color: #444;
+        }
+      }
+
+      > .acf-fields {
+
+        .acf-field-tab + .acf-field-group {
+          background-color: linear-gradient( to right, rgba(color(wp,white), 1), rgba(color(wp,postbox), 0.5) 7%, rgba(color(wp,postbox), 1) );
+        }
+      }
+    }
+
+
+    .layout.-collapsed {
+
+      &:hover {
+        .acf-fc-layout-order {
+          background-color: color(wp, titles);
+        }
+      }
+
+      .acf-fc-layout-order {
+        background-color: #646464;
+        color: color(wp, white);
+      }
+    }
+
+
+  }
+
+
+}
+
+.inside.acf-fields.-top {
+
+  .acf-field-flexible-content {
+
+    > .acf-label label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #444;
+    }
+
+  }
+
+  > .acf-field-group {
+
+    > .acf-label label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #444;
+    }
+  }
+
+  > .acf-field-repeater {
+
+    > .acf-label label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #444;
+    }
+  }
+}
+
+.seamless {
+
+  .inside.acf-fields {
+
+    &:not(.-left) > .acf-field {
+      padding: 0 12px 15px 12px;
+    }
+  }
+}

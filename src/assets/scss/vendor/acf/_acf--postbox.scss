@@ -1,0 +1,26 @@
+/*--------------------------------------------------------------
+## ACF postboxes
+--------------------------------------------------------------*/
+.acf-postbox {
+
+  .inside {
+    background-color: color(wp, postbox);
+  }
+
+  .inside.-sidebar {
+    background-color: color(wp, white);
+  }
+
+  label {
+    cursor: default;
+  }
+}
+
+
+.acf-fields.-sidebar {
+
+  .acf-field,
+  .acf-field-group {
+    background-color: color(wp, white);
+  }
+}

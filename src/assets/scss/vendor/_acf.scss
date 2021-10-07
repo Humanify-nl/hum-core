@@ -1,0 +1,67 @@
+/*--------------------------------------------------------------
+## ACF admin styles
+==============================================================*/
+/* make link box smaller */
+.acf-link .block__link-wrap {
+	padding: 0;
+}
+
+/* background grey */
+.acf-table > tbody > tr > td {
+	background-color: color(wp, box);
+}
+
+/* make true/false switch smaller */
+.acf-switch {
+	height: 28px;
+}
+
+.acf-switch span {
+	line-height: 20px;
+	font-size: 12px;
+}
+
+
+/* row buttons align */
+.acf-actions {
+	border: 1px dashed #dfdfdf;
+	border-radius: 3px;
+	padding: 4px;
+	margin-top: 20px;
+}
+
+
+.acf-admin-field-groups {
+	.wp-list-table {
+
+		.post-state {
+			color: #b3b3b3;
+			font-size: 10px;
+		}
+	}
+}
+
+/* Media query - Tablet  -------------------------------------*/
+@media screen and (min-width: 850px) {
+
+	.acf-admin-field-groups {
+
+		.wp-list-table {
+
+			.column-title {
+				width: 25%;
+			}
+
+			.column-acf-count {
+				width: 8%;
+			}
+			.column-acf-json {
+				width: 8%;
+			}
+			.column-menu_order {
+				width: 8%;
+			}
+
+		}
+	}
+}
