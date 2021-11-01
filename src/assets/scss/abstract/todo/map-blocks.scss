@@ -1,0 +1,121 @@
+/* Block variables */
+$map-blocks: (
+	heading: (
+		font-family: var(--global--font-primary),
+	  letter-spacing-h6: 0.05em,
+	  letter-spacing-h5: 0.05em,
+	  letter-spacing-h4: var(--global--letter-spacing),
+	  letter-spacing-h3: var(--global--letter-spacing),
+	  letter-spacing-h2: var(--global--letter-spacing),
+	  letter-spacing-h1: var(--global--letter-spacing),
+	  line-height-h6: var(--global--line-height-heading),
+	  line-height-h5: var(--global--line-height-heading),
+	  line-height-h4: var(--global--line-height-heading),
+	  line-height-h3: var(--global--line-height-heading),
+	  line-height-h2: var(--global--line-height-heading),
+	  line-height-h1: var(--global--line-height-page-title),
+	  font-weight: normal,
+	  font-weight-page-title: 400,
+	  font-weight-strong: 600,
+	),
+	latest-posts: (
+		title: (
+			font-family: var(--heading--font-family),
+			font-size: var(--heading--font-size-h3),
+		),
+		description: (
+			font-family: var(--global--font-secondary),
+			font-size: var(--global--font-size-sm),
+		),
+	),
+	form: (
+		font-family: var(--global--font-secondary),
+		font-size: var(--global--font-size-sm),
+		line-height: var(--global--line-height-body),
+		color-text: var(--global--color-dark-gray), // Text color in input fields is always dark over light background.
+		color-ranged: var(--global--color-secondary),
+		label-weight: 500,
+		border-color: var(--global--color-secondary),
+		border-width: 3px,
+		border-radius: 0,
+		spacing-unit: calc(0.5 * var(--global--spacing-unit)),
+	),
+	cover: (
+		height: calc(15 * var(--global--spacing-vertical)),
+		color-foreground: var(--global--color-white),
+		color-background: var(--global--color-black),
+	),
+	pullquote: (
+		font-family: var(--global--font-primary),
+		font-size: var(--global--font-size-h3),
+		font-style: normal,
+		letter-spacing: var(--heading--letter-spacing-h4),
+		line-height: var(--global--line-height-heading),
+		border-width: 3px,
+		border-color: var(--global--color-primary),
+		color-foreground: var(--global--color-primary),
+		color-background: var(--global--color-background),
+	),
+	quote: (
+		font-family: var(--global--font-secondary),
+		font-size: var(--global--font-size-h4),
+		font-size-large: var(--global--font-size-xl),
+		font-style: normal,
+		font-weight: 700,
+		font-weight-strong: bolder,
+		font-style-large: normal,
+		font-style-cite: normal,
+		line-height: var(--global--line-height-body),
+		line-height-large: 1.35,
+	),
+	separator: (
+		border-color: var(--global--color-border),
+		height: 1px,
+	),
+	table: (
+		stripes: (
+			border-color: var(--global--color-light-gray),
+			background-color: var(--global--color-light-gray),
+		),
+		has-background: (
+			text-color: var(--global--color-dark-gray),
+		),
+	),
+	list: (
+		font-family: var(--global--font-secondary),
+		definition-term: (
+			font-family: var(--global--font-primary),
+		),
+	),
+	widget: (
+		line-height-list: 1.9,
+		line-height-title: 1.4,
+		font-weight-title: 700,
+		spacing-menu: calc(0.66 * var(--global--spacing-unit)),
+	),
+);
+
+$prefix: '--';
+
+:root {
+
+	// each item, submap in main map (branding, selectors(map) )
+	@each $top-selector, $sub-selectors in $map-blocks {
+		// each item in map level 1 (header, properties(map) )
+		@each $sub-selector, $properties in $sub-selectors {
+
+			@if type-of($properties) == "map" {
+
+				// each item in map level 2 (color, value)
+				@each $property, $value in $properties {
+
+					#{$prefix + $top-selector + '--' + $sub-selector + '-' + $property}: $value;
+				}
+			} @else {
+
+					#{$prefix + $top-selector + '--' + $sub-selector}: $properties;
+
+			}
+		}
+	}
+}

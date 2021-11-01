@@ -1,0 +1,31 @@
+
+/* Singular
+--------------------------------------------- */
+
+.singular {
+}
+
+
+.after-entry .wrap {
+
+	& > * {
+		margin-top: var(--global--spacing-vertical);
+	}
+
+	.publish-date {
+		border-top: 1px solid var(--global--color-grey-light);
+		color: var(--global--color-grey-text);
+		font-size: var(--global--font-size-small);
+	}
+}
+
+.nav-links {
+	@include clearfix;
+
+	.nav-previous {
+		float: left;
+	}
+	.nav-next {
+		float: right;
+	}
+}

@@ -1,16 +1,36 @@
+
+// Main styles
+
 @use "sass:math";
 
-@import "partials/base";
-@import "partials/reset";
-@import "partials/layout";
-@import "partials/form";
-@import "partials/blocks-base";
-@import "partials/blocks-core";
-@import "partials/blocks-plugin";
-@import "partials/blocks-custom";
-@import "partials/site-header";
-@import "partials/navigation";
-@import "partials/post-summary";
-@import "partials/archive";
-@import "partials/singular";
-@import "partials/site-footer";
+@import "abstract/vars";
+@import "abstract/mixins";
+@import "abstract/reset";
+
+@import "layout/layout";
+@import "layout/vertical";
+@import "layout/alignments";
+@import "layout/grid";
+@import "layout/background";
+
+@import "blocks/form";
+@import "blocks/elements";
+@import "blocks/blocks";
+@import "blocks/blocks-acf";
+
+@import "components/screen-reader";
+@import "components/previews";
+@import "components/site-header";
+@import "components/site-footer";
+@import "components/footer-widgets";
+@import "components/navigation";
+@import "components/pagination";
+@import "components/archive/archive";
+@import "components/archive/archive-header";
+@import "components/singular";
+@import "components/single";
+@import "components/entry/entry-header";
+@import "components/entry/entry-meta";
+@import "components/entry/entry-comments";
+
+@import "theme/color-options";

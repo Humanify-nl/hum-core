@@ -1,0 +1,178 @@
+
+/* Button
+--------------------------------------------- */
+// note: .button is the style class, .btn is layout
+
+@mixin button() {
+  background-color: var(--button--color-back);
+  border: var(--button--border-width) solid transparent;
+  border-radius: var(--button--border-radius);
+  color: var(--button--color-text);
+  cursor: pointer;
+  display: inline-block;
+  font-size: var(--button--font-size);
+  line-height: var(--button--line-height);
+  padding: var(--button--padding-ver) var(--button--padding-hor);
+  //text-decoration: none;
+  touch-action: manipulation;
+  user-select: none;
+  white-space: nowrap;
+
+  .clickable:hover &.click,
+  &:hover {
+    background-color: var(--button--color-back-hover);
+    border-bottom-color: var(--button--color-back-active);
+    color: var(--button--color-text-hover);
+  }
+
+  .clickable:active &.click,
+  &:active {
+    background-color: var(--button--color-back-active);
+    border-bottom: var(--button--border-width) solid var(--button--color-back-active);
+    color: var(--button--color-text-active);
+  }
+
+}
+
+
+.button {
+  @include button();
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+
+// new
+/*
+// Button
+.site .button,
+button,
+input[type="submit"],
+input[type="reset"],
+.wp-block-search .wp-block-search__button,
+.wp-block-button .wp-block-button__link,
+.wp-block-file a.wp-block-file__button {
+	// Extend button style
+	@include button-style();
+}
+
+// Block Options
+.wp-block-button {
+
+	// Target the default and filled button states.
+	&:not(.is-style-outline) {
+
+		.wp-block-button__link:not(:hover):not(:active) {
+
+			// Text colors
+			&:not(.has-text-color) {
+				color: var(--global--color-background);
+
+				// Nested
+				.has-background & {
+					color: var(--local--color-background, var(--global--color-background));
+
+					&.has-background {
+						color: var(--global--color-primary);
+					}
+				}
+			}
+
+			// Background-colors
+			&:not(.has-background) {
+				background-color: var(--global--color-primary);
+
+				// Nested
+				.has-background & {
+					background-color: var(--local--color-primary, var(--global--color-primary));
+				}
+			}
+		}
+
+		// Hover Button color should match parent element foreground color
+		.wp-block-button__link:hover,
+		.wp-block-button__link:active {
+			border-color: currentColor !important;
+			background-color: transparent !important;
+			color: inherit !important;
+		}
+
+    // Remove :focus styles in the editor
+    .wp-block-button__link:focus {
+      outline-offset: inherit;
+      outline: inherit;
+    }
+	}
+
+	// Outline Style.
+	&.is-style-outline {
+
+		.wp-block-button__link:not(:hover):not(:active) {
+
+			// Border colors
+			&:not(.has-text-color),
+			&:not(.has-background),
+			&.has-background {
+				border-color: currentColor;
+			}
+
+			// Text colors
+			&:not(.has-text-color) {
+				color: var(--global--color-primary);
+
+				// Nested
+				.has-background & {
+					color: var(--local--color-primary, var(--global--color-primary));
+				}
+			}
+
+			&.has-background {
+				// Nested
+				.has-background &:not(.has-text-color) {
+					color: inherit;
+				}
+			}
+
+			// Background-colors
+			&:not(.has-background) {
+				background-color: transparent;
+			}
+		}
+
+		.wp-block-button__link:hover,
+		.wp-block-button__link:active {
+
+			border-color: transparent !important;
+			background-color: var(--global--color-primary) !important;
+			color: var(--global--color-background) !important;
+
+			.has-background & {
+				background-color: var(--local--color-primary, var(--global--color-primary)) !important;
+				color: var(--local--color-background, var(--global--color-background)) !important;
+			}
+
+			.has-text-color & {
+				color: var(--local--color-background, var(--global--color-background)) !important;
+			}
+		}
+
+    // Remove :focus styles in the editor
+    .wp-block-button__link:focus {
+      outline-offset: inherit;
+      outline: inherit;
+    }
+	}
+
+	// Squared Style
+	.is-style-squared .wp-block-button__link {
+		border-radius: 0;
+	}
+}
+
+.is-style-outline .wp-block-button__link[style*="radius"]:focus,
+.wp-block-button a.wp-block-button__link[style*="radius"]:focus {
+	outline-offset: 2px;
+}
+*/

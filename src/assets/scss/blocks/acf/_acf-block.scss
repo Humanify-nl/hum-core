@@ -1,0 +1,27 @@
+
+/* ACF block controls
+--------------------------------------------- */
+.acf-block-body {
+
+  .acf-block-preview {
+    min-height: 0;
+  }
+
+  .acf-block-fields {
+    margin-bottom: var(--global--block-margin);
+
+    select {
+      width: 100%;
+      padding: 4px 8px;
+      margin: 0;
+      box-sizing: border-box;
+      font-size: 14px;
+      line-height: 1.4;
+      height: auto;
+    }
+  }
+}
+
+.acf-block {
+
+}

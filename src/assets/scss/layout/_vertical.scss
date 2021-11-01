@@ -1,0 +1,71 @@
+
+/* Vertical spacing
+--------------------------------------------- */
+
+.entry-content {
+  margin-bottom: var(--global--spacing-vertical);
+
+  .single & {
+    margin-top: var(--global--text-margin);
+  }
+
+  // block spacing
+  > * {
+    margin-top: var(--global--block-margin);
+    margin-bottom: 0;
+  }
+
+  // groups
+  > .wp-block-group {
+    margin-top: var(--global--spacing-vertical);
+    margin-bottom: var(--global--spacing-vertical);
+
+    &.has-background.alignfull {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: var(--global--spacing-vertical);
+      padding-bottom: var(--global--spacing-vertical);
+    }
+
+    &.is-style-no-space {
+      margin-top: var(--global--block-margin);
+      margin-bottom: var(--global--block-margin);
+
+      &.has-background.alignfull {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      &.has-background {
+        padding-top: var(--global--block-gap);
+        padding-bottom: var(--global--block-gap);
+      }
+    }
+  }
+
+  // columns
+  > .wp-block-columns {
+    margin-top: var(--global--spacing-vertical);
+    margin-bottom: var(--global--spacing-vertical);
+
+    &.has-background.alignfull {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    &.is-style-no-space {
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-top: var(--global--block-margin);
+      margin-bottom: var(--global--block-margin);
+
+      &.has-background.alignfull {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      &.has-background {
+        padding-top: var(--global--block-gap);
+        padding-bottom: var(--global--block-gap);
+      }
+    }
+  }
+}

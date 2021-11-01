@@ -1,0 +1,92 @@
+
+/* Icon svg
+--------------------------------------------- */
+
+$icon-size-normal: 2rem;
+$icon-padding-normal: 0.5rem;
+$icon-width-normal: $icon-size-normal + ($icon-padding-normal * 2);
+$icon-size-large: 3rem;
+$icon-padding-large: 0.75rem ;
+$icon-width-large: $icon-size-large + ($icon-padding-large * 2);
+
+.block-icon-svg {
+  display: flex;
+  line-height: 1;
+  margin-bottom: var(--global--block-pad);
+
+  .block-icon-svg__wrap {
+    background: white;
+    padding: $icon-padding-normal;
+    border-radius: 50%;
+    height: $icon-width-normal;
+    width: $icon-width-normal;
+  }
+
+  // Put on top of column edge (acf field) // experimental - column only
+  &.is-on-top {
+    position: relative;
+    margin-bottom: calc(var(--global--block-pad) * 1.5);
+
+    &.icon-size-large {
+      margin-bottom: $icon-width-large * 0.5;
+    }
+
+    .block-icon-svg__wrap {
+      position: absolute;
+      top: calc( #{-$icon-width-normal * 0.5} - var(--global--block-pad)); // 40px - 6px
+    }
+  }
+
+  // Large icon & pad (acf field)
+  &.icon-size-large {
+
+    .block-icon-svg__wrap {
+      height: $icon-width-large;
+      width: $icon-width-large;
+      padding: $icon-padding-large;
+
+      svg {
+        height: $icon-size-large;
+        width: $icon-size-large;
+      }
+    }
+
+    &.is-on-top {
+      .block-icon-svg__wrap {
+        top: calc( #{-$icon-width-large * 0.5} - var(--global--block-pad)); // 40px - 6px
+      }
+    }
+  }
+
+  // native textalign setting
+  &.aligncenter {
+    justify-content: center;
+  }
+  &.alignright {
+    justify-content: end;
+  }
+
+  // block styles
+  &.is-style-primary-background {
+
+    .block-icon-svg__wrap {
+      background: var(--global--color-primary);
+
+      svg {
+        fill: var(--global--color-white);
+      }
+    }
+  }
+
+}
+
+// center editor preview
+.editor-preview {
+  justify-content: center;
+
+  .block-icon-svg__wrap {
+    svg {
+      padding-top: 2px;
+    }
+  }
+}

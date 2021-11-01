@@ -1,6 +1,7 @@
-/*--------------------------------------------------------------
-## ACF admin styles
-==============================================================*/
+
+/* ACF admin style
+--------------------------------------------- */
+
 /* make link box smaller */
 .acf-link .block__link-wrap {
 	padding: 0;
@@ -32,6 +33,7 @@
 
 
 .acf-admin-field-groups {
+
 	.wp-list-table {
 
 		.post-state {
@@ -41,7 +43,6 @@
 	}
 }
 
-/* Media query - Tablet  -------------------------------------*/
 @media screen and (min-width: 850px) {
 
 	.acf-admin-field-groups {
@@ -65,3 +66,6 @@
 		}
 	}
 }
+
+@import "acf/acf-postbox";
+@import "acf/acf-blocks";

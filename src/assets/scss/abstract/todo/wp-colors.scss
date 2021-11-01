@@ -1,0 +1,19 @@
+/* Colors */
+:root {
+	--global--color-black: #0f0c1c;
+	--global--color-dark-gray: #CCCCCC;
+	--global--color-gray: #E0E0E0;
+	--global--color-light-gray: #EBEBEB;
+	--global--color-green: #1D8B5D;
+	--global--color-blue: #206697;
+	--global--color-purple: #d1d1e4;
+	--global--color-red: #e4d1d1;
+	--global--color-orange: #F4643D;
+	--global--color-yellow: #eeeadd;
+	--global--color-white: #fff;
+	--global--color-white-50: rgba(255, 255, 255, 0.5); // Used for disabled buttons
+	--global--color-white-90: rgba(255, 255, 255, 0.9); // Used in form fields.
+
+	--global--color-background: var(--global--color-white-flash); /* Default body background */
+	--global--color-border: var(--global--color-gray); /* Used for borders (separators) */
+}

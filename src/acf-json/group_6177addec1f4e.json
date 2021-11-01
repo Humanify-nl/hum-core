@@ -1,0 +1,99 @@
+{
+    "key": "group_6177addec1f4e",
+    "title": "Block > Icon",
+    "fields": [
+        {
+            "key": "field_6177ae5450b9a",
+            "label": "Select icon",
+            "name": "select_svg_icon",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "activity": "Activity",
+                "chat-dots": "Chat dots",
+                "chat-dots-fill": "Chat dots fill",
+                "house": "House",
+                "house-fill": "House fill",
+                "palette": "Palette",
+                "palette-fill": "Palette fill"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_6177b972942a8",
+            "label": "Icon size",
+            "name": "svg_icon_size",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "icon-size-small": "Small",
+                "icon-size-normal": "Normal",
+                "icon-size-large": "Large"
+            },
+            "default_value": "normal",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_617a9bec3ad29",
+            "label": "Attach to top",
+            "name": "svg_icon_pos",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/icon"
+            }
+        ]
+    ],
+    "menu_order": 20,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "acf\/blocks\/block-icon-svg",
+    "modified": 1635425285
+}

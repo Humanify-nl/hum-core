@@ -8,20 +8,15 @@
 // Cleanup
 include_once( get_template_directory() . '/inc/wordpress-cleanup.php' );
 
-// Theme
 include_once( get_template_directory() . '/inc/tha-theme-hooks.php' );
-// Theme settings
 include_once( get_template_directory() . '/inc/theme-settings.php');
-// Template functions
 include_once( get_template_directory() . '/inc/template-functions.php' );
-// Template tags
 include_once( get_template_directory() . '/inc/template-tags.php' );
-// Plugin support
-include_once( get_template_directory() . '/inc/plugin-support.php' );
-// Scripts and styles
-include_once( get_template_directory() . '/inc/scripts.php');
-// Block editor
 include_once( get_template_directory() . '/inc/block-editor.php');
+include_once( get_template_directory() . '/inc/plugin-support.php' );
+include_once( get_template_directory() . '/inc/scripts.php');
+
+include_once( get_template_directory() . '/inc/acf-functions.php');
 
 
 /**
@@ -43,7 +38,7 @@ if ( ! function_exists( 'hum_core_setup' ) ) {
 
 		// Editor style
 		add_theme_support( 'editor-styles' );
-		add_editor_style( 'assets/css/editor.css' );
+		//add_editor_style( 'assets/css/editor.css' );
 
 		// Remove admin bar style fallback
 		add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );

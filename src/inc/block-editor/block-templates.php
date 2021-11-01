@@ -5,28 +5,81 @@
  * @package hum-core
  */
 
- /*
 function post_blocks_template() {
 
-  $post_type_object = get_post_type_object( 'post' );
-  $post_type_object->template = array(
-    array( 'hum/block-header', array() ),
-  );
+  $post = [
+    [ 'core/post-excerpt', [ 'moreText' => 'More', 'showMoreOnNewLine' => false, 'content' => 'Add a short excerpt here'] ],
+  ];
+
+  $testimonial = [
+    [ 'core/post-excerpt', [ 'moreText' => 'More', 'showMoreOnNewLine' => false, 'content' => 'Add a short excerpt here'] ],
+  ];
+
+  $post_types = [
+     'post',
+     'testimonial'
+   ];
+
+  foreach( $post_types as $post_type ) {
+
+    $post_type_object = get_post_type_object( $post_type );
+    if ( is_array(${$post_type}) ) {
+      $post_type_object->template = ${$post_type};
+    }
+  }
+
   //$post_type_object->template_lock = 'all';
+
 }
 add_action( 'init', 'post_blocks_template' );
 
 
-function page_blocks_template() {
 
-  $post_type_object = get_post_type_object( 'page' );
-  $post_type_object->template = array(
-    array( 'hum/block-header', array() ),
-  );
-  //$post_type_object->template_lock = 'all';
+/**
+ * Get pattern template
+ *
+ * https://permanenttourist.ch/2021/02/easier-block-patterns-using-template-parts/
+ */
+
+function hum_get_block_template( $post_type_name ) {
+
+	// return early if no input
+	if ( !$post_type_name ) {
+		return;
+	}
+
+	// open output buffer
+	ob_start();
+	// get pattern template-part
+	get_template_part( 'inc/block-editor/post-type-templates/block-template-'.$post_type_name );
+	// save contents in var
+	$block_template = ob_get_contents();
+	// close output buffer
+	ob_end_clean();
+
+	return $block_template;
+
 }
-add_action( 'init', 'page_blocks_template' );
 
+/*
+$block_template_post = [
+  [ 'core/group', [ 'className' => 'entry-input'],
+    [
+      [ 'core/columns', [],
+        [
+          [ 'core/column', [ 'templateLock' => 'all' ],
+            [
+              [ 'core/post-excerpt', [ 'moreText' => 'More', 'showMoreOnNewLine' => false, 'content' => 'Add your excerpt here'] ],
+            ]
+          ]
+        ]
+      ]
+    ]
+  ],
+];
+*/
+
+/*
 
 function post_blocks_template() {
 

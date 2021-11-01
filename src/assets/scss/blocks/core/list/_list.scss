@@ -1,0 +1,30 @@
+
+/* List
+--------------------------------------------- */
+
+.wp-block-list {
+
+  ul, ol {
+    padding-left: 1.5rem;
+
+    li {
+      padding-bottom: .5rem;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      ul, ol {
+        padding-top: .5rem;
+      }
+    }
+
+    &.blocks-gallery-grid {
+      padding-left: 0;
+
+      li {
+        padding-bottom: 0;
+      }
+    }
+  }
+}

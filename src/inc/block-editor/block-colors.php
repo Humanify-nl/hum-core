@@ -10,41 +10,49 @@
 add_theme_support( 'disable-custom-colors' );
 
 // Editor color palette.
-$black      = '#0f0c1c';
-$blue 		  = '#206697';
-$green      = '#1D8B5D';
-$gray       = '#E0E0E0';
-$white_gray = '#f7f7f7';
-$white      = '#ffffff';
+$base       = '#282B3E'; //#0f0c1c';
+$primary 		= '#5E7B28';
+$secondary  = '#156099';
+$tertiary   = '#F4643D';
+$grey       = '#E0E0E0';
+$grey_white = '#F6FAF0';
+$white      = '#FFFFFF';
 
 add_theme_support(
   'editor-color-palette',
   // empty array = no color support
   array(
     array(
-      'name'  => esc_html__( 'Black', 'hum-core' ),
-      'slug'  => 'black',
-      'color' => $black,
+      'name'  => esc_html__( 'Base', 'hum-core' ),
+      'slug'  => 'base',
+      'color' => $base,
     ),
     array(
-      'name'  => esc_html__( 'Blue', 'hum-core' ),
-      'slug'  => 'blue',
-      'color' => $blue,
+      'name'  => esc_html__( 'Primary', 'hum-core' ),
+      'slug'  => 'primary',
+      'color' => $primary,
     ),
     array(
-      'name'  => esc_html__( 'Green', 'hum-core' ),
-      'slug'  => 'green',
-      'color' => $green,
+      'name'  => esc_html__( 'Secondary', 'hum-core' ),
+      'slug'  => 'secondary',
+      'color' => $secondary,
+    ),
+    /*
+    array(
+      'name'  => esc_html__( 'Tertiary', 'hum-core' ),
+      'slug'  => 'tertiary',
+      'color' => $tertiary,
+    ),
+    */
+    array(
+      'name'  => esc_html__( 'Grey', 'hum-core' ),
+      'slug'  => 'grey',
+      'color' => $grey,
     ),
     array(
-      'name'  => esc_html__( 'Gray', 'hum-core' ),
-      'slug'  => 'gray',
-      'color' => $gray,
-    ),
-    array(
-      'name'  => esc_html__( 'White gray', 'hum-core' ),
-      'slug'  => 'white-gray',
-      'color' => $white_gray,
+      'name'  => esc_html__( 'Grey white', 'hum-core' ),
+      'slug'  => 'grey-white',
+      'color' => $grey_white,
     ),
     array(
       'name'  => esc_html__( 'White', 'hum-core' ),

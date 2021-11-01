@@ -1,0 +1,42 @@
+
+// Blocks
+// --------------------------------------------- /
+
+$map-blocks: (
+	icon-svg: (
+    size: (
+      normal: 2rem,
+      large: 3rem,
+    ),
+    padding: (
+      normal: 0.5rem,
+      large: 0.75rem,
+    ), 
+  ),
+
+);
+
+$prefix: '--';
+
+:root {
+
+	// each item, submap in main map (branding, selectors(map) )
+	@each $top-selector, $sub-selectors in $map-blocks {
+		// each item in map level 1 (header, properties(map) )
+		@each $sub-selector, $properties in $sub-selectors {
+
+			@if type-of($properties) == "map" {
+
+				// each item in map level 2 (color, value)
+				@each $property, $value in $properties {
+
+					#{$prefix + $top-selector + '--' + $sub-selector + '-' + $property}: $value;
+				}
+			} @else {
+
+				#{$prefix + $top-selector + '--' + $sub-selector}: $properties;
+
+			}
+		}
+	}
+}

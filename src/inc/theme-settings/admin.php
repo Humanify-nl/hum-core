@@ -68,8 +68,8 @@ function hum_saved_blocks_admin_menu() {
       'edit_posts',
       'edit.php?post_type=wp_block',
       '',
-      'dashicons-table-row-before',
-      22
+      'dashicons-screenoptions',
+      20
     );
 }
 add_action( 'admin_menu', 'hum_saved_blocks_admin_menu' );
@@ -85,7 +85,6 @@ function hum_change_menu_order( $menu_order ) {
         'index.php', // order 2
         'edit.php?post_type=page',
         'edit.php', // order 5
-        'edit.php?post_type=wp_block',
         'edit.php?post_type=projects',
         'edit.php?post_type=products',
         'edit.php?post_type=services',
@@ -94,8 +93,10 @@ function hum_change_menu_order( $menu_order ) {
         'edit.php?post_type=employees',
         'edit.php?post_type=clients',
         'edit.php?post_type=jobs',
+        'edit.php?post_type=testimonial',
         'edit.php?post_type=logos',
-        'upload.php', // order 10
+        'upload.php', // order 10,
+        'edit.php?post_type=wp_block',
     );
 }
 add_filter( 'custom_menu_order', '__return_true' );

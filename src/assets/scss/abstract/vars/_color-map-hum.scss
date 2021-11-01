@@ -1,0 +1,80 @@
+
+// Colors
+// --------------------------------------------- /
+
+$map-colors: (
+  base: (
+    base: #0f0c1c,
+  ),
+  primary: (
+    base: #206697,
+    light: lighten(#206697, 5),
+    dark: darken(#206697, 5),
+  ),
+  secondary: (
+    base: #1D8B5D,
+    light: lighten(#1D8B5D, 5),
+    dark: darken(#1D8B5D, 5),
+  ),
+  tertiary: (
+    base: #F4643D,
+    light: lighten(#F4643D, 5),
+    dark: darken(#F4643D, 5),
+  ),
+  white: (
+    base: #fff,
+    flash: #f1f2f4,
+    grey: #f7f7f7,
+    true: #fff,
+  ),
+  grey: (
+    base: #E0E0E0,
+    light: #EBEBEB,
+    white: #F5F5F5,
+    dark: #CCCCCC,
+    text: #757575,
+  ),
+  black: (
+    base: #0f0c1c,
+    light: #222,
+    dark: #111,
+  ),
+);
+
+
+
+// variable prefix
+$color-prefix: --global--color-;
+
+// retrieve color from map `clr(primary, base)`
+@function clr($color-name, $color-variant: base) {
+  @return map-get(map-get($map-colors,$color-name),$color-variant);
+}
+
+
+// Write variables in root -------------------- /
+
+:root {
+
+  // each item in color map
+  @each $color-name, $color-shades in $map-colors {
+
+    // maps require a second loop
+    @if type-of($color-shades) == "map" {
+
+      // each item in sub map
+      @each $subname, $color-hex in $color-shades {
+        // --color-primary-base
+        @if $subname == 'base' {
+          #{$color-prefix + $color-name}: $color-hex;
+        } @else {
+          #{$color-prefix + $color-name + '-' + $subname}: $color-hex;
+        }
+      }
+    // no map
+    } @else if type-of($color-shades) == "color" {
+      // output color
+      #{$color-prefix + $color-name}: $color-shades;
+    }
+  }
+}

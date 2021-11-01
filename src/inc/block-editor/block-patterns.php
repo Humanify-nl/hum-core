@@ -5,6 +5,12 @@
  * @package hum-core
  */
 
+
+/**
+ * Remove core Block patterns
+ */
+remove_theme_support( 'core-block-patterns' );
+
 /**
  * Register Block Pattern Category.
  */
@@ -16,21 +22,63 @@ if ( function_exists( 'register_block_pattern_category' ) ) {
 	);
 }
 
+
+/**
+ * Get pattern template
+ *
+ * https://permanenttourist.ch/2021/02/easier-block-patterns-using-template-parts/
+ */
+
+function hum_get_pattern_template( $pattern_name ) {
+
+	// return early if no input
+	if ( !$pattern_name ) {
+		return;
+	}
+
+	// open output buffer
+	ob_start();
+	// get pattern template-part
+	get_template_part( 'template-parts/blocks/patterns/'.$pattern_name );
+	// save contents in var
+	$pattern_template = ob_get_contents();
+	// close output buffer
+	ob_end_clean();
+
+	return $pattern_template;
+
+}
+
+
 /**
  * Register Block Patterns.
  */
+
 if ( function_exists( 'register_block_pattern' ) ) {
 
-  $content = "<!-- wp:group {\"align\":\"full\"} -->\n<div class=\"wp-block-group alignfull\"><!-- wp:columns {\"align\":\"wide\"} -->\n<div class=\"wp-block-columns alignwide\"><!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:post-title /-->\n\n<!-- wp:paragraph {\"fontSize\":\"normal\"} -->\n<p class=\"has-normal-font-size\">Post introduction text</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:post-date /--></div>\n<!-- /wp:column -->\n\n<!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:post-featured-image /--></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns --></div>\n<!-- /wp:group -->";
+	$post_query_template = hum_get_pattern_template( 'pattern-post-query' );
+	$forminator_template = hum_get_pattern_template( 'pattern-forminator' );
 
-	// Large Text.
+	// Post query
 	register_block_pattern(
-		'hum/group-test',
-		array(
-			'title'         => esc_html__( 'Group test', 'hum-core' ),
-			'categories'    => array( 'humanify' ),
-			'viewportWidth' => 1440,
-			'content'       => $content,
-		)
+		'hum/post-query',
+		[
+			'title'         => esc_html__( 'Post query', 'hum-core' ),
+			'categories'    => [ 'humanify' ],
+			//'viewportWidth' => 1440,
+			'content'       => $post_query_template,
+		]
+
+	);
+
+	register_block_pattern(
+		'hum/forminator',
+		[
+			'title'         => esc_html__( 'Forminator', 'hum-core' ),
+			'categories'    => [ 'humanify' ],
+			//'viewportWidth' => 1440,
+			'content'       => $forminator_template,
+		]
+
 	);
 }

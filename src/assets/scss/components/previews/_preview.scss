@@ -1,0 +1,36 @@
+
+/* Preview
+--------------------------------------------- */
+
+.preview {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+
+// Spacing
+
+// after meta
+.preview__category + .preview__title,
+.preview__category + .preview__excerpt,
+.preview__category + .preview__footer,
+// after thumb
+.preview__img + .preview__title,
+.preview__img + .preview__category,
+// after title
+.preview__title + .preview__excerpt,
+.preview__title + .preview__category,
+.preview__title + .preview__footer,
+// after text
+.preview__excerpt + .preview__category {
+  margin-top: var(--global--block-inner-gap);
+}
+
+// foot
+.preview__excerpt + .preview__footer {
+  margin-top: var(--global--block-inner-gap);
+  @include bp-min($medium){ margin-top: auto; }
+}

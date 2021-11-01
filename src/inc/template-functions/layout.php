@@ -5,17 +5,26 @@
  * @package hum-core
  */
 
+ /**
+  * Wrap content (when no flex rows)
+  *
+  */
+ function hum_enable_wrap() {
+   return true;
+ }
+
+
 /**
  * Layout Options
  *
  */
 function hum_page_layout_options() {
 
-  $layouts = array(
-    'content',
+  $layouts = [
+    'content-center',
     'content-sidebar',
-    'content-fullwidth',
-  );
+    'content-wide',
+  ];
   return $layouts;
 }
 
@@ -42,6 +51,7 @@ function hum_page_layout_metabox() {
 
 	$choices = [];
 	$layouts = hum_page_layout_options();
+  $default = 'content-wide';
 	foreach( $layouts as $layout ) {
 		$label = str_replace( '-', ' ', $layout );
 		$choices[ $layout ] = ucwords( $label );
@@ -66,8 +76,9 @@ function hum_page_layout_metabox() {
 				),
 				'choices' => $choices,
 				'default_value' => array(
+          $default,
 				),
-				'allow_null' => 1,
+				'allow_null' => 0,
 				'multiple' => 0,
 				'ui' => 0,
 				'return_format' => 'value',
@@ -120,7 +131,7 @@ add_action( 'widgets_init', 'hum_widgets_init' );
  */
 function hum_widget_area_args( $args = array() ) {
 
-	$defaults = array(
+	$defaults = [
 		'name'          => '',
 		'id'            => '',
 		'description'   => '',
@@ -128,7 +139,7 @@ function hum_widget_area_args( $args = array() ) {
 		'after_widget'  => '</section>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
-	);
+	];
 	$args = wp_parse_args( $args, $defaults );
 
 	if( !empty( $args['name'] ) && empty( $args['id'] ) )
@@ -146,8 +157,7 @@ function hum_widget_area_args( $args = array() ) {
 function hum_page_layout( $id = false ) {
 
 	$available_layouts = hum_page_layout_options();
-  // default layout
-	$layout = 'content-fullwidth';
+  $layout = 'content-wide';
 
 	if( is_singular() || $id ) {
 
@@ -161,7 +171,7 @@ function hum_page_layout( $id = false ) {
 	}
 
 	$layout = apply_filters( 'hum_page_layout', $layout );
-	$layout = in_array( $layout, $available_layouts ) ? $layout : $available_layouts[0];
+	//$layout = in_array( $layout, $available_layouts ) ? $layout : $available_layouts[0];
 
 	return sanitize_title_with_dashes( $layout );
 }
@@ -171,13 +181,13 @@ function hum_page_layout( $id = false ) {
  * Return Content
  *
  * used in 'hum_page_layout' filter (in templates before loading index.php)
- * i.e. add_filter( 'hum_page_layout', 'hum_return_full_width_content' )
+ * i.e. add_filter( 'hum_page_layout', 'hum_return_content_wide' )
  */
-function hum_return_content() {
-  return 'content';
+function hum_return_content_center() {
+  return 'content-center';
 }
-function hum_return_full_width_content() {
-	return 'content-fullwidth';
+function hum_return_content_wide() {
+	return 'content-wide';
 }
 function hum_return_content_sidebar() {
 	return 'content-sidebar';

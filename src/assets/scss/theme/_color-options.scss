@@ -1,0 +1,44 @@
+
+/* Color Options
+--------------------------------------------- */
+
+@each $color-name, $color-shades in $map-colors {
+
+	// each item in sub map
+	@each $subname, $color-hex in $color-shades {
+		// --color-primary-base
+		@if $subname == 'base' {
+
+			#{'.has-' + $color-name + '-color'} {
+				color: var(#{'--global' + '--color-' + $color-name});
+			}
+			#{'.has-' + $color-name + '-background-color'}{
+				background-color: var(#{'--global' + '--color-' + $color-name});
+			}
+
+		} @else {
+
+			#{'.has-' + $color-name + '-' + $subname + '-color'} {
+				color: var(#{'--global' + '--color-' + $color-name + '-' + $subname});
+			}
+			#{'.has-' + $color-name + '-' + $subname + '-background-color'} {
+				background-color: var(#{'--global' + '--color-' + $color-name + '-' + $subname});
+			}
+		}
+
+	}
+}
+
+
+// Dark background (this needs postCSS)
+.has-background:not(
+  .has-grey-background-color,
+  .has-grey-white-background-color,
+  .has-white-background-color
+  ) {
+  color: $white;
+
+  h1, h2, h3, h4, h5, h6, p {
+    color: $white;
+  }
+}

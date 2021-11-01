@@ -1,0 +1,81 @@
+
+// Components
+// --------------------------------------------- /
+
+$map-components: (
+	branding: (
+		color-text: var(--global--color-primary),
+		color-link: var(--global--color-primary),
+		color-link-hover: var(--global--color-secondary),
+		title: (
+			font-family: var(--global--font-primary),
+		  font-size: var(--global--font-size-normal),
+			font-size-mobile: var(--heading--font-size-small),
+			font-weight: normal,
+			text-transform: uppercase,
+		),
+		description: (
+			font-family: var(--global--font-secondary),
+		  font-size: var(--global--font-size-small),
+		),
+		logo: (
+		  max-width: 200px,
+			max-height: 64px,
+			max-width-mobile: 56px,
+			max-height-mobile: 56px,
+		),
+	),
+	menu:(
+		font-family: var(--global--font-primary),
+		font-size: var(--global--font-size-normal),
+		font-size-sub-menu: var(--global--font-size-small),
+		font-size-button: var(--global--font-size-small),
+		font-style: normal,
+		font-style-sub-menu-mobile: normal,
+		font-weight: normal,
+		font-weight-button: 500,
+		line-height: 22px,
+	),
+	pagination: (
+		color-text: var(--global--color-primary),
+		color-link: var(--global--color-primary),
+		color-link-hover: var(--global--color-primary-hover),
+		font-family: var(--global--font-secondary),
+		font-size: var(--global--font-size-normal),
+		font-weight: normal,
+		font-weight-strong: 600,
+	),
+	footer: (
+		color-back: var(--global--color-primary),
+		color-text: var(--global--color-white),
+		color-link: var(--global--color-white),
+		color-link-hover: var(--global--color-white-flash),
+		font-family: var(--global--font-primary),
+		font-size: var(--global--font-size-small),
+	),
+);
+
+$prefix: '--';
+
+:root {
+
+	// each item, submap in main map (branding, selectors(map) )
+	@each $top-selector, $sub-selectors in $map-components {
+		// each item in map level 1 (header, properties(map) )
+		@each $sub-selector, $properties in $sub-selectors {
+
+			@if type-of($properties) == "map" {
+
+				// each item in map level 2 (color, value)
+				@each $property, $value in $properties {
+
+					#{$prefix + $top-selector + '--' + $sub-selector + '--' + $property}: $value;
+				}
+			} @else {
+
+				#{$prefix + $top-selector + '--' + $sub-selector}: $properties;
+
+			}
+		}
+	}
+}

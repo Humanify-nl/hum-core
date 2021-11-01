@@ -1,0 +1,23 @@
+
+/* Entry Header
+--------------------------------------------- */
+
+.entry-header {
+  @include row-pad-mobile(1rem);
+  @include row-pad-tablet-up(2rem);
+  @include row-pad-desktop(2rem);
+  border-bottom: 1px solid var(--global--color-grey-light);
+
+  @include bp-min($small) {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  > * {
+    margin-bottom: $pad_inner;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,67 @@
+
+// Flex row
+// --------------------------------------------- /
+
+@mixin flex-row( $width_first: 100, $gap:null ) {
+
+  @if( $gap == null ) {
+    $gap: $grid-gap;
+  }
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$gap;
+  margin-right: -$gap;
+
+  // set odd (first)
+  > .block:nth-child(odd) {
+    margin-left: $gap;
+    margin-right: $gap;
+    width: calc( #{$width_first * 1%} - #{$gap * 2});
+  }
+
+  // set even (second)
+  > .block:nth-child(even) {
+    margin-left: $gap;
+    margin-right: $gap;
+    // if 100, all are 100
+    @if( $width_first == 100) {
+      width: calc( 100% - #{$gap * 2});
+    // else fill rest of space
+    } @else {
+      width: calc( #{(100 - $width_first ) * 1%} - #{$gap * 2});
+    }
+  }
+
+}
+
+
+// Flex-row, Mobile
+
+@mixin flex-row-mobile( $percentage, $gap: null ) {
+
+	@include bp-max($small) {
+		@include flex-row( $percentage, $gap );
+	}
+
+}
+
+// Flex-row, Tablet Up
+
+@mixin flex-row-tablet-up( $percentage, $gap: null ) {
+
+	@include bp-min($small) {
+		@include flex-row( $percentage, $gap );
+	}
+
+}
+
+// Flex-row, Desktop
+
+@mixin flex-row-desktop( $percentage, $gap: null ) {
+
+	@include bp-min($medium) {
+		@include flex-row( $percentage, $gap );
+	}
+
+}

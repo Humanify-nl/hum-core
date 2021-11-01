@@ -1,0 +1,51 @@
+
+/* Archive Header
+--------------------------------------------- */
+
+.archive-header {
+	@include row-pad-mobile(1rem);
+	@include row-pad-tablet-up(2rem);
+	@include row-pad-desktop(2rem);
+	width: 100%;
+
+	.archive-title {
+		margin-bottom: 0;
+	}
+
+	.archive-search {
+		background-color: var(--global--color-grey-light);
+		padding: var(--global--padding-inner) 0;
+		max-width: 100%;
+	}
+
+	.search-form {
+		max-width: var(--global-aligncenter);
+		margin: 0 auto;
+	}
+
+	.archive-title + .archive-search {
+		margin-top: var(--global--text-margin);
+	}
+
+}
+
+.author-archive-description {
+
+	.avatar {
+		border-radius: 50%;
+		display: block;
+		margin: 0 auto 16px;
+	}
+
+	h3:last-child {
+		@include bp-min($small) {
+			margin-top: 48px;
+		}
+	}
+}
+
+.author-title {
+	font-size: var(--global-font-size-h4);
+	font-weight: 700;
+	text-transform: uppercase;
+}

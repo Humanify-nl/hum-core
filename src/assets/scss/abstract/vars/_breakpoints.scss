@@ -1,0 +1,79 @@
+
+// Breakpoints
+// --------------------------------------------- /
+
+// Base: landscape phones, 576px and up
+// Small: tablets, 768px and up
+// Medium: desktops, 992px and up
+// Large: large desktops, 1200px and up
+
+$breakpoints: (
+  base: 576px,
+  small: 782px,
+  medium: 992px,
+  large: 1200px,
+);
+
+// Breakpoint
+$base: map-get($breakpoints, base);
+$small: map-get($breakpoints, small);
+$medium: map-get($breakpoints, medium);
+$large: map-get($breakpoints, large);
+
+// Site width
+$width-site-m: 768px;
+$width-site-l: 1100px;
+$width-site-w: 1680px;
+$width-sidebar: 300px;
+
+// Site margins
+$margin_site_s: 2rem; // < 540px
+$margin_site_m: 3rem; // > 540px
+
+
+// Root variables
+:root {
+  --global-bp-mobile: #{$base};
+  --global-bp-tablet: #{$small};
+  --global-bp-laptop: #{$medium};
+  --global-bp-desktop: #{$large};
+  --global-aligncenter: #{$width-site-m};
+  --global-alignwide: #{$width-site-l};
+  --global-aligndefault: #{--global-alignwide};
+}
+
+
+// Breakpoint min-width
+@mixin bp-min($point: 0) {
+  @media only screen and(min-width: ($point + 0px)) {
+    @content;
+  }
+}
+
+// Breakpoint max-width
+@mixin bp-max($point: 0) {
+  @media only screen and (max-width: ($point - 1px)) {
+    @content;
+  }
+}
+
+// Breakpoint min-max-width
+@mixin bp-min-max($point: 0, $pointmax: 0 ) {
+  @media only screen and (min-width: ($point + 0px)) and (max-width: ($pointmax - 1px)) {
+    @content;
+  }
+}
+
+// Responsive (neg. margin) block width
+@mixin calc-width($block: 100, $space: $grid_space) {
+	width: calc( #{$block * 1%} - #{$space * 2} );
+}
+
+// Site margin max width
+@mixin site-margin($margin_site: 0){
+  @if( $margin_site == 0){
+    width: 100%;
+  } @else {
+    width: calc(100% - #{$margin_site * 2});
+  }
+}

@@ -46,17 +46,20 @@ function hum_entry_header_share() {
  *
  */
 function hum_single_after_entry() {
+
 	echo '<div class="after-entry">';
 
-	// Breadcrumbs
-	hum_breadcrumbs();
+		echo '<div class="wrap">';
+		// Breadcrumbs
+		hum_breadcrumbs();
 
-	// Publish date
-	echo '<p class="publish-date">Published on ' . get_the_date( 'F j, Y' ) . '</p>';
+		// Publish date
+		echo '<p class="publish-date">Published on ' . get_the_date( 'F j, Y' ) . '</p>';
 
-	// Sharing
-	// do_action( 'hum_entry_footer_share' );
+		// Sharing
+		// do_action( 'hum_entry_footer_share' );
+
+		echo '</div>';
 
 	echo '</div>';
-
 }

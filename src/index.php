@@ -10,7 +10,7 @@ get_header();
 
 tha_content_before();
 
-	echo '<div class="' . hum_class( 'content-area', 'wrap', apply_filters( 'hum_content_area_wrap', true ) ) . '">';
+	echo '<div class="' . hum_post_class( 'content-area', 'wrap-content', apply_filters( 'hum_content_area_wrap', false ) ) . '">';
 
 		tha_content_wrap_before();
 		?>

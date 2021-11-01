@@ -1,0 +1,17 @@
+
+// Preview category
+
+.preview__category {
+  font-size: var(--global--font-size-small);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  a {
+    color: $grey_8;
+    text-decoration: none;
+
+    &:hover {
+      color: $highlight;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+
+/* Admin colors
+--------------------------------------------- */
+
+$admin_colors: (
+  wp: (
+    body: #fff,
+    box: #fff, // #f5f5f5
+    inside: #f0f0f0,
+    inside-2: #e7e7e7,
+    dark: #23282d,
+    link: #0073aa,
+    text: #23282d,
+    border: #ccd0d4,
+    border-acf: #f9f9f9,
+    titles: #444,
+    // new
+    postbox: #fafafa,
+    acf-box: #fbfbfb,
+    white: #fff,
+    main-body: #eee,
+  ),
+);
+
+
+@function color($base, $shade: base) {
+  $color: map-get(map-get($admin_colors, $base), $shade);
+  @return $color;
+}

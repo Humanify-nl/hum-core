@@ -5,13 +5,27 @@
  * @package hum-core
  */
 
+/**
+ * Archive wrap class
+ *
+ */
+function hum_archive_wrap_class() {
+  echo '<div class="'.hum_grid_class_preview().'">';
+}
+
+function hum_archive_wrap_class_end() {
+  echo '</div>';
+}
+
+
+
  /**
   * Archive header
   *
   */
 function hum_archive_header() {
 
-	$title = $subtitle = $description = $more = false;
+	$title = $description = $search = false;
 
 	// blog
 	if( is_home() && get_option( 'page_for_posts' ) ) {
@@ -22,7 +36,7 @@ function hum_archive_header() {
 	} elseif( is_search() ) {
 
 		$title = 'Search Results';
-		$more = get_search_form( false );
+		$search = get_search_form( false );
 
   // archive
 	} elseif( is_archive() ) {
@@ -37,28 +51,35 @@ function hum_archive_header() {
 		return;
 	}
 
-	$classes = [ 'archive-description' ];
+	$classes = [ 'archive-header', 'header' ];
 	if( is_author() ) {
 		$classes[] = 'author-archive-description';
 	}
+  if( get_the_archive_description() ){
+    $classes = [ 'archive-description' ];
+  }
 	?>
 
-	<header class="<?php join( ' ', $classes ) ?>">
+	<header class="<?php echo join( ' ', $classes ); ?>">
 
-		<?php
-		do_action ('hum_archive_header_before' );
+    <div class="wrap">
 
-		if( ! empty( $title ) ) {
-			echo '<h1 class="archive-title">' . $title . '</h1>';
-		}
-		if( ! empty( $subtitle ) ) {
-			echo '<h4>' . $subtitle . '</h4>';
-		}
-		echo apply_filters( 'ea_the_content', $description );
-		echo $more;
+  	  <?php
+  		do_action ('hum_archive_header_before' );
 
-		do_action ('hum_archive_header_before' );
-		?>
+  		if( ! empty( $title ) ) {
+  			echo '<h1 class="archive-title">' . $title . '</h1>';
+  		}
+
+  		echo apply_filters( 'hum_the_content', $description );
+  		if ( $search ) {
+        echo '<div class="archive-search">' . $search . '</div>';
+      }
+
+  		do_action ('hum_archive_header_after' );
+  		?>
+
+    </div>
 
 	</header>
 

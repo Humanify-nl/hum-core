@@ -13,9 +13,12 @@ $post_class_array = get_post_class() ;
 <article class="<?php echo join( ' ', $post_class_array ); ?>">
 
   <?php
+  //hum_block_area()->show( 'entry-header' );
   if( hum_has_action( 'tha_entry_top' ) ) {
-    echo '<header class="entry-header">';
-    tha_entry_top();
+    echo '<header class="entry-header header wrap">';
+
+      tha_entry_top();
+
     echo '</header>';
   }
   ?>
@@ -39,8 +42,8 @@ $post_class_array = get_post_class() ;
 
   <?php
   if( hum_has_action( 'tha_entry_bottom' ) ) {
-    echo '<header class="entry-footer">';
-    tha_entry_bottom();
+    echo '<header class="entry-footer wrap">';
+      tha_entry_bottom();
     echo '</header>';
   }
   ?>

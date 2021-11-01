@@ -1,0 +1,26 @@
+
+/* Paragraph
+--------------------------------------------- */
+
+p {
+	margin: 0 0 var(--global--text-margin);
+	padding: 0;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&.has-normal-font-size {
+		font-size: var(--global--font-size-normal);
+	}
+
+	&.has-large-font-size,
+	&.large {
+		font-size: var(--global--font-size-large);
+	}
+
+	&.has-small-font-size,
+	&.small {
+		font-size: var(--global--font-size-small);
+	}
+}

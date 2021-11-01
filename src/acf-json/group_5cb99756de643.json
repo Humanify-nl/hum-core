@@ -1,0 +1,58 @@
+{
+    "key": "group_5cb99756de643",
+    "title": "Option > Humanify",
+    "fields": [
+        {
+            "key": "field_5f1598efd2dc1",
+            "label": "Het Humanify menu",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "In dit menu kun je de globale instellingen & setup voor de website uitvoeren.\r\n\r\n\r\nVersie: hum-v7",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5f1599ef05717",
+            "label": "Bij vragen of problemen:",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<br>\r\nE-mail: rob@humanify.nl\r\nTel: 06-30024662\r\n<br>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-site-options"
+            }
+        ]
+    ],
+    "menu_order": 49,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Main options menu",
+    "modified": 1634050339
+}

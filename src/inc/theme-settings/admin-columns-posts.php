@@ -10,10 +10,13 @@
  *
  */
 function hum_add_img_column($columns) {
+
   $columns = array_slice($columns, 0, 1, true) + array("img" => "Featured Image") + array_slice($columns, 1, count($columns) - 1, true);
+
   return $columns;
+
 }
-add_filter('manage_posts_columns', 'hum_add_img_column');
+add_filter('manage_post_posts_columns', 'hum_add_img_column' );
 
 
 /**
@@ -32,9 +35,10 @@ function hum_manage_post_columns( $columns ) {
     'author'               => 'Author',
     'date'                 => 'Date',
   );
+
   return $columns;
 }
-add_filter('manage_posts_columns' , 'hum_manage_post_columns');
+add_filter('manage_post_posts_columns' , 'hum_manage_post_columns' );
 
 
 /**

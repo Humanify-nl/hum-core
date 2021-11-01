@@ -1,0 +1,163 @@
+
+/* Site Header
+--------------------------------------------- */
+
+.site-header {
+	background: var(--theme--header-bg);
+	border-bottom: 1px solid var(--theme--site-border);
+	position: relative;
+	min-height: 49px;
+
+	.wrap-outer {
+		max-width: var(--global-alignwide);
+		margin-left: auto;
+		margin-right: auto;
+		@include calc-width(100, $margin_site_s);
+	}
+}
+
+.custom-logo {
+	height: $menu-toggle-size;
+	padding: 4px 0;
+	width: auto;
+}
+
+.title-area {
+	display: flex;
+	float: left;
+	width: 100%;
+	min-height: $menu-toggle-size;
+	text-align: left;
+	margin: 0 auto;
+
+	h1.site-title,
+	p.site-title {
+		margin: 0;
+		font-size: 24px;
+		line-height: 30px;
+		padding: 8px;
+
+		a {
+			color: $base-color;
+			text-decoration: none;
+		}
+	}
+
+
+	@include bp-max($small) {
+		float: none;
+		justify-content: center;
+	}
+
+
+}
+
+
+/* Admin Bar
+--------------------------------------------- */
+
+@include bp-min(783) {
+	.admin-bar .site-container {
+		padding-top: var(--global--admin-bar--height);
+	}
+}
+
+@include bp-max(783) {
+	#wpadminbar {
+		display: none !important;
+	}
+}
+
+
+/* Persistent Header
+--------------------------------------------- */
+
+@if( $static_header_desktop ) {
+	@include bp-min($small) {
+
+		.site-container {
+			padding-top: $static_header_desktop;
+		}
+
+		.site-header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 999;
+			height: $static_header_desktop;
+		}
+
+		@include bp-min(782) {
+			.admin-bar {
+
+				.site-container {
+					padding-top: 32px + $static_header_desktop;
+				}
+
+				.site-header {
+					top: 32px;
+				}
+			}
+		}
+	}
+}
+
+@if( $static_header_mobile ) {
+	@include bp-max($small) {
+
+		.site-container {
+			padding-top: $static_header_mobile;
+		}
+
+		.site-header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 999;
+
+			overflow: scroll;
+			max-height: 100vh;
+		}
+
+		@include bp-min(782) {
+			.admin-bar {
+
+				.site-container {
+					padding-top: var(--global--admin-bar--height) + $static_header_mobile;
+				}
+
+				.site-header {
+					top: var(--global--admin-bar--height);
+				}
+			}
+		}
+
+	}
+}
+
+
+/* Header Search
+--------------------------------------------- */
+
+.header-search {
+	background: var(--theme--menu-bg-alt);
+	overflow: hidden;
+	padding: 16px;
+	width: 100%;
+
+	@include bp-min($small) {
+		position: absolute;
+		right: 0;
+		bottom: -82px;
+
+		.search-form {
+			margin: 0 auto;
+		}
+	}
+
+	&:not(.active) {
+		display: none;
+	}
+}

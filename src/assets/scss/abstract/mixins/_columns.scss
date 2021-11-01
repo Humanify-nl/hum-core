@@ -1,0 +1,61 @@
+
+// Columns
+// --------------------------------------------- /
+
+@mixin columns( $columns, $grid_item_element: '.preview', $gap: null ) {
+
+	@if( $gap == null ) {
+		$gap: $grid-gap;
+	}
+
+	display: grid;
+	grid-column-gap: $gap;
+	grid-row-gap: $gap * $grid-gutter-factor;
+	grid-template-columns: repeat( $columns, 1fr );
+
+	& > #{$grid_item_element} {
+		margin-left: 0;
+	}
+
+}
+
+
+// Columns, Mobile
+
+@mixin columns-mobile( $columns, $grid_item_element: '.preview', $gap: null ) {
+
+	@include bp-max($small) {
+		@include columns( $columns,$grid_item_element, $gap );
+	}
+
+}
+
+// Columns, Tablet
+
+@mixin columns-tablet( $columns, $grid_item_element: '.preview', $gap: null ) {
+
+	@include bp-min-max($small, $medium) {
+		@include columns( $columns, $grid_item_element, $gap );
+	}
+
+}
+
+// Columns, Tablet Up
+
+@mixin columns-tablet-up( $columns, $grid_item_element: '.preview', $gap: null ) {
+
+	@include bp-min($small) {
+		@include columns( $columns, $grid_item_element, $gap );
+	}
+
+}
+
+// Columns, Desktop
+
+@mixin columns-desktop( $columns, $grid_item_element: '.preview', $gap: null ) {
+
+  @include bp-min($medium) {
+		@include columns( $columns, $grid_item_element, $gap );
+	}
+
+}

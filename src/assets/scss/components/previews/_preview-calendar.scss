@@ -1,0 +1,35 @@
+
+/* Preview--calendar
+--------------------------------------------- */
+
+.preview-calendar {
+  flex-flow: row nowrap;
+  flex-direction: row;
+  padding: var(--global--padding-inner);
+
+  .preview__content {
+    padding: var(--global--padding-inner);
+    width: calc(100% - 10px - 54px);
+  }
+
+  .preview__title {
+    margin: 0;
+    position: relative;
+
+    .preview__link {
+      display: block;
+    }
+
+  }
+
+
+}
+
+/*
+.has-bg,
+.has-img {
+  .preview--calendar {
+    background-color: theme(main, bg);
+  }
+}
+*/

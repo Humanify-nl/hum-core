@@ -36,4 +36,5 @@ function hum_remove_default_img_sizes( $sizes ) {
   }
   return $sizes;
 }
+
 add_filter( 'intermediate_image_sizes', 'hum_remove_default_img_sizes', 10, 1);

@@ -1,19 +1,21 @@
 const path = require('path');
+const sourcePath = path.join(__dirname, '/src');
+const outputPath = path.join(__dirname, '/dist');
 const assetPath = 'assets';
-const outputPath = 'dist';
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  context: path.resolve(__dirname, 'src/' + assetPath),
+  context: path.join(sourcePath, assetPath),
   mode: 'development',
   entry: {
      bundle: '/js' + '/bundle.js',
+     swiper: '/js' + '/swiper.js',
      main: '/scss' + '/main.scss',
      editor: '/scss' + '/editor.scss',
-     layout: '/scss' + '/editor-layout.scss',
+     layout: '/scss' + '/layout.scss',
      admin: '/scss' + '/admin.scss',
    },
   plugins: [
@@ -38,8 +40,8 @@ module.exports = {
         },
         // template files
         {
-          from: path.resolve(__dirname, 'src/'),
-          to: path.resolve(__dirname, 'dist/'),
+          from: sourcePath,
+          to: outputPath,
           globOptions: {
            ignore: [
              // Ignore all files in assets dir
@@ -56,7 +58,9 @@ module.exports = {
   output: {
     filename: 'js/[name].js',
     path: path.resolve(__dirname, outputPath + '/' + assetPath),
-    clean: true,
+    clean: {
+      keep: /acf-json/,
+    },
     assetModuleFilename: '[path][name][ext]'
   },
   /*

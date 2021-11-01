@@ -1,0 +1,40 @@
+
+/* Site layout
+--------------------------------------------- */
+
+.wrap {
+
+  > * {
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - #{$margin_site_s * 2});
+  }
+
+  //.content-wide & { max-width: var(--global-alignwide); }
+  //.content-center & { max-width: var(--global-aligncenter); }
+}
+
+
+.entry-content {
+
+  > * {
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - #{$margin_site_s * 2});
+  }
+
+  // .has-background has hor-padding of sitemargin
+  > .wp-block-group.alignfull:not(.has-background) {
+      .wp-block-group__inner-container {
+        margin-left: auto;
+        margin-right: auto;
+        width: calc(100% - #{$margin_site_s * 2});
+      }
+  }
+
+  //.content-wide & { max-width: var(--global-alignwide); }
+  //.content-center & { max-width: var(--global-aligncenter); }
+}
+
+@import "content-wide";
+@import "content-center";

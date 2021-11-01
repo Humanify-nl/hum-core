@@ -6,4 +6,4 @@
  */
 
 // Build the page
-require get_template_directory() . '/index.php';
+require get_template_directory() . '/archive.php';

@@ -1,0 +1,30 @@
+
+// Base styles
+// --------------------------------------------- /
+
+@mixin base-style {
+	font-family: var(--global--font-primary);
+	font-size: var(--global--font-size-normal);
+	font-weight: 400;
+	line-height: var(--global--line-height);
+	letter-spacing: 1px;
+
+	@media print {
+		font-family: sans-serif;
+	}
+
+}
+
+%transition {
+	transition: all 0.1s ease-in-out;
+}
+
+%alt_link {
+	color: $base-color;
+	font-weight: 400;
+
+	&:hover {
+		color: $highlight;
+		text-decoration: none;
+	}
+}

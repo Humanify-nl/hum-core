@@ -1,0 +1,42 @@
+
+/* Core blocks editor
+--------------------------------------------- */
+
+@import "core/button/button-editor";
+@import "core/code/code-editor";
+@import "core/columns/columns-editor";
+@import "core/cover/cover-editor";
+@import "core/group/group-editor";
+@import "core/heading/heading-editor";
+@import "core/image/image-editor";
+@import "core/list/list-editor";
+@import "core/paragraph/paragraph-editor";
+@import "core/post-excerpt/post-excerpt-editor";
+@import "core/pullquote/pullquote-editor";
+@import "core/quote/quote-editor";
+@import "core/separator/separator-editor";
+@import "core/social-icons/social-icons-editor";
+@import "core/table/table-editor";
+
+body {
+	color: var(--theme--site);
+	@include base-style();
+}
+
+
+/* Post title width */
+.editor-post-title__block.wp-block {
+
+	/* Post title styling */
+	.editor-post-title__input {
+		font-family: var(--global--font-primary);
+		font-weight: 400;
+		font-size: var(--global--font-size-h1);
+		padding: 0;
+	}
+}
+
+
+.acf-block-preview {
+	display: flex;
+}

@@ -1,0 +1,84 @@
+
+/* Typographical Elements
+--------------------------------------------- */
+
+body {
+	@include base-style();
+}
+
+a {
+	color: var(--theme--main-link, var(--global--color-primary));
+	text-decoration: underline;
+	@extend %transition;
+
+	&:hover {
+		color: var(--theme--main-link-hover), var(--global--color-primary-light);
+		text-decoration: none;
+	}
+
+	svg {
+		@extend %transition;
+	}
+}
+
+strong {
+	font-weight: 700;
+}
+
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+code,
+pre {
+	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+	font-size: var(--global--font-size-normal);
+}
+
+code {
+	display: inline-block;
+	white-space: nowrap;
+}
+
+pre {
+	display: block;
+	margin: 0 0 10px;
+	line-height: 18px;
+	word-break: break-all;
+	word-wrap: break-word;
+	white-space: pre;
+	white-space: pre-wrap;
+}
+
+pre code {
+	padding: 0;
+	color: inherit;
+	white-space: pre;
+	white-space: pre-wrap;
+	background-color: transparent;
+	border: 0;
+}
+
+cite {
+	font-style: normal;
+}
+
+.clearfix {
+	@include clearfix;
+}
+
+
+
+/* Box Sizing
+--------------------------------------------- */
+
+html,
+input[type="search"] {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}

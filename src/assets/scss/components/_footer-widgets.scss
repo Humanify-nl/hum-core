@@ -1,0 +1,72 @@
+
+/* Footer Widgets
+--------------------------------------------- */
+
+.footer-widgets {
+	background: brand-color( 'blue' );
+	padding: 40px 0 10px;
+	position: relative;
+
+	ul {
+		margin-bottom: 30px;
+	}
+
+	li {
+		list-style-type: none;
+		margin-bottom: 12px;
+	}
+
+	.widget-title {
+		color: $white;
+		font-size: var(--global--font-size-h3);
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	a {
+		color: $white;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+
+		svg {
+			fill: $white;
+			@include icon-position( 20px );
+			margin-right: 12px;
+		}
+	}
+
+	@include bp-max($small) {
+		.social-links li {
+				display: inline-block;
+				margin: 0;
+		}
+
+		.social-links .label {
+			display: none;
+		}
+
+		.footer-widgets-1 {
+			float: left;
+			width: calc( 50% - 8px );
+		}
+
+		.footer-widgets-2 {
+			float: right;
+			width: calc( 50% - 8px );
+		}
+
+		.footer-widgets-3 {
+			overflow: hidden;
+			width: 100%;
+		}
+	}
+
+	@include bp-min($small) {
+		.wrap {
+			@include columns( 3, 'div' );
+		}
+	}
+}

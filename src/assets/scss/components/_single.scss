@@ -1,0 +1,19 @@
+
+/* Single
+--------------------------------------------- */
+
+.single {
+
+
+  .related-posts {
+  	@include bp-min($small) {
+  		display: grid;
+  		grid-template-columns: repeat( 3, 1fr );
+  		grid-column-gap: 16px;
+
+  		header {
+  			grid-column: 1 / -1;
+  		}
+  	}
+  }
+}

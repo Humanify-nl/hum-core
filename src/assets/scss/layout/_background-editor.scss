@@ -1,0 +1,32 @@
+
+/* Block colors
+--------------------------------------------- */
+
+.has-background {
+  padding: var(--global--block-pad);
+
+  &.wp-block-columns,
+  &.wp-block-group {
+
+    [data-align="full"] > & {
+      padding-top: var(--global--spacing-vertical);
+      padding-bottom: var(--global--spacing-vertical);
+    }
+  }
+
+  [data-align="full"] > & {
+    padding: var(--global--block-pad) $margin_site_s;
+  }
+
+  [data-align="wide"] & {
+    [data-align="wide"] {
+      padding-left: var(--global--block-pad);
+      padding-right: var(--global--block-pad);
+    }
+  }
+
+
+  .has-background {
+    padding: var(--global--block-pad);
+  }
+}

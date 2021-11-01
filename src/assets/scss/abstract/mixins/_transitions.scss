@@ -1,0 +1,17 @@
+
+// Transitions
+// --------------------------------------------- /
+
+@mixin trans ($timeValue: 0.3, $properties...) {
+  transition-duration: ($timeValue * 1s);
+  transition-property: $properties;
+  transition-timing-function: ease;
+  backface-visibility: hidden;
+}
+
+@mixin trans-ea ($timeValue: 0.3, $properties...) {
+  transition-duration: ($timeValue * 1s);
+  transition-property: $properties;
+  transition-timing-function: ease-in-out;
+  backface-visibility: hidden;
+}

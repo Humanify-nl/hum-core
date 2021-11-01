@@ -15,9 +15,7 @@
 		<?php
 	  tha_footer_top();
 
-		get_template_part( 'template-parts-old/site/footer/footer', 'flex' );
-		get_template_part( 'template-parts-old/site/footer/footer', 'bottom' );
-		get_template_part( 'template-parts-old/site/footer/footer', 'float' );
+		get_template_part( 'template-parts/site/site-footer' );
 
 		tha_footer_bottom();
 		?>

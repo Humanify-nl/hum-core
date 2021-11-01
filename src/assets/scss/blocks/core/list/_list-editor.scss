@@ -1,0 +1,30 @@
+@import "list";
+
+/* List [editor]
+--------------------------------------------- */
+
+.wp-block-list  {
+	box-sizing: border-box;
+  padding-left: 1.5rem;
+
+  li {
+    padding-bottom: 0.5rem;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    ul, ol {
+      padding-top: 0.5rem;
+			padding-left: 1.5rem;
+    }
+  }
+
+  &.blocks-gallery-grid {
+    padding-left: 0;
+
+    li {
+      padding-bottom: 0;
+    }
+  }
+}

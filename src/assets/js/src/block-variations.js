@@ -1,22 +1,17 @@
 /**
  * Block variations
  *
- * @package hum-gutenberg
+ * @package hum-core
  */
 
 wp.domReady(() => {
 
   wp.blocks.registerBlockVariation(
-    'hum/entry-header', {
-      name: 'entry-header-full',
-      title: 'Post Header full',
-      icon: 'portfolio',
-      scope: ['block'],
-      innerBlocks: [
-        ['core/column'],
-        ['core/column'],
-        ['core/column'],
-      ],
+    'core/group', {
+      name: 'group-spaced',
+      title: 'Group spaced',
+      attributes: { className: 'wp-block-group-spaced' },
+      scope: 'transform',
     }
   );
 

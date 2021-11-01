@@ -1,0 +1,46 @@
+
+/* Heading
+--------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--global--font-primary);
+	font-weight: 400;
+	line-height: 1.2;
+	margin: 0 0 var(--global--text-margin);
+
+	a {
+		color: inherit;
+
+		&:hover {
+			color: $highlight;
+			text-decoration: none;
+		}
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+h1 {
+  font-size: var(--global--font-size-h1);
+	text-indent: -2px;
+}
+
+h2 {
+	font-size: var(--global--font-size-h2);
+	text-indent: -2px;
+}
+
+h3 {
+	font-size: var(--global--font-size-h3);
+}
+
+h4, h5, h6 {
+	font-size: var(--global--font-size-h4);
+}

@@ -31,8 +31,8 @@ tha_body_top();
 
 	<?php
 	tha_header_before();
-	get_template_part( 'template-parts/site', 'header' );
+	get_template_part( 'template-parts/site/site', 'header' );
 	tha_header_after();
 	?>
 
-	<div id="content" class="site-content">
+	<div class="site-content" id="content" >

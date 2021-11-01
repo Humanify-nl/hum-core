@@ -1,0 +1,44 @@
+
+/* Preview--list
+--------------------------------------------- */
+
+.preview-list {
+  flex-wrap: nowrap;
+  flex-direction: row;
+
+  .preview__content {
+    flex-direction: column;
+  }
+
+  .preview__title,
+  .preview__text p {
+    min-height: auto;
+  }
+
+  .preview__img + .preview__content {
+    margin-top: 0;
+    width: 66.6666%;
+  }
+
+  .preview__img {
+    width: 33.3333%;
+    img {
+      height: auto;
+    }
+  }
+
+  .preview__content {
+    margin-left: var(--global--block-gap);
+    .preview__footer {
+      margin-top: auto;
+    }
+  }
+
+  @include bp-max($base){
+
+    .preview__text {
+      font-size: 0.8125rem;
+    }
+  }
+
+}

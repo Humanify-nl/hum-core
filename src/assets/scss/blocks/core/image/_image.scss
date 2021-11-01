@@ -1,0 +1,31 @@
+
+/* Image
+--------------------------------------------- */
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+
+	&.alignleft {
+		float: left;
+		margin: 0 var(--global--text-margin) var(--global--text-margin) 0;
+	}
+
+	&.alignright {
+		float: right;
+		margin: 0 0 var(--global--text-margin) var(--global--text-margin);
+	}
+
+	&.aligncenter {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.wp-block-image figcaption {
+		color: $grey_7;
+		text-align: left;
+		font-size: 14px;
+		font-style: normal;
+	}
+}

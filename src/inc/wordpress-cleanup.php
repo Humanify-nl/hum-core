@@ -45,6 +45,26 @@ add_filter( 'body_class', 'hum_singular_body_class' );
 
 
 /**
+ * Get registered non-wp post types
+ * @return array { post types }
+ */
+function hum_registered_post_types() {
+
+	$args = [
+		'public'   => true,
+		'_builtin' => false,
+	];
+
+	$output = 'names'; // names or objects, note names is the default
+	$operator = 'and'; // 'and' or 'or'
+
+	$post_types = get_post_types( $args, $output, $operator );
+
+	return $post_types;
+}
+
+
+/**
  * Clean body classes
  *
  */
@@ -56,10 +76,18 @@ function hum_clean_body_class( $classes ) {
 		'page',
 		'archive',
 		'admin-bar',
-		'content-fullwidth',
+		'content-wide',
 		'content-sidebar',
-		'content',
+		'content-center',
+		'search',
+		'page-template-page-group',
 	];
+
+	$custom_post_types = hum_registered_post_types();
+	$allowed_classes[] = 'single-post';
+	foreach( $custom_post_types as $post_type ) {
+		$allowed_classes[] = 'single-' . $post_type;
+	}
 
 	return array_intersect( $classes, $allowed_classes );
 
@@ -176,3 +204,14 @@ add_filter( 'excerpt_more', 'hum_excerpt_more' );
 
 // Remove inline CSS for emoji
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
+
+/**
+ * Print array
+ *
+ */
+function hum_print_arr( $array ) {
+	echo '<pre>';
+		echo print_r( $array );
+	echo '</pre>';
+}

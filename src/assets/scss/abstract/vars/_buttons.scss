@@ -1,0 +1,85 @@
+
+// Buttons
+// --------------------------------------------- /
+
+// color variable map in Sass
+$button: (
+  button: (
+    color-text: clr(white, flash), // property
+    color-text-hover: clr(white),
+    color-text-active: clr(white, flash),
+    color-back: clr(primary),
+    color-back-hover: clr(primary, light),
+    color-back-active: clr(primary, light),
+    font-size: var(--global--font-size-normal),
+    border-width: 1px,
+    border-radius: 0,
+    line-height: var(--global--line-height),
+    padding-ver: var(--global--padding-inner),
+    padding-hor: var(--global--spacing-horizontal),
+  ),
+);
+
+
+$btn-prefix: '--';
+
+// retrieve color from map: button(base, color-text)
+@function btn($selector, $properties:null, $true-val:false) {
+
+  // we need to return the color value
+  @if $true-val == true {
+    // color variant is optional
+    @if ($properties != null) {
+      // map inception, need two deep
+      @return map-get(map-get($map-name,$selector),$properties);
+
+    } @else {
+      // single-level color, one deep
+      @return map-get($map-name,$selector);
+
+    }
+  // if we're only returning the CSS4 variable
+  } @else {
+    // color variant is optional
+    @if ($properties != null) {
+      // map inception, need two names
+      @return var(#{$btn-prefix + $selector + $btn-prefix + $properties});
+
+    } @else {
+      // single-level color, one name
+      @return var(#{$btn-prefix + $selector});
+
+    }
+  }
+}
+
+
+
+// Write variables in root
+// --------------------------------------------- /
+
+$map-name: $button;
+$root-prefix: '--';
+
+:root {
+
+  // each item in color map
+  @each $selector, $properties in $map-name {
+
+    // maps require a second loop
+    @if type-of($properties) == "map" {
+
+      // each item in sub map
+      @each $property, $value in $properties {
+        // --color-primary-base
+        #{$root-prefix + $selector + '--' + $property}: $value;
+      }
+
+    // normal styles
+    } @else {
+
+      #{$root-prefix + $selector}: $properties;
+
+    }
+  }
+}

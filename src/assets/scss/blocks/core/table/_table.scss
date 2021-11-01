@@ -1,0 +1,13 @@
+
+/* Tables
+--------------------------------------------- */
+
+.wp-block-table  {
+  border-collapse: collapse;
+  width: 100%;
+
+	td, th {
+		padding: .5em;
+	  border: 1px solid;
+	}
+}

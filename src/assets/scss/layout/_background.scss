@@ -1,0 +1,22 @@
+
+/* Block colors
+--------------------------------------------- */
+
+.has-background {
+  padding: var(--global--block-pad);
+
+  &.alignfull {
+    padding: var(--global--block-pad) $margin_site_s;
+  }
+
+  &.alignwide {
+    .alignwide {
+      padding-left: var(--global--block-pad);
+      padding-right: var(--global--block-pad);
+    }
+  }
+
+  .has-background {
+    padding: var(--global--block-pad);
+  }
+}

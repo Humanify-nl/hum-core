@@ -1,0 +1,30 @@
+
+// Row padding
+// --------------------------------------------- /
+
+@mixin row-pad( $padding: null ) {
+  padding-top: $padding;
+  padding-bottom: $padding;
+}
+
+
+@mixin row-pad-mobile( $padding: null ) {
+
+  @include bp-max( $small ) {
+    @include row-pad( $padding );
+  }
+}
+
+@mixin row-pad-tablet-up( $padding: null ) {
+
+  @include bp-min( $small ) {
+    @include row-pad( $padding );
+  }
+}
+
+@mixin row-pad-desktop( $padding: null ) {
+
+  @include bp-min( $large ) {
+    @include row-pad( $padding );
+  }
+}

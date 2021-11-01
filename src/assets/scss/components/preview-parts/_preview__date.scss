@@ -1,0 +1,23 @@
+
+// Preview date
+
+.preview__date {
+
+  .date--square {
+    background-color: $grey_3;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    height: 3.375em;
+    width: 3.375em;
+
+    .date__day {
+      font-size: 1em;
+    }
+    .date__month {
+      font-size: 1em;
+    }
+  }
+
+}

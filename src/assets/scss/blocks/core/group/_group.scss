@@ -1,0 +1,19 @@
+
+/* Group
+--------------------------------------------- */
+
+.wp-block-group {
+
+	.wp-block-group__inner-container {
+		@include clearfix;
+
+		& > *:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.wp-block-columns:last-child {
+		margin-bottom: 0;
+	}
+
+}

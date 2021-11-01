@@ -1,0 +1,145 @@
+
+/* Entry Comments
+--------------------------------------------- */
+
+.entry-comments {
+
+	.comment-list {
+		margin: 0 0 var(--global--text-margin-x2);
+
+		li {
+			list-style-type: none;
+			border: 1px solid $grey_3;
+
+			article {
+				padding: var(--global--text-margin);
+				position: relative;
+			}
+
+			&.staff > article {
+				background: rgba( $highlight, .05 );
+				border-left: 2px solid $highlight;
+			}
+		}
+
+		& > li {
+			border-radius: 3px;
+			overflow: hidden;
+			margin-bottom: 15px;
+		}
+
+		.comment-author {
+			color: $base-color;
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0;
+			font-family: $serif;
+			font-size: var(--global--font-size-h4);
+
+			a {
+				color: $base-color;
+				text-decoration: none;
+
+				&:hover {
+					color: $highlight;
+				}
+			}
+
+			.says {
+				display: none;
+			}
+		}
+
+		.comment-edit-link {
+			display: none;
+		}
+
+		.comment-meta {
+			font-size: 14px;
+			color: $grey_6;
+			vertical-align: middle;
+
+			a {
+				color: $grey_6;
+				font-weight: 400;
+				text-decoration: none;
+
+				&:hover {
+					color: $highlight;
+				}
+			}
+		}
+
+		.comment-content {
+
+			p:last-child {
+				margin: 0;
+			}
+		}
+
+		.comment-reply-link {
+			position: absolute;
+			top: 16px;
+			right: 16px;
+			font-size: 16px;
+			text-transform: uppercase;
+			text-decoration: none;
+		}
+
+		ul.children {
+			margin: 0;
+
+			li {
+				border-top: 1px solid $border-color;
+			}
+		}
+
+	}
+}
+
+.comment-navigation {
+
+	a {
+		font-size: 20px;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+}
+
+.comment-respond {
+	margin-top: var(--global--spacing-vertical);
+	margin-bottom: var(--global--spacing-vertical);
+
+	label {
+		display: block;
+		margin-right: 12px;
+
+		&[for="subscribe"],
+		&[for="wp-comment-cookies-consent"] {
+			display: inline-block;
+		}
+	}
+
+	.comment-form-cookies-consent {
+		input {
+			width: auto;
+		}
+	}
+
+	@include bp-min($small) {
+
+		.comment-form-author,
+		.comment-form-email {
+			float: left;
+			width: calc( 50% - 16px );
+		}
+
+		.comment-form-email {
+			margin-left: 32px;
+		}
+
+		input[type="submit"] {
+			width: auto;
+		}
+	}
+}

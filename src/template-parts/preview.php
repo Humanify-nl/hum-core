@@ -6,15 +6,14 @@
  */
 ?>
 
-<article class="preview post-summary">
+<article class="preview">
 
   <?php
 	hum_preview_image();
-
-	echo '<div class="preview__content">';
-		hum_entry_category();
-		hum_preview_title();
-	echo '</div>';
+	hum_preview_category();
+	hum_preview_title();
+  hum_preview_excerpt();
+  hum_preview_footer();
   ?>
 
 </article>

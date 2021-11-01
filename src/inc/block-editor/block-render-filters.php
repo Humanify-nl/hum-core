@@ -2,29 +2,26 @@
 /**
  * Block output filters
  *
- * @package hum-gutenberg
+ * @package hum-core
  */
 
 /*
  * Extend block output filter
  * @see https://javascriptforwp.com/extending-wordpress-blocks/
  */
-
-add_filter( 'render_block', 'hum_block_filter', 10, 3);
-
 function hum_block_filter( $block_content, $block ) {
 
-  if ( $block['blockName'] === 'hum/header' ) {
+  if ( get_post_type( get_the_id() ) === 'post' || get_post_type( get_the_id() ) === 'testimonial' ) {
 
-    $content = '<div class="wp-block-paragraph">';
-    $content .= $block_content;
-    $content .= '</div>';
-    return $content;
-
-  } else {
-
-    return $block_content;
-
+    if ( $block['blockName'] === 'core/post-excerpt' ) {
+      return;
+    }
   }
 
+  if ( $block['blockName'] === 'core/list' ) {
+    $block_content = '<div class="wp-block-list">' .$block_content. '</div>';
+  }
+
+  return $block_content;
 }
+add_filter( 'render_block', 'hum_block_filter', 10, 3);

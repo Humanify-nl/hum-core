@@ -15,10 +15,11 @@ module.exports = {
   mode: 'development',
   entry: {
      bundle: '/js' + '/bundle.js',
+     gutenberg: '/js' + '/gutenberg.js',
      swiper: '/js' + '/swiper.js',
      main: '/scss' + '/main.scss',
      editor: '/scss' + '/editor.scss',
-     layout: '/scss' + '/editor-layout.scss',
+     layout: '/scss' + '/layout.scss',
      admin: '/scss' + '/admin.scss',
    },
   plugins: [

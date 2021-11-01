@@ -9,15 +9,15 @@
  // Editor styles
 add_theme_support('editor-styles');
 
+// Inside wrap-editor-styles
 add_editor_style( array(
-  'assets/css/style-editor.css',
-  //'assets/css/editor.css',
+  'assets/css/editor.css',
 ) );
 
 // Add support for responsive embedded content.
 add_theme_support( 'responsive-embeds' );
 
-// Add support for full and wide align images.
+// Add support for full and wide aligns.
 add_theme_support( 'align-wide' );
 
 // Add custom editor font sizes.
@@ -39,7 +39,7 @@ add_theme_support(
     array(
       'name'      => esc_html__( 'Large', 'hum-core' ),
       'shortName' => esc_html_x( 'L', 'Font size', 'hum-core' ),
-      'size'      => 32,
+      'size'      => 24,
       'slug'      => 'large',
     ),
   )
