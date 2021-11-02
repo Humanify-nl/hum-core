@@ -4,7 +4,14 @@
 
 .wp-block-table  {
   border-collapse: collapse;
-  width: 100%;
+  margin-bottom: var(--global--block-margin);
+  @include bp-min($small){
+    width: 100%;
+  }
+  @include bp-max($small){
+    font-size: 12px;
+    letter-spacing: 0;
+  }
 
 	td, th {
 		padding: .5em;
