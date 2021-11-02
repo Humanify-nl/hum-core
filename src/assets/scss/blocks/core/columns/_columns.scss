@@ -7,6 +7,10 @@
   .wp-block-columns {
     margin-bottom: 0;
   }
+
+  + .wp-block-columns {
+    margin-top: var(--global--spacing-vertical);
+  }
 }
 
 .wp-block-column {
@@ -15,6 +19,10 @@
     margin-bottom: var(--global--block-gap);
 
     > *:last-child {
+      margin-bottom: 0;
+    }
+
+    &:last-child {
       margin-bottom: 0;
     }
   }
