@@ -2,6 +2,10 @@
 /* Image
 --------------------------------------------- */
 
+figure {
+	margin-bottom: 0;
+}
+
 img {
 	display: block;
 	max-width: 100%;
@@ -22,10 +26,19 @@ img {
 		margin-right: auto;
 	}
 
-	.wp-block-image figcaption {
-		color: $grey_7;
-		text-align: left;
-		font-size: 14px;
-		font-style: normal;
+}
+
+.wp-block-image figcaption {
+	display: none;
+	color: $grey_7;
+	text-align: left;
+	font-size: 14px;
+	font-style: normal;
+	margin-bottom: 0;
+}
+
+.wp-block-gallery {
+	.blocks-gallery-grid {
+		margin-bottom: -1em;
 	}
 }
