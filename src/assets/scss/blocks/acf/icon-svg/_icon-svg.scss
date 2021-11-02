@@ -80,6 +80,13 @@ $icon-width-large: $icon-size-large + ($icon-padding-large * 2);
 
 }
 
+.wp-block-acf-icon {
+  // only select the parent
+  &.block-editor-block-list__block {
+    margin-bottom: 0;
+  }
+}
+
 // center editor preview
 .editor-preview {
   justify-content: center;
