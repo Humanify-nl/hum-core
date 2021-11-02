@@ -8,7 +8,7 @@
     padding-left: 1.5rem;
 
     li {
-      padding-bottom: .5rem;
+      padding-bottom: 0.5rem;
 
       &:last-child {
         padding-bottom: 0;
@@ -26,5 +26,11 @@
         padding-bottom: 0;
       }
     }
+
+    &.has-background {
+      display: inline-block;
+      padding-left: calc( var(--global--block-pad) + 1.5rem)
+    }
   }
+
 }
