@@ -10,13 +10,13 @@
 add_theme_support( 'disable-custom-colors' );
 
 // Editor color palette.
-$base       = '#282B3E'; //#0f0c1c';
-$primary 		= '#5E7B28';
-$secondary  = '#156099';
+$base       = '#0f0c1c';
+$primary 		= '#206697';
+$secondary  = '#1D8B5D';
 $tertiary   = '#F4643D';
 $grey       = '#E0E0E0';
-$grey_white = '#F6FAF0';
-$white      = '#FFFFFF';
+$grey_white = '#f7f7f7';
+$white      = '#ffffff';
 
 add_theme_support(
   'editor-color-palette',
@@ -37,13 +37,11 @@ add_theme_support(
       'slug'  => 'secondary',
       'color' => $secondary,
     ),
-    /*
     array(
       'name'  => esc_html__( 'Tertiary', 'hum-core' ),
       'slug'  => 'tertiary',
       'color' => $tertiary,
     ),
-    */
     array(
       'name'  => esc_html__( 'Grey', 'hum-core' ),
       'slug'  => 'grey',
