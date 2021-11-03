@@ -15,7 +15,7 @@ add_action( 'tha_entry_top', 'hum_entry_image', 14 );
 add_filter( 'hum_page_layout', 'hum_return_content_center' );
 
 function hum_block_area_after() {
-	hum_block_area()->show( 'block-area-after' );
+	hum_block_area()->show( 'after-entry' );
 }
 add_action( 'tha_content_bottom', 'hum_block_area_after' );
 

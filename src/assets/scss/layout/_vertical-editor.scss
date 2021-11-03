@@ -31,8 +31,7 @@
 	> .wp-block {
 		margin-bottom: var(--global--block-margin);
 
-		&:first-child:not([data-align="full"]),
-		&:first-child:not(.has-background):not(.wp-block-cover){
+		&:first-child:not(.has-background):not(.wp-block-cover):not(.wp-block-post-excerpt):not([data-align="full"]){
 			margin-top: var(--global--block-margin);
 		}
 

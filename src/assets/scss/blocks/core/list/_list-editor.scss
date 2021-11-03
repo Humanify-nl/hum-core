@@ -27,4 +27,8 @@
       padding-bottom: 0;
     }
   }
+
+	&.has-background {
+		padding-left: calc( var(--global--block-pad) + 1.5rem)
+	}
 }

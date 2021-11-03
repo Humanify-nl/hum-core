@@ -26,6 +26,7 @@ function hum_post_blocks_array( $post_type = false ) {
     'core/video',
     // --> design
     'core/buttons',
+    'core/button',
     'core/columns',
     'core/group',
     'core/more',
@@ -72,6 +73,7 @@ function hum_post_blocks_array( $post_type = false ) {
     'core/video',
     // --> design
     'core/buttons',
+    'core/button',
     'core/columns',
     'core/group',
     'core/more',
@@ -110,6 +112,7 @@ function hum_post_blocks_array( $post_type = false ) {
     'core/video',
     // --> design
     'core/buttons',
+    'core/button',
     'core/columns',
     'core/group',
     //'core/more',
@@ -146,6 +149,7 @@ function hum_post_blocks_array( $post_type = false ) {
     'core/video',
     // --> design
     'core/buttons',
+    'core/button',
     'core/columns',
     'core/group',
     'core/spacer',

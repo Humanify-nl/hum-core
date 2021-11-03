@@ -16,7 +16,7 @@
 			margin-right: auto !important;
 
 			> .acf-block-body {
-				max-width: var(--global-alignwide);
+				max-width: var(--global--alignwide);
 				margin-left: auto;
 				margin-right: auto;
 			}
@@ -36,17 +36,17 @@
 	.editor-styles-wrapper {
 
 		.editor-post-title__block.wp-block {
-			max-width: var(--global-alignwide);
+			max-width: var(--global--alignwide);
 		}
 
 		.is-root-container {
 
 			> .wp-block {
-				max-width: var(--global-alignwide);
+				max-width: var(--global--alignwide);
 			}
 
 			> .block-list-appender {
-				max-width: var(--global-alignwide);
+				max-width: var(--global--alignwide);
 				margin-left: auto;
 				margin-right: auto;
 			}
@@ -58,7 +58,7 @@
 
 			.wp-block-group__inner-container {
 				> *:not([data-align="full"]) {
-					max-width: var(--global-alignwide);
+					max-width: var(--global--alignwide);
 				}
 			}
 		}
@@ -71,28 +71,28 @@
 	.editor-styles-wrapper {
 
 		.editor-post-title__block.wp-block {
-			max-width: var(--global-aligncenter);
+			max-width: var(--global--aligncenter);
 		}
 
 		.is-root-container {
 
 			> .wp-block {
-				max-width: var(--global-aligncenter);
+				max-width: var(--global--aligncenter);
 			}
 
 			> .block-list-appender {
-				max-width: var(--global-alignwide);
+				max-width: var(--global--alignwide);
 				margin-left: auto;
 				margin-right: auto;
 			}
 		}
 
 		.wp-block[data-align="wide"] {
-			max-width: var(--global-alignwide);
+			max-width: var(--global--alignwide);
 
 			.wp-block-group__inner-container {
 				> *:not([data-align="full"]):not([data-align="wide"]) {
-					max-width: var(--global-aligncenter);
+					max-width: var(--global--aligncenter);
 				}
 			}
 		}
@@ -103,7 +103,7 @@
 
 			.wp-block-group__inner-container {
 				> *:not([data-align="full"]):not([data-align="wide"]) {
-					max-width: var(--global-aligncenter);
+					max-width: var(--global--aligncenter);
 				}
 			}
 		}
@@ -111,6 +111,10 @@
 	}
 }
 
+
+.block-editor-contrast-checker {
+	display: none;
+}
 
 // attach post excerpt input to title
 .post-type-post {
@@ -123,5 +127,6 @@
 .post-type-page {
 	.edit-post-visual-editor__post-title-wrapper {
 		border-bottom: 1px dashed var(--global--color-grey);
+		margin-bottom: 8px;
 	}
 }

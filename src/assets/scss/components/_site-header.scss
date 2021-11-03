@@ -9,7 +9,7 @@
 	min-height: 49px;
 
 	.wrap-outer {
-		max-width: var(--global-alignwide);
+		max-width: var(--global--alignwide);
 		margin-left: auto;
 		margin-right: auto;
 		@include calc-width(100, $margin_site_s);

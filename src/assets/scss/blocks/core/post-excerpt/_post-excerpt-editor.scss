@@ -6,12 +6,15 @@
 .wp-block-post-excerpt {
 	border-bottom: 1px dashed var(--global--color-grey);
 	font-size: var(--global--font-size-small);
-	&:after {
+	&:before {
 		content: "Not rendered";
 		color: var(--global--color-grey);
 		font-size: 0.75em;
 		display: block;
+		position: absolute;
 		text-align: right;
+		line-height: 22px;
+		width: 100%;
 	}
 
 	.wp-block-post-excerpt__more-text {

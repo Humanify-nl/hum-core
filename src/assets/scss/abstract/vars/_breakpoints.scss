@@ -33,13 +33,13 @@ $margin_site_m: 3rem; // > 540px
 
 // Root variables
 :root {
-  --global-bp-mobile: #{$base};
-  --global-bp-tablet: #{$small};
-  --global-bp-laptop: #{$medium};
-  --global-bp-desktop: #{$large};
-  --global-aligncenter: #{$width-site-m};
-  --global-alignwide: #{$width-site-l};
-  --global-aligndefault: #{--global-alignwide};
+  --global--bp-mobile: #{$base};
+  --global--bp-tablet: #{$small};
+  --global--bp-laptop: #{$medium};
+  --global--bp-desktop: #{$large};
+  --global--aligncenter: #{$width-site-m};
+  --global--alignwide: #{$width-site-l};
+  --global--aligndefault: #{--global--alignwide};
 }
 
 
