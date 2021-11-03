@@ -4,17 +4,17 @@
 
 $map-colors: (
   base: (
-    base: #282B3E, //#0f0c1c,
+    base: #0f0c1c,
   ),
   primary: (
-    base: #5E7B28,
-    light: lighten(#5E7B28, 5),
-    dark: darken(#5E7B28, 5),
+    base: #206697,
+    light: lighten(#206697, 5),
+    dark: darken(#206697, 5),
   ),
   secondary: (
-    base: #156099,
-    light: lighten(#156099, 5),
-    dark: darken(#156099, 5),
+    base: #1D8B5D,
+    light: lighten(#1D8B5D, 5),
+    dark: darken(#1D8B5D, 5),
   ),
   tertiary: (
     base: #F4643D,
@@ -22,20 +22,20 @@ $map-colors: (
     dark: darken(#F4643D, 5),
   ),
   white: (
-    base: #FFFFFF,
-    flash: #F6FAF0,
+    base: #fff,
+    flash: #f1f2f4,
     grey: #f7f7f7,
     true: #fff,
   ),
   grey: (
     base: #E0E0E0,
     light: #EBEBEB,
-    white: #F6FAF0,
+    white: #F5F5F5,
     dark: #CCCCCC,
     text: #757575,
   ),
   black: (
-    base: #282B3E, //#0f0c1c,
+    base: #0f0c1c,
     light: #222,
     dark: #111,
   ),
