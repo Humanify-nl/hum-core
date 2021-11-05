@@ -34,7 +34,7 @@ module.exports = {
     new RemoveEmptyScriptsPlugin(),
     // extract and write css
     new MiniCssExtractPlugin({
-      filename: 'css/[name].min.css',
+      filename: 'css/[name].css',
     }),
     /*
     // wordpress dependencies
