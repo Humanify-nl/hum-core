@@ -18,8 +18,8 @@
       margin-top: var(--global--block-margin);
     }
 
-    &:last-child.has-background {
-      margin-bottom: 0;
+    &:last-child:not(.has-background) {
+      margin-bottom: var(--global--spacing-vertical);
     }
   }
 

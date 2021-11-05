@@ -45,8 +45,7 @@
 		}
 	}
 
-	> .wp-block-columns,
-	> .wp-block-cover {
+	> .wp-block-group {
 		position: relative;
 		&:before {
 			@include spacer_icon();
