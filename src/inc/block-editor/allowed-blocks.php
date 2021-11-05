@@ -245,3 +245,13 @@ function hum_filter_allowed_block_types( $allowed_block_types, $editor_context )
 }
 
 add_filter( 'allowed_block_types_all', 'hum_filter_allowed_block_types', 10, 2 );
+
+
+// remove dropcap
+add_filter(
+  'block_editor_settings',
+  function ($editor_settings) {
+    $editor_settings['__experimentalFeatures']['typography']['dropCap'] = false;
+    return $editor_settings;
+  }
+);
