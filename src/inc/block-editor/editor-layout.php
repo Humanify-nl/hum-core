@@ -63,6 +63,8 @@ function hum_editor_layout_class( $classes ) {
 			$classes .= ' content-center';
 		} elseif ( $screen->post_type === 'page' ) {
 			$classes .= ' content-wide';
+		} elseif ( $screen->post_type === 'testimonial' ) {
+			$classes .= ' content-center';
 		}
 	}
 
