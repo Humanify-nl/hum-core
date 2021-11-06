@@ -7,12 +7,10 @@ body {
 }
 
 a {
-	color: var(--theme--main-link, var(--global--color-primary));
 	text-decoration: underline;
 	@extend %transition;
 
 	&:hover {
-		color: var(--theme--main-link-hover), var(--global--color-primary-light);
 		text-decoration: none;
 	}
 

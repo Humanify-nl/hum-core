@@ -9,16 +9,11 @@
 
 		li {
 			list-style-type: none;
-			border: 1px solid $grey_3;
+			border: 1px solid var(--theme--border);
 
 			article {
 				padding: var(--global--text-margin);
 				position: relative;
-			}
-
-			&.staff > article {
-				background: rgba( $highlight, .05 );
-				border-left: 2px solid $highlight;
 			}
 		}
 
@@ -29,7 +24,6 @@
 		}
 
 		.comment-author {
-			color: $base-color;
 			display: inline-block;
 			vertical-align: middle;
 			margin: 0;
@@ -37,12 +31,7 @@
 			font-size: var(--global--font-size-h4);
 
 			a {
-				color: $base-color;
 				text-decoration: none;
-
-				&:hover {
-					color: $highlight;
-				}
 			}
 
 			.says {
@@ -56,17 +45,13 @@
 
 		.comment-meta {
 			font-size: 14px;
-			color: $grey_6;
+			color: clr(grey, text);
 			vertical-align: middle;
 
 			a {
-				color: $grey_6;
+				color: clr(grey, text);
 				font-weight: 400;
 				text-decoration: none;
-
-				&:hover {
-					color: $highlight;
-				}
 			}
 		}
 
@@ -90,7 +75,7 @@
 			margin: 0;
 
 			li {
-				border-top: 1px solid $border-color;
+				border-top: 1px solid var(--theme--border);
 			}
 		}
 

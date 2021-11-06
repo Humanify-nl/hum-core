@@ -1,0 +1,36 @@
+
+// Button style
+// --------------------------------------------- /
+// Applies button styles to blocks and elements that share them.
+
+@mixin button-style() {
+	border: var(--button--border-width) solid transparent;
+	border-radius: var(--button--border-radius);
+	cursor: pointer;
+	font-weight: var(--button--font-weight);
+	font-family: var(--button--font-family);
+	font-size: var(--button--font-size);
+	line-height: var(--button--line-height);
+	padding: var(--button--padding-ver) var(--button--padding-hor);
+	text-decoration: none;
+	user-select: none;
+
+
+	// Focus Button outline color should always match the current text color
+	&:focus {
+		outline: 0;
+	}
+
+	// default background
+	&:not(.has-background) {
+		$default: nth( nth( $color-picker, 1 ), 2 ); // first color in $colors array
+		background-color: $default;
+	}
+
+	// Disabled Button colors
+	&:disabled {
+		background-color: var(--color-white-50);
+		border-color: var(--color-white-50);
+		color: var(--button--color-text-active);
+	}
+}

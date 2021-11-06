@@ -2,40 +2,52 @@
 // Colors
 // --------------------------------------------- /
 
+$color-picker: (
+  primary: #206697,
+  secondary: #1D8B5D,
+  tertiary: #F4643D,
+  grey-light: #EBEBEB,
+  white: #FFFFFF,
+  black: #0f0C1C,
+);
+
+@function c($color-name) {
+  @return map-get($color-picker,$color-name);
+}
+
 $map-colors: (
   base: (
-    base: #0f0c1c,
+    base: c(black),
   ),
   primary: (
-    base: #206697,
-    light: lighten(#206697, 5),
-    dark: darken(#206697, 5),
+    base: c(primary),
+    light: lighten(c(primary), 10),
+    dark: darken(c(primary), 10),
   ),
   secondary: (
-    base: #1D8B5D,
-    light: lighten(#1D8B5D, 5),
-    dark: darken(#1D8B5D, 5),
+    base: c(secondary),
+    light: lighten(c(secondary), 10),
+    dark: darken(c(secondary), 10),
   ),
   tertiary: (
-    base: #F4643D,
-    light: lighten(#F4643D, 5),
-    dark: darken(#F4643D, 5),
+    base: c(tertiary),
+    light: lighten(c(tertiary), 10),
+    dark: darken(c(tertiary), 10),
   ),
   white: (
-    base: #fff,
+    base: c(white),
     flash: #f1f2f4,
     grey: #f7f7f7,
     true: #fff,
+    50: rgba( #fff, 0.5),
   ),
   grey: (
-    base: #E0E0E0,
-    light: #EBEBEB,
-    white: #F5F5F5,
-    dark: #CCCCCC,
+    base: #C2C2C2,
+    light: c(grey-light),
     text: #757575,
   ),
   black: (
-    base: #0f0c1c,
+    base: c(black),
     light: #222,
     dark: #111,
   ),
@@ -44,7 +56,7 @@ $map-colors: (
 
 
 // variable prefix
-$color-prefix: --global--color-;
+$color-prefix: '--color';
 
 // retrieve color from map `clr(primary, base)`
 @function clr($color-name, $color-variant: base) {
@@ -66,15 +78,15 @@ $color-prefix: --global--color-;
       @each $subname, $color-hex in $color-shades {
         // --color-primary-base
         @if $subname == 'base' {
-          #{$color-prefix + $color-name}: $color-hex;
+          #{$color-prefix + '--' + $color-name}: $color-hex;
         } @else {
-          #{$color-prefix + $color-name + '-' + $subname}: $color-hex;
+          #{$color-prefix + '--' + $color-name + '-' + $subname}: $color-hex;
         }
       }
     // no map
     } @else if type-of($color-shades) == "color" {
       // output color
-      #{$color-prefix + $color-name}: $color-shades;
+      #{$color-prefix + '--' + $color-name}: $color-shades;
     }
   }
 }

@@ -18,17 +18,16 @@
   }
 
   .preview__content {
-    background-color: rgba($grey_3, 0.85);
+    background-color: rgba(clr(grey, light), 0.85);
     bottom: 0;
     position: absolute;
-    text-shadow: $text_shadow;
-    padding: var(--global--padding);
+    padding: var(--global--block-pad);
     height: 100%;
     width: 100%;
     margin-top: 0;
 
     .preview__title {
-      margin-bottom: var(--global--padding);
+      margin-bottom: var(--global--block-pad);
     }
 
     @include bp-max($medium){
@@ -62,7 +61,7 @@
   &:hover {
     @include bp-min($medium){
       .preview__content {
-        background-color: rgba($grey_3, 0.75);
+        background-color: rgba(clr(grey, light), 0.75);
         transform: translateY( 0 );
       }
     }

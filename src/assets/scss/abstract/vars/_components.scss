@@ -3,27 +3,11 @@
 // --------------------------------------------- /
 
 $map-components: (
-	branding: (
-		color-text: var(--global--color-primary),
-		color-link: var(--global--color-primary),
-		color-link-hover: var(--global--color-secondary),
-		title: (
-			font-family: var(--global--font-primary),
-		  font-size: var(--global--font-size-normal),
-			font-size-mobile: var(--heading--font-size-small),
-			font-weight: normal,
-			text-transform: uppercase,
-		),
-		description: (
-			font-family: var(--global--font-secondary),
-		  font-size: var(--global--font-size-small),
-		),
-		logo: (
-		  max-width: 200px,
-			max-height: 64px,
-			max-width-mobile: 56px,
-			max-height-mobile: 56px,
-		),
+	site-title: (
+		font-family: var(--global--font-primary),
+	  font-size: 24px,
+		font-size-mobile: var(--heading--font-size-small),
+		text-transform: uppercase,
 	),
 	menu:(
 		font-family: var(--global--font-primary),
@@ -37,21 +21,22 @@ $map-components: (
 		line-height: 22px,
 	),
 	pagination: (
-		color-text: var(--global--color-primary),
-		color-link: var(--global--color-primary),
-		color-link-hover: var(--global--color-primary-hover),
 		font-family: var(--global--font-secondary),
 		font-size: var(--global--font-size-normal),
-		font-weight: normal,
-		font-weight-strong: 600,
+		font-weight: 600,
 	),
 	footer: (
-		color-back: var(--global--color-primary),
-		color-text: var(--global--color-white),
-		color-link: var(--global--color-white),
-		color-link-hover: var(--global--color-white-flash),
 		font-family: var(--global--font-primary),
 		font-size: var(--global--font-size-small),
+	),
+	button: (
+		font-size: var(--global--font-size-normal),
+		font-family: var(--global--font-primary),
+		border-width: 1px,
+		border-radius: 0,
+		line-height: var(--global--line-height),
+		padding-ver: var(--global--padding-inner),
+		padding-hor: var(--global--spacing-horizontal),
 	),
 );
 

@@ -3,46 +3,53 @@
 // --------------------------------------------- /
 
 $themecolors: (
-  site: (
-    base: clr(black),
-    bg: clr(white),
-    body: clr(white, flash),
-    alert: #8B3036,
-    border: clr(grey, light),
-  ),
+  base: clr(black),
+  bg: clr(white),
+  body: clr(white, flash),
+  alert: #8B3036,
+  border: clr(grey),
+  heading: clr(primary),
+  link: clr(primary),
+  link-a: clr(primary, light),
+  link-h: clr(primary, dark),
+  // components
   footer: (
     base: clr(black),
     bg: clr(white),
     text: clr(black),
     title: clr(black),
-    link: clr(black),
-    link-h: clr(secondary),
-    link-a: clr(secondary, light),
+    link: clr(primary),
+    link-h: clr(primary),
+    link-a: clr(primary, light),
+    icon: clr(primary),
   ),
   header: (
     base: clr(black),
     bg: clr(white),
     bg-alt: clr(white, flash),
     text: clr(black),
+    branding: clr(primary),
+    border: clr(grey, light),
   ),
   menu: (
     base: clr(black),
     bg: clr(white),
-    bg-alt: clr(grey, white),
+    bg-alt: clr(white, grey),
     link: clr(primary),
     link-h: clr(primary, light),
     link-a: clr(primary, dark),
     mark: clr(primary),
-    border: clr(grey, white),
+    border: clr(grey, light),
   ),
   submenu: (
     base: clr(black),
-    bg: clr(grey, white),
+    bg: clr(white, grey),
     bg-h: clr(grey, light),
     link: clr(black),
     link-h: clr(primary),
     link-a: clr(primary, dark),
     mark: clr(primary, light),
+    expand: clr(black),
   ),
   mobmenu: (
     base: clr(black),
@@ -65,23 +72,13 @@ $themecolors: (
     border-a: clr(secondary),
     label: clr(primary),
   ),
-  // default theme
-  main: (
-    base: clr(primary),
-    alt: clr(secondary),
-    text: clr(black),
-    titles: clr(primary),
-    bg: clr(grey, light),
-    bg-alt: clr(white),
-    link: clr(primary),
-    link-h: clr(primary, light),
-    link-a: clr(primary, dark),
-    btn: clr(primary),
-    btn-h: clr(primary, light),
-    btn-a: clr(primary, dark),
-    border: clr(primary, dark),
-    grey: clr(grey),
-    white: clr(white),
+  button: (
+    text: clr(white, flash), // property
+    text-hover: clr(white),
+    text-active: clr(white, flash),
+    back: clr(primary),
+    back-hover: clr(primary, light),
+    back-active: clr(primary, light),
   ),
 );
 
@@ -92,21 +89,30 @@ $themecolors: (
 
 
 // Write variables in root -------------------- /
-$color-prefix: --theme;
+$color-prefix: '--theme';
 
 :root {
 
   // each item in color map
   @each $name, $color-shades in $themecolors {
 
-    // each item in sub map
-    @each $subname, $color-hex in $color-shades {
-      // --color-primary-base
-      @if $subname == 'base' {
-        #{$color-prefix + '--' + $name}: $color-hex;
-      } @else {
-        #{$color-prefix + '--' + $name + '-' + $subname}: $color-hex;
+    @if type-of($color-shades) == "map" {
+
+      // each item in sub map
+      @each $subname, $color-hex in $color-shades {
+        // --color-primary-base
+        @if $subname == 'base' {
+          #{$color-prefix + '--' + $name}: $color-hex;
+        } @else {
+          #{$color-prefix + '--' + $name + '--' + $subname}: $color-hex;
+        }
       }
+
+    } @else {
+
+      #{$color-prefix + '--' + $name}: $color-shades;
+
     }
+
   }
 }

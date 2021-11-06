@@ -3,8 +3,8 @@
 --------------------------------------------- */
 .wp-block-pullquote {
   text-align: left;
-  border-top: 2px solid var(--theme--site-border);
-  border-bottom: 2px solid var(--theme--site-border);
+  border-top: 2px solid var(--color--primary);
+  border-bottom: 2px solid var(--color--primary);
   padding-top: var(--global--block-margin);
   padding-bottom: var(--global--block-margin);
 
@@ -18,13 +18,11 @@
   }
 
   p {
-    color: var(--blockquote--color-text), var(--global--color-base);
     font-size: var(--global--font-size-h3);
     margin-bottom: 0;
   }
 
   .wp-block-pullquote__citation {
-    color: var(--blockquote--color-text), var(--global--color-base);
 		display: block;
 		font-size: 13px;
 		margin-top: 12px;

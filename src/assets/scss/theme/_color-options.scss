@@ -2,43 +2,26 @@
 /* Color Options
 --------------------------------------------- */
 
-@each $color-name, $color-shades in $map-colors {
+// Generate selector class & values for colors
+@each $color-name, $color-hex in $color-picker {
 
-	// each item in sub map
-	@each $subname, $color-hex in $color-shades {
-		// --color-primary-base
-		@if $subname == 'base' {
-
-			#{'.has-' + $color-name + '-color'} {
-				color: var(#{'--global' + '--color-' + $color-name});
-			}
-			#{'.has-' + $color-name + '-background-color'}{
-				background-color: var(#{'--global' + '--color-' + $color-name});
-			}
-
-		} @else {
-
-			#{'.has-' + $color-name + '-' + $subname + '-color'} {
-				color: var(#{'--global' + '--color-' + $color-name + '-' + $subname});
-			}
-			#{'.has-' + $color-name + '-' + $subname + '-background-color'} {
-				background-color: var(#{'--global' + '--color-' + $color-name + '-' + $subname});
-			}
-		}
-
+	#{'.has-' + $color-name + '-color'} {
+		color: var(#{'--color--' + $color-name});
 	}
+	#{'.has-' + $color-name + '-background-color'} {
+		background-color: var(#{'--color--' + $color-name});
+	}
+
 }
 
 
-// Dark background (this needs postCSS)
-.has-background:not(
-  .has-grey-background-color,
-  .has-grey-white-background-color,
-  .has-white-background-color
-  ) {
-  color: $white;
+.has-grey-light-background-color,
+.has-white-background-color {
+	color: var(--color--base);
+}
 
-  h1, h2, h3, h4, h5, h6, p {
-    color: $white;
-  }
+.has-tertiary-background-color,
+.has-secondary-background-color,
+.has-primary-background-color {
+	color: var(--color--white);
 }

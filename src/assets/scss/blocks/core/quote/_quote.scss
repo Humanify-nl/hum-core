@@ -5,7 +5,6 @@
 .wp-block-quote {
 
 	p {
-		color: var(--global--color-base);
 		font-size: var(--global--font-size-large);
 		font-style: normal;
 		font-weight: 400;
@@ -16,7 +15,6 @@
 	}
 
 	cite {
-		color: var(--global--color-base);
 		display: block;
 		font-size: 13px;
 		margin-top: 12px;
@@ -27,8 +25,8 @@
 	// block styles
 
 	&.is-style-background {
-		background-color: var(--global--color-white-grey);
-		padding: var(--global--padding);
+		background-color: var(--color--white-grey);
+		padding: var(--global--block-pad);
 	}
 
 

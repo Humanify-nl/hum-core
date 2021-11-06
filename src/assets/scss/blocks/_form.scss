@@ -3,10 +3,10 @@
 --------------------------------------------- */
 
 input, select, textarea {
-	background: $white;
-	border: 1px solid $border-color;
+	background: var(--color--white);
+	border: 1px solid var(--theme--border);
 	border-radius: 4px;
-	color: $base-color;
+	color: var(--theme--base);
 	font-size: var(--global--font-size-normal);
 	line-height: 24px;
 	padding: 14px 16px;
@@ -22,13 +22,13 @@ textarea {
 	width: 100%;
 }
 
-@include placeholder-color( $grey_5 );
+@include placeholder-color( var(--color--grey-text));
 
 /* Search Form
 --------------------------------------------- */
 
 .search-form {
-	border: 1px solid $border-color;
+	border: 1px solid var(--theme--border);
 	max-width: 400px;
 	position: relative;
 	overflow: hidden;
@@ -55,11 +55,11 @@ textarea {
 		right: 0;
 
 		svg {
-			fill: $grey_7;
+			fill: var(--color--grey-text);
 			@include icon-position( 20px );
 
 			&:hover {
-				fill: $highlight;
+				fill: var(--color--primary);
 			}
 		}
 

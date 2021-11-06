@@ -6,10 +6,12 @@
 @import "core/code/code-editor";
 @import "core/columns/columns-editor";
 @import "core/cover/cover-editor";
+@import "core/file/file";
 @import "core/group/group-editor";
 @import "core/heading/heading-editor";
 @import "core/image/image-editor";
 @import "core/list/list-editor";
+@import "core/media-text/media-text-editor";
 @import "core/paragraph/paragraph-editor";
 @import "core/post-excerpt/post-excerpt-editor";
 @import "core/pullquote/pullquote-editor";
@@ -17,9 +19,12 @@
 @import "core/separator/separator-editor";
 @import "core/social-icons/social-icons-editor";
 @import "core/table/table-editor";
+@import "core/site-logo/site-logo-editor";
+
 
 body {
-	color: var(--theme--site);
+	color: var(--theme);
+	background-color: var(--theme--bg);
 	@include base-style();
 }
 

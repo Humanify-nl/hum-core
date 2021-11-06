@@ -3,24 +3,21 @@
 --------------------------------------------- */
 
 .site-footer {
-	background: var(--footer--color-back);
-	color: rgba( $white, .75 );
+	background: var(--theme--footer--bg);
 	font-size: var(--footer--font-size);
-	padding: 32px 0;
-	text-align: center;
-	@include bp-min($small) {
-		text-align: left;
-	}
 
 	.wrap > *:last-child {
 		margin-bottom: 0;
 	}
 
 	a {
-		color: rgba( $white, .75 );
+		color: var(--theme--footer--link);
 
 		&:hover {
-			color: rgba( $white, 1 );
+			color: var(--theme--footer--link-h);
+		}
+		&:active {
+			color: var(--theme--footer--link-a);
 		}
 	}
 
@@ -29,7 +26,7 @@
 	}
 
 	.backtotop {
-		background: rgba( $black, .75 );
+		background: rgba( clr(black), .75 );
 		border-radius: 3px;
 		display: inline-block;
 		line-height: 20px;
@@ -40,13 +37,13 @@
 		}
 
 		svg {
-			fill: $white;
+			fill: clr(white);
 			margin-left: 4px;
 			vertical-align: middle;
 		}
 
 		&:hover {
-			background: rgba( $black, 1 );
+			background: rgba( clr(black), 1 );
 		}
 	}
 

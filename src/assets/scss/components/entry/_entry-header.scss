@@ -3,10 +3,9 @@
 --------------------------------------------- */
 
 .entry-header {
-  @include row-pad-mobile(1rem);
-  @include row-pad-tablet-up(2rem);
-  @include row-pad-desktop(2rem);
-  border-bottom: 1px solid var(--global--color-grey-light);
+  padding-top: var(--global--padding);
+  padding-bottom: var(--global--padding);
+  border-bottom: 1px solid var(--color--grey-light);
 
   @include bp-min($small) {
     overflow: hidden;

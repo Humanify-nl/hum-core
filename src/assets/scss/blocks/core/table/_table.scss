@@ -1,5 +1,5 @@
 
-/* Tables
+/* Table
 --------------------------------------------- */
 
 .wp-block-table  {
@@ -14,7 +14,7 @@
   }
 
 	td, th {
-		padding: .5em;
-	  border: 1px solid;
+		padding: 0.5em;
+	  border: 1px solid var(--theme--border);
 	}
 }

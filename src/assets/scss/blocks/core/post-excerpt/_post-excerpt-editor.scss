@@ -4,11 +4,11 @@
 --------------------------------------------- */
 
 .wp-block-post-excerpt {
-	border-bottom: 1px dashed var(--global--color-grey);
+	border-bottom: 1px dashed var(--color--grey);
 	font-size: var(--global--font-size-small);
 	&:before {
 		content: "Not rendered";
-		color: var(--global--color-grey);
+		color: var(--color--grey);
 		font-size: 0.75em;
 		display: block;
 		position: absolute;

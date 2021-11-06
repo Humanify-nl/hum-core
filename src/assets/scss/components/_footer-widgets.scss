@@ -3,7 +3,6 @@
 --------------------------------------------- */
 
 .footer-widgets {
-	background: brand-color( 'blue' );
 	padding: 40px 0 10px;
 	position: relative;
 
@@ -17,14 +16,12 @@
 	}
 
 	.widget-title {
-		color: $white;
 		font-size: var(--global--font-size-h3);
 		font-weight: 700;
 		text-transform: uppercase;
 	}
 
 	a {
-		color: $white;
 		text-decoration: none;
 
 		&:hover {
@@ -32,7 +29,6 @@
 		}
 
 		svg {
-			fill: $white;
 			@include icon-position( 20px );
 			margin-right: 12px;
 		}

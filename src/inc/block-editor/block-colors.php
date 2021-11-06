@@ -10,23 +10,17 @@
 add_theme_support( 'disable-custom-colors' );
 
 // Editor color palette.
-$base       = '#0f0c1c';
 $primary 		= '#206697';
 $secondary  = '#1D8B5D';
 $tertiary   = '#F4643D';
-$grey       = '#E0E0E0';
-$grey_white = '#f7f7f7';
+$grey_light = '#EBEBEB';
 $white      = '#ffffff';
+$black      = '#0f0c1c';
 
 add_theme_support(
   'editor-color-palette',
   // empty array = no color support
   array(
-    array(
-      'name'  => esc_html__( 'Base', 'hum-core' ),
-      'slug'  => 'base',
-      'color' => $base,
-    ),
     array(
       'name'  => esc_html__( 'Primary', 'hum-core' ),
       'slug'  => 'primary',
@@ -43,19 +37,19 @@ add_theme_support(
       'color' => $tertiary,
     ),
     array(
-      'name'  => esc_html__( 'Grey', 'hum-core' ),
-      'slug'  => 'grey',
-      'color' => $grey,
-    ),
-    array(
-      'name'  => esc_html__( 'Grey white', 'hum-core' ),
-      'slug'  => 'grey-white',
-      'color' => $grey_white,
+      'name'  => esc_html__( 'Grey light', 'hum-core' ),
+      'slug'  => 'grey-light',
+      'color' => $grey_light,
     ),
     array(
       'name'  => esc_html__( 'White', 'hum-core' ),
       'slug'  => 'white',
       'color' => $white,
+    ),
+    array(
+      'name'  => esc_html__( 'Black', 'hum-core' ),
+      'slug'  => 'black',
+      'color' => $black,
     ),
   )
 );

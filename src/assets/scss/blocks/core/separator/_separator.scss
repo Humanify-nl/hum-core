@@ -11,7 +11,7 @@ hr {
 	position: relative;
 
 	&::before {
-		background: $border-color;
+		background: var(--theme--border);
 		content: '';
 		display: block;
 		width: 100%;

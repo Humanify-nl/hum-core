@@ -30,7 +30,7 @@ img {
 
 .wp-block-image figcaption {
 	display: none;
-	color: $grey_7;
+	color: var(--color--grey-text);
 	text-align: left;
 	font-size: 14px;
 	font-style: normal;

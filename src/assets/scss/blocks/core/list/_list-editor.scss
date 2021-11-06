@@ -1,14 +1,15 @@
-@import "list";
+//@import "list";
 
 /* List [editor]
 --------------------------------------------- */
 
 .wp-block-list  {
 	box-sizing: border-box;
-  padding-left: 1.5rem;
+	list-style-position: inside;
 
   li {
-    padding-bottom: 0.5rem;
+		padding: 0.25em 0.25em 0.25em 1.25em;
+		text-indent: -1.375em;
 
     &:last-child {
       padding-bottom: 0;
@@ -16,7 +17,7 @@
 
     ul, ol {
       padding-top: 0.5rem;
-			padding-left: 1.5rem;
+			padding-left: 1rem;
     }
   }
 
@@ -24,11 +25,29 @@
     padding-left: 0;
 
     li {
-      padding-bottom: 0;
+      padding: 0;
     }
   }
 
 	&.has-background {
-		padding-left: calc( var(--global--block-pad) + 1.5rem)
+		padding: var(--global--block-pad);
+
+		li {
+			margin-left: 0;
+		}
+	}
+
+	// block styles
+
+	&.is-style-no-dots {
+		list-style-type: none;
+	}
+
+	&.is-style-icon {
+		list-style-type: none;
+
+		li {
+			background: url(../icons/utility-arrows-collapse.svg) center left no-repeat;
+		}
 	}
 }

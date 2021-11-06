@@ -1,0 +1,13 @@
+
+/* File [editor]
+--------------------------------------------- */
+
+.wp-block-file {
+
+  a.wp-block-file__button {
+    padding: 0.5em 1.75em;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

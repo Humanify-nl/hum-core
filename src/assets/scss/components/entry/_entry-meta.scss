@@ -13,12 +13,8 @@
 	}
 
 	a {
-		color: $base-color;
+		color: clr(grey, text);
 		text-decoration: none;
-
-		&:hover {
-			color: $highlight;
-		}
 	}
 }
 
@@ -27,15 +23,11 @@
 	margin-bottom: 24px;
 
 	a {
-		color: $base-color;
-
-		&:hover {
-			color: $highlight;
-		}
+		color: clr(grey, text);
 	}
 
 	.single & {
-		border-top: 1px solid $border-color;
+		border-top: 1px solid var(--theme--border);
 		padding-top: 32px;
 		text-align: center;
 	}

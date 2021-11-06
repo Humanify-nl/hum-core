@@ -3,9 +3,8 @@
 --------------------------------------------- */
 
 .archive-header {
-	@include row-pad-mobile(1rem);
-	@include row-pad-tablet-up(2rem);
-	@include row-pad-desktop(2rem);
+	padding-top: var(--global--padding);
+	padding-bottom: var(--global--padding);
 	width: 100%;
 
 	.archive-title {
@@ -13,7 +12,7 @@
 	}
 
 	.archive-search {
-		background-color: var(--global--color-grey-light);
+		background-color: var(--color--grey-light);
 		padding: var(--global--padding-inner) 0;
 		max-width: 100%;
 	}

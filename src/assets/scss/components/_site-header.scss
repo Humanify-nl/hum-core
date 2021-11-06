@@ -3,8 +3,9 @@
 --------------------------------------------- */
 
 .site-header {
-	background: var(--theme--header-bg);
-	border-bottom: 1px solid var(--theme--site-border);
+	background: var(--theme--header--bg);
+	color: var(--theme--header--text);
+	border-bottom: 1px solid var(--theme--header--border);
 	position: relative;
 	min-height: 49px;
 
@@ -32,15 +33,12 @@
 
 	h1.site-title,
 	p.site-title {
+		color: var(--theme--branding);
 		margin: 0;
-		font-size: 24px;
+		font-size: var(--site-title--font-size);
+		text-transform: var(--site-title--text-transform);
 		line-height: 30px;
 		padding: 8px;
-
-		a {
-			color: $base-color;
-			text-decoration: none;
-		}
 	}
 
 
@@ -142,7 +140,7 @@
 --------------------------------------------- */
 
 .header-search {
-	background: var(--theme--menu-bg-alt);
+	background: var(--theme--menu--bg-alt);
 	overflow: hidden;
 	padding: 16px;
 	width: 100%;

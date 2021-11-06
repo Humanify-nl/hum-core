@@ -1,7 +1,6 @@
 
 /* Heading
 --------------------------------------------- */
-
 h1,
 h2,
 h3,
@@ -17,7 +16,6 @@ h6 {
 		color: inherit;
 
 		&:hover {
-			color: $highlight;
 			text-decoration: none;
 		}
 	}

@@ -7,11 +7,7 @@
   letter-spacing: 1px;
 
   a {
-    color: $grey_8;
+    color: clr(grey, text);
     text-decoration: none;
-
-    &:hover {
-      color: $highlight;
-    }
   }
 }

@@ -1,11 +1,32 @@
-@import "button";
 
 /* Button [editor]
 --------------------------------------------- */
+.wp-block-button {
 
-// Full width button
-.wp-block-button.is-style-full,
-.wp-block-button.is-style-full .block-editor-rich-text,
-div[data-type="core/button"] div[data-block] {
-	display: block;
+	// Remove default .has-background block styling
+	&.has-background {
+		padding: 0;
+		background-color: none;
+	}
+
+	// Reset other styles
+	.wp-block-button__link {
+		@include button-style();
+		border-radius: 0;
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		// Default text
+		&:not(.has-text-color):not(.has-white-background-color):not(.has-grey-light-background-color) {
+			color: white;
+		}
+
+
+		&.has-white-background-color,
+		&.has-grey-light-background-color {
+			color: var(--color--base);
+		}
+  }
 }

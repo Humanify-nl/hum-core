@@ -33,11 +33,8 @@ $map-spacing: (
 	// grid
 	grid-gap: 2 * $spacing-unit,						// between previews (horizontal)
 	grid-gutter-factor: 2, 				          // multiplier for gap
-	grid-gap-preview: 2 * $spacing-unit,
-	grid-gap-gallery: 0.25 * $spacing-unit,
 	// text
 	text-margin: 1.5 * $spacing-unit,
-	text-margin-x2: 3 * $spacing-unit,
 	line-height: 1.5,
 	elevation: 1px 1px 3px 0 rgba(0, 0, 0, 0.2),
 );

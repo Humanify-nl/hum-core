@@ -1,0 +1,30 @@
+
+/* Site logo
+--------------------------------------------- */
+
+.wp-block-site-logo {
+  display: flex;
+  justify-content: center;
+
+  .custom-logo {
+    height: auto;
+  }
+
+  // aligns
+
+  &.aligncenter {
+    justify-content: center;
+  }
+
+  &.alignleft {
+    justify-content: left;
+  }
+
+  &.alignright {
+    justify-content: right;
+  }
+
+  // vertical
+
+  margin-bottom: var(--global--block-margin);
+}

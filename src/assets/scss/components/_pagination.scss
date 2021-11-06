@@ -3,8 +3,7 @@
 --------------------------------------------- */
 
 .pagination {
-	border-top: 1px solid $border-color;
-	color: var(--pagination--color-text);
+	border-top: 1px solid var(--theme--border);
 	font-size: var(--pagination--font-size);
 	text-align: center;
 	padding-top: 22px;
@@ -17,7 +16,6 @@
 			display: inline-block;
 
 			a {
-				color: var(--pagination--color-link);
 				border-radius: 50%;
 				display: block;
 				font-weight: var(--pagination--font-weight);
@@ -33,13 +31,8 @@
 				width: auto;
 			}
 
-			&:hover > a {
-				color: var(--pagination--color-link-hover);
-			}
 
 			&.active > a {
-				background: var(--pagination--color-link-hover);
-				color: var(--global--color-white);
 				font-weight: 700;
 			}
 		}

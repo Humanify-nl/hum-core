@@ -1,0 +1,26 @@
+
+/* Colors
+--------------------------------------------- */
+body {
+  color: var(--theme--base);
+  background-color: var(--theme--bg);
+}
+
+h2 {
+  color: var(--theme--heading);
+}
+
+a {
+  color: var(--theme--link);
+
+  &:hover {
+    color: var(--theme--link-h);
+  }
+  &:active {
+    color: var(--theme--link-a);
+  }
+}
+
+.publish-date {
+  color: var(--color--grey-text);
+}

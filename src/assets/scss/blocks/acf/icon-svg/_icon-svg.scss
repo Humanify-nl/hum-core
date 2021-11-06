@@ -70,10 +70,10 @@ $icon-width-large: $icon-size-large + ($icon-padding-large * 2);
   &.is-style-primary-background {
 
     .block-icon-svg__wrap {
-      background: var(--global--color-primary);
+      background: var(--color--primary);
 
       svg {
-        fill: var(--global--color-white);
+        fill: var(--color--white);
       }
     }
   }
