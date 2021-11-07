@@ -23,7 +23,7 @@
 .is-root-container {
 
 	.wp-block {
-		border: 1px solid var(--global--color-grey);
+		border: 1px solid var(--color--grey);
 	}
 
 	// Margins
@@ -38,7 +38,7 @@
 	}
 
 	> .wp-block-group {
-		margin-bottom: 0;
+
 		&.is-style-no-space:not(.has-background) {
 			margin-top: var(--global--block-margin);
 			margin-bottom: var(--global--block-margin);
@@ -48,7 +48,7 @@
 	> .wp-block-group {
 		position: relative;
 		&:before {
-			@include spacer_icon();
+			//@include spacer_icon();
 		}
 	}
 
@@ -57,7 +57,6 @@
 		&:before {
 			@include spacer_icon();
 		}
-		> .wp-block-columns,
 		> .wp-block-cover,
 		> .wp-block-group {
 			margin-bottom: 0;
@@ -73,7 +72,7 @@
 		+ [data-align="full"],
 		+ .wp-block-group {
 			&:before {
-				@include spacer_icon(top);
+				@include spacer_icon();
 			}
 		}
 	}
@@ -98,9 +97,16 @@
 		}
 
 		&.is-style-no-space:not(.has-background) {
-			padding-top: 0;
-			padding-bottom: 0;
+      padding-top: var(--global--block-margin);
+      padding-bottom: var(--global--block-margin);
 		}
 
 	}
+
+  > .wp-block[data-align="full"] .wp-block-group {
+    &.has-background {
+      padding-top: var(--global--spacing-vertical);
+      padding-bottom: var(--global--spacing-vertical);
+    }
+  }
 }

@@ -16,17 +16,25 @@
       margin-top: var(--global--block-margin);
     }
   }
+
+  &.is-style-space-between {
+    justify-content: space-between;
+  }
+
+  &.has-background {
+    padding: var(--global--block-pad);
+  }
 }
 
 
 .wp-block-column {
 
+  > *:last-child {
+    margin-bottom: 0;
+  }
+
   @include bp-max($small){
     margin-bottom: var(--global--block-gap);
-
-    > *:last-child {
-      margin-bottom: 0;
-    }
 
     &:last-child {
       margin-bottom: 0;
@@ -36,7 +44,7 @@
   @include bp-min($small){
 
     &:not(:first-child) {
-      margin-left: var(--global--block-gap);
+      margin-left: var(--global--block-gap) !important;
     }
   }
 
