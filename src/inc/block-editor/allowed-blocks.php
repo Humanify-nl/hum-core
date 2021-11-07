@@ -13,6 +13,7 @@ function hum_post_blocks_array( $post_type = false ) {
     'core/paragraph',
     'core/heading',
     'core/list',
+    'core/table',
     'core/quote',
     'core/code',
     'core/preformatted',
@@ -62,6 +63,7 @@ function hum_post_blocks_array( $post_type = false ) {
     'core/heading',
     'core/list',
     'core/quote',
+    'core/table',
     //'core/code',
     'core/preformatted',
     'core/pullquote',
@@ -100,6 +102,7 @@ function hum_post_blocks_array( $post_type = false ) {
     'core/paragraph',
     'core/heading',
     'core/list',
+    'core/table',
     //'core/quote',
     //'core/code',
     //'core/preformatted',
@@ -152,6 +155,8 @@ function hum_post_blocks_array( $post_type = false ) {
     'core/button',
     'core/columns',
     'core/group',
+    'core/site-title',
+    'core/site-logo',
     'core/spacer',
     'core/post-terms',
     // --> widgets
@@ -249,7 +254,7 @@ add_filter( 'allowed_block_types_all', 'hum_filter_allowed_block_types', 10, 2 )
 
 // remove dropcap
 add_filter(
-  'block_editor_settings',
+  'block_editor_settings_all',
   function ($editor_settings) {
     $editor_settings['__experimentalFeatures']['typography']['dropCap'] = false;
     return $editor_settings;
