@@ -95,7 +95,8 @@
     }
 
     &.is-style-no-space:not(.has-background) {
-      padding-top: var(--global--block-margin);
+      margin-top: var(--global--block-margin);
+      padding-top: 0;
       padding-bottom: var(--global--block-margin);
     }
   }
