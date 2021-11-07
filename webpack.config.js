@@ -17,6 +17,7 @@ module.exports = {
      editor: '/scss' + '/editor.scss',
      layout: '/scss' + '/layout.scss',
      admin: '/scss' + '/admin.scss',
+     root: '/scss' + '/root.scss',
    },
   plugins: [
     // generates a new index.html
