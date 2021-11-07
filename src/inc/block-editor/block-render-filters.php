@@ -18,10 +18,6 @@ function hum_block_filter( $block_content, $block ) {
     }
   }
 
-  if ( $block['blockName'] === 'core/list' ) {
-    $block_content = '<div class="wp-block-list">' .$block_content. '</div>';
-  }
-
   return $block_content;
 }
 add_filter( 'render_block', 'hum_block_filter', 10, 3);
