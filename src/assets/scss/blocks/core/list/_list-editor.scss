@@ -8,8 +8,9 @@
 	list-style-position: inside;
 
   li {
-		padding: 0.25em 0.25em 0.25em 1.25em;
-		text-indent: -1.375em;
+		$text_indent: 1.375em;
+		padding: 0.25em 0.25em 0.25em (0.25em + $text_indent);
+		text-indent: -$text_indent;
 
     &:last-child {
       padding-bottom: 0;
