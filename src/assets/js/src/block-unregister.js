@@ -48,6 +48,7 @@ wp.domReady(() => {
 
   // block styles
   wp.blocks.unregisterBlockStyle( 'core/quote', 'large' );
+  wp.blocks.unregisterBlockStyle( 'core/table', 'stripes' );
   //wp.blocks.unregisterBlockStyle( 'core/pullquote', 'solid-color' );
   //wp.blocks.unregisterBlockStyle( 'core/pullquote', 'default' );
 
