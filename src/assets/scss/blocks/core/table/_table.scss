@@ -17,4 +17,24 @@
 		padding: 0.5em;
 	  border: 1px solid var(--theme--border);
 	}
+
+  &.is-style-background {
+
+    table {
+      border-collapse: separate;
+      border-spacing: 4px;
+    }
+
+    td, th {
+      background: var(--theme--bg-alt);
+      border-color: var(--theme--bg-alt);
+
+      .has-grey-light-background-color & {
+        background: var(--theme--bg);
+        border-color: var(--theme--bg-alt);
+      }
+    }
+
+  }
+
 }

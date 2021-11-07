@@ -21,8 +21,8 @@ function hum_register_block_styles() {
   register_block_style(
     'core/columns',
       [
-         'name'         => 'no-space',
-         'label'        => 'No spacing',
+         'name'         => 'space-between',
+         'label'        => 'Space between',
       ]
   );
 
@@ -33,6 +33,24 @@ function hum_register_block_styles() {
          'label'        => 'Background',
       ]
   );
+
+  register_block_style(
+    'core/list',
+      [
+         'name'         => 'no-dots',
+         'label'        => 'No Dots',
+      ],
+  );
+
+
+  register_block_style(
+    'core/table',
+      [
+         'name'         => 'background',
+         'label'        => 'Background',
+      ],
+  );
+
 
 }
 add_action( 'after_setup_theme' , 'hum_register_block_styles' );
