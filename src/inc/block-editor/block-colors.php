@@ -14,7 +14,7 @@ $primary 		= '#206697';
 $secondary  = '#1D8B5D';
 $tertiary   = '#F4643D';
 $grey_light = '#EBEBEB';
-$white      = '#ffffff';
+$white      = '#FAFAFA';
 $black      = '#0f0c1c';
 
 add_theme_support(
