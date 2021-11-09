@@ -25,7 +25,7 @@ function acf_load_preview_type_select_choices( $field ) {
 add_filter('acf/load_field/name=preview_type_select', 'acf_load_preview_type_select_choices');
 
 
-/*
+
 function acf_load_preview_page_type_choices( $field ) {
 
     // reset choices
@@ -41,4 +41,3 @@ function acf_load_preview_page_type_choices( $field ) {
 }
 
 add_filter('acf/load_field/name=preview_page_select', 'acf_load_preview_page_type_choices');
-*/

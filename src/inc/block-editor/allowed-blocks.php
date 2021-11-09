@@ -54,6 +54,7 @@ function hum_post_blocks_array( $post_type = false ) {
     'core/embed',
     'acf/post-query',
     'acf/icon',
+    'acf/pagelinks',
     'forminator/forms',
   ];
 

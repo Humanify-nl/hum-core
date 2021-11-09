@@ -7,6 +7,7 @@
 
 include_once( get_template_directory() . '/inc/acf/blocks-acf/block-post-query.php' );
 include_once( get_template_directory() . '/inc/acf/blocks-acf/block-icon-svg.php' );
+include_once( get_template_directory() . '/inc/acf/blocks-acf/block-pagelinks.php' );
 
 
 function hum_acf_init_block_types() {
@@ -20,6 +21,10 @@ function hum_acf_init_block_types() {
 
     acf_register_block_type(
       register_icon_block()
+    );
+
+    acf_register_block_type(
+      register_pagelinks_block()
     );
 
   }

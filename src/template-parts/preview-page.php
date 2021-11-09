@@ -9,7 +9,7 @@
 <article class="preview preview-page">
 
   <?php
-	hum_preview_image( 'featured', true, $page );
+	hum_preview_image( 'large', true, $page );
 	hum_preview_title( true, $page );
   hum_preview_excerpt( $page );
   ?>
