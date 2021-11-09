@@ -55,19 +55,18 @@
 		// Generate CSS
 		@each $name, $color in $color-picker {
 
-			&.has-#{$name}-color:hover,
-			&.has-#{$name}-color:active,
-			&.has-#{$name}-color:focus {
+			&#{ '.has-' + $name + '-color:hover'},
+			&#{ '.has-' + $name + '-color:active'},
+			&#{ '.has-' + $name + '-color:focus'} {
 				color: $color;
 			}
 
-			&.has-#{$name}-background-color:hover,
-			&.has-#{$name}-background-color:active,
-			&.has-#{$name}-background-color:focus {
+			&#{ '.has-' + $name + '-background-color:hover'},
+			&#{ '.has-' + $name + '-background-color:focus'} {
 				background-color: darken( $color, 10% );
 			}
 
-			&.has-#{$name}-background-color:active {
+			&#{ '.has-' + $name + '-background-color:active'} {
 				background-color: darken( $color, 18% );
 			}
 		}
