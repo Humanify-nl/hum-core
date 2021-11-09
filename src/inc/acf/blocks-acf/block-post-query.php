@@ -46,7 +46,7 @@ function hum_render_post_query_block( $block, $content = '', $is_preview = false
   ?>
   <div class="<?php echo esc_attr($className); ?>">
     <?php
-    get_template_part( 'template-parts/acf/queries/query-posts');
+    get_template_part( 'template-parts/acf/query-posts/query-posts' );
     ?>
   </div>
   <?php
