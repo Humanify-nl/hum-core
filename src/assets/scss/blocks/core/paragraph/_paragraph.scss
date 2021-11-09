@@ -10,17 +10,18 @@ p {
 		margin-bottom: 0;
 	}
 
-	&.has-normal-font-size {
-		font-size: var(--global--font-size-normal);
-	}
+}
 
-	&.has-large-font-size,
-	&.large {
-		font-size: var(--global--font-size-large);
-	}
+.has-normal-font-size {
+	font-size: var(--global--font-size-normal);
+}
 
-	&.has-small-font-size,
-	&.small {
-		font-size: var(--global--font-size-small);
-	}
+.has-large-font-size,
+.large {
+	font-size: var(--global--font-size-large);
+}
+
+.has-small-font-size,
+.small {
+	font-size: var(--global--font-size-small);
 }
