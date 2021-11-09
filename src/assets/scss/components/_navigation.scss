@@ -122,7 +122,6 @@
 
 		.sub-menu {
 			background: var(--theme--submenu--bg);
-			font-size: var(--menu--font-size-sub-menu);
 			left: -9999px;
 			opacity: 0;
 			position: absolute;
@@ -131,6 +130,10 @@
 
 			.menu-item {
 				float: none;
+
+				a {
+					font-size: var(--menu--font-size-sub-menu);
+				}
 
 				&:hover > a {
 					background: var(--theme--submenu--bg-h);
