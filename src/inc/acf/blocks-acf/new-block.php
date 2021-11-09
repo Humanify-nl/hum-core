@@ -48,7 +48,7 @@ function register_new_block() {
 }
 
 
-function hum_render_icon_block( $block, $content = '', $is_preview = false ) {
+function hum_render_new_block( $block, $content = '', $is_preview = false ) {
 
   // Debug
   // hum_print_arr($block);
