@@ -1,7 +1,7 @@
 <?php
 // replace 'new'
 
-function register_icon_block() {
+function register_new_block() {
 
   $register_icon = [
     'name'              => 'new',
