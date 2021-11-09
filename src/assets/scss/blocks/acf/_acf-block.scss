@@ -2,6 +2,15 @@
 /* ACF block controls
 --------------------------------------------- */
 .acf-block-body {
+  font-size: 13px;
+
+  input, select, textarea {
+    font-size: 13px;
+    padding: 4px 8px;
+    line-height: 1.4;
+    border: 1px solid #8c8f94;
+    background: #fff;
+  }
 
   .acf-block-preview {
     min-height: 0;
@@ -15,7 +24,7 @@
       padding: 4px 8px;
       margin: 0;
       box-sizing: border-box;
-      font-size: 14px;
+      font-size: 13px;
       line-height: 1.4;
       height: auto;
     }
