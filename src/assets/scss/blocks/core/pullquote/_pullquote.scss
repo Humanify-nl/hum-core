@@ -8,18 +8,24 @@
   padding-top: var(--global--block-margin);
   padding-bottom: var(--global--block-margin);
 
-  .wp-block-columns &,
   .wp-block-group & {
     margin-bottom: 0;
   }
 
   blockquote {
     margin: 0;
+
+    p + cite {
+      display: block;
+      margin-top: var(--global--block-pad);
+    }
   }
 
   p {
     font-size: var(--global--font-size-h3);
-    margin-bottom: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .wp-block-pullquote__citation {
