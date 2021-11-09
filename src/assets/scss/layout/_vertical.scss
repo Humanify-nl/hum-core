@@ -14,8 +14,12 @@
       margin-top: var(--global--block-margin);
     }
 
-    &:last-child:not(.has-background):not(.is-style-no-space) {
+    &:last-child:not(.has-background):not(.is-style-no-space):not(.wp-block-cover) {
       margin-bottom: var(--global--spacing-vertical);
+    }
+
+    &:last-child.wp-block-cover {
+      margin-bottom: 0;
     }
   }
 
@@ -99,5 +103,10 @@
       padding-top: 0;
       padding-bottom: var(--global--block-margin);
     }
+  }
+  
+  > .wp-block-cover {
+    padding-top: var(--global--spacing-vertical);
+    padding-bottom: var(--global--spacing-vertical);
   }
 }
