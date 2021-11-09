@@ -64,6 +64,7 @@
 			max-width: none;
 			width: 100%;
 
+			.wp-block-cover__inner-container,
 			.wp-block-group__inner-container {
 				> *:not([data-align="full"]) {
 					max-width: var(--global--alignwide);
@@ -103,6 +104,7 @@
 		.wp-block[data-align="wide"] {
 			max-width: var(--global--alignwide);
 
+			.wp-block-cover__inner-container,
 			.wp-block-group__inner-container {
 				> *:not([data-align="full"]):not([data-align="wide"]) {
 					max-width: var(--global--aligncenter);
@@ -114,6 +116,7 @@
 			max-width: 100%;
 			width: 100%;
 
+			.wp-block-cover__inner-container,
 			.wp-block-group__inner-container {
 				> *:not([data-align="full"]):not([data-align="wide"]) {
 					max-width: var(--global--aligncenter);
