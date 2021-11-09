@@ -225,7 +225,7 @@
 }
 
 
-.site-header .wrap-outer {
+.site-header {
 	@include bp-max($small) {
 		margin: 0;
 		width: 100%;
