@@ -4,4 +4,10 @@
 
 .wp-block-cover {
   padding: var(--global--block-pad);
+
+  .wp-block-cover__inner-container {
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
