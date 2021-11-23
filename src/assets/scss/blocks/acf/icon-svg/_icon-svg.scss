@@ -2,17 +2,14 @@
 /* Icon svg
 --------------------------------------------- */
 
-$icon-size-normal: 2rem;
-$icon-padding-normal: 0.5rem;
+$icon-size-normal: 2.5rem;
+$icon-padding-normal: 0.75rem;
 $icon-width-normal: $icon-size-normal + ($icon-padding-normal * 2);
-$icon-size-large: 3rem;
-$icon-padding-large: 0.75rem ;
-$icon-width-large: $icon-size-large + ($icon-padding-large * 2);
 
 .block-icon-svg {
   display: flex;
   line-height: 1;
-  margin-bottom: var(--global--padding);
+  margin-bottom: var(--global--text-margin);
 
   .block-icon-svg__wrap {
     background: white;
@@ -20,41 +17,17 @@ $icon-width-large: $icon-size-large + ($icon-padding-large * 2);
     border-radius: 50%;
     height: $icon-width-normal;
     width: $icon-width-normal;
-  }
-
-  // Put on top of column edge (acf field) // experimental - column only
-  &.is-on-top {
-    position: relative;
-    margin-bottom: calc(var(--global--padding) * 1.5);
-
-    &.icon-size-large {
-      margin-bottom: $icon-width-large * 0.5;
-    }
-
-    .block-icon-svg__wrap {
-      position: absolute;
-      top: calc( #{-$icon-width-normal * 0.5} - var(--global--padding)); // 40px - 6px
+    svg {
+      height: $icon-size-normal;
+      width: $icon-size-normal;
     }
   }
 
-  // Large icon & pad (acf field)
-  &.icon-size-large {
+  .block-icon-svg__wrap {
+    background: var(--color--primary);
 
-    .block-icon-svg__wrap {
-      height: $icon-width-large;
-      width: $icon-width-large;
-      padding: $icon-padding-large;
-
-      svg {
-        height: $icon-size-large;
-        width: $icon-size-large;
-      }
-    }
-
-    &.is-on-top {
-      .block-icon-svg__wrap {
-        top: calc( #{-$icon-width-large * 0.5} - var(--global--padding)); // 40px - 6px
-      }
+    svg {
+      fill: var(--color--white);
     }
   }
 
@@ -66,26 +39,8 @@ $icon-width-large: $icon-size-large + ($icon-padding-large * 2);
     justify-content: end;
   }
 
-  // block styles
-  &.is-style-primary-background {
-
-    .block-icon-svg__wrap {
-      background: var(--color--primary);
-
-      svg {
-        fill: var(--color--white);
-      }
-    }
-  }
-
 }
 
-.wp-block-acf-icon {
-  // only select the parent
-  &.block-editor-block-list__block {
-    margin-bottom: 0;
-  }
-}
 
 // center editor preview
 .editor-preview {

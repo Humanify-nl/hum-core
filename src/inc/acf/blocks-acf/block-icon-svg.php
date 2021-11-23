@@ -24,12 +24,6 @@ function register_icon_block() {
       'customClassName'	  => true,
       'jsx' 			        => true,
     ],
-    'styles'            => [
-      [
-        'name'            => 'primary-background',
-        'label'           => __( 'Primary background', 'hum-core'),
-      ]
-    ],
     'example'           => [
       'attributes'        => [
         'mode'              => 'preview',
@@ -59,15 +53,6 @@ function hum_render_icon_block( $block, $content = '', $is_preview = false ) {
       $className .= ' align' . $block['align_text'];
   }
 
-  $icon_svg_size = get_field( 'svg_icon_size' );
-  if ( !empty($icon_svg_size) ) {
-    $className .= ' '. $icon_svg_size;
-  }
-
-  $icon_svg_pos = get_field( 'svg_icon_pos' );
-  if ( $icon_svg_pos ) {
-    $className .= ' is-on-top';
-  }
 
   // Backend preview (editor)
   // needs example[atrributes[data['is_preview' => true]]] in register block
