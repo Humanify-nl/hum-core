@@ -8,21 +8,12 @@
     margin-bottom: 0;
   }
 
-  + .wp-block-columns {
-    margin-top: var(--global--spacing-vertical);
-
-    // if group is no-spaced, override
-    .wp-block-group.is-style-no-space & {
-      margin-top: var(--global--block-margin);
-    }
-  }
-
   &.is-style-space-between {
     justify-content: space-between;
   }
 
   &.has-background {
-    padding: var(--global--block-pad);
+    padding: var(--global--padding);
   }
 }
 

@@ -11,8 +11,8 @@ function hum_register_block_styles() {
   register_block_style(
     'core/group',
       [
-         'name'         => 'no-space',
-         'label'        => 'No spacing',
+         'name'         => 'extra-spacing',
+         'label'        => 'Extra spacing',
          //'inline_style' => '.is-style-no-space { margin: 2rem 0 }',
          //'style_handle' => 'block-css-style-spaced',
       ]

@@ -1,0 +1,19 @@
+// spacer icon
+@mixin spacer_icon( $top: false ) {
+  $width_icon_collapse: v($map-spacing, block-margin);
+  content: "";
+  position: absolute;
+  fill: #ebebeb;
+  height: $width_icon_collapse;
+  width: $width_icon_collapse;
+  background-size: contain;
+  left: calc(50% - #{$width_icon_collapse * 0.5});
+  opacity: 0.1;
+	@if ( $top == false ) {
+    background: url(../icons/bs-arrow-up.svg) no-repeat center;
+		bottom: - #{$width_icon_collapse + 0.125rem};
+	} @else {
+    background: url(../icons/bs-arrow-down.svg) no-repeat center;
+		top: - #{$width_icon_collapse + 0.125rem};
+	}
+}

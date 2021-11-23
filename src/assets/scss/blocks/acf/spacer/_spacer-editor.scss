@@ -1,0 +1,18 @@
+@import "spacer";
+
+.wp-block[data-type='acf/spacer']{
+}
+
+.block-spacer {
+  border: 1px dashed rgba(3,3,3,0.025);
+  margin-top: 0;
+  margin-bottom: 0;
+  position: relative;
+
+  &::before {
+    @include spacer_icon( $top: true);
+  }
+  &::after {
+    @include spacer_icon();
+  }
+}

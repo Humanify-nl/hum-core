@@ -3,20 +3,20 @@
 --------------------------------------------- */
 
 .has-background {
-  padding: var(--global--block-pad);
+  padding: var(--global--padding);
 
   &.alignfull {
-    padding: var(--global--block-pad) $margin_site_s;
+    padding: var(--global--padding) $margin_site_s;
   }
 
   &.alignwide {
     .alignwide {
-      padding-left: var(--global--block-pad);
-      padding-right: var(--global--block-pad);
+      padding-left: var(--global--padding);
+      padding-right: var(--global--padding);
     }
   }
 
   .has-background {
-    padding: var(--global--block-pad);
+    padding: var(--global--padding);
   }
 }

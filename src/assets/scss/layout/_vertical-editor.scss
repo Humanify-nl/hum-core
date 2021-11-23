@@ -1,30 +1,8 @@
 
 /* Vertical spacing [editor]
 --------------------------------------------- */
-// spacer icon
-@mixin spacer_icon( $top: false ) {
-  $width_icon_collapse: v($map-spacing, block-margin) - 0.25rem;
-  content: "";
-  position: absolute;
-  fill: #ebebeb;
-  height: $width_icon_collapse;
-  width: $width_icon_collapse;
-  background: url(../icons/utility-arrows-collapse.svg) no-repeat center;
-  background-size: contain;
-  left: calc(50% - #{$width_icon_collapse * 0.5});
-  opacity: 0.1;
-	@if ( $top == false ) {
-		bottom: - #{$width_icon_collapse + 0.125rem};
-	} @else {
-		top: - #{$width_icon_collapse + 0.125rem};
-	}
-}
 
 .is-root-container {
-
-	.wp-block {
-		//border: 1px solid var(--color--grey);
-	}
 
 	// Margins
 
@@ -39,63 +17,33 @@
 
 	> .wp-block-group {
 
-		&.is-style-no-space:not(.has-background) {
-			margin-top: var(--global--block-margin);
-			margin-bottom: var(--global--block-margin);
+		&.is-style-extra-spacing {
+			padding-top: var(--global--block-margin);
+			padding-bottom: var(--global--block-margin);
 		}
 	}
 
-	> .wp-block-group {
-		position: relative;
-		&:before {
-			//@include spacer_icon();
-		}
-	}
 
 	> .wp-block[data-align="full"] {
-		position: relative;
-		&:before {
-			@include spacer_icon();
-		}
+
 		> .wp-block-cover,
 		> .wp-block-group {
 			margin-bottom: 0;
 		}
-
-		+ .wp-block-columns:not(.has-background) {
-			// use pad instead of margin to prevent cascade
-			padding-top: var(--global--block-margin);
-		}
 	}
 
   > .wp-block[data-align="wide"] {
-    position: relative;
-    &:before {
-      @include spacer_icon();
-    }
+
     > .wp-block-cover,
     > .wp-block-group {
       margin-bottom: 0;
     }
-
-    + .wp-block-columns:not(.has-background) {
-      // use pad instead of margin to prevent cascade
-      padding-top: var(--global--block-margin);
-    }
   }
 
-	> .wp-block-columns {
-		+ [data-align="full"],
-		+ .wp-block-group {
-			&:before {
-				@include spacer_icon();
-			}
-		}
-	}
 
 
 	// Padding
-
+  /*
 	> .wp-block[data-align="wide"] .wp-block-group,
 	> .wp-block[data-align="full"] .wp-block-group,
 	> .wp-block-group {
@@ -134,6 +82,6 @@
       }
     }
   }
-
+  */
 
 }

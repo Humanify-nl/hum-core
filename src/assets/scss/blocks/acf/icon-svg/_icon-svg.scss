@@ -12,7 +12,7 @@ $icon-width-large: $icon-size-large + ($icon-padding-large * 2);
 .block-icon-svg {
   display: flex;
   line-height: 1;
-  margin-bottom: var(--global--block-pad);
+  margin-bottom: var(--global--padding);
 
   .block-icon-svg__wrap {
     background: white;
@@ -25,7 +25,7 @@ $icon-width-large: $icon-size-large + ($icon-padding-large * 2);
   // Put on top of column edge (acf field) // experimental - column only
   &.is-on-top {
     position: relative;
-    margin-bottom: calc(var(--global--block-pad) * 1.5);
+    margin-bottom: calc(var(--global--padding) * 1.5);
 
     &.icon-size-large {
       margin-bottom: $icon-width-large * 0.5;
@@ -33,7 +33,7 @@ $icon-width-large: $icon-size-large + ($icon-padding-large * 2);
 
     .block-icon-svg__wrap {
       position: absolute;
-      top: calc( #{-$icon-width-normal * 0.5} - var(--global--block-pad)); // 40px - 6px
+      top: calc( #{-$icon-width-normal * 0.5} - var(--global--padding)); // 40px - 6px
     }
   }
 
@@ -53,7 +53,7 @@ $icon-width-large: $icon-size-large + ($icon-padding-large * 2);
 
     &.is-on-top {
       .block-icon-svg__wrap {
-        top: calc( #{-$icon-width-large * 0.5} - var(--global--block-pad)); // 40px - 6px
+        top: calc( #{-$icon-width-large * 0.5} - var(--global--padding)); // 40px - 6px
       }
     }
   }

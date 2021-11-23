@@ -5,15 +5,25 @@
 $spacing-unit: 1rem;
 
 $map-spacing: (
-	spacing-vertical: (
-	  small: 4 * $spacing-unit,
-		medium: 6 * $spacing-unit,
-	  large: 8 * $spacing-unit,
-	),
 	spacing-horizontal: (
-	  small: 1 * $spacing-unit,
+		small: 1 * $spacing-unit,
 		medium: 2 * $spacing-unit,
 		large: 2 * $spacing-unit,
+	),
+	spacing-vertical: (
+	  small: 2 * $spacing-unit,
+		medium: 4 * $spacing-unit,
+	  large: 5 * $spacing-unit,
+	),
+	spacing-vertical-sm: (
+		small: 1 * $spacing-unit,
+		medium: 1.5 * $spacing-unit,
+		large: 2 * $spacing-unit,
+	),
+	spacing-vertical-lg: (
+		small: 4 * $spacing-unit,
+		medium: 6 * $spacing-unit,
+		large: 8 * $spacing-unit,
 	),
 	padding: (
 		small: 1 * $spacing-unit,

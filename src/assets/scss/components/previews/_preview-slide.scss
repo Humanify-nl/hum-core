@@ -21,13 +21,13 @@
     background-color: rgba(clr(grey, light), 0.85);
     bottom: 0;
     position: absolute;
-    padding: var(--global--block-pad);
+    padding: var(--global--padding);
     height: 100%;
     width: 100%;
     margin-top: 0;
 
     .preview__title {
-      margin-bottom: var(--global--block-pad);
+      margin-bottom: var(--global--padding);
     }
 
     @include bp-max($medium){

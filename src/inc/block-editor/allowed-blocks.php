@@ -33,7 +33,7 @@ function hum_post_blocks_array( $post_type = false ) {
     'core/more',
     'core/pagebreak',
     'core/separator',
-    'core/spacer',
+    //'core/spacer',
     'core/post-terms',
     // --> widgets
     'core/shortcode',
@@ -52,6 +52,7 @@ function hum_post_blocks_array( $post_type = false ) {
     'core/post-featured-image',
     // --> embed
     'core/embed',
+    'acf/spacer',
     'acf/post-query',
     'acf/icon',
     'acf/pagelinks',
@@ -82,7 +83,7 @@ function hum_post_blocks_array( $post_type = false ) {
     'core/more',
     'core/pagebreak',
     'core/separator',
-    'core/spacer',
+    //'core/spacer',
     'core/post-terms',
     // --> widgets
     'core/shortcode',
@@ -96,6 +97,7 @@ function hum_post_blocks_array( $post_type = false ) {
     'core/post-featured-image',
     // --> embed
     'core/embed',
+    'acf/spacer',
   ];
 
   $block_types_page = [
@@ -122,7 +124,7 @@ function hum_post_blocks_array( $post_type = false ) {
     //'core/more',
     'core/pagebreak',
     'core/separator',
-    'core/spacer',
+    //'core/spacer',
     // --> widgets
     'core/shortcode',
     'core/calendar',
@@ -131,6 +133,7 @@ function hum_post_blocks_array( $post_type = false ) {
     'cpre/categories',
     // --> embed
     'core/embed',
+    'acf/spacer',
     'acf/post-query',
     'acf/icon',
     'forminator/forms',
@@ -158,7 +161,7 @@ function hum_post_blocks_array( $post_type = false ) {
     'core/group',
     'core/site-title',
     'core/site-logo',
-    'core/spacer',
+    // 'core/spacer',
     'core/post-terms',
     // --> widgets
     'core/shortcode',
@@ -171,6 +174,7 @@ function hum_post_blocks_array( $post_type = false ) {
     'core/post-featured-image',
     // --> embed
     'core/embed',
+    'acf/spacer',
     'acf/icon',
     'forminator/forms',
   ];
@@ -184,6 +188,7 @@ function hum_post_blocks_array( $post_type = false ) {
     'core/columns',
     'core/group',
     'core/separator',
+    'acf/spacer',
   ];
 
   switch($post_type) {

@@ -16,4 +16,9 @@
 		margin-bottom: 0;
 	}
 
+	&.is-style-extra-spacing {
+		padding-top: var(--global--spacing-vertical);
+		padding-bottom: var(--global--spacing-vertical);
+	}
+
 }

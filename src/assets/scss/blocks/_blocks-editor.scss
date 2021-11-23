@@ -20,12 +20,20 @@
 @import "core/social-icons/social-icons-editor";
 @import "core/table/table-editor";
 @import "core/site-logo/site-logo-editor";
+// custom
+@import "acf/acf-block";
+@import "acf/spacer/spacer-editor";
+@import "acf/icon-svg/icon-svg-editor";
 
 
 body {
 	color: var(--theme);
 	background-color: var(--theme--bg);
 	@include base-style();
+}
+
+.wp-block {
+	border: 1px solid #eee;
 }
 
 

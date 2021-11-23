@@ -3,12 +3,12 @@
 --------------------------------------------- */
 
 .has-background {
-  padding: var(--global--block-pad);
+  padding: var(--global--padding);
 
   [data-align="wide"] & {
     [data-align="wide"] {
-      padding-left: var(--global--block-pad);
-      padding-right: var(--global--block-pad);
+      padding-left: var(--global--padding);
+      padding-right: var(--global--padding);
     }
   }
 
@@ -17,6 +17,6 @@
   }
 
   .has-background {
-    padding: var(--global--block-pad);
+    padding: var(--global--padding);
   }
 }

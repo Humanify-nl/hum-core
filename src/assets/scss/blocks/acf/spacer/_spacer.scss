@@ -1,0 +1,110 @@
+
+/* Spacer
+--------------------------------------------- */
+.block-spacer {
+  margin-top: calc(-1 * var(--global--block-margin));
+  margin-bottom: 0;
+}
+
+
+$grid-spacer: 8px;
+// v-spacer map - properties (to build utility classes like `.vs-pt-sm`)
+
+$vs-props: (
+    h: 'height',
+    pt: 'padding-top',
+    pb: 'padding-bottom',
+    mt: 'margin-top',
+    mb: 'margin-bottom'
+);
+
+// v-spacer map - sizes per breakpoint
+// breakpoints zijn toe te voegen
+$vs-sizes: (
+    sm: (
+        base: v($map-spacing, spacing-vertical-sm, small),
+        small: v($map-spacing, spacing-vertical-sm, medium),
+        medium:  v($map-spacing, spacing-vertical-sm, large)
+    ),
+    md: (
+      base: v($map-spacing, spacing-vertical, small),
+      small: v($map-spacing, spacing-vertical, medium),
+      medium:  v($map-spacing, spacing-vertical, large)
+    ),
+    lg: (
+      base: v($map-spacing, spacing-vertical-lg, small),
+      small: v($map-spacing, spacing-vertical-lg, medium),
+      medium:  v($map-spacing, spacing-vertical-lg, large)
+    )
+);
+
+// Mixin - generate breakpoints
+
+@mixin vs-breakpoints($vs-bps, $vs-prop) {
+
+    // each nested array in $vs-sizes
+    @each $vs-bp, $vs-size in $vs-bps {
+
+        // default value (no bp)
+        @if ($vs-bp == base) {
+            #{$vs-prop}: #{$vs-size};
+        }
+        @if ($vs-bp == medium) {
+          @include bp-min($medium){
+            #{$vs-prop}: #{$vs-size};
+          }
+        }
+        @if ($vs-bp == large) {
+          @include bp-min($large){
+            #{$vs-prop}: #{$vs-size};
+          }
+        }
+
+    }
+}
+
+
+// Utility classes
+
+// v-spacer each - generate utility classes for each property and size
+@each $vs-name, $vs-prop in $vs-props {
+    @each $vs-size, $vs-bps in $vs-sizes {
+
+        // generate utility classes
+        .vs-#{$vs-name}-#{$vs-size} {
+
+            // and include the `vs-breakpoints` mixin
+            @include vs-breakpoints($vs-bps, $vs-prop);
+        }
+    }
+}
+
+// AVAILABLE CLASSES:
+// Height: 			.vs-h-xs 	.vs-h-sm 	.vs-h-md 	.vs-h-lg 	.vs-h-xl
+// Margin-top: 		.vs-mt-xs 	.vs-mt-sm 	.vs-mt-md 	.vs-mt-lg 	.vs-mt-xl
+// Margin-bottom: 	.vs-mb-xs 	.vs-mb-sm 	.vs-mb-md 	.vs-mb-lg 	.vs-mb-xl
+// Padding-top: 	.vs-pt-xs 	.vs-pt-sm 	.vs-pt-md 	.vs-pt-lg 	.vs-pt-xl
+// Padding-bottom: 	.vs-pb-xs 	.vs-pb-sm 	.vs-pb-md 	.vs-pb-lg 	.vs-pb-xl
+
+
+
+// RETRIEVE VS-VAR IN SASS
+
+// get map value fpr a bp
+@function vs-var-get( $vs-size, $vs-bp ) {
+  @return map-get(map-get( $vs-sizes, $vs-size ), $vs-bp);
+}
+
+// mixin to generate var as css for each bp
+// use: '@include vs-var(margin-top, md)'
+@mixin vs-var( $property, $vs-selected-size ) {
+
+  #{$property}: vs-var-get( $vs-selected-size, base);
+
+  @include bp-min($small){
+    #{$property}: vs-var-get( $vs-selected-size, small);
+  }
+  @include bp-min($medium){
+    #{$property}: vs-var-get( $vs-selected-size, medium);
+  }
+}
