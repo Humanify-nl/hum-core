@@ -17,8 +17,8 @@
 	}
 
 	&.is-style-extra-spacing {
-		padding-top: var(--global--spacing-vertical);
-		padding-bottom: var(--global--spacing-vertical);
+		padding-top: var(--global--block-margin);
+		padding-bottom: var(--global--block-margin);
 	}
 
 	&.alignfull.has-background + .wp-block-group.has-background {

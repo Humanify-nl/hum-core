@@ -18,8 +18,8 @@
 	> .wp-block-group {
 
 		&.is-style-extra-spacing {
-			padding-top: var(--global--block-margin);
-			padding-bottom: var(--global--block-margin);
+      padding-top: var(--global--spacing-vertical);
+  		padding-bottom: var(--global--spacing-vertical);
 		}
 	}
 
@@ -30,6 +30,14 @@
 		> .wp-block-group {
 			margin-bottom: 0;
 		}
+
+    > .wp-block-group {
+
+      &.is-style-extra-spacing {
+        padding-top: var(--global--spacing-vertical);
+        padding-bottom: var(--global--spacing-vertical);
+      }
+    }
 	}
 
   > .wp-block[data-align="wide"] {
@@ -37,6 +45,14 @@
     > .wp-block-cover,
     > .wp-block-group {
       margin-bottom: 0;
+    }
+
+    > .wp-block-group {
+
+      &.is-style-extra-spacing {
+        padding-top: var(--global--spacing-vertical);
+        padding-bottom: var(--global--spacing-vertical);
+      }
     }
   }
 
