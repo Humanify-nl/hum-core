@@ -2,8 +2,8 @@
 /* Spacer
 --------------------------------------------- */
 .block-spacer {
-  margin-top: calc(-1 * var(--global--block-margin));
-  margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: calc(-1 * var(--global--block-margin));
 }
 
 

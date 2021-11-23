@@ -21,4 +21,8 @@
 		padding-bottom: var(--global--spacing-vertical);
 	}
 
+	&.alignfull.has-background + .wp-block-group.has-background {
+		margin-top: 0;
+	}
+
 }

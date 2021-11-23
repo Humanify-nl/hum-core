@@ -8,93 +8,12 @@
   // block spacing
 
   > * {
-    margin-bottom: var(--global--block-margin);
-
-    &:first-child:not(.has-background):not(.wp-block-cover){
-      margin-top: var(--global--block-margin);
-    }
+    margin-top: var(--global--block-margin);
 
     &:last-child:not(.has-background):not(.is-style-no-space):not(.wp-block-cover) {
       margin-bottom: var(--global--spacing-vertical);
     }
 
-    &:last-child.wp-block-cover {
-      margin-bottom: 0;
-    }
   }
 
-  > .wp-block-group {
-
-  }
-
-
-  // Padding
-  /*
-  > .wp-block-group.alignfull,
-  > .wp-block-group.alignwide,
-  > .wp-block-group {
-    padding-top: var(--global--spacing-vertical);
-		padding-bottom: var(--global--spacing-vertical);
-
-    &.has-background {
-      padding-left: $margin_site_s;
-			padding-right: $margin_site_s;
-      @include bp-min($small){
-				padding-left: var(--global--block-margin);
-				padding-right: var(--global--block-margin);
-			}
-
-      &.is-style-no-space {
-        padding-top: var(--global--block-margin);
-        padding-bottom: var(--global--block-margin);
-      }
-    }
-
-    &.is-style-no-space:not(.has-background) {
-      padding-top: var(--global--block-margin);
-      padding-bottom: var(--global--block-margin);
-    }
-  }
-  */
-
-  // Padding - new code
-
-  /*
-  > .wp-block-group {
-    padding-top: var(--global--spacing-vertical);
-    padding-bottom: var(--global--spacing-vertical);
-
-    &.has-background {
-      padding-top: var(--global--block-margin);
-      padding-bottom: var(--global--block-margin);
-      padding-left: $margin_site_s;
-      padding-right: $margin_site_s;
-      @include bp-min($small){
-        padding-left: var(--global--block-margin);
-        padding-right: var(--global--block-margin);
-      }
-
-      &.alignfull {
-        padding-top: var(--global--spacing-vertical);
-        padding-bottom: var(--global--spacing-vertical);
-      }
-
-      &.is-style-no-space {
-        padding-top: var(--global--block-margin);
-        padding-bottom: var(--global--block-margin);
-      }
-    }
-
-    &.is-style-no-space:not(.has-background) {
-      margin-top: var(--global--block-margin);
-      padding-top: 0;
-      padding-bottom: var(--global--block-margin);
-    }
-  }
-
-  > .wp-block-cover {
-    padding-top: var(--global--spacing-vertical);
-    padding-bottom: var(--global--spacing-vertical);
-  }
-  */
 }

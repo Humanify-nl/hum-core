@@ -1,10 +1,8 @@
 @import "spacer";
 
-.wp-block[data-type='acf/spacer']{
-}
-
 .block-spacer {
-  border: 1px dashed rgba(3,3,3,0.025);
+  border-top: 1px solid var(--color--grey-light);
+  border-bottom: 1px solid var(--color--grey-light);
   margin-top: 0;
   margin-bottom: 0;
   position: relative;
