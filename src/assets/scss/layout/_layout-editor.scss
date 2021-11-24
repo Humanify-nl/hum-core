@@ -42,8 +42,8 @@
 
 	.editor-styles-wrapper {
 
-		.wp-block-post-title,
-		.editor-post-title__block.wp-block {
+		//.editor-post-title__block.wp-block,
+		.wp-block-post-title {
 			max-width: var(--global--alignwide);
 		}
 
@@ -83,8 +83,8 @@
 
 	.editor-styles-wrapper {
 
-		.wp-block-post-title,
-		.editor-post-title__block.wp-block {
+		//.editor-post-title__block.wp-block,
+		.wp-block-post-title {
 			max-width: var(--global--aligncenter);
 		}
 

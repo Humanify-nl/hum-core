@@ -15,7 +15,12 @@ function post_blocks_template() {
     [ 'core/post-excerpt', [ 'moreText' => 'More', 'showMoreOnNewLine' => false, 'content' => 'Add a short excerpt here'] ],
   ];
 
+  $page = [
+    [ 'core/post-title', [] ],
+  ];
+
   $post_types = [
+     'page',
      'post',
      'testimonial'
    ];
@@ -25,10 +30,10 @@ function post_blocks_template() {
     $post_type_object = get_post_type_object( $post_type );
     if ( is_array(${$post_type}) ) {
       $post_type_object->template = ${$post_type};
+      //$post_type_object->template_lock = 'all';
     }
   }
 
-  //$post_type_object->template_lock = 'all';
 
 }
 add_action( 'init', 'post_blocks_template' );

@@ -5,6 +5,7 @@
  * @package hum-core
  */
 
+add_action( 'tha_entry_top', 'hum_entry_title' );
 // Entry category in header
 add_action( 'tha_entry_top', 'hum_entry_category', 8 );
 add_action( 'tha_entry_top', 'hum_entry_excerpt', 10 );

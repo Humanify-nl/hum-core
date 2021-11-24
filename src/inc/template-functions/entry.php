@@ -13,7 +13,7 @@
 function hum_entry_title() {
 	echo '<h1 class="entry-title">' . get_the_title() . '</h1>';
 }
-add_action( 'tha_entry_top', 'hum_entry_title' );
+//add_action( 'tha_entry_top', 'hum_entry_title' );
 
 
 /**
