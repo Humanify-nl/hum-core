@@ -27,6 +27,17 @@
 				margin-left: auto;
 				margin-right: auto;
 			}
+
+			.acf-block-component {
+				.acf-block-fields {
+					> .acf-field {
+						max-width: var(--global--alignwide);
+						margin-left: auto;
+						margin-right: auto;
+					}
+				}
+			}
+
 		}
 	}
 }
@@ -74,7 +85,18 @@
 					margin-right: auto;
 				}
 			}
+
+			.acf-block-component {
+				.acf-block-fields {
+					> .acf-field {
+						max-width: var(--global--alignwide);
+						margin-left: auto;
+						margin-right: auto;
+					}
+				}
+			}
 		}
+
 
 	}
 }
@@ -122,8 +144,17 @@
 					max-width: var(--global--aligncenter);
 				}
 			}
-		}
 
+			.acf-block-component {
+				.acf-block-fields {
+					> .acf-field {
+						max-width: var(--global--aligncenter);
+						margin-left: auto;
+						margin-right: auto;
+					}
+				}
+			}
+		}
 	}
 }
 
