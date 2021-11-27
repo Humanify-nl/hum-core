@@ -15,3 +15,10 @@
   transition-timing-function: ease-in-out;
   backface-visibility: hidden;
 }
+
+@mixin trans-collapse ($timeValue: 0.3, $properties...) {
+  transition-duration: ($timeValue * 1s);
+  transition-property: $properties;
+  transition-timing-function: cubic-bezier(0.125, 0.930, 1.000, 1.000);
+  backface-visibility: hidden;
+}
