@@ -1,6 +1,6 @@
 // spacer icon
 @mixin spacer_icon( $top: false ) {
-  $width_icon_collapse: v($map-spacing, block-margin);
+  $width_icon_collapse: v($map-spacing, block-margin, small);
   content: "";
   position: absolute;
   fill: #ebebeb;
@@ -12,11 +12,39 @@
   transform: scale(1.75);
 	@if ( $top == false ) {
     background: url(../icons/bs-arrow-up.svg) no-repeat center;
-    //background: url(../icons/utility-arrows-collapse.svg) no-repeat center;
 		bottom: - #{$width_icon_collapse + 0.125rem};
 	} @else {
     background: url(../icons/bs-arrow-down.svg) no-repeat center;
-    //background: url(../icons/utility-arrows-collapse.svg) no-repeat center;
 		top: - #{$width_icon_collapse + 0.125rem};
 	}
+
+  // medium bp
+  @include bp-min($medium) {
+    $width_icon_collapse: v($map-spacing, block-margin, medium);
+    height: $width_icon_collapse;
+    width: $width_icon_collapse;
+
+    @if ( $top == false ) {
+      background: url(../icons/bs-arrow-up.svg) no-repeat center;
+      bottom: - #{$width_icon_collapse + 0.125rem};
+    } @else {
+      background: url(../icons/bs-arrow-down.svg) no-repeat center;
+      top: - #{$width_icon_collapse + 0.125rem};
+    }
+  }
+
+  // large bp
+  @include bp-min($large) {
+    $width_icon_collapse: v($map-spacing, block-margin, large);
+    height: $width_icon_collapse;
+    width: $width_icon_collapse;
+
+    @if ( $top == false ) {
+      background: url(../icons/bs-arrow-up.svg) no-repeat center;
+      bottom: - #{$width_icon_collapse + 0.125rem};
+    } @else {
+      background: url(../icons/bs-arrow-down.svg) no-repeat center;
+      top: - #{$width_icon_collapse + 0.125rem};
+    }
+  }
 }
