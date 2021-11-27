@@ -7,6 +7,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 const CopyPlugin = require("copy-webpack-plugin");
+const ProgressPlugin = require('cli-progress-webpack-plugin');
 //const DependencyExtractionWebpackPlugin = require( '@wordpress/dependency-extraction-webpack-plugin' );
 
 module.exports = {
@@ -64,6 +65,8 @@ module.exports = {
         },
       ],
     }),
+    // CLI progress bars
+    new ProgressPlugin(),
   ],
   /*
    * output management

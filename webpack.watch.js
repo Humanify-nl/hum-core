@@ -8,7 +8,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 const CopyPlugin = require("copy-webpack-plugin");
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 const ProgressPlugin = require('cli-progress-webpack-plugin');
 
 module.exports = {
@@ -56,19 +55,6 @@ module.exports = {
         },
       ],
     }),
-    new BrowserSyncPlugin(
-      // BrowserSync options
-      {
-        // browse to http://localhost:3000/ during development
-        // proxy the Webpack Dev Server endpoint
-        // (which should be serving on http://localhost:3100/)
-        // through BrowserSync
-        host: 'localhost',
-        port: 3000,
-        proxy: localProxy,
-        files: '**/*.php',
-      },
-    ),
     // CLI progress bars
     new ProgressPlugin(),
   ],

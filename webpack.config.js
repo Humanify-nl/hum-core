@@ -6,6 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 const CopyPlugin = require("copy-webpack-plugin");
+const ProgressPlugin = require('cli-progress-webpack-plugin');
 
 module.exports = {
   context: path.join(sourcePath, assetPath),
@@ -52,6 +53,8 @@ module.exports = {
         },
       ],
     }),
+    // CLI progress bars
+    new ProgressPlugin(),
   ],
   /*
    * https://webpack.js.org/guides/output-management/
