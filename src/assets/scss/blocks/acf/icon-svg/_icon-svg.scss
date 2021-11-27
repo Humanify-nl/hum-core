@@ -2,10 +2,6 @@
 /* Icon svg
 --------------------------------------------- */
 
-$icon-size-normal: 2.5rem;
-$icon-padding-normal: 0.75rem;
-$icon-width-normal: $icon-size-normal + ($icon-padding-normal * 2);
-
 .block-icon-svg {
   display: flex;
   line-height: 1;
@@ -13,13 +9,13 @@ $icon-width-normal: $icon-size-normal + ($icon-padding-normal * 2);
 
   .block-icon-svg__wrap {
     background: white;
-    padding: $icon-padding-normal;
+    padding: var(--global--icon-padding);
     border-radius: 50%;
-    height: $icon-width-normal;
-    width: $icon-width-normal;
+    height: var(--global--icon-size-outer);
+    width: var(--global--icon-size-outer);
     svg {
-      height: $icon-size-normal;
-      width: $icon-size-normal;
+      height: var(--global--icon-size);
+      width: var(--global--icon-size);
     }
   }
 
