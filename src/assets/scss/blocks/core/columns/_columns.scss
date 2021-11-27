@@ -3,20 +3,43 @@
 --------------------------------------------- */
 
 .wp-block-columns {
+  margin-bottom: 0;
 
   .wp-block-columns {
     margin-bottom: 0;
   }
 
+  &.has-background {
+    padding: var(--global--padding);
+  }
+
+  // block styles
   &.is-style-space-between {
     justify-content: space-between;
   }
 
-  &.has-background {
-    padding: var(--global--padding);
+  &.is-style-icon-side {
+
+    >.wp-block-column {
+      flex-basis: auto !important;
+      margin-left: 0 !important;
+    }
+
+    @include bp-min($small){
+
+      > .wp-block-column:nth-child(2n+1) {
+        width: calc( var(--global--icon-size-outer) );
+      }
+      > .wp-block-column:nth-child(2n){
+        margin-left: var(--global--block-gap) !important;
+        width: calc( 100% - var(--global--icon-size-outer) - var(--global--block-gap) );
+      }
+    }
   }
 }
 
+
+// inner stacking
 
 .wp-block-column {
 
