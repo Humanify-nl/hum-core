@@ -128,21 +128,7 @@
 }
 
 
-.block-editor-contrast-checker {
-	display: none;
-}
-
-// attach post excerpt input to title
-.post-type-post {
-	.is-root-container {
-		.wp-block:first-child {
-			margin-top: 0;
-		}
-	}
-}
-.post-type-page {
-	.edit-post-visual-editor__post-title-wrapper {
-		border-bottom: 1px dashed var(--color--grey);
-		margin-bottom: 8px;
-	}
+.edit-post-visual-editor__post-title-wrapper {
+	border-bottom: 1px dashed var(--color--grey);
+	margin-bottom: 8px;
 }
