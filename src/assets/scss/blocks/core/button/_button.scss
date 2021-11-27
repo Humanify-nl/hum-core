@@ -77,3 +77,10 @@
 		}
   }
 }
+
+.wp-block-buttons {
+	margin-top: calc( 0.5 * var(--global--block-margin));
+	> .wp-block-button:last-child {
+		margin-bottom: 0;
+	}
+}
