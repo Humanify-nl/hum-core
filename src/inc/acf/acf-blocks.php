@@ -33,6 +33,10 @@ function hum_acf_init_block_types() {
       register_spacer_block()
     );
 
+    acf_register_block_type(
+      register_slider_block()
+    );
+
   }
 }
 add_action('acf/init', 'hum_acf_init_block_types');

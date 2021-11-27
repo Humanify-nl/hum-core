@@ -38,6 +38,11 @@ $map-components: (
 		padding-ver: var(--global--padding-inner),
 		padding-hor: var(--global--spacing-horizontal),
 	),
+	swiper: (
+	  button-color: var(--color--grey),
+		button-color-h: var(--color--grey-light),
+		button-color-a: var(--color--grey-dark),
+	),
 );
 
 $prefix: '--';

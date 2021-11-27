@@ -38,6 +38,14 @@
 				}
 			}
 
+			.wp-block-acf-slider {
+				.slider-text-wrap {
+					margin-left: auto;
+					margin-right: auto;
+					max-width: var(--global--alignwide);
+				}
+			}
+
 		}
 	}
 }
@@ -53,11 +61,7 @@
 
 	.editor-styles-wrapper {
 
-		//.editor-post-title__block.wp-block,
-		.wp-block-post-title {
-			max-width: var(--global--alignwide);
-		}
-
+		// direct children
 		.is-root-container {
 
 			> .wp-block {
@@ -65,9 +69,15 @@
 			}
 
 			> .block-list-appender {
-				max-width: var(--global--alignwide);
 				margin-left: auto;
 				margin-right: auto;
+				max-width: var(--global--alignwide);
+			}
+		}
+
+		.wp-block-acf-slider {
+			.slider-text-wrap {
+				padding: var(--global--padding);
 			}
 		}
 
@@ -89,10 +99,18 @@
 			.acf-block-component {
 				.acf-block-fields {
 					> .acf-field {
-						max-width: var(--global--alignwide);
 						margin-left: auto;
 						margin-right: auto;
+						max-width: var(--global--alignwide);
 					}
+				}
+			}
+
+			.wp-block-acf-slider {
+				.slider-text-wrap {
+					margin-left: auto;
+					margin-right: auto;
+					max-width: var(--global--alignwide);
 				}
 			}
 		}
@@ -105,11 +123,7 @@
 
 	.editor-styles-wrapper {
 
-		//.editor-post-title__block.wp-block,
-		.wp-block-post-title {
-			max-width: var(--global--aligncenter);
-		}
-
+		// direct children
 		.is-root-container {
 
 			> .wp-block {
@@ -123,12 +137,26 @@
 			}
 		}
 
+		.wp-block-acf-slider {
+			.slider-text-wrap {
+				padding: var(--global--padding);
+			}
+		}
+
 		.wp-block[data-align="wide"] {
 			max-width: var(--global--alignwide);
 
 			.wp-block-cover__inner-container,
 			.wp-block-group__inner-container {
 				> *:not([data-align="full"]):not([data-align="wide"]) {
+					max-width: var(--global--aligncenter);
+				}
+			}
+
+			.wp-block-acf-slider {
+				.slider-text-wrap {
+					margin-left: auto;
+					margin-right: auto;
 					max-width: var(--global--aligncenter);
 				}
 			}
@@ -148,10 +176,18 @@
 			.acf-block-component {
 				.acf-block-fields {
 					> .acf-field {
-						max-width: var(--global--aligncenter);
 						margin-left: auto;
 						margin-right: auto;
+						max-width: var(--global--aligncenter);
 					}
+				}
+			}
+
+			.wp-block-acf-slider {
+				.slider-text-wrap {
+					margin-left: auto;
+					margin-right: auto;
+					max-width: var(--global--aligncenter);
 				}
 			}
 		}

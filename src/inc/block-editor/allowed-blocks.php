@@ -56,6 +56,7 @@ function hum_post_blocks_array( $post_type = false ) {
     'acf/post-query',
     'acf/icon',
     'acf/pagelinks',
+    'acf/slider',
     'forminator/forms',
   ];
 
@@ -98,6 +99,7 @@ function hum_post_blocks_array( $post_type = false ) {
     // --> embed
     'core/embed',
     'acf/spacer',
+    'acf/slider',
   ];
 
   $block_types_page = [
@@ -134,6 +136,7 @@ function hum_post_blocks_array( $post_type = false ) {
     // --> embed
     'core/embed',
     'acf/spacer',
+    'acf/slider',
     'acf/post-query',
     'acf/icon',
     'forminator/forms',
@@ -175,6 +178,7 @@ function hum_post_blocks_array( $post_type = false ) {
     // --> embed
     'core/embed',
     'acf/spacer',
+    'acf/slider',
     'acf/icon',
     'forminator/forms',
   ];
@@ -188,6 +192,7 @@ function hum_post_blocks_array( $post_type = false ) {
     'core/columns',
     'core/group',
     'core/separator',
+    'acf/slider',
     'acf/spacer',
   ];
 

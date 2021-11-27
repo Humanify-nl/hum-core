@@ -11,6 +11,7 @@ include_once( get_template_directory() . '/inc/acf/acf-post-type-select.php' );
 include_once( get_template_directory() . '/inc/acf/acf-preview-type-select.php' );
 include_once( get_template_directory() . '/inc/acf/acf-blocks.php' );
 include_once( get_template_directory() . '/inc/acf/acf-select-svg-icon.php' );
+include_once( get_template_directory() . '/inc/acf/acf-select-image-size.php' );
 
 
 function hum_block_pattern_names() {

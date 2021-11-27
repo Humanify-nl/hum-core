@@ -84,9 +84,16 @@ $themecolors: (
 );
 
 @function theme($base, $shade: base) {
-  $color: map-get(map-get($themecolors, $base), $shade);
-  @return $color;
+
+  @if type-of($shade) == "map" {
+    @return map-get(map-get($themecolors, $base), $shade);
+  } @else {
+    @return map-get($themecolors, $base);
+  }
+
 }
+
+
 
 
 // Write variables in root -------------------- /

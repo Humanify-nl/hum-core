@@ -34,6 +34,10 @@ jQuery(document).ready(function($) {
       delay: 4000,
     },
     speed: 300,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',

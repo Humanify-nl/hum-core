@@ -1,0 +1,52 @@
+@import "slider";
+
+$swiper_icon_h: 32px;
+
+.wp-block-acf-slider {
+
+  .swiper {
+    position: relative;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    height: $swiper_icon_h;
+    top: calc(50% - #{$swiper_icon_h * 0.5});
+  }
+
+  .swiper-button-prev {
+    left: -6px;
+  }
+
+  .swiper-button-next {
+    right: -6px;
+  }
+
+  &.is-style-buttons-outside {
+    .swiper-button-prev {
+      left: -$swiper_icon_h;
+    }
+
+    .swiper-button-next {
+      right: -$swiper_icon_h;
+    }
+
+  }
+
+}
+
+.wp-block[data-align="full"] {
+
+  .wp-block-acf-slider {
+
+    &.is-style-buttons-outside {
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        display: none;
+      }
+    }
+  }
+
+}

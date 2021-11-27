@@ -55,10 +55,8 @@ if ( ! function_exists( 'hum_core_setup' ) ) {
  		// Featured image
 		add_theme_support( 'post-thumbnails' );
 
-		add_image_size( 'small', 360, 360 ); // Unlimited height, hard crop
-		add_image_size( 'featured', 1920, 9999 ); // Unlimited height, soft crop
-		add_image_size( 'featured-sq', 640, 640 ); // Unlimited height, hard crop
-		add_image_size( 'admin', 100, 80 ); // Unlimited height, hard crop
+		// Image sizes
+		include_once( get_template_directory() . '/inc/theme-settings/image-sizes.php' );
 
 		add_theme_support( 'custom-logo', array(
 		  'height'      => null, // Allow full flexibility if no size is specified.

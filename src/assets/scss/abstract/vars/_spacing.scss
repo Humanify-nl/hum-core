@@ -47,6 +47,11 @@ $map-spacing: (
 		medium: 0.75 * $spacing-unit,
 		large: 1 * $spacing-unit,
 	),
+	featured-img: (
+		small: 15 * $spacing-unit, // 240px
+		medium: 18 * $spacing-unit, // 288px
+		large: 20 * $spacing-unit, // 320px
+	),
 	// grid
 	grid-gap: 4 * $spacing-unit,						// between previews (horizontal)
 	grid-gutter-factor: 1, 				          // multiplier for gap
