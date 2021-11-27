@@ -8,11 +8,11 @@
 function post_blocks_template() {
 
   $post = [
-    [ 'core/post-excerpt', [ 'moreText' => 'More', 'showMoreOnNewLine' => false, 'content' => 'Add a short excerpt here'] ],
+    [ 'core/post-title', [] ],
   ];
 
   $testimonial = [
-    [ 'core/post-excerpt', [ 'moreText' => 'More', 'showMoreOnNewLine' => false, 'content' => 'Add a short excerpt here'] ],
+    [ 'core/post-title', [] ],
   ];
 
   $page = [
