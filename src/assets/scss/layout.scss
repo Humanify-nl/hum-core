@@ -7,11 +7,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 
-/*
-.editor-styles-wrapper {
-  &,
-  * {
-    font-family: "Lato", sans-serif;
-  }
+
+// cap height of buggy block-style previews
+.block-editor-block-styles__item-preview {
+  max-height: 80px;
 }
-*/
+// remove contrast msgs (we have our own system)
+.block-editor-contrast-checker {
+	display: none;
+}
