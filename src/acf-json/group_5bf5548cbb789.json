@@ -128,6 +128,34 @@
             "placeholder": ""
         },
         {
+            "key": "field_61a4c10956b52",
+            "label": "Preview type 'posts'",
+            "name": "preview_type_posts",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "66.6666",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "preview-post": "With image (img, title, excerpt)",
+                "preview-excerpt": "No image (title, excerpt)",
+                "preview-list": "List (img left, title & excerpt right)",
+                "preview-list-circle": "List circle (img circle left, title & excerpt right)",
+                "preview-circle": "Circle (img circle, title, excerpt)"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_6031324fe452d",
             "label": "Related posts",
             "name": "",
@@ -222,7 +250,7 @@
             "default_value": 6,
             "min": 0,
             "max": 15,
-            "step": 3,
+            "step": 1,
             "prepend": "",
             "append": ""
         },
@@ -246,6 +274,34 @@
                 "grid--100": "1 per row"
             },
             "default_value": "grid-1",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_61a4c0d256b51",
+            "label": "Preview type 'related posts'",
+            "name": "preview_type_rel",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "66.6666",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "preview-post": "With image (img, title, excerpt)",
+                "preview-excerpt": "No image (title, excerpt)",
+                "preview-list": "List (img left, title & excerpt right)",
+                "preview-list-circle": "List circle (img circle left, title & excerpt right)",
+                "preview-circle": "Circle (img circle, title, excerpt)"
+            },
+            "default_value": false,
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -311,5 +367,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Setup all post types",
-    "modified": 1634303418
+    "modified": 1638200515
 }

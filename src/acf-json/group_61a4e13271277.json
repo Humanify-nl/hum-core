@@ -1,0 +1,138 @@
+{
+    "key": "group_61a4e13271277",
+    "title": "Option > Testimonials",
+    "fields": [
+        {
+            "key": "field_61a4e09c8167c",
+            "label": "Single",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_61a4e226dc9ac",
+            "label": "Grid related posts",
+            "name": "grid_preview_testimonial_rel",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.3333",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "grid--25": "4 per row",
+                "grid-33": "3 per row",
+                "grid--50": "2 per row",
+                "grid--100": "1 per row"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_61a4f5174622b",
+            "label": "Preview type related",
+            "name": "preview_type_testimonial_rel",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "66.6666",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "preview-post": "With image (img, title, excerpt)",
+                "preview-excerpt": "No image (title, excerpt)",
+                "preview-list": "List (img left, title & excerpt right)",
+                "preview-list-circle": "List circle (img circle left, title & excerpt right)",
+                "preview-circle": "Circle (img circle, title, excerpt)"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_61a4e188f377d",
+            "label": "Archive",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_61a4e0b58167d",
+            "label": "Grid type archief",
+            "name": "grid_preview_testimonial",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.3333",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "grid--25": "4 per row",
+                "grid-33": "3 per row",
+                "grid--50": "2 per row",
+                "grid--100": "1 per row"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-site-options"
+            }
+        ]
+    ],
+    "menu_order": 50,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1638201457
+}
