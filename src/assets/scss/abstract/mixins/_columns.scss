@@ -26,6 +26,7 @@
 
 	@include bp-max($small) {
 		@include columns( $columns,$grid_item_element, $gap );
+		grid-row-gap: 0.5 * $grid-gap;
 	}
 
 }
