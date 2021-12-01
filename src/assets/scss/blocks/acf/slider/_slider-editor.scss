@@ -8,6 +8,10 @@ $swiper_icon_h: 32px;
     position: relative;
   }
 
+  .swiper-slide {
+    opacity: 1;
+  }
+
   .swiper-button-prev,
   .swiper-button-next {
     position: absolute;

@@ -7,11 +7,16 @@
     object-fit: cover;
     width: 100%;
     min-height: var(--global--featured-img);
-    max-height: 400px;
+    max-height: 460px;
   }
 
   .swiper-slide {
-    position: relative;
+    opacity: 0;
+    @include trans-ea(0.05, opacity);
+  }
+
+  .swiper-slide-visible {
+    opacity: 1;
   }
 
   .slider-text {
@@ -36,6 +41,9 @@
   .slider-text-wrap {
     box-sizing: border-box;
     width: 100%;
+    @include bp-max($small){
+      padding: 1em;
+    }
   }
 
   // swiper modifications
