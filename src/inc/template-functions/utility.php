@@ -21,21 +21,6 @@ function hum_has_action( $hook ) {
 
 
 /**
- * Conditional CSS Classes
- *
- * @param string $base_classes, classes always applied
- * @param string $optional_class, additional class applied if $conditional is true
- * @param bool $conditional, whether to add $optional_class or not
- * @return string $classes
- */
-function hum_post_class( $base_classes, $optional_class, $conditional ) {
-
-	return $conditional ? $base_classes . ' ' . $optional_class : $base_classes;
-
-}
-
-
-/**
  * Yoast breadcrumbs
  *
  */
