@@ -41,6 +41,11 @@
 		}
 	}
 
+	.sub-menu > .menu-item a {
+		font-size: var(--menu--font-size-sub-menu);
+		padding: 8px 18px;
+	}
+
 	.submenu-expand {
 		@include button-reset;
 		position: absolute;
@@ -92,6 +97,7 @@
 	max-width: $sidemenu-width;
 	margin-left: auto;
 	margin-right: 0;
+	width: 0;
 
 	@include bp-max($base){
 		max-width: $base;
@@ -113,6 +119,7 @@
 	}
 
 	&.active {
+		width: auto;
 
 		.nav-primary {
 			right: 0;
