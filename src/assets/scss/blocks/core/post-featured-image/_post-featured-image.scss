@@ -1,0 +1,13 @@
+
+/* Post featured image
+--------------------------------------------- */
+
+.wp-block-post-featured-image {
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    min-height: var(--global--featured-img);
+    max-height: 460px;
+  }
+}

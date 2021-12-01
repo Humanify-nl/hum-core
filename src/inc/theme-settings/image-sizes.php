@@ -7,7 +7,7 @@
 
 add_image_size( 'small', 360, 360 ); // Unlimited height, hard crop
 add_image_size( 'featured', 1920, 514, array( 'top') ); // Unlimited height, soft crop
-add_image_size( 'featured-sq', 640, 640 ); // Unlimited height, hard crop
+add_image_size( 'featured-sq', 640, 640, true ); // Unlimited height, hard crop
 add_image_size( 'admin', 100, 80 ); // Unlimited height, hard crop
 
 /**

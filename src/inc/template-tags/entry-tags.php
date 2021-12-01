@@ -19,8 +19,25 @@ function hum_entry_image_id() {
  * Entry image
  *
  */
-function hum_entry_image( $size = 'post-image' ) {
- 	echo the_post_thumbnail( $size );
+function hum_entry_image() {
+	if ( has_post_thumbnail() ) {
+		if ( get_post_type( get_the_id() ) == 'testimonial' ) {
+			echo the_post_thumbnail( 'featured-sq' );
+		} else {
+			echo the_post_thumbnail( 'featured' );
+		}
+	} else {
+		return false;
+	}
+}
+
+
+/**
+ * Entry image
+ *
+ */
+function hum_entry_image_testimonial() {
+ 	echo the_post_thumbnail( 'featured-sq' );
 }
 
 

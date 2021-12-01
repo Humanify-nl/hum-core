@@ -13,13 +13,24 @@ $post_class_array = get_post_class() ;
 <article class="<?php echo join( ' ', $post_class_array ); ?>">
 
   <?php
-  //hum_block_area()->show( 'entry-header' );
-  if( hum_has_action( 'tha_entry_top' ) ) {
-    echo '<header class="entry-header header wrap">';
+  if ( hum_has_action( 'tha_entry_top' ) || has_post_thumbnail() ) {
 
-      tha_entry_top();
+    ?>
+    <header class="entry-header wrap">
 
-    echo '</header>';
+      <div class="header">
+
+        <?php hum_entry_image(); ?>
+
+        <div class="header-wrap">
+          <?php tha_entry_top(); ?>
+        </div>
+
+      </div>
+
+    </header>
+    <?php
+
   }
   ?>
 
