@@ -42,9 +42,6 @@ function register_slider_block() {
 
 function hum_render_slider_block( $block, $content = '', $is_preview = false ) {
 
-  // Debug
-  //hum_print_arr($block);
-
   // Variables
   $className = 'acf-block block-slider';
 
