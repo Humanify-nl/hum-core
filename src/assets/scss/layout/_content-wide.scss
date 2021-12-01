@@ -5,6 +5,8 @@
 .content-wide {
 
   .wrap > * {
+    margin-left: auto;
+    margin-right: auto;
     max-width: var(--global--alignwide);
   }
 
@@ -47,9 +49,4 @@
     }
   }
 
-  .grid {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: var(--global--alignwide);
-  }
 }

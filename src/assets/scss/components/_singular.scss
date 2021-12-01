@@ -8,10 +8,6 @@
 
 .after-entry .wrap {
 
-	& > * {
-		margin-top: var(--global--spacing-vertical);
-	}
-
 	.publish-date {
 		border-top: 1px solid var(--color--grey-light);
 		font-size: var(--global--font-size-small);

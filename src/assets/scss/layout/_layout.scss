@@ -3,14 +3,10 @@
 --------------------------------------------- */
 
 .wrap {
-
-  > * {
-    margin-left: auto;
-    margin-right: auto;
-    width: calc(100% - #{$margin_site_s * 2});
-  }
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(100% - #{$margin_site_s * 2});
 }
-
 
 .entry-content {
 
