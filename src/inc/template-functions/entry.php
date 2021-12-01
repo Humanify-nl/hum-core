@@ -13,7 +13,6 @@
 function hum_entry_title() {
 	echo '<h1 class="entry-title">' . get_the_title() . '</h1>';
 }
-//add_action( 'tha_entry_top', 'hum_entry_title' );
 
 
 /**
@@ -47,13 +46,12 @@ function hum_entry_header_share() {
  */
 function hum_single_after_entry() {
 
-	echo '<div class="after-entry">';
+	echo '<section class="after-entry">';
 
 		echo '<div class="wrap">';
-		// Breadcrumbs
+
 		hum_breadcrumbs();
 
-		// Publish date
 		echo '<p class="publish-date">Published on ' . get_the_date( 'F j, Y' ) . '</p>';
 
 		// Sharing
@@ -61,5 +59,5 @@ function hum_single_after_entry() {
 
 		echo '</div>';
 
-	echo '</div>';
+	echo '</section>';
 }

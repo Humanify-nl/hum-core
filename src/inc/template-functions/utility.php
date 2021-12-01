@@ -29,11 +29,14 @@ function hum_breadcrumbs() {
 
 	if ( function_exists('yoast_breadcrumb') ) {
 
-		echo '<div class="yoast">';
+		if ( has_post_parent() ) {
 
-		yoast_breadcrumb( '<p class="breadcrumbs">','</p>' );
+			echo '<div class="yoast">';
 
-		echo '</div>';
+			yoast_breadcrumb( '<p class="breadcrumbs">','</p>' );
+
+			echo '</div>';
+		}
 	}
 }
 

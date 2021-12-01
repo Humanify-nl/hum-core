@@ -80,6 +80,8 @@ if ( ! function_exists( 'hum_core_setup' ) ) {
 		// remove post-formats
 		remove_theme_support( 'post-formats' );
 
+		add_theme_support( 'yoast-seo-breadcrumbs' );
+
 		// block editor
 		include_once( get_template_directory() . '/inc/block-editor/theme-support.php');
 		include_once( get_template_directory() . '/inc/block-editor/block-colors.php' );
