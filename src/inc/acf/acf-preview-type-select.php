@@ -23,7 +23,9 @@ function acf_load_preview_type_select_choices( $field ) {
 }
 
 add_filter('acf/load_field/name=preview_type_select', 'acf_load_preview_type_select_choices');
-
+add_filter('acf/load_field/name=preview_type_posts', 'acf_load_preview_type_select_choices');
+add_filter('acf/load_field/name=preview_type_rel', 'acf_load_preview_type_select_choices');
+add_filter('acf/load_field/name=preview_type_testimonial_rel', 'acf_load_preview_type_select_choices');
 
 
 function acf_load_preview_page_type_choices( $field ) {
