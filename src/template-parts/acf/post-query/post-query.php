@@ -27,10 +27,10 @@ if ( $query_posts->have_posts() ) {
     while ( $query_posts->have_posts() ) {
 
       $query_posts->the_post();
-      $preview_select = get_field( 'preview_post_select' );
+      $preview_select = get_field( 'preview_type_select' );
       $preview_type = !empty($preview_select) ? $preview_select : 'preview';
 
-      include( locate_template( 'template-parts/'.$preview_type.'.php' ) );
+      include( locate_template( 'template-parts/previews/'.$preview_type.'.php' ) );
 
     }
 

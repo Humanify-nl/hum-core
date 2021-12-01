@@ -6,6 +6,7 @@
  */
 
 include_once( get_template_directory() . '/inc/acf/blocks/block-post-query.php' );
+include_once( get_template_directory() . '/inc/acf/blocks/block-query-related.php' );
 include_once( get_template_directory() . '/inc/acf/blocks/block-icon-svg.php' );
 include_once( get_template_directory() . '/inc/acf/blocks/block-pagelinks.php' );
 include_once( get_template_directory() . '/inc/acf/blocks/block-spacer.php' );
@@ -19,6 +20,10 @@ function hum_acf_init_block_types() {
 
     acf_register_block_type(
       register_post_query_block()
+    );
+
+    acf_register_block_type(
+      register_post_query_related_block()
     );
 
     acf_register_block_type(
