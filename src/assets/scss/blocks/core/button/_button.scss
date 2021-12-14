@@ -16,8 +16,9 @@
 
 	// Remove default .has-background block styling
 	&.has-background {
-		padding: 0;
-		background-color: none;
+		background: unset;
+		color: unset;
+		padding: unset;
 	}
 
 	// Reset other styles
@@ -27,60 +28,19 @@
 		&:hover {
 			text-decoration: none;
 		}
-
-		// Default text
-
-		&:not(.has-text-color):not(.has-white-background-color):not(.has-grey-light-background-color) {
-			color: white;
-
-			&:hover {
-				color: white;
-			}
-		}
-
-		// default background
-		&:not(.has-background) {
-			$default: nth( nth( $color-picker, 1 ), 2 ); // first color in $colors array
-			background-color: $default;
-
-			&:hover,
-			&:focus {
-				background-color: darken( $default, 10% );
-			}
-			&:active {
-				background-color: darken( $default, 18% );
-			}
-		}
-
-		// Generate CSS
-		@each $name, $color in $color-picker {
-
-			&#{ '.has-' + $name + '-color:hover'},
-			&#{ '.has-' + $name + '-color:active'},
-			&#{ '.has-' + $name + '-color:focus'} {
-				color: $color;
-			}
-
-			&#{ '.has-' + $name + '-background-color:hover'},
-			&#{ '.has-' + $name + '-background-color:focus'} {
-				background-color: darken( $color, 10% );
-			}
-
-			&#{ '.has-' + $name + '-background-color:active'} {
-				background-color: darken( $color, 18% );
-			}
-		}
-
-		&.has-white-background-color,
-		&.has-grey-light-background-color {
-			color: var(--color--base);
-		}
   }
 }
 
 .wp-block-buttons {
-	margin-top: calc( 0.5 * var(--global--block-margin));
-	> .wp-block-button:last-child {
-		margin-bottom: 0;
+	margin-top: calc( 0.25 * var(--global--block-margin));
+
+	> .wp-block-button {
+		margin-bottom: calc( 0.25 * var(--global--block-margin));
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 }
+
+
+// see colors in theme/color-options

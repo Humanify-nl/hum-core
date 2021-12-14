@@ -24,20 +24,3 @@ a {
 .publish-date {
   color: var(--color--grey-text);
 }
-
-
-// background colors dictate color
-.has-grey-light-background-color,
-.has-white-background-color {
-	color: var(--color--base);
-}
-
-.has-tertiary-background-color,
-.has-secondary-background-color,
-.has-primary-background-color {
-	color: var(--color--white);
-
-	a, h2, h3 {
-		color: var(--color--white);
-	}
-}

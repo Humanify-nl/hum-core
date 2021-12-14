@@ -15,7 +15,7 @@ $button: (
     font-family: var(--global--font-primary),
     border-width: 1px,
     border-radius: 0,
-    line-height: var(--global--line-height),
+    line-height: 1.6 //var(--global--line-height),
     padding-ver: var(--global--padding-inner),
     padding-hor: var(--global--spacing-horizontal),
   ),

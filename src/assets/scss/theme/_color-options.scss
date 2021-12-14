@@ -13,3 +13,105 @@
 	}
 
 }
+
+
+// Background colors dictate color
+.has-grey-light-background-color,
+.has-white-background-color {
+	color: var(--color--base);
+}
+
+.has-tertiary-background-color,
+.has-secondary-background-color,
+.has-primary-background-color {
+	color: var(--color--white);
+
+	a, h2, h3 {
+		color: var(--color--white);
+	}
+}
+
+
+// Buttons
+.wp-block-button .wp-block-button__link {
+
+	// default text color
+	color: white;
+
+	&:hover {
+		color: white;
+	}
+
+
+	// default background color
+	&:not(.has-background) {
+		$default: nth( nth( $color-picker, 1 ), 2 ); // first color in $colors array
+		background-color: $default;
+
+		&:hover,
+		&:focus {
+			background-color: darken( $default, 10% );
+		}
+		&:active {
+			background-color: darken( $default, 18% );
+		}
+	}
+
+
+	// generate css colors based on color picker
+	@each $name, $color in $color-picker {
+
+		&#{ '.has-' + $name + '-background-color'} {
+			background-color: $color !important;
+		}
+		&#{ '.has-' + $name + '-background-color:hover'},
+		&#{ '.has-' + $name + '-background-color:focus'} {
+			background-color: darken( $color, 10% ) !important;
+		}
+		&#{ '.has-' + $name + '-background-color:active'} {
+			background-color: darken( $color, 18% ) !important;
+		}
+	}
+
+	&.has-grey-light-background-color,
+	&.has-white-background-color {
+		color: var(--color--base);
+	}
+
+}
+
+// block styles
+.wp-block-button.is-style-outline {
+	background-color: transparent !important;
+
+	.wp-block-button__link {
+		border: 1px solid;
+		background-color: transparent !important;
+
+		@each $name, $color in $color-picker {
+
+			&#{ '.has-' + $name + '-background-color'} {
+				border-color: $color;
+				color: $color;
+			}
+
+			&#{ '.has-' + $name + '-background-color:hover'},
+			&#{ '.has-' + $name + '-background-color:focus'} {
+				border-color: $color, 10%;
+				background-color: $color !important;
+				color: var(--color--white);
+			}
+
+			&#{ '.has-' + $name + '-background-color:active'} {
+				border-color: darken( $color, 18% );
+				background-color: darken( $color, 18% ) !important;
+				color: var(--color--white);
+			}
+		}
+
+		&.has-grey-light-background-color,
+		&.has-white-background-color {
+			color: var(--color--white);
+		}
+	}
+}
