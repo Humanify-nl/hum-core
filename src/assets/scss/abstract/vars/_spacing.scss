@@ -24,7 +24,7 @@ $map-spacing: (
 	spacing-vertical-sm: (
 		small: 1.5 * $spacing-unit,
 		medium: 2 * $spacing-unit,
-		large: 2 * $spacing-unit,
+		large: 3 * $spacing-unit,
 	),
 	spacing-vertical: (
 	  small: 2 * $spacing-unit,
@@ -58,6 +58,7 @@ $map-spacing: (
 	// text
 	text-margin: 1.5 * $spacing-unit,
 	line-height: 1.5,
+	line-height-heading: 1.2,
 	elevation: 1px 1px 3px 0 rgba(0, 0, 0, 0.2),
 	// icon
 	icon-padding: 0.75 * $spacing-unit,
@@ -97,6 +98,11 @@ $pad_inner: 0.5 * $spacing-unit;
 
 $line_height_preview_title: 1.2;
 
+// Lists
+
+$list_text_indent: 1.3125em;
+$list_padding: 0.25em;
+$list_padding_left: 1.5em;
 
 // Root variables
 
