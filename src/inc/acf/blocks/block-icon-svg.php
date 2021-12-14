@@ -10,16 +10,14 @@ function register_icon_block() {
     'icon'              => 'heart',
     'keywords'          => [ 'icon', 'svg' ],
     'post_types'        => [ 'post', 'page' ],
-    'align'             => 'left',     // left, center, right, wide and full.
-    'align_text'        => 'left',     // left, center, right
-    'mode'              => 'preview',  // preview, auto, edit
-    //'enqueue_style'     => get_template_directory_uri() . '/template-parts/acf/blocks/post-query.css',
-    //'enqueue_script'    => get_template_directory_uri() . '/template-parts/acf/blocks/post-query.js',
+    'align'             => 'left',
+    'align_text'        => 'left',
+    'mode'              => 'preview',
     'supports'          => [
-      'align'             => false,   // [ 'center', 'full' ], // customize alignment toolbar (false = disable)
-      'align_text'        => true,    // text alignment toolbar
-      'align_content'     => false,   // content alignment toolbar
-      'mode'              => true,    // preview/edit toggle
+      'align'             => false,
+      'align_text'        => true,
+      'align_content'     => false,
+      'mode'              => true,
       'multiple'          => true,
       'customClassName'	  => true,
       'jsx' 			        => true,

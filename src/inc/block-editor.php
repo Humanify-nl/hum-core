@@ -27,18 +27,20 @@ function hum_acf_post_id() {
   }
 }
 
-if(!function_exists('my_get_valid_id')){
-   function my_get_valid_id() {
-       $hum_id= hum_acf_post_id();
-       if ( $hum_id>0 ) {
-           return $hum_id;
-       }else {
-           global $post;
-           $post_id=$post->ID;
-           if($post_id>0 && $post_id!=null){
-               return $post_id;
-           }
-           return -1;//fail safe. In case id not found at all
-       }
-   }
+
+function hum_get_valid_id() {
+
+	$hum_id = hum_acf_post_id();
+	
+	if ( $hum_id > 0 ) {
+		return $hum_id;
+	} else {
+		global $post;
+		$post_id = $post->ID;
+
+		if ( $post_id>0 && $post_id != null ) {
+		  return $post_id;
+		}
+	  return -1;//fail safe. In case id not found at all
+	}
 }

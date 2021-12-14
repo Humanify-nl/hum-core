@@ -41,6 +41,12 @@ function register_new_block() {
         ],
       ],
     ]
+    /*
+    // Specifying an anonymous function
+    'enqueue_assets' => function(){
+      wp_enqueue_script( 'block-tabs', get_template_directory_uri() . '/assets/js/tabs.js', array('jquery'), '', true );
+    },
+    */
 
   ];
 

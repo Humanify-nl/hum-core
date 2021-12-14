@@ -15,7 +15,7 @@ if ( !$is_select && $pages_relation == 'parent') {
 
   $selected_pages = get_pages( array(
 
-    'child_of'    => hum_acf_post_id(),
+    'child_of'    => hum_get_valid_id(),
     'sort_column' => 'menu_order',
 
   ) );
@@ -38,22 +38,6 @@ if ( !$is_select && $pages_relation == 'parent') {
 
   ) );
 
-// not rendered in the block editor
-} elseif ( $args['is_related'] ) {
-
-  if ( $post->parent != 0 ) {
-
-    $selected_pages = get_pages( array(
-
-      'parent' => $post->post_parent,
-      'exclude' => [ hum_acf_post_id() ],
-      'sort_column' => 'menu_order',
-
-    ) );
-
-  }
-
-
 } else {
 
   echo '<p>No pages to show</p>';
@@ -64,11 +48,10 @@ if ( !$is_select && $pages_relation == 'parent') {
 $preview_select = get_field( 'preview_page_select' );
 $preview_type = !empty($preview_select) ? $preview_select : 'preview';
 
-
 if ( !empty( $selected_pages ) ) {
 
 	?>
-	<div class="<?php echo hum_grid_class_preview( 'has-'.$preview_type );?>">
+	<div class="<?php echo hum_grid_class_preview( 'grid-'.$preview_type );?>">
 
 		<?php
 	  foreach ( $selected_pages as $post ) {

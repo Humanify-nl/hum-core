@@ -1,6 +1,4 @@
 <?php
-// replace 'spacer'
-
 function register_spacer_block() {
 
   $register_spacer = [
@@ -12,16 +10,14 @@ function register_spacer_block() {
     'icon'              => 'image-flip-vertical',
     'keywords'          => [ 'icon', 'svg' ],
     'post_types'        => [ 'post', 'page' ],
-    'align'             => false,     // left, center, right, wide and full.
-    'align_text'        => false,     // left, center, right
-    'mode'              => 'preview',  // preview, auto, edit
-    //'enqueue_style'     => get_template_directory_uri() . '/template-parts/acf/blocks/post-query.css',
-    //'enqueue_script'    => get_template_directory_uri() . '/template-parts/acf/blocks/post-query.js',
+    'align'             => false,
+    'align_text'        => false,
+    'mode'              => 'preview',
     'supports'          => [
-      'align'             => false,   // [ 'center', 'full' ], // customize alignment toolbar (false = disable)
-      'align_text'        => false,    // text alignment toolbar
-      'align_content'     => false,   // content alignment toolbar
-      'mode'              => true,    // preview/edit toggle
+      'align'             => false,
+      'align_text'        => false,
+      'align_content'     => false,
+      'mode'              => true,
       'multiple'          => true,
       'customClassName'	  => true,
       'jsx' 			        => true,

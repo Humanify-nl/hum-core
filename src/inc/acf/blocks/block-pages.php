@@ -26,42 +26,22 @@ function register_pages_block() {
 }
 
 
-function hum_render_pages_block( $block, $content = '', $is_preview = false ) {
+function hum_render_pages_block( $block, $content = '', $is_preview = false, $post_id = 0 ) {
 
   // Variables
   $className = 'wp-block acf-block pages';
-  if( !empty($block['className']) ) {
-      $className .= ' ' . $block['className'];
+  if( !empty( $block['className'] ) ) {
+    $className .= ' ' . $block['className'];
   }
-  if( !empty($block['align']) ) {
-      $className .= ' align' . $block['align'];
+  if( !empty( $block['align'] ) ) {
+    $className .= ' align' . $block['align'];
   }
 
   ?>
-  <div class="<?php echo esc_attr($className); ?>">
+  <div class="<?php echo esc_attr( $className ); ?>">
     <?php
-    get_template_part( 'template-parts/acf/pages/pages' , '', [ 'is_related' => false ]);
+    get_template_part( 'template-parts/acf/pages/pages' );
     ?>
   </div>
-  <?php
-}
-
-
-// render this block outside editor
-
-function hum_pages_related() {
-  // Variables
-  $className = 'pages-related vs-mt-lg vs-mb-lg';
-
-  ?>
-  <section class="<?php echo esc_attr($className); ?>">
-    <div class="wrap">
-      <?php
-      $section_title = get_field( 'page-siblings-title' , 'option');
-      if ( $section_title ) { echo '<h2 class="section-title vs-mb-md">' .$section_title. '</h2>'; }
-      get_template_part( 'template-parts/acf/pages/pages', '', [ 'is_related' => true ] );
-      ?>
-    </div>
-  </section>
   <?php
 }

@@ -1,5 +1,5 @@
 <?php
-// replace 'pagelinks'
+// 'pagelinks' --> experimental
 
 function register_pagelinks_block() {
 
@@ -12,16 +12,13 @@ function register_pagelinks_block() {
     'icon'              => 'screenoptions',
     'keywords'          => [ 'pages', 'links' ],
     'post_types'        => [ 'post', 'page' ],
-    //'align'             => 'left',     // left, center, right, wide and full.
-    'align_text'        => 'left',     // left, center, right
-    'mode'              => 'preview',  // preview, auto, edit
-    //'enqueue_style'     => get_template_directory_uri() . '/template-parts/acf/blocks/post-query.css',
-    //'enqueue_script'    => get_template_directory_uri() . '/template-parts/acf/blocks/post-query.js',
+    'align_text'        => 'left',
+    'mode'              => 'preview',
     'supports'          => [
-      'align'             => [ 'wide', 'full' ], // customize alignment toolbar (false = disable)
-      'align_text'        => false,    // text alignment toolbar
-      'align_content'     => false,   // content alignment toolbar
-      'mode'              => true,    // preview/edit toggle
+      'align'             => [ 'wide', 'full' ],
+      'align_text'        => false,
+      'align_content'     => false,
+      'mode'              => true,
       'multiple'          => true,
       'customClassName'	  => true,
       'jsx' 			        => true,
