@@ -4,11 +4,14 @@
 .wp-block-social-links {
 
   .wp-social-link {
-    padding-bottom: 0;
+
+    a {
+       padding: 0;
+    }
 
     svg {
-      width: $icon_size_social;
-      height: $icon_size_social;
+      width: var(--icon-svg--size-large);
+      height: var(--icon-svg--size-large);
     }
   }
 }
