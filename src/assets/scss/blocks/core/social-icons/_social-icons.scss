@@ -13,5 +13,9 @@
       width: var(--icon-svg--size-large);
       height: var(--icon-svg--size-large);
     }
+
+    &:hover {
+      transform: none;
+    }
   }
 }
