@@ -47,7 +47,7 @@ function hum_post_type_testimonial() {
       'has_archive'         => true,
       'query_var'           => true,
       'can_export'          => true,
-      'rewrite'             => [ 'slug' => 'testimonials', 'with_front' => false ],
+      'rewrite'             => [ 'slug' => $post_type, 'with_front' => false ],
       'menu_icon'           => 'dashicons-groups', // https://developer.wordpress.org/resource/dashicons/
     ];
 
