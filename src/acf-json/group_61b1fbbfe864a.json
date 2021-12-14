@@ -1,11 +1,11 @@
 {
-    "key": "group_6177addec1f4e",
-    "title": "Block > Icon",
+    "key": "group_61b1fbbfe864a",
+    "title": "Mod > Page preview type",
     "fields": [
         {
-            "key": "field_6177ae5450b9a",
-            "label": "Select icon",
-            "name": "select_svg_icon",
+            "key": "field_61b1fbd40f092",
+            "label": "Preview type",
+            "name": "preview_page_select",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -16,15 +16,12 @@
                 "id": ""
             },
             "choices": {
-                "activity": "Activity",
-                "chat-dots": "Chat dots",
-                "chat-dots-fill": "Chat dots fill",
-                "house": "House",
-                "house-fill": "House fill",
-                "palette": "Palette",
-                "palette-fill": "Palette fill"
+                "preview": "Default (img, title, excerpt)",
+                "preview-icon": "Icon (icon, title)",
+                "preview-link": "Link (title-link only)",
+                "preview-list": "List (img left, title & excerpt right)"
             },
-            "default_value": "heart",
+            "default_value": "preview-list",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -36,19 +33,19 @@
     "location": [
         [
             {
-                "param": "block",
+                "param": "post_type",
                 "operator": "==",
-                "value": "acf\/icon"
+                "value": "post"
             }
         ]
     ],
-    "menu_order": 20,
+    "menu_order": 5,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
-    "description": "inc\/acf\/blocks\/block-icon-svg",
-    "modified": 1639411040
+    "active": false,
+    "description": "",
+    "modified": 1639410312
 }

@@ -11,17 +11,17 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "choices": {
-                "grid-25": "4 per row",
+                "grid--25": "4 per row",
                 "grid-33": "3 per row",
-                "grid-50": "2 per row",
-                "grid-100": "1 per row"
+                "grid--50": "2 per row",
+                "grid--100": "1 per row"
             },
-            "default_value": "grid-100",
+            "default_value": false,
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -47,5 +47,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "inc\/acf\/acf-grid-class-preview",
-    "modified": 1639410300
+    "modified": 1639054469
 }

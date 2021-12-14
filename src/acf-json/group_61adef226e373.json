@@ -1,9 +1,9 @@
 {
-    "key": "group_6177addec1f4e",
-    "title": "Block > Icon",
+    "key": "group_61adef226e373",
+    "title": "Block > Icon wrap",
     "fields": [
         {
-            "key": "field_6177ae5450b9a",
+            "key": "field_61adef2277cc2",
             "label": "Select icon",
             "name": "select_svg_icon",
             "type": "select",
@@ -38,7 +38,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/icon"
+                "value": "acf\/icon-wrap"
             }
         ]
     ],
@@ -50,5 +50,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "inc\/acf\/blocks\/block-icon-svg",
-    "modified": 1639411040
+    "modified": 1639411056
 }

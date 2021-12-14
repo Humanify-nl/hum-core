@@ -1,0 +1,216 @@
+{
+    "key": "group_5dcd2e2f56566",
+    "title": "Option > Pages",
+    "fields": [
+        {
+            "key": "field_603131669ad0e",
+            "label": "Pagina groepen",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_603139799416e",
+            "label": "Pagina groepen",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Pagina worden onderdeel van een 'groep' zodra er een 'parent' toegewezen is. Zo snapt WordPress dat deze pagina's verwant zijn.\r\n\r\nDoor de groepsrelatie is het mogelijk om 'groepen' verwante pagina's elders op de site te tonen. Dit helpt je bezoeker navigeren.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5dd67f9a2372e",
+            "label": "Globale titel siblings",
+            "name": "page_siblings_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.3333",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Gerelateerd",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6000271b734f7",
+            "label": "Link type",
+            "name": "page_links",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.3333",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "button": "Button",
+                "button-wired": "Wired button",
+                "button-white": "White button",
+                "preview__link": "Default link"
+            },
+            "default_value": "link",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_600156bca618c",
+            "label": "Globale Link titel",
+            "name": "page_links_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.3333",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Lees meer",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_614b1e716cdff",
+            "label": "Page grid columns",
+            "name": "grid_preview_page",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.3333",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "grid-25": "4 per row",
+                "grid-33": "3 per row",
+                "grid-50": "2 per row",
+                "grid-100": "1 per row"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_61b320436806a",
+            "label": "Page preview type",
+            "name": "preview_page_opt",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "66.6666",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "preview-post": "Default (img, title, excerpt)",
+                "preview-icon": "Icon (icon, title)",
+                "preview-list": "List (img left, title & excerpt right)",
+                "preview-link": "Link (title-link only)"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_6033a4ad2a1c2",
+            "label": "Default image",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6033a483dac3f",
+            "label": "Default preview image",
+            "name": "default_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "admin",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": 1920,
+            "max_height": 1920,
+            "max_size": "",
+            "mime_types": "jpg, png"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-site-options"
+            }
+        ]
+    ],
+    "menu_order": 50,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Setup all page types",
+    "modified": 1639129186
+}

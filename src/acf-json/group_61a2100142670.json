@@ -16,7 +16,6 @@
                 "id": ""
             },
             "choices": {
-                "small": "Small",
                 "medium": "Medium",
                 "large": "Large",
                 "featured": "Featured",
@@ -48,5 +47,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1638013686
+    "modified": 1639404129
 }

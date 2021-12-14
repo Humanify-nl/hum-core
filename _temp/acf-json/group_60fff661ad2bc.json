@@ -11,20 +11,19 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "choices": {
-                "preview": "Default (img, title, excerpt)",
+                "preview-post": "Default (img, title, excerpt)",
                 "preview-excerpt": "Excerpt (title, excerpt)",
                 "preview-more": "Excerpt more tag (img, title, excerpt)",
-                "preview-link": "Link (title-link only)",
                 "preview-calendar": "Calendar (date, title)",
                 "preview-slide": "Slider (img, title, excerpt)",
                 "preview-list": "List (img left, title & excerpt right)"
             },
-            "default_value": "preview-list",
+            "default_value": false,
             "allow_null": 0,
             "multiple": 0,
             "ui": 1,
@@ -50,5 +49,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "inc\/acf\/acf-preview-type-select",
-    "modified": 1639410325
+    "modified": 1639054415
 }
