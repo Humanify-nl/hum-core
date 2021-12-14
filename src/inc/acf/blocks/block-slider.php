@@ -16,7 +16,7 @@ function register_slider_block() {
     //'align_text'        => 'left',     // left, center, right
     'mode'              => 'preview',  // preview, auto, edit
     //'enqueue_style'     => get_template_directory_uri() . '/template-parts/acf/blocks/post-query.css',
-    //'enqueue_script'    => get_template_directory_uri() . '/assets/js/swiper.js',
+    'enqueue_script'    => get_template_directory_uri() . '/assets/js/swiper.js',
     'supports'          => [
       'align'             => [ 'wide', 'full' ], // customize alignment toolbar (false = disable)
       'align_text'        => false,    // text alignment toolbar

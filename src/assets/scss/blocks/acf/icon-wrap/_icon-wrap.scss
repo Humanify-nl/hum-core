@@ -1,0 +1,26 @@
+
+/* Icon wrap
+--------------------------------------------- */
+.block-icon-wrap {
+  display: flex;
+  flex-wrap: nowrap;
+
+  > * {
+    margin-bottom: 0;
+  }
+
+  .block-icon-svg__wrap {
+    background: var(--color--primary);
+    display: flex;
+    align-items: top;
+    margin-right: var(--global--padding-inner);
+    margin-top: calc( 0.5 * var(--global--padding-inner) );
+
+    svg {
+      fill: var(--color--white);
+      height: var(--global--icon-size);
+      width: var(--global--icon-size);
+    }
+  }
+
+}

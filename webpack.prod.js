@@ -17,6 +17,7 @@ module.exports = {
     bundle: '/js' + '/bundle.js',
     main: '/scss' + '/main.scss',
     swiper: '/js' + '/swiper.js',
+    tabs: '/js' + '/tabs.js',
     editor: '/scss' + '/editor.scss',
     layout: '/scss' + '/layout.scss',
     admin: '/scss' + '/admin.scss',

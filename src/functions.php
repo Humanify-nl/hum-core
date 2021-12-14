@@ -55,6 +55,9 @@ if ( ! function_exists( 'hum_core_setup' ) ) {
  		// Featured image
 		add_theme_support( 'post-thumbnails' );
 
+		// Excerpts for pages
+		add_post_type_support( 'page', 'excerpt' );
+
 		// Image sizes
 		include_once( get_template_directory() . '/inc/theme-settings/image-sizes.php' );
 

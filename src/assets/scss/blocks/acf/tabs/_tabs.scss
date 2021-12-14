@@ -1,0 +1,181 @@
+
+/* Tabs
+--------------------------------------------- */
+.block-tabs {
+  position: relative;
+
+  .list-tabs {
+    //@include trans-ea(0.1, height);
+    display: block;
+    position: static;
+    width: 100%;
+    @include bp-min($medium){
+      display: flex;
+    }
+    @include bp-max($medium){
+      height: auto !important;
+    }
+  }
+
+  .tab {
+    position: static;
+    padding: 0;
+    list-style: none;
+    text-indent: 0;
+    width: 100%;
+    @include bp-min($medium){
+      //margin-bottom: var(--global--text-margin);
+      width: 25%;
+    }
+
+    .tab-title {
+      font-size: 1em;
+      padding: 0.5em 1.5rem;
+      margin: 0;
+      text-align: left;
+      opacity: 0.8;
+      font-size: 1.125em;
+      @include bp-min($medium){
+        text-align: center;
+      }
+
+      &:hover,
+      &:active {
+        opacity: 1;
+      }
+    }
+
+    .tab-wrap {
+      flex-direction: row;
+
+      .tab-title {
+        cursor: pointer;
+      }
+
+      &.is-toggled {
+
+        .tab-title {
+          opacity: 1;
+        }
+      }
+    }
+
+    .tab-card {
+      display: none;
+      width: 100%;
+      @include bp-min($medium){
+        position: absolute;
+        left: 0;
+      }
+
+      .tab-card-body {
+        padding: var(--global--text-margin) 1.5rem;
+      }
+
+      .tab-text {
+        opacity: 0;
+      }
+
+    }
+
+    .tab-card.is-active {
+      display: block;
+
+      .tab-text {
+        opacity: 1;
+      }
+
+      .tab-footer {
+        display: flex;
+        flex-direction: row-reverse;
+        @include bp-max($small) {
+          margin-top: 0.75rem;
+          flex-direction: row;
+        }
+        .button {
+          margin-top: auto;
+        }
+      }
+    }
+  }
+
+  .tab-1 {
+    background-color: #f3f3f3;
+    .tab-card.is-active {
+      background-color: #f3f3f3;
+    }
+  }
+  .tab-2 {
+    background-color: #eee;
+    .tab-card.is-active {
+      background-color: #eee;
+    }
+  }
+  .tab-3 {
+    background-color: #e6e6e6;
+    .tab-card.is-active {
+      background-color: #e6e6e6;
+    }
+  }
+  .tab-4 {
+    background-color: #ddd;
+    .tab-card.is-active {
+      background-color: #ddd;
+    }
+  }
+
+  &.alignfull {
+
+    &:not(.is-style-unwrap) {
+
+      .list-tabs {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: var(--global--alignwide);
+      }
+
+      .tab-card.is-active .tab-card-body {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: var(--global--alignwide);
+      }
+    }
+
+  }
+}
+
+.content-center {
+
+  .block-tabs.alignfull:not(.is-style-unwrap) {
+
+    .list-tabs {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: var(--global--aligncenter);
+    }
+
+    .tab-card.is-active .tab-card-body {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: var(--global--aligncenter);
+    }
+  }
+}
+
+.content-wide {
+
+  .block-tabs.alignfull:not(.is-style-unwrap) {
+
+    .list-tabs {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: var(--global--alignwide);
+    }
+
+    .tab-card.is-active .tab-card-body {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: var(--global--alignwide);
+    }
+  }
+}

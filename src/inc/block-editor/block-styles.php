@@ -50,6 +50,14 @@ function hum_register_block_styles() {
       ],
   );
 
+  register_block_style(
+    'core/list',
+      [
+         'name'         => 'fa-icon',
+         'label'        => 'Icon FA',
+      ],
+  );
+
 
   register_block_style(
     'core/table',

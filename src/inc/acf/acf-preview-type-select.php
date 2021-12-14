@@ -9,9 +9,10 @@ function acf_load_preview_type_select_choices( $field ) {
 
     // reset choices
     $field['choices'] = array(
-      'preview-post' => 'Default (img, title, excerpt)',
+      'preview' => 'Default (img, title, excerpt)',
       'preview-excerpt' => 'Excerpt (title, excerpt)',
       'preview-more' => 'Excerpt more tag (img, title, excerpt)',
+      'preview-link' => 'Link (title-link only)',
       'preview-calendar' => 'Calendar (date, title)',
       'preview-slide' => 'Slider (img, title, excerpt)',
       'preview-list' => 'List (img left, title & excerpt right)',
@@ -32,9 +33,10 @@ function acf_load_preview_page_type_choices( $field ) {
 
     // reset choices
     $field['choices'] = array(
-      'preview-page' => 'Default',
-      'preview-page--icon' => 'Icon',
-      'preview-page--link' => 'Link',
+      'preview' => 'Default (img, title, excerpt)',
+      'preview-icon' => 'Icon (icon, title)',
+      'preview-link' => 'Link (title-link only)',
+      'preview-list' => 'List (img left, title & excerpt right)',
     );
 
     // return the field
@@ -43,3 +45,4 @@ function acf_load_preview_page_type_choices( $field ) {
 }
 
 add_filter('acf/load_field/name=preview_page_select', 'acf_load_preview_page_type_choices');
+add_filter('acf/load_field/name=preview_page_opt', 'acf_load_preview_page_type_choices');

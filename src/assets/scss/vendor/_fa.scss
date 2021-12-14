@@ -1,0 +1,67 @@
+
+/* FontAwesome
+--------------------------------------------- */
+.fa {
+  font-size: 0.875em;
+  position: relative;
+  top: 0.0625em;
+  margin-right: 0.25em;
+  width: 1em;
+
+  li > & {
+    top: 0;
+    text-indent: 0;
+  }
+}
+
+
+// buttons
+.wp-block-button {
+  .fa {
+    font-size: 1em;
+    top: 0.0625em;
+  }
+}
+
+
+// lists
+.wp-block-list,
+.block-content ul,
+.block-content ol {
+
+  &.is-style-no-dots {
+
+    li {
+
+      > .fa {
+        margin-right: $list_text_indent - 0.5em - 0.25em;
+        margin-left: 0;
+      }
+    }
+  }
+
+  &.is-style-fa-icon {
+    list-style-type: none;
+
+    li {
+    text-indent: 0;
+    position: relative;
+
+      > .fa {
+
+        $text_height: 1em * 1.5; // font size * line-height
+        $icon_height: 0.875em;
+        $top_value: $text_height - $icon_height;
+        $correction: 0.125em;
+
+        position: absolute;
+        left: 0.375em;
+        top: 0.6875em;
+        margin-right: 0;
+        left: ($list_padding_left * 0.5) - (1em * 0.5);
+        top: $top_value + $correction;
+      }
+    }
+  }
+
+}

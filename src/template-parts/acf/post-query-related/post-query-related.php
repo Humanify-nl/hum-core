@@ -7,8 +7,8 @@
 
 
 $post_amount = get_field( 'related_posts_amount' ) ? get_field( 'related_posts_amount' ) : get_field( 'related_posts_amount', 'option' );
-$post_type = get_post_type( get_the_id() );
-$post_id = get_the_id();
+$post_type = get_post_type( hum_acf_post_id() );
+$post_id = hum_acf_post_id();
 $post_preview = get_field( 'preview_type_select' );
 
 if ( $post_type == 'testimonial' ) {
