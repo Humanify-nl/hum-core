@@ -9,7 +9,7 @@ h5,
 h6 {
 	font-family: var(--global--font-primary);
 	font-weight: 400;
-	line-height: 1.2;
+	line-height: var(--global--line-height-heading);
 	margin: 0 0 var(--global--text-margin);
 
 	a {
