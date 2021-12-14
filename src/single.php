@@ -5,7 +5,7 @@
  * @package hum-core
  */
 
-add_action( 'tha_entry_top', 'hum_entry_title' );
+add_action( 'tha_entry_top', 'hum_entry_title', 5 );
 add_action( 'tha_entry_top', 'hum_entry_category', 8 );
 add_action( 'tha_entry_top', 'hum_entry_excerpt', 10 );
 add_action( 'tha_entry_top', 'hum_entry_author', 12 );
