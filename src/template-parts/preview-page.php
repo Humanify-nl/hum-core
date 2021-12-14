@@ -9,9 +9,14 @@
 <article class="preview preview-page">
 
   <?php
-	hum_preview_image( 'large', true, $page );
-	hum_preview_title( true, $page );
-  hum_preview_excerpt( $page );
+  hum_preview_image();
+
+  echo '<div class="preview__content">';
+    hum_preview_category();
+    hum_preview_title();
+    hum_preview_excerpt();
+    hum_preview_footer();
+  echo '</div>';
   ?>
 
 </article>

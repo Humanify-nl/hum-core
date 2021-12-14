@@ -46,8 +46,8 @@ function acf_load_button_class_preview_choices( $field ) {
 // reset choices
 $field['choices'] = array(
   'button' => 'Button',
-  'button--wired' => 'Wired button',
-  'button--white' => 'White button',
+  'button-wired' => 'Wired button',
+  'button-white' => 'White button',
   'preview__link' => 'Default link',
 );
 
@@ -74,8 +74,8 @@ function acf_load_button_class_all_choices( $field ) {
 // reset choices
 $field['choices'] = array(
 'button' => 'Button',
-'button--wired' => 'Wired button',
-'button--white' => 'White button',
+'button-wired' => 'Wired button',
+'button-white' => 'White button',
 'preview__link' => 'Default link',
 );
 
