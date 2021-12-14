@@ -13,14 +13,14 @@ $post_class_array = get_post_class() ;
 <article class="<?php echo join( ' ', $post_class_array ); ?>">
 
   <?php
-  if ( hum_has_action( 'tha_entry_top' ) || has_post_thumbnail() ) {
+  if ( hum_has_action( 'tha_entry_top' ) || ( is_single() && has_post_thumbnail() ) ) {
 
     ?>
     <header class="entry-header wrap">
 
       <div class="header">
 
-        <?php hum_entry_image(); ?>
+        <?php if ( is_single() ) { hum_entry_image(); } ?>
 
         <div class="header-wrap">
           <?php tha_entry_top(); ?>
@@ -34,7 +34,7 @@ $post_class_array = get_post_class() ;
   }
   ?>
 
-  <div class="entry-content">
+  <div class="entry-content block-content">
 
     <?php
     tha_entry_content_before();

@@ -108,7 +108,7 @@ class Hum_Block_Area {
 
 				$loop->the_post();
 
-				echo '<section class="block-area block-area-' . $location . '">';
+				echo '<section class="block-content block-area-' . $location . '">';
 					the_content();
 				echo '</section>';
 

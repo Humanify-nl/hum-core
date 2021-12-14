@@ -20,7 +20,7 @@ while ( have_posts() ) {
 
 		</header><!-- .entry-header -->
 
-		<div class="entry-content">
+		<div class="entry-content block-content">
 
 			<figure class="wp-block-image">
 				<?php

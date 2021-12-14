@@ -5,17 +5,21 @@
  * @package hum-core
  */
 
-/**
- * Archive wrap class
- *
- */
-function hum_archive_wrap_class() {
-  echo '<div class="'.hum_grid_class_preview().'">';
-}
+ /**
+  * Archive wrap class
+  *
+  */
+ function hum_archive_wrap_class() {
+   echo '<section class="posts posts-'. get_post_type(get_the_id()) .'">';
+   echo '<div class="wrap">';
+   echo '<div class="'.hum_grid_class_preview().'">';
+ }
 
-function hum_archive_wrap_class_end() {
-  echo '</div>';
-}
+ function hum_archive_wrap_class_end() {
+   echo '</div>';
+   echo '</div>';
+   echo '</section>';
+ }
 
 
 
