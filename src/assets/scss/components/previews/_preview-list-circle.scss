@@ -1,0 +1,18 @@
+
+/* Preview-list-circle
+--------------------------------------------- */
+
+.preview-list {
+
+  &.circle {
+
+    .preview__img {
+
+      img {
+        object-fit: cover;
+        border-radius: 100%;
+      }
+    }
+  }
+
+}

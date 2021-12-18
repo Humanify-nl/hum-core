@@ -1,0 +1,16 @@
+
+/* Preview--circle
+--------------------------------------------- */
+
+.preview-circle {
+
+  .preview__img {
+    margin-bottom: var(--global--block-margin);
+
+    img {
+      object-fit: cover;
+      border-radius: 100%;
+    }
+  }
+
+}

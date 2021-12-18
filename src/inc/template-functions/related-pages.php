@@ -25,7 +25,7 @@ function hum_pages_related() {
   if ( !empty( $selected_pages ) ) {
 
     ?>
-    <section class="<?php echo esc_attr( 'pages-related' ); ?>">
+    <section class="<?php echo esc_attr( 'related related-pages' ); ?>">
 
       <div class="wrap">
 

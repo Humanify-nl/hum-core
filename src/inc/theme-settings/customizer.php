@@ -5,6 +5,7 @@
  * @package hum-core
  */
 
+
 /**
  * Register postMessage support.
  * Add postMessage support for site title and description for the Theme Customizer.
@@ -18,16 +19,16 @@ function hum_customize_register( $wp_customize ) {
 
 	// Use selective refresh to preview changes to site title and tagline.
 	if ( isset( $wp_customize->selective_refresh ) ) {
-		$wp_customize->selective_refresh->add_partial( 'blogname', array(
+		$wp_customize->selective_refresh->add_partial( 'blogname', [
 			'selector'            => '.site-title > a',
 			'container_inclusive' => false,
 			'render_callback'     => 'hum_customize_partial_blogname',
-		) );
-		$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
+		] );
+		$wp_customize->selective_refresh->add_partial( 'blogdescription', [
 			'selector'            => '.site-description',
 			'container_inclusive' => false,
 			'render_callback'     => 'hum_customize_partial_blogdescription',
-		) );
+		] );
 	}
 
 	// Rename the label to "Display Site Title & Tagline" in order to make this option extra clear.
@@ -67,7 +68,7 @@ function hum_customizer_js() {
 
 	wp_enqueue_script( 'hum_customizer',
 	get_template_directory_uri() . '/assets/js/customizer.js',
-	array( 'customize-preview' ),
+	[ 'customize-preview' ],
 	'2.2.0',
 	true );
 

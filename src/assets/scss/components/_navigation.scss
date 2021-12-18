@@ -60,7 +60,7 @@
 			@include bp-max($small) {
 				padding: 4px 16px 16px;
 			}
-			@include bp-min($small) {
+			@include bp-min($large) {
 				margin: 5px 0 0 8px;
 
 				.search-field {
@@ -81,13 +81,13 @@
 				padding: 12px;
 			}
 
-			@include bp-max($small) {
+			@include bp-max($large) {
 				display: none;
 			}
 		}
 	}
 
-	@include bp-min($small) {
+	@include bp-min($large) {
 		float: right;
 		width: calc( 100% - #{$menu_width} );
 		display: flex;
@@ -146,7 +146,7 @@
 		}
 	}
 
-	@include bp-max($small) {
+	@include bp-max($large) {
 		display: none;
 
 		&.active {
@@ -226,7 +226,7 @@
 
 
 .site-header {
-	@include bp-max($small) {
+	@include bp-max($large) {
 		margin: 0;
 		width: 100%;
 
@@ -246,16 +246,16 @@
 		width: $menu-toggle-size;
 		height: $menu-toggle-size;
 
-		@include bp-min($small) {
+		@include bp-min($large) {
 			display: none;
 		}
 	}
 
 	& > .menu-toggle {
-		left: 0;
+		right: 0;
 	}
 
 	& > .search-toggle {
-		right: 0;
+		left: 0;
 	}
 }

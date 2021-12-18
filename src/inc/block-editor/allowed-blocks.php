@@ -60,6 +60,7 @@ function hum_post_blocks_array( $post_type = false ) {
     'acf/slider',
     'acf/tabs',
     'acf/icon-wrap',
+    'acf/svg',
     'forminator/forms',
   ];
 

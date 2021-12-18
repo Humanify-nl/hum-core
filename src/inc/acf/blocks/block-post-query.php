@@ -4,10 +4,10 @@ function register_post_query_block() {
   $register_post_query = [
     'name'              => 'post-query',
     'title'             => __('Post Query'),
-    'description'       => __('A custom post query block.'),
+    'description'       => __('Display a configurable grid of post-type previews.'),
     'render_template'   => 'template-parts/acf/blocks/block-post-query.php',
     'render_callback'   => 'hum_render_post_query_block',
-    'category'          => 'formatting',
+    'category'          => 'design',
     'icon'              => 'screenoptions',
     'keywords'          => [ 'query', 'post' ],
     'post_types'        => [ 'post', 'page' ],
@@ -20,6 +20,12 @@ function register_post_query_block() {
       'multiple'          => true,
       'customClassName'	  => true,
       'jsx' 			        => true,
+    ],
+    'styles'            => [
+      [
+        'name'            => 'preview-bg',
+        'label'           => __( 'Preview background', 'hum-core'),
+      ]
     ],
 
   ];

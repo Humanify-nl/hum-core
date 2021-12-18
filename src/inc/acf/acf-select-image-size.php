@@ -6,17 +6,15 @@
  */
 
 
-
-
 function acf_load_image_size_select_choices( $field ) {
 
     // reset choices
-    $field['choices'] = array(
+    $field['choices'] = [
       'medium' => 'Medium',
       'large' => 'Large',
       'featured' => 'Featured',
       'featured-sq' => 'Featured square',
-    );
+    ];
 
     // return the field
     return $field;

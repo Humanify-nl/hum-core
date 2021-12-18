@@ -1,5 +1,8 @@
 
-/* Navigation
+/* Navigation -side
+ - permanent mobile menu
+ - do not import along with navigation.scss
+ - if -side, also choose import site-header-side
 --------------------------------------------- */
 
 .nav-menu {
@@ -65,7 +68,7 @@
 			@include bp-max($small) {
 				padding: 4px 16px 16px;
 			}
-			@include bp-min($small) {
+			@include bp-min($large) {
 				margin: 5px 0 0 8px;
 
 				.search-field {
@@ -93,7 +96,7 @@
 
 	$sidemenu-width: 300px;
 	display: block;
-	height: calc(100vh - calc( var(--global--admin-bar--height) + #{$static_header_desktop}) );
+	height: calc(100vh - calc( var(--admin-bar--height) + #{$static_header_desktop}) );
 	max-width: $sidemenu-width;
 	margin-left: auto;
 	margin-right: 0;

@@ -3,10 +3,10 @@
 // --------------------------------------------- /
 
 @mixin base-style {
-	font-family: var(--global--font-primary);
-	font-size: var(--global--font-size-normal);
+	font-family: var(--font-primary);
+	font-size: var(--font-size-normal);
 	font-weight: 400;
-	line-height: var(--global--line-height);
+	line-height: var(--line-height);
 	letter-spacing: 1px;
 
 	@media print {

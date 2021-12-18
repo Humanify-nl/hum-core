@@ -1,5 +1,5 @@
 
-// Fonts
+// Fonts [responsive]
 // --------------------------------------------- /
 
 $map-fonts: (
@@ -62,17 +62,17 @@ $map-fonts: (
 
 // Root variables
 
-$font-prefix: --global--font-size-;
+$font-prefix: --font-size-;
 
 :root {
 
   // not in map
   --font-headings: "Lato";
-  --global--font-primary: var(--font-headings, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
-  --global--font-secondary: var(--font-base, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
-	--global--line-height-body: 1.7;
-	--global--line-height-heading: 1.3;
-	--global--line-height-page-title: 1.1;
+  --font-primary: var(--font-headings, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
+  --font-secondary: var(--font-base, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
+	--line-height-body: 1.7;
+	--line-height-heading: 1.1;
+	--line-height-page-title: 1.1;
 
   // each item, submap in size map
   @each $selector, $breakpoints in $map-fonts {

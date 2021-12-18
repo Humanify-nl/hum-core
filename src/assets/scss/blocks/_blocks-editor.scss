@@ -10,6 +10,7 @@
 @import "core/group/group-editor";
 @import "core/heading/heading-editor";
 @import "core/image/image-editor";
+@import "core/gallery/gallery-editor";
 @import "core/list/list-editor";
 @import "core/media-text/media-text-editor";
 @import "core/paragraph/paragraph-editor";
@@ -18,7 +19,7 @@
 @import "core/pullquote/pullquote-editor";
 @import "core/quote/quote-editor";
 @import "core/separator/separator-editor";
-@import "core/social-icons/social-icons-editor";
+@import "core/social-links/social-links-editor";
 @import "core/table/table-editor";
 @import "core/site-logo/site-logo-editor";
 // custom
@@ -26,7 +27,7 @@
 @import "acf/spacer/spacer-editor";
 @import "acf/slider/slider-editor";
 @import "acf/tabs/tabs-editor";
-@import "acf/icon-svg/icon-svg-editor";
+@import "acf/svg/svg-editor";
 @import "acf/icon-wrap/icon-wrap-editor";
 
 
@@ -48,9 +49,9 @@ body {
 
 	/* Post title styling */
 	.editor-post-title__input {
-		//font-family: var(--global--font-primary);
+		//font-family: var(--font-primary);
 		font-weight: 400;
-		font-size: var(--global--font-size-h3);
+		font-size: var(--font-size-h3);
 		padding: 0;
 	}
 }

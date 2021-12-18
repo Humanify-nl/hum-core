@@ -5,6 +5,7 @@
  * @package hum-core
  */
 
+
 // Uses JS script, find it in /assets/js/functions.js
 function hum_google_map_api( $api ){
 
@@ -15,8 +16,8 @@ function hum_google_map_api( $api ){
 add_filter('acf/fields/google_map/api', 'hum_google_map_api');
 
 /*
-wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBpdCzkqTljPEYkH5kDBddAUgfAopFr3to', array(), '3', true );
-wp_enqueue_script( 'google-map-init', get_template_directory_uri() . '/assets/js/googlemaps-acf.js', array('google-map', 'jquery'), '0.1', true );
+wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBpdCzkqTljPEYkH5kDBddAUgfAopFr3to', [], '3', true );
+wp_enqueue_script( 'google-map-init', get_template_directory_uri() . '/assets/js/googlemaps-acf.js', ['google-map', 'jquery'], '0.1', true );
 */
 
 

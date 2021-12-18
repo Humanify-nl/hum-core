@@ -1,0 +1,40 @@
+
+/* Forminator
+--------------------------------------------- */
+
+.forminator-row-last {
+  // align button
+  //.forminator-field {
+  //  text-align: center;
+  //}
+}
+
+.forminator-guttenberg {
+
+  .forminator-ui.forminator-custom-form.forminator-design--default {
+
+    .forminator-textarea,
+    .forminator-input {
+      padding: 0.875em;
+    }
+    .forminator-button {
+      background-color: var(--color--primary) !important;
+      font-size: var(--button--font-size) !important;
+      padding: var(--button--padding-ver) calc( 2 * var(--button--padding-hor) );
+      &:focus,
+      &:hover {
+        background-color: var(--color--primary-light) !important;
+      }
+      &:active {
+        background-color: var(--color--primary-dark) !important;
+      }
+    }
+    .forminator-row {
+      margin-bottom: var(--global--block-inner-gap);
+      .forminator-row:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}

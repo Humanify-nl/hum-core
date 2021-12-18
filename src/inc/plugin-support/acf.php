@@ -5,6 +5,7 @@
  * @package hum-core
  */
 
+
 /**
  * Options Page
  *
@@ -13,11 +14,11 @@ function acf_register_options() {
 
   if ( function_exists( 'acf_add_options_page' ) ) {
 
-    acf_add_options_page( array(
+    acf_add_options_page( [
       'title'      => __( 'Site Options', 'hum-core' ),
       'capability'	=> 'edit_posts',
       'icon_url' 		=> 'dashicons-admin-settings',
-    ) );
+    ] );
 
   }
 }

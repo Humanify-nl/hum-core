@@ -19,7 +19,7 @@
 	}
 
   // medium bp
-  @include bp-min($medium) {
+  @include bp-min($small) {
     $width_icon_collapse: v($map-spacing, block-margin, medium);
     height: $width_icon_collapse;
     width: $width_icon_collapse;
@@ -34,7 +34,7 @@
   }
 
   // large bp
-  @include bp-min($large) {
+  @include bp-min($medium) {
     $width_icon_collapse: v($map-spacing, block-margin, large);
     height: $width_icon_collapse;
     width: $width_icon_collapse;

@@ -3,7 +3,7 @@
 --------------------------------------------- */
 
 p {
-	margin: 0 0 var(--global--text-margin);
+	margin: 0 0 var(--text-margin);
 	padding: 0;
 
 	&:last-child {
@@ -13,15 +13,15 @@ p {
 }
 
 .has-normal-font-size {
-	font-size: var(--global--font-size-normal);
+	font-size: var(--font-size-normal);
 }
 
 .has-large-font-size,
 .large {
-	font-size: var(--global--font-size-large);
+	font-size: var(--font-size-large);
 }
 
 .has-small-font-size,
 .small {
-	font-size: var(--global--font-size-small);
+	font-size: var(--font-size-small);
 }

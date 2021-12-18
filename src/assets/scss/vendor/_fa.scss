@@ -26,7 +26,7 @@
 
 // lists
 .wp-block-list,
-.block-content ul,
+.block-content ul:not(.blocks-gallery-grid):not(.list-tabs),
 .block-content ol {
 
   &.is-style-no-dots {

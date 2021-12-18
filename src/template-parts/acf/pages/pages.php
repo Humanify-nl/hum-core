@@ -5,6 +5,7 @@
  * @package hum-core
  */
 
+
 $is_select = get_field( 'pages_source' );
 $pages_select = get_field( 'pages_select' );
 $pages_relation = get_field( 'pages_relation' );
@@ -45,20 +46,21 @@ if ( !$is_select && $pages_relation == 'parent') {
 }
 
 
-$preview_select = get_field( 'preview_page_select' );
-$preview_type = !empty($preview_select) ? $preview_select : 'preview';
 
 if ( !empty( $selected_pages ) ) {
 
+  $preview_select = get_field( 'preview_page_select' );
+  $preview_type = !empty($preview_select) ? $preview_select : 'preview';
 	?>
+
 	<div class="<?php echo hum_grid_class_preview( 'grid-'.$preview_type );?>">
 
 		<?php
 	  foreach ( $selected_pages as $post ) {
 
 		  setup_postdata( $post );
-
       include( locate_template( 'template-parts/previews/'.$preview_type.'.php' ) );
+
 		}
 
 		wp_reset_postdata();

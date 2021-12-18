@@ -1,18 +1,21 @@
 
 /* Color Options
 --------------------------------------------- */
+:root {
 
-// Generate selector class & values for colors
-@each $color-name, $color-hex in $color-picker {
+	// Generate selector class & values for colors
+	@each $color-name, $color-hex in $color-picker {
 
-	#{'.has-' + $color-name + '-color'} {
-		color: var(#{'--color--' + $color-name});
+		#{'.has-' + $color-name + '-color'} {
+			color: var(#{'--color--' + $color-name});
+		}
+		#{'.has-' + $color-name + '-background-color'} {
+			background-color: var(#{'--color--' + $color-name});
+		}
+
 	}
-	#{'.has-' + $color-name + '-background-color'} {
-		background-color: var(#{'--color--' + $color-name});
-	}
-
 }
+
 
 
 // Background colors dictate color
@@ -33,7 +36,7 @@
 
 
 // Buttons
-.wp-block-button .wp-block-button__link {
+.wp-block-button__link {
 
 	// default text color
 	color: white;

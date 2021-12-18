@@ -5,7 +5,7 @@
 .wp-block-quote {
 
 	p {
-		font-size: var(--global--font-size-large);
+		font-size: var(--font-size-large);
 		font-style: normal;
 		font-weight: 400;
 
@@ -26,7 +26,7 @@
 
 	&.is-style-background {
 		background-color: var(--color--white-grey);
-		padding: var(--global--padding);
+		padding: var(--padding);
 	}
 
 

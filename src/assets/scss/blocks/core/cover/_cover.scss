@@ -3,15 +3,34 @@
 --------------------------------------------- */
 
 .wp-block-cover {
-  padding: var(--global--padding);
+  padding: var(--padding);
 
-  &.alignfull {
+  &.alignfull:first-child {
     margin-top: 0;
   }
 
   .wp-block-cover__inner-container {
     *:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  // when no color selected - remove dim
+  &.has-background-dim:not([class*=-background-color]) {
+    background-color: unset;
+  }
+
+  &.is-style-shape {
+    position: relative;
+    &::after {
+      content: "";
+      background: url(../icons/shapes-wave.svg) no-repeat;
+      background-size: 100%;
+      background-position: bottom;
+      bottom: -1px;
+      position: absolute;
+      width: 100%;
+      z-index: 1;
     }
   }
 }

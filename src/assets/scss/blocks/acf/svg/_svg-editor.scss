@@ -1,0 +1,36 @@
+@import "svg";
+
+.block-svg {
+
+  &.is-icon {
+    margin-bottom: 0;
+  }
+
+}
+
+// center editor preview
+.editor-preview {
+  justify-content: center;
+
+  .block-svg__wrap {
+    svg {
+      padding-top: 2px;
+    }
+  }
+}
+
+
+[data-align="full"] {
+
+  .block-svg.is-shape {
+    &:after {
+      @include spacer_icon();
+    }
+
+    &.is-flipped {
+      &:before {
+        @include spacer_icon();
+      }
+    }
+  }
+}

@@ -5,6 +5,7 @@
  * @package hum-core
  */
 
+
 /**
  * Add columns for posts
  *
@@ -26,12 +27,12 @@ add_filter('manage_testimonial_posts_columns', 'hum_add_testimonial_img_column' 
  */
 function hum_manage_testimonial_columns( $columns ) {
 
-  $columns = array(
+  $columns = [
     'cb'                   => '<input type="checkbox" />',
     'img'                  => 'Image',
     'title'                => 'Title',
     'date'                 => 'Date',
-  );
+  ];
 
   return $columns;
 }

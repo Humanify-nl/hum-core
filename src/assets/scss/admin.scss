@@ -1,5 +1,6 @@
 
 // Admin styles
-
+@import "abstract/vars/color-map";
 @import "theme/admin";
-@import "vendor/acf";
+@import "vendor/acf-admin";
+@import "vendor/acf-color-picker";

@@ -1,0 +1,73 @@
+
+/* ACF radio button color picker
+--------------------------------------------- */
+.wp-admin .acf-block-component {
+
+  ul.acf-radio-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-left: 0;
+
+    li {
+      margin-right: 0;
+      display: flex;
+
+      label {
+        width: 34px;
+        height: 34px;
+        position: relative;
+        overflow: hidden;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        color: c(white);
+
+        input[type="radio"] {
+          border-radius: 100%;
+          position: absolute;
+          top: 2px;
+          left: 2px;
+          width: 28px;
+          height: 28px;
+
+          &:checked {
+
+            &::before {
+              content: "\f15e";
+              font-family: dashicons;
+              width: 26px;
+              height: 26px;
+              background-color: transparent;
+              font-size: 22px;
+              margin: 1px;
+              color: c(white);
+            }
+          }
+
+          // override light colors with a black checkmark when checked (default is white)
+          &[value="white"],
+          &[value="grey-light"] {
+
+            &:checked {
+
+              &::before {
+                color: c(black);
+              }
+            }
+          }
+
+          @each $name, $color in $color-picker {
+
+            &#{ '[value="' + $name + '"]'} {
+              background-color: $color;
+            }
+            /*
+            &[value="#{$name}"] {
+            }
+            */
+          }
+        }
+      }
+    }
+  }
+}

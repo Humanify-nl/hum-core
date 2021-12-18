@@ -3,8 +3,8 @@
 --------------------------------------------- */
 
 .archive-header {
-	padding-top: var(--global--padding);
-	padding-bottom: var(--global--padding);
+	padding-top: var(--padding);
+	padding-bottom: var(--padding);
 	width: 100%;
 
 	.archive-title {
@@ -13,17 +13,17 @@
 
 	.archive-search {
 		background-color: var(--color--grey-light);
-		padding: var(--global--padding-inner) 0;
+		padding: var(--padding-inner) 0;
 		max-width: 100%;
 	}
 
 	.search-form {
-		max-width: var(--global--aligncenter);
+		max-width: var(--aligncenter);
 		margin: 0 auto;
 	}
 
 	.archive-title + .archive-search {
-		margin-top: var(--global--text-margin);
+		margin-top: var(--text-margin);
 	}
 
 }

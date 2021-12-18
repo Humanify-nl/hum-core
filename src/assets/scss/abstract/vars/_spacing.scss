@@ -1,5 +1,5 @@
 
-// Spacing
+// Spacing - [responsive]
 // --------------------------------------------- /
 
 $spacing-unit: 1rem;
@@ -52,9 +52,15 @@ $map-spacing: (
 		medium: 18 * $spacing-unit, // 288px
 		large: 20 * $spacing-unit, // 320px
 	),
+	gallery-gap: (
+	small: 0.25em,
+	medium: 0.5em,
+	large: 0.75em,
+	),
 	// grid
 	grid-gap: 4 * $spacing-unit,						// between previews (horizontal)
-	grid-gutter-factor: 1, 				          // multiplier for gap
+	grid-gutter-factor: 0.5, 				          // multiplier for gap
+  // gallery
 	// text
 	text-margin: 1.5 * $spacing-unit,
 	line-height: 1.5,
@@ -83,7 +89,7 @@ $map-spacing: (
 
 }
 
-// Used internally (mixins)
+// Used internally
 
 // Grid
 $grid-gap: v($map-spacing, grid-gap);
@@ -106,38 +112,25 @@ $list_padding_left: 1.5em;
 
 // Root variables
 
-$spacing-prefix: '--global';
+$spacing-prefix: '--';
 
 :root {
 	@each $selector, $value in $map-spacing {
 
 		@if type-of($value) != "map" {
-			#{$spacing-prefix + '--' + $selector}: $value;
+			#{$spacing-prefix + $selector}: $value;
 		}
 	}
 }
 
-@media only screen and (max-width: #{$small}) {
+@media only screen and (max-width: #{$medium}) {
 
   :root {
     @each $selector, $breakpoints in $map-spacing {
       @each $breakpoint-name, $value in $breakpoints {
 
         @if $breakpoint-name == small {
-          #{$spacing-prefix + '--' + $selector}: $value;
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: #{$small}) {
-  :root {
-    @each $selector, $breakpoints in $map-spacing {
-      @each $breakpoint-name, $value in $breakpoints {
-
-        @if $breakpoint-name == medium {
-          #{$spacing-prefix + '--' + $selector}: $value;
+          #{$spacing-prefix + $selector}: $value;
         }
       }
     }
@@ -149,8 +142,21 @@ $spacing-prefix: '--global';
     @each $selector, $breakpoints in $map-spacing {
       @each $breakpoint-name, $value in $breakpoints {
 
+        @if $breakpoint-name == medium {
+          #{$spacing-prefix + $selector}: $value;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: #{$large}) {
+  :root {
+    @each $selector, $breakpoints in $map-spacing {
+      @each $breakpoint-name, $value in $breakpoints {
+
         @if $breakpoint-name == large {
-          #{$spacing-prefix + '--' + $selector}: $value;
+          #{$spacing-prefix + $selector}: $value;
         }
       }
     }
@@ -161,15 +167,15 @@ $spacing-prefix: '--global';
 // Admin-bar height if not exists
 
 :root {
-	--global--admin-bar--height: 0px;
+	--admin-bar--height: 0px;
 }
 
 // Admin-bar if exists
 
 .admin-bar {
-	--global--admin-bar--height: 32px;
+	--admin-bar--height: 32px;
 
 	@media only screen and (max-width: 782px) {
-		--global--admin-bar--height: 46px;
+		--admin-bar--height: 46px;
 	}
 }

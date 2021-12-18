@@ -1,0 +1,19 @@
+
+/* Gallery
+--------------------------------------------- */
+.wp-block-gallery {
+
+  .blocks-gallery-grid {
+    gap: var(--gallery-gap);
+  }
+
+  // override WP margins
+  .blocks-gallery-item {
+    margin: 0 !important;
+    /*
+    figcaption,
+    .blocks-gallery-item__caption {
+    }
+    */
+  }
+}

@@ -7,12 +7,39 @@
   // block spacing
 
   > * {
-    margin-top: var(--global--block-margin);
+    margin-top: var(--block-margin);
 
-    &:last-child:not(.has-background):not(.is-style-no-space):not(.wp-block-cover) {
-      margin-bottom: var(--global--spacing-vertical);
+    &:last-child {
+      margin-bottom: var(--block-margin);
+
+      &.wp-block-cover.alignfull,
+      &.wp-block-image.alignfull,
+      &.has-background {
+        margin-bottom: 0;
+      }
     }
-
   }
 
+}
+
+// elsewhere
+section.block-content {
+
+  &:not(:last-child) {
+    margin-bottom: var(--block-margin);
+  }
+
+  > *:first-child {
+    margin-top: 0;
+  }
+
+}
+
+
+.related {
+  margin-bottom: var(--spacing-vertical);
+
+  .section-title {
+    margin-bottom: var(--block-margin);
+  }
 }

@@ -6,15 +6,13 @@
  */
 
 
-
-
 function acf_load_pages_relation_select_choices( $field ) {
 
     // reset choices
-    $field['choices'] = array(
+    $field['choices'] = [
       'parent' => 'Children of page (current parent)',
       'parent-custom' => 'Children of parent (select parent)',
-    );
+    ];
 
     // return the field
     return $field;

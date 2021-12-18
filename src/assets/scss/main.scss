@@ -7,7 +7,7 @@
 @import "abstract/mixins";
 @import "abstract/reset";
 
-@import "layout/layout";
+@import "layout/content-width";
 @import "layout/vertical";
 @import "layout/alignments";
 @import "layout/grid";
@@ -33,6 +33,7 @@
 @import "components/entry/entry-comments";
 
 @import "vendor/fa";
+@import "vendor/forminator";
 
 @import "theme/color-options";
 @import "theme/colors";

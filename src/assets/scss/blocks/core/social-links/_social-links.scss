@@ -1,0 +1,17 @@
+
+/* Social icons
+--------------------------------------------- */
+.wp-block-social-links {
+
+  .wp-social-link {
+
+    a {
+       padding: 0.25em;
+    }
+
+    svg {
+      width: var(--icon-svg--size-large);
+      height: var(--icon-svg--size-large);
+    }
+  }
+}

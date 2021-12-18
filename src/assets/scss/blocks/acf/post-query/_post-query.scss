@@ -1,0 +1,13 @@
+
+/* Posts
+--------------------------------------------- */
+.post-query {
+
+  &.is-style-preview-bg {
+
+    .preview {
+      border: 1px solid var(--theme--border);
+      padding: var(--padding-inner);
+    }
+  }
+}

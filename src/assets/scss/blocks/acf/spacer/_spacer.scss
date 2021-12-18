@@ -3,7 +3,7 @@
 --------------------------------------------- */
 .block-spacer {
   margin-top: 0;
-  margin-bottom: calc(-1 * var(--global--block-margin));
+  margin-bottom: calc(-1 * var(--block-margin));
 }
 
 
@@ -102,9 +102,9 @@ $vs-sizes: (
   #{$property}: vs-var-get( $vs-selected-size, base);
 
   @include bp-min($small){
-    #{$property}: vs-var-get( $vs-selected-size, small);
+    #{$property}: vs-var-get( $vs-selected-size, medium);
   }
   @include bp-min($medium){
-    #{$property}: vs-var-get( $vs-selected-size, medium);
+    #{$property}: vs-var-get( $vs-selected-size, large);
   }
 }

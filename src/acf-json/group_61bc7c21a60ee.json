@@ -1,0 +1,47 @@
+{
+    "key": "group_61bc7c21a60ee",
+    "title": "Mod > Heading size",
+    "fields": [
+        {
+            "key": "field_61bc7c33fc8dc",
+            "label": "Heading size",
+            "name": "heading_size",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "h4": "H4",
+                "h3": "H3",
+                "h2": "H2"
+            },
+            "allow_null": 0,
+            "default_value": "h3",
+            "layout": "horizontal",
+            "return_format": "value"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 5,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "modified": 1639742559
+}

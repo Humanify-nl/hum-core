@@ -3,14 +3,19 @@
 --------------------------------------------- */
 
 .wp-block-columns {
-  margin-bottom: 0;
+  gap: var(--block-gap);
+
+  // override wp margins
+  .wp-block-column {
+    margin: 0 !important;
+  }
 
   .wp-block-columns {
     margin-bottom: 0;
   }
 
   &.has-background {
-    padding: var(--global--padding);
+    padding: var(--padding);
   }
 
   // block styles
@@ -18,47 +23,19 @@
     justify-content: space-between;
   }
 
-  &.is-style-icon-side {
+  // override wp col stack
+  &:not(.is-not-stacked-on-mobile) {
 
-    >.wp-block-column {
-      flex-basis: auto !important;
-      margin-left: 0 !important;
-    }
+    @include bp-min-max( $small, $medium ) {
+      flex-wrap: wrap;
 
-    @include bp-min($small){
+      > .wp-block-column {
 
-      > .wp-block-column:nth-child(2n+1) {
-        width: calc( var(--global--icon-size-outer) );
+        &:not(:only-child) {
+          flex-basis: 100% !important;
+          flex-grow: 0;
+        }
       }
-      > .wp-block-column:nth-child(2n){
-        margin-left: var(--global--block-gap) !important;
-        width: calc( 100% - var(--global--icon-size-outer) - var(--global--block-gap) );
-      }
-    }
-  }
-}
-
-
-// inner stacking
-
-.wp-block-column {
-
-  > *:last-child {
-    margin-bottom: 0;
-  }
-
-  @include bp-max($small){
-    margin-bottom: var(--global--block-gap);
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  @include bp-min($small){
-
-    &:not(:first-child) {
-      margin-left: var(--global--block-gap) !important;
     }
   }
 

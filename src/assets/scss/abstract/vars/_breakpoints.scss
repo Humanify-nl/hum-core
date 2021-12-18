@@ -2,16 +2,25 @@
 // Breakpoints
 // --------------------------------------------- /
 
-// Base: landscape phones, 576px and up
-// Small: tablets, 768px and up
-// Medium: desktops, 992px and up
-// Large: large desktops, 1200px and up
+// Bootstrap inspired breakpoints (not in use)
 
+// $bs-breakpoints: (
+//   base: 576px,
+//   small: 782px,
+//   medium: 992px,
+//   large: 1200px,
+// );
+
+
+// Breakpoints consistent with wordpress 5.8
+// Note: Columns stack at base/small/medium
+// https://github.com/WordPress/gutenberg/blob/wp/5.8/packages/base-styles/_breakpoints.scss
 $breakpoints: (
-  base: 576px,
-  small: 782px,
-  medium: 992px,
-  large: 1200px,
+  base: 480px,   // max 1 col
+  small: 600px,  // max 2 cols
+  medium: 782px, // all cols & adminbar resize
+  large: 960px,  // desktop only
+  wide: 1280px,
 );
 
 // Breakpoint
@@ -33,13 +42,13 @@ $margin_site_m: 3rem; // > 540px
 
 // Root variables
 :root {
-  --global--bp-mobile: #{$base};
-  --global--bp-tablet: #{$small};
-  --global--bp-laptop: #{$medium};
-  --global--bp-desktop: #{$large};
-  --global--aligncenter: #{$width-site-m};
-  --global--alignwide: #{$width-site-l};
-  --global--aligndefault: #{--global--alignwide};
+  --bp-mobile: #{$base};
+  --bp-tablet: #{$small};
+  --bp-laptop: #{$medium};
+  --bp-desktop: #{$large};
+  --aligncenter: #{$width-site-m};
+  --alignwide: #{$width-site-l};
+  --aligndefault: #{--alignwide};
 }
 
 

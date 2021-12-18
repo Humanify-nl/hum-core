@@ -25,13 +25,13 @@ add_filter( 'manage_pages_columns', 'hum_page_columns' );
  */
 function hum_manage_page_columns( $columns ) {
 
-  $columns = array(
+  $columns = [
     'cb'                   => '<input type="checkbox" />',
     'title'                => 'Title',
     'page-templates'       => 'Template',
     'author'               => 'Author',
     'date'                 => 'Date',
-  );
+  ];
   return $columns;
 }
 add_filter('manage_pages_columns' , 'hum_manage_page_columns');

@@ -7,9 +7,17 @@
 
 
 /**
+ * Add new pattern names here
+ */
+hum_register_block_pattern( 'post-query' );
+hum_register_block_pattern( 'forminator' );
+
+
+/**
  * Remove core Block patterns
  */
 remove_theme_support( 'core-block-patterns' );
+
 
 /**
  * Register Block Pattern Category.
@@ -18,7 +26,7 @@ if ( function_exists( 'register_block_pattern_category' ) ) {
 
 	register_block_pattern_category(
 		'humanify',
-		array( 'label' => esc_html__( 'Humanify', 'hum-core' ) )
+		[ 'label' => esc_html__( 'Humanify', 'hum-core' ) ]
 	);
 }
 
@@ -28,7 +36,6 @@ if ( function_exists( 'register_block_pattern_category' ) ) {
  *
  * https://permanenttourist.ch/2021/02/easier-block-patterns-using-template-parts/
  */
-
 function hum_get_pattern_template( $pattern_name ) {
 
 	// return early if no input
@@ -39,7 +46,7 @@ function hum_get_pattern_template( $pattern_name ) {
 	// open output buffer
 	ob_start();
 	// get pattern template-part
-	get_template_part( 'template-parts/patterns/'.$pattern_name );
+	get_template_part( 'template-parts/patterns/' . $pattern_name );
 	// save contents in var
 	$pattern_template = ob_get_contents();
 	// close output buffer
@@ -51,34 +58,26 @@ function hum_get_pattern_template( $pattern_name ) {
 
 
 /**
- * Register Block Patterns.
+ * Create a block pattern
+ *
  */
+function hum_register_block_pattern( $pattern ) {
 
-if ( function_exists( 'register_block_pattern' ) ) {
+  if ( function_exists( 'register_block_pattern' ) ) {
 
-	$post_query_template = hum_get_pattern_template( 'pattern-post-query' );
-	$forminator_template = hum_get_pattern_template( 'pattern-forminator' );
+		$pattern_title = ucfirst(str_replace('-', ' ', $pattern ));
+		$pattern_template = hum_get_pattern_template( 'pattern-'. $pattern );
 
-	// Post query
-	register_block_pattern(
-		'hum/post-query',
-		[
-			'title'         => esc_html__( 'Post query', 'hum-core' ),
-			'categories'    => [ 'humanify' ],
-			//'viewportWidth' => 1440,
-			'content'       => $post_query_template,
-		]
+		register_block_pattern(
+			'hum/'.$pattern,
+			[
+				'title'         => esc_html__( $pattern_title, 'hum-core' ),
+				'categories'    => [ 'humanify' ],
+				//'viewportWidth' => 1440,
+				'content'       => $pattern_template,
+			]
 
-	);
+		);
 
-	register_block_pattern(
-		'hum/forminator',
-		[
-			'title'         => esc_html__( 'Forminator', 'hum-core' ),
-			'categories'    => [ 'humanify' ],
-			//'viewportWidth' => 1440,
-			'content'       => $forminator_template,
-		]
-
-	);
+	}
 }

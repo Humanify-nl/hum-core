@@ -32,10 +32,3 @@
   @include columns-mobile(1);
   @include columns-tablet-up(1);
 }
-
-.site-main {
-  > .grid {
-    width: calc(100% - #{$margin_site_s * 2});
-    margin-bottom: var(--global--spacing-vertical);
-  }
-}

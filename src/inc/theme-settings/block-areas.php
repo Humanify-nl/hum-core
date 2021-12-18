@@ -10,8 +10,8 @@
  * @license      GPL-2.0+
 **/
 
-// In template usage: hum_block_area()->show( 'entry-header' );
 
+// In template usage: hum_block_area()->show( 'entry-header' );
 class Hum_Block_Area {
 
 	/**
@@ -29,8 +29,8 @@ class Hum_Block_Area {
 			self::$instance = new Hum_Block_Area();
 
 			// Actions
-			add_action( 'init',              array( self::$instance, 'register_cpt'      )    );
-			add_action( 'template_redirect', array( self::$instance, 'redirect_single'   )    );
+			add_action( 'init',              [ self::$instance, 'register_cpt'      ]    );
+			add_action( 'template_redirect', [ self::$instance, 'redirect_single'   ]    );
 		}
 		return self::$instance;
 	}

@@ -3,6 +3,21 @@
 --------------------------------------------- */
 
 .wp-block-file {
+  display: flex;
+  align-items: center;
+
+  @include bp-max($base){
+    flex-wrap: wrap;
+    justify-content: space-between;
+    a {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+      &.wp-block-file__button {
+        padding: 0.5em 1em;
+        margin: 0;
+      }
+    }
+  }
 
   a.wp-block-file__button {
     padding: 0.5em 1.75em;

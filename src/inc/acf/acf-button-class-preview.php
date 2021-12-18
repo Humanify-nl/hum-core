@@ -5,6 +5,7 @@
  * @package hum-core
  */
 
+
 if ( !function_exists( 'hum_button_class_preview' ) ) {
 
   function hum_button_class_preview( $preview_type = false ) {
@@ -26,7 +27,7 @@ if ( !function_exists( 'hum_button_class_preview' ) ) {
       break;
 
       default;
-      $button_class = [ 'preview__link' ];
+      $button_class = [ 'link' ];
 
     }
 
@@ -44,12 +45,13 @@ if ( !function_exists( 'hum_button_class_preview' ) ) {
 function acf_load_button_class_preview_choices( $field ) {
 
 // reset choices
-$field['choices'] = array(
-  'button' => 'Button',
-  'button-wired' => 'Wired button',
-  'button-white' => 'White button',
-  'preview__link' => 'Default link',
-);
+$field['choices'] = [
+  'has-background has-primary-background-color' => 'Button primary',
+  'has-background has-secondary-background-color' => 'Button secondary',
+  'has-background has-tertiary-background-color' => 'Button tertiary',
+  'has-background has-white-background-color' => 'Button white',
+  'is-link' => 'Link',
+];
 
 // return the field
 return $field;
@@ -72,12 +74,12 @@ add_filter('acf/load_field/name=rel_links', 'acf_load_button_class_preview_choic
 function acf_load_button_class_all_choices( $field ) {
 
 // reset choices
-$field['choices'] = array(
+$field['choices'] = [
 'button' => 'Button',
 'button-wired' => 'Wired button',
 'button-white' => 'White button',
 'preview__link' => 'Default link',
-);
+];
 
 // return the field
 return $field;

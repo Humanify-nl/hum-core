@@ -5,13 +5,12 @@
  * @package hum-core
  */
 
-// Cleanup
-include_once( get_template_directory() . '/inc/wordpress-cleanup.php' );
 
+include_once( get_template_directory() . '/inc/wordpress-cleanup.php' );
+include_once( get_template_directory() . '/inc/utility.php');
 include_once( get_template_directory() . '/inc/tha-theme-hooks.php' );
 include_once( get_template_directory() . '/inc/theme-settings.php');
 include_once( get_template_directory() . '/inc/template-functions.php' );
-include_once( get_template_directory() . '/inc/template-tags.php' );
 include_once( get_template_directory() . '/inc/block-editor.php');
 include_once( get_template_directory() . '/inc/plugin-support.php' );
 include_once( get_template_directory() . '/inc/scripts.php');
@@ -31,17 +30,17 @@ if ( ! function_exists( 'hum_core_setup' ) ) {
 		load_theme_textdomain( 'hum-core', get_template_directory() . '/languages' );
 
 		// This theme uses wp_nav_menu() in two locations.
-		register_nav_menus(	array(
+		register_nav_menus(	[
 			'primary' => esc_html__( 'Primary Menu', 'hum-core' ),
 			'secondary' => esc_html__( 'Secondary Menu', 'hum-core' ),
-		) );
+		] );
 
 		// Editor style
 		add_theme_support( 'editor-styles' );
 		//add_editor_style( 'assets/css/editor.css' );
 
 		// Remove admin bar style fallback
-		add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );
+		add_theme_support( 'admin-bar', [ 'callback' => '__return_false' ] );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -61,16 +60,16 @@ if ( ! function_exists( 'hum_core_setup' ) ) {
 		// Image sizes
 		include_once( get_template_directory() . '/inc/theme-settings/image-sizes.php' );
 
-		add_theme_support( 'custom-logo', array(
+		add_theme_support( 'custom-logo', [
 		  'height'      => null, // Allow full flexibility if no size is specified.
 		  'width'       => null, // Allow full flexibility if no size is specified.
 		  'flex-height' => true,
 		  'flex-width'  => true,
 		  'unlink-homepage-logo' => true,
-		) );
+		] );
 
 		// HTML5 support for default core markup.
-		add_theme_support( 'html5', array(
+		add_theme_support( 'html5', [
 			'search-form',
 			'comment-form',
 			'comment-list',
@@ -78,7 +77,7 @@ if ( ! function_exists( 'hum_core_setup' ) ) {
 			'caption',
 			'style',
 			'script',
-		) );
+		] );
 
 		// remove post-formats
 		remove_theme_support( 'post-formats' );

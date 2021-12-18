@@ -5,6 +5,7 @@
 // Button
 .site .button,
 .wp-block-search .wp-block-search__button,
+.wp-block-button__link,
 .wp-block-button .wp-block-button__link,
 .wp-block-file .wp-block-file__button {
 	// Extend button style
@@ -24,6 +25,7 @@
 	// Reset other styles
 	.wp-block-button__link {
 		border-radius: 0;
+		min-width: var(--button--min-width);
 
 		&:hover {
 			text-decoration: none;
@@ -32,10 +34,10 @@
 }
 
 .wp-block-buttons {
-	margin-top: calc( 0.25 * var(--global--block-margin));
+	margin-top: calc( 0.25 * var(--block-margin));
 
 	> .wp-block-button {
-		margin-bottom: calc( 0.25 * var(--global--block-margin));
+		margin-bottom: calc( 0.25 * var(--block-margin));
 		&:last-child {
 			margin-bottom: 0;
 		}

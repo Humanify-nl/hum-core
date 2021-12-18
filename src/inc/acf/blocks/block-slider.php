@@ -4,7 +4,7 @@ function register_slider_block() {
   $register_icon = [
     'name'              => 'slider',
     'title'             => __('Slider'),
-    'description'       => __('A custom slider block.'),
+    'description'       => __('Display multiple slides with text in a slider.'),
     'render_callback'   => 'hum_render_slider_block',
     'category'          => 'media',
     'icon'              => 'leftright',

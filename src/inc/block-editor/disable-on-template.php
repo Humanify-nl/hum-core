@@ -6,17 +6,15 @@
  * @author Bill Erickson
  */
 
+
 /**
  * Templates and Page IDs without editor
  *
  */
 function hum_disable_editor( $id = false ) {
 
-	$excluded_templates = array(
-	);
-
-	$excluded_ids = array(
-	);
+	$excluded_templates = [];
+	$excluded_ids = [];
 
 	if( empty( $id ) )
 		return false;

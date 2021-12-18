@@ -5,14 +5,14 @@
 .entry-comments {
 
 	.comment-list {
-		margin: 0 0 var(--global--text-margin-x2);
+		margin: 0 0 var(--text-margin-x2);
 
 		li {
 			list-style-type: none;
 			border: 1px solid var(--theme--border);
 
 			article {
-				padding: var(--global--text-margin);
+				padding: var(--text-margin);
 				position: relative;
 			}
 		}
@@ -28,7 +28,7 @@
 			vertical-align: middle;
 			margin: 0;
 			font-family: $serif;
-			font-size: var(--global--font-size-h4);
+			font-size: var(--font-size-h4);
 
 			a {
 				text-decoration: none;
@@ -92,8 +92,8 @@
 }
 
 .comment-respond {
-	margin-top: var(--global--spacing-vertical);
-	margin-bottom: var(--global--spacing-vertical);
+	margin-top: var(--spacing-vertical);
+	margin-bottom: var(--spacing-vertical);
 
 	label {
 		display: block;

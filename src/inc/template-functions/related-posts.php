@@ -12,8 +12,9 @@ function hum_posts_related() {
 
   $post_amount = get_field( 'related_posts_amount', 'option' );
   $section_title = get_field( 'related_posts_title', 'option' );
+
   $args = [
-    'post_type' => [ get_post_type( get_the_id() ) ],
+    'post_type' => [ $post->post_type ],
     'orderby' => 'date',
     'order' => 'DESC',
     'posts_per_page' => $post_amount,
@@ -25,13 +26,13 @@ function hum_posts_related() {
   if ( $query_posts->have_posts() ) {
   ?>
 
-    <section class="<?php echo esc_attr( 'post-query-related' ); ?>">
+    <section class="<?php echo esc_attr( 'related related-posts' ); ?>">
 
       <div class="wrap">
 
         <?php
         // vars
-        if ( $post_type == 'testimonial' ) {
+        if ( $post->post_type == 'testimonial' ) {
           $option_field = get_field( 'preview_type_testimonial_rel', 'option' );
         } else {
           $option_field = get_field( 'preview_type_rel', 'option' );

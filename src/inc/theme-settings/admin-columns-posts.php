@@ -5,13 +5,14 @@
  * @package hum-core
  */
 
+
 /**
  * Add columns for posts
  *
  */
 function hum_add_img_column($columns) {
 
-  $columns = array_slice($columns, 0, 1, true) + array("img" => "Featured Image") + array_slice($columns, 1, count($columns) - 1, true);
+  $columns = array_slice($columns, 0, 1, true) + ["img" => "Featured Image"] + array_slice($columns, 1, count($columns) - 1, true);
 
   return $columns;
 
@@ -26,7 +27,7 @@ add_filter('manage_post_posts_columns', 'hum_add_img_column' );
  */
 function hum_manage_post_columns( $columns ) {
 
-  $columns = array(
+  $columns = [
     'cb'                   => '<input type="checkbox" />',
     'img'                  => 'Image',
     'title'                => 'Title',
@@ -34,7 +35,7 @@ function hum_manage_post_columns( $columns ) {
     'tags'                 => 'Tags',
     'author'               => 'Author',
     'date'                 => 'Date',
-  );
+  ];
 
   return $columns;
 }

@@ -5,12 +5,13 @@
  * @package hum-core
  */
 
+
 function hum_scripts() {
 
   // JS scripts
   wp_enqueue_script( 'hum-bundle-js',
     get_template_directory_uri() . '/assets/js/bundle.js',
-    array( 'jquery' ),
+    [ 'jquery' ],
     filemtime( get_template_directory() . '/assets/js/bundle.js' ),
     true
   );
@@ -35,7 +36,7 @@ function hum_scripts() {
   // Main CSS style
   wp_enqueue_style( 'hum-style',
     get_template_directory_uri() . '/assets/css/main.css',
-    array(),
+    [],
     filemtime( get_template_directory() . '/assets/css/main.css' )
   );
 

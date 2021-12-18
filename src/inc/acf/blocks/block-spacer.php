@@ -4,7 +4,7 @@ function register_spacer_block() {
   $register_spacer = [
     'name'              => 'spacer',
     'title'             => __('Spacer'),
-    'description'       => __('A vertical spacer block.'),
+    'description'       => __('Add vertical space.'),
     'render_callback'   => 'hum_render_spacer_block',
     'category'          => 'design',
     'icon'              => 'image-flip-vertical',

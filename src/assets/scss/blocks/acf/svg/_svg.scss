@@ -1,0 +1,91 @@
+
+/* SVG
+--------------------------------------------- */
+.block-svg {
+
+  .svg-shape {
+    width: 100%;
+    height: auto;
+  }
+
+
+  &.is-shape {
+    margin-bottom: 0;
+    // make sure it aligns to bottom correctly
+    .block-svg__wrap {
+      display: flex;
+    }
+
+    &.is-flipped {
+      margin-top: 0;
+      transform: scale(-1);
+    }
+  }
+
+
+  // when icon, apply icon style
+  &.is-icon {
+    display: flex;
+    line-height: 1;
+    margin-bottom: var(--text-margin);
+
+    .block-svg__wrap {
+      border-radius: 50%;
+      height: var(--icon-size-outer);
+      width: var(--icon-size-outer);
+      svg {
+        height: var(--icon-size);
+        width: var(--icon-size);
+      }
+    }
+
+    &.icon-background {
+      .block-svg__wrap {
+        background-color: var(--color--primary);
+        padding: var(--icon-padding);
+        svg {
+          fill: var(--color--white);
+        }
+      }
+
+    }
+
+
+    // textalign setting
+    &.aligncenter {
+      justify-content: center;
+    }
+    &.alignright {
+      justify-content: end;
+    }
+  }
+
+  // generate css colors based on color picker
+  @each $name, $color in $color-picker {
+
+    &#{ '.has-' + $name + '-color'} {
+      svg path {
+        fill: $color;
+      }
+
+      &.icon-background {
+        .block-svg__wrap {
+          background-color: $color;
+          svg path {
+            fill: var(--color--white);
+          }
+        }
+      }
+
+    }
+
+  }
+
+
+  .block-content & {
+
+    + .wp-block-group.has-background {
+      margin-top: 0;
+    }
+  }
+}

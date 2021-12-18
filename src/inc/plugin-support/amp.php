@@ -7,6 +7,7 @@
  * @license GPL-2.0+
  */
 
+
 /**
  * Is AMP?
  * Conditional tag
@@ -51,7 +52,7 @@ function hum_amp_class( $default, $active, $state ) {
  * @param array $disable, list of states to disable
  * @return string The 'on' attribute.
  */
-function hum_amp_toggle( $state = '', $disable = array() ) {
+function hum_amp_toggle( $state = '', $disable = [] ) {
 	if( ! hum_is_amp() )
 		return;
 

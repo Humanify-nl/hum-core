@@ -7,6 +7,7 @@
  * @package hum-core
  */
 
+
 $slide_size = get_field( 'image_size_select' );
 $slide_text_align = get_field( 'text_align_select' );
 

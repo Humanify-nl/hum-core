@@ -10,7 +10,7 @@
 	min-height: 49px;
 
 	.wrap-outer {
-		max-width: var(--global--alignwide);
+		max-width: var(--alignwide);
 		margin-left: auto;
 		margin-right: auto;
 		@include calc-width(100, $margin_site_s);
@@ -42,7 +42,7 @@
 	}
 
 
-	@include bp-max($small) {
+	@include bp-max($large) {
 		float: none;
 		justify-content: center;
 	}
@@ -54,13 +54,13 @@
 /* Admin Bar
 --------------------------------------------- */
 
-@include bp-min(783) {
+@include bp-min($medium) {
 	.admin-bar .site-container {
-		padding-top: var(--global--admin-bar--height);
+		padding-top: var(--admin-bar--height);
 	}
 }
 
-@include bp-max(783) {
+@include bp-max($medium) {
 	#wpadminbar {
 		display: none !important;
 	}
@@ -71,7 +71,7 @@
 --------------------------------------------- */
 
 @if( $static_header_desktop ) {
-	@include bp-min($small) {
+	@include bp-min($large) {
 
 		.site-container {
 			padding-top: $static_header_desktop;
@@ -86,7 +86,7 @@
 			height: $static_header_desktop;
 		}
 
-		@include bp-min(782) {
+		@include bp-min($medium) {
 			.admin-bar {
 
 				.site-container {
@@ -102,7 +102,7 @@
 }
 
 @if( $static_header_mobile ) {
-	@include bp-max($small) {
+	@include bp-max($large) {
 
 		.site-container {
 			padding-top: $static_header_mobile;
@@ -119,15 +119,15 @@
 			max-height: 100vh;
 		}
 
-		@include bp-min(782) {
+		@include bp-min($medium) {
 			.admin-bar {
 
 				.site-container {
-					padding-top: var(--global--admin-bar--height) + $static_header_mobile;
+					padding-top: var(--admin-bar--height) + $static_header_mobile;
 				}
 
 				.site-header {
-					top: var(--global--admin-bar--height);
+					top: var(--admin-bar--height);
 				}
 			}
 		}
@@ -145,7 +145,7 @@
 	padding: 16px;
 	width: 100%;
 
-	@include bp-min($small) {
+	@include bp-min($large) {
 		position: absolute;
 		right: 0;
 		bottom: -82px;

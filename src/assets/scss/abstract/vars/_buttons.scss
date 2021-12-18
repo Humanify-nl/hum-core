@@ -11,13 +11,13 @@ $button: (
     color-back: clr(primary),
     color-back-hover: clr(primary, light),
     color-back-active: clr(primary, light),
-    font-size: var(--global--font-size-normal),
-    font-family: var(--global--font-primary),
+    font-size: var(--font-size-normal),
+    font-family: var(--font-primary),
     border-width: 1px,
     border-radius: 0,
-    line-height: 1.6 //var(--global--line-height),
-    padding-ver: var(--global--padding-inner),
-    padding-hor: var(--global--spacing-horizontal),
+    line-height: 1.6 //var(--line-height),
+    padding-ver: var(--padding-inner),
+    padding-hor: var(--spacing-horizontal),
   ),
 );
 

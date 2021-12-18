@@ -6,6 +6,7 @@
   */
 ?>
 
+
 <div class="grid <?php echo hum_grid_class_preview(); ?>">
 
   <?php

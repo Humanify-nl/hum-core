@@ -4,7 +4,7 @@
 
 .wp-block-table  {
   border-collapse: collapse;
-  margin-bottom: var(--global--block-margin);
+  margin-bottom: var(--block-margin);
   @include bp-min($small){
     width: 100%;
   }

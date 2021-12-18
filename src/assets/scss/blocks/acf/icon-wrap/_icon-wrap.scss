@@ -13,13 +13,13 @@
     background: var(--color--primary);
     display: flex;
     align-items: top;
-    margin-right: var(--global--padding-inner);
-    margin-top: calc( 0.5 * var(--global--padding-inner) );
+    margin-right: var(--padding-inner);
+    margin-top: calc( 0.5 * var(--padding-inner) );
 
     svg {
       fill: var(--color--white);
-      height: var(--global--icon-size);
-      width: var(--global--icon-size);
+      height: var(--icon-size);
+      width: var(--icon-size);
     }
   }
 

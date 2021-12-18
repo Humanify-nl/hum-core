@@ -17,13 +17,13 @@
 	}
 
 	&.is-style-extra-spacing {
-		padding-top: var(--global--block-margin);
-		padding-bottom: var(--global--block-margin);
+		padding-top: var(--block-margin);
+		padding-bottom: var(--block-margin);
 
 		&.alignwide,
 		&.alignfull {
-			padding-top: var(--global--spacing-vertical);
-			padding-bottom: var(--global--spacing-vertical);
+			padding-top: var(--spacing-vertical);
+			padding-bottom: var(--spacing-vertical);
 		}
 	}
 

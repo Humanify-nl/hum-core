@@ -3,20 +3,20 @@
 --------------------------------------------- */
 
 .has-background {
-  padding: var(--global--padding);
+  padding: var(--padding);
 
   [data-align="wide"] & {
     [data-align="wide"] {
-      padding-left: var(--global--padding);
-      padding-right: var(--global--padding);
+      padding-left: var(--padding);
+      padding-right: var(--padding);
     }
   }
 
   &.wp-block-group {
-    padding: var(--global--block-margin);
+    padding: var(--block-margin);
   }
 
   .has-background {
-    padding: var(--global--padding);
+    padding: var(--padding);
   }
 }

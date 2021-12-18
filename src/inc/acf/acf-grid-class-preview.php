@@ -5,6 +5,7 @@
  * @package hum-core
  */
 
+
 if ( !function_exists( 'hum_grid_class_preview' ) ) {
 
   function hum_grid_class_preview( $class = false ) {
@@ -64,12 +65,12 @@ if ( !function_exists( 'hum_grid_class_preview' ) ) {
 function acf_load_grid_preview_classes( $field ) {
 
     // reset choices
-    $field['choices'] = array(
+    $field['choices'] = [
       'grid-25' => '4 per row',
       'grid-33' => '3 per row',
       'grid-50' => '2 per row',
       'grid-100' => '1 per row',
-    );
+    ];
 
     return $field;
 

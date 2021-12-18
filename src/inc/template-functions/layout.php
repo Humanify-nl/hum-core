@@ -115,9 +115,9 @@ add_action( 'acf/init', 'hum_page_layout_metabox' );
 */
 function hum_widgets_init() {
 
-	register_sidebar( hum_widget_area_args( array(
+	register_sidebar( hum_widget_area_args( [
 		'name' => esc_html__( 'Primary Sidebar', 'hum-core' ),
-	) ) );
+	] ) );
 
 }
 add_action( 'widgets_init', 'hum_widgets_init' );
@@ -129,7 +129,7 @@ add_action( 'widgets_init', 'hum_widgets_init' );
  * @param array $args
  * @return array $args
  */
-function hum_widget_area_args( $args = array() ) {
+function hum_widget_area_args( $args = [] ) {
 
 	$defaults = [
 		'name'          => '',

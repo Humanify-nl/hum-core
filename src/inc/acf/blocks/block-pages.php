@@ -4,15 +4,15 @@ function register_pages_block() {
   $register_pages_block = [
     'name'              => 'pages',
     'title'             => __('Pages'),
-    'description'       => __('A pages block to display children or siblings.'),
+    'description'       => __('Display a configurable grid of children or sibling page previews.'),
     'render_callback'   => 'hum_render_pages_block',
-    'category'          => 'formatting',
+    'category'          => 'design',
     'icon'              => 'screenoptions',
     'keywords'          => [ 'pages', 'related' ],
     'mode'              => 'preview',
     'supports'          => [
       'align'             => [ 'wide', 'full' ],
-      'align_text'        => false,
+      'align_text'        => true,
       'align_content'     => true,
       'mode'              => true,
       'multiple'          => true,
@@ -35,6 +35,9 @@ function hum_render_pages_block( $block, $content = '', $is_preview = false, $po
   }
   if( !empty( $block['align'] ) ) {
     $className .= ' align' . $block['align'];
+  }
+  if( !empty( $block['align_text'] ) ) {
+    $className .= ' has-text-align-' . $block['align_text'];
   }
 
   ?>

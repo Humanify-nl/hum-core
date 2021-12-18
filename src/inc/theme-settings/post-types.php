@@ -2,8 +2,9 @@
 /**
  * Post types
  *
- * @package hum-v7-acf
+ * @package hum-core
  */
+
 
 function hum_post_type_testimonial() {
 

@@ -5,8 +5,8 @@
   text-align: left;
   border-top: 2px solid var(--color--primary);
   border-bottom: 2px solid var(--color--primary);
-  padding-top: var(--global--block-margin);
-  padding-bottom: var(--global--block-margin);
+  padding-top: var(--block-margin);
+  padding-bottom: var(--block-margin);
 
   .wp-block-group & {
     margin-bottom: 0;
@@ -17,12 +17,12 @@
 
     p + cite {
       display: block;
-      margin-top: var(--global--padding);
+      margin-top: var(--padding);
     }
   }
 
   p {
-    font-size: var(--global--font-size-h3);
+    font-size: var(--font-size-h3);
     &:last-child {
       margin-bottom: 0;
     }
@@ -42,7 +42,7 @@
     blockquote {
       max-width: unset;
       p {
-        font-size: var(--global--font-size-h3);
+        font-size: var(--font-size-h3);
       }
     }
   }

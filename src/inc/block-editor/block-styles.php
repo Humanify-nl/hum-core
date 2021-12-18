@@ -35,6 +35,14 @@ function hum_register_block_styles() {
   );
 
   register_block_style(
+    'core/cover',
+      [
+         'name'         => 'shape',
+         'label'        => 'Shape',
+      ],
+  );
+
+  register_block_style(
     'core/quote',
       [
          'name'         => 'background',

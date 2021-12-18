@@ -5,6 +5,7 @@
  * @package hum-core
  */
 
+
 /*
  * Extend block output filter
  * @see https://javascriptforwp.com/extending-wordpress-blocks/
@@ -20,4 +21,4 @@ function hum_block_filter( $block_content, $block ) {
 
   return $block_content;
 }
-add_filter( 'render_block', 'hum_block_filter', 10, 3);
+//add_filter( 'render_block', 'hum_block_filter', 10, 3);

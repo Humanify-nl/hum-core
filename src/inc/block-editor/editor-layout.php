@@ -5,11 +5,11 @@
  * @package hum-core
  */
 
+
 /**
  * Gutenberg layout style
  *
  */
-
 function hum_editor_layout_style() {
 
 	wp_enqueue_style(
@@ -29,7 +29,6 @@ add_action( 'enqueue_block_editor_assets', 'hum_editor_layout_style' );
  * @param string $classes
  * @return string
  */
-
 function hum_editor_layout_class( $classes ) {
 
 	$screen = get_current_screen();

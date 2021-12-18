@@ -5,10 +5,10 @@
 .preview-calendar {
   flex-flow: row nowrap;
   flex-direction: row;
-  padding: var(--global--padding-inner);
+  padding: var(--padding-inner);
 
   .preview__content {
-    padding: var(--global--padding-inner);
+    padding: var(--padding-inner);
     width: calc(100% - 10px - 54px);
   }
 
@@ -18,6 +18,26 @@
 
     .preview__link {
       display: block;
+    }
+  }
+
+  .preview__date {
+
+    .date--square {
+      background-color: var(--color--grey-light);
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      flex-flow: column wrap;
+      height: 3.375em;
+      width: 3.375em;
+
+      .date__day {
+        font-size: 1em;
+      }
+      .date__month {
+        font-size: 1em;
+      }
     }
 
   }

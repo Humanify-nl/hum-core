@@ -26,7 +26,7 @@ add_action( 'wp_head', 'hum_header_meta' );
 function hum_dequeue_jquery_migrate( &$scripts ){
 	if( !is_admin() ) {
 		$scripts->remove( 'jquery');
-		$scripts->add( 'jquery', false, array( 'jquery-core' ), '1.10.2' );
+		$scripts->add( 'jquery', false, [ 'jquery-core' ], '1.10.2' );
 	}
 }
 add_filter( 'wp_default_scripts', 'hum_dequeue_jquery_migrate' );
@@ -42,26 +42,6 @@ function hum_singular_body_class( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'hum_singular_body_class' );
-
-
-/**
- * Get registered non-wp post types
- * @return array { post types }
- */
-function hum_registered_post_types() {
-
-	$args = [
-		'public'   => true,
-		'_builtin' => false,
-	];
-
-	$output = 'names'; // names or objects, note names is the default
-	$operator = 'and'; // 'and' or 'or'
-
-	$post_types = get_post_types( $args, $output, $operator );
-
-	return $post_types;
-}
 
 
 /**
@@ -127,7 +107,7 @@ function hum_clean_nav_class( $classes ) {
 
 	// Remove submenu class if depth is limited
 	if( isset( $args->depth ) && 1 === $args->depth ) {
-		$classes = array_diff( $classes, array( 'menu-item-has-children' ) );
+		$classes = array_diff( $classes, [ 'menu-item-has-children' ] );
 	}
 
 	return $classes;
@@ -144,10 +124,10 @@ function hum_clean_post_class( $classes ) {
 	if( ! is_array( $classes ) )
 		return $classes;
 
-	$allowed_classes = array(
-  		'hentry',
-  		'type-' . get_post_type(),
-   	);
+	$allowed_classes = [
+  	'hentry',
+  	'type-' . get_post_type(),
+  ];
 
 	return array_intersect( $classes, $allowed_classes );
 }
@@ -204,14 +184,3 @@ add_filter( 'excerpt_more', 'hum_excerpt_more' );
 
 // Remove inline CSS for emoji
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
-
-
-/**
- * Print array
- *
- */
-function hum_print_arr( $array ) {
-	echo '<pre>';
-		echo print_r( $array );
-	echo '</pre>';
-}

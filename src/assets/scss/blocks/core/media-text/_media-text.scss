@@ -19,7 +19,7 @@
   }
 
   .wp-block-media-text__content {
-    padding-left: var(--global--padding);
+    padding-left: var(--padding);
     padding-right: 0;
   }
 
@@ -28,7 +28,7 @@
 
     .wp-block-media-text__content {
       padding-left: 0;
-      padding-right: var(--global--padding);
+      padding-right: var(--padding);
     }
     .wp-block-media-text__media {
 
@@ -41,6 +41,21 @@
 
   &.has-background {
     padding: 0;
+  }
+
+
+  &.is-stacked-on-mobile {
+
+    @include bp-max($small) {
+
+      .wp-block-media-text__media {
+        margin-bottom: var(--block-margin);
+      }
+      .wp-block-media-text__content {
+        padding: 0;
+      }
+    }
+
   }
 
 }

@@ -4,8 +4,9 @@
  *
  * ACF field: group_60212965217d1
  *
- * @package hum-v7-core
+ * @package hum-core
  */
+
 
 if ( have_rows( 'tab_repeater' ) ) {
 ?>

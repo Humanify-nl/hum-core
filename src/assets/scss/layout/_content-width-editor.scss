@@ -1,0 +1,229 @@
+
+/* Editor layout - outside wrap-editor-styles
+--------------------------------------------- */
+.wp-block {
+	margin-top: 0;
+	margin-bottom: var(--block-margin);
+	max-width: unset;
+}
+
+.is-root-container {
+
+	.wp-block {
+
+		&[data-align="left"],
+		&[data-align="right"] {
+			> * {
+				margin-bottom: var(--block-margin);
+			}
+		}
+
+		&[data-align="full"] {
+			margin-left: auto !important;
+			margin-right: auto !important;
+
+			> .acf-block-body {
+				max-width: var(--alignwide);
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.acf-block-component {
+				.acf-block-fields {
+					> .acf-field {
+						max-width: var(--alignwide);
+						margin-left: auto;
+						margin-right: auto;
+					}
+				}
+			}
+
+			.wp-block-acf-slider {
+				.slider-text-wrap {
+					margin-left: auto;
+					margin-right: auto;
+					max-width: var(--alignwide);
+				}
+			}
+
+		}
+	}
+}
+
+
+.acf-block {
+	max-width: 100%;
+	width: 100%;
+}
+
+// horizontal layouts
+.content-wide {
+
+	.editor-styles-wrapper {
+
+		// direct children
+		.is-root-container {
+
+			> .wp-block {
+				max-width: var(--alignwide);
+			}
+
+			> .block-list-appender {
+				margin-left: auto;
+				margin-right: auto;
+				max-width: var(--alignwide);
+			}
+		}
+
+		.wp-block-acf-slider {
+			.slider-text-wrap {
+				padding: var(--padding);
+			}
+		}
+
+		.wp-block[data-align="full"] {
+			max-width: none;
+			width: 100%;
+
+			.wp-block-cover__inner-container,
+			.wp-block-group__inner-container {
+				> *:not([data-align="full"]) {
+					max-width: var(--alignwide);
+				}
+				.block-list-appender {
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+
+			.acf-block-component {
+				.acf-block-fields {
+					> .acf-field {
+						margin-left: auto;
+						margin-right: auto;
+						max-width: var(--alignwide);
+					}
+				}
+			}
+
+			> .wp-block-acf-slider {
+				.slider-text-wrap {
+					margin-left: auto;
+					margin-right: auto;
+					max-width: var(--alignwide);
+				}
+			}
+
+			> .wp-block-acf-tabs:not(.is-style-unwrap) {
+				.list-tabs {
+					margin-left: auto;
+					margin-right: auto;
+					max-width: var(--alignwide);
+				}
+
+				.tab-card.is-active .tab-card-body {
+					margin-left: auto;
+					margin-right: auto;
+					max-width: var(--alignwide);
+				}
+			}
+		}
+
+
+	}
+}
+
+.content-center {
+
+	.editor-styles-wrapper {
+
+		// direct children
+		.is-root-container {
+
+			> .wp-block {
+				max-width: var(--aligncenter);
+			}
+
+			> .block-list-appender {
+				max-width: var(--alignwide);
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+
+		.wp-block-acf-slider {
+			.slider-text-wrap {
+				padding: var(--padding);
+			}
+		}
+
+		.wp-block[data-align="wide"] {
+			max-width: var(--alignwide);
+
+			.wp-block-cover__inner-container,
+			.wp-block-group__inner-container {
+				> *:not([data-align="full"]):not([data-align="wide"]) {
+					max-width: var(--aligncenter);
+				}
+			}
+
+      > .wp-block-acf-slider {
+				.slider-text-wrap {
+					margin-left: auto;
+					margin-right: auto;
+					max-width: var(--aligncenter);
+				}
+			}
+		}
+
+		.wp-block[data-align="full"] {
+			max-width: 100%;
+			width: 100%;
+
+			.wp-block-cover__inner-container,
+			.wp-block-group__inner-container {
+				> *:not([data-align="full"]):not([data-align="wide"]) {
+					max-width: var(--aligncenter);
+				}
+			}
+
+			.acf-block-component {
+				.acf-block-fields {
+					> .acf-field {
+						margin-left: auto;
+						margin-right: auto;
+						max-width: var(--aligncenter);
+					}
+				}
+			}
+
+			> .wp-block-acf-slider {
+				.slider-text-wrap {
+					margin-left: auto;
+					margin-right: auto;
+					max-width: var(--aligncenter);
+				}
+			}
+
+			> .wp-block-acf-tabs:not(.is-style-unwrap) {
+				.list-tabs {
+					margin-left: auto;
+					margin-right: auto;
+					max-width: var(--aligncenter);
+				}
+
+				.tab-card.is-active .tab-card-body {
+					margin-left: auto;
+					margin-right: auto;
+					max-width: var(--aligncenter);
+				}
+			}
+		}
+	}
+}
+
+
+.edit-post-visual-editor__post-title-wrapper {
+	border-bottom: 1px dashed var(--color--grey);
+	margin-bottom: 8px;
+}

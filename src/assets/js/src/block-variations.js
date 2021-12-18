@@ -6,6 +6,7 @@
 
 wp.domReady(() => {
 
+  /*
   wp.blocks.registerBlockVariation(
     'core/group', {
       name: 'group-spaced',
@@ -14,5 +15,6 @@ wp.domReady(() => {
       scope: 'transform',
     }
   );
+  */
 
 });

@@ -5,6 +5,7 @@
  * @package hum-core-acf
  */
 
+
 $post_order = get_field( 'post_query_order' );
 $post_amount = get_field( 'post_query_amount' );
 $post_type = get_field( 'post_query_type' );
@@ -20,16 +21,16 @@ $query_posts = new WP_query ( $args );
 
 if ( $query_posts->have_posts() ) {
 
+  $preview_select = get_field( 'preview_type_select' );
+  $preview_type = !empty($preview_select) ? $preview_select : 'preview';
   ?>
-  <div class="<?php echo hum_grid_class_preview();?>">
+
+  <div class="<?php echo hum_grid_class_preview( 'grid-'.$preview_type );?>">
 
     <?php
     while ( $query_posts->have_posts() ) {
 
       $query_posts->the_post();
-      $preview_select = get_field( 'preview_type_select' );
-      $preview_type = !empty($preview_select) ? $preview_select : 'preview';
-
       include( locate_template( 'template-parts/previews/'.$preview_type.'.php' ) );
 
     }

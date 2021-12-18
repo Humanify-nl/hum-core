@@ -10,6 +10,7 @@
 @import "core/group/group";
 @import "core/heading/heading";
 @import "core/image/image";
+@import "core/gallery/gallery";
 @import "core/list/list";
 @import "core/media-text/media-text";
 @import "core/paragraph/paragraph";
@@ -18,13 +19,15 @@
 @import "core/pullquote/pullquote";
 @import "core/quote/quote";
 @import "core/separator/separator";
-@import "core/social-icons/social-icons";
+@import "core/social-links/social-links";
 @import "core/table/table";
 @import "core/site-logo/site-logo";
 // custom
 @import "acf/acf-block";
 @import "acf/spacer/spacer";
+@import "acf/post-query/post-query";
+@import "acf/pages/pages";
 @import "acf/slider/slider";
 @import "acf/tabs/tabs";
-@import "acf/icon-svg/icon-svg";
+@import "acf/svg/svg";
 @import "acf/icon-wrap/icon-wrap";

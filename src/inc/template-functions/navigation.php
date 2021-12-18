@@ -17,15 +17,15 @@ function hum_site_header() {
 	echo '<nav' . hum_amp_class( 'nav-menu', 'active', 'menuActive' ) . ' role="navigation">';
 
 		if( has_nav_menu( 'primary' ) ) {
-			wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'container_class' => 'nav-primary' ) );
+			wp_nav_menu( [ 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'container_class' => 'nav-primary' ] );
 		}
 		if( has_nav_menu( 'secondary' ) ) {
-			wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_id' => 'secondary-menu', 'container_class' => 'nav-secondary' ) );
+			wp_nav_menu( [ 'theme_location' => 'secondary', 'menu_id' => 'secondary-menu', 'container_class' => 'nav-secondary' ] );
 		}
 
 	echo '</nav>';
 
-	echo '<div' . hum_amp_class( 'header-search', 'active', 'searchActive' ) . '>' . get_search_form( array( 'echo' => false ) ) . '</div>';
+	echo '<div' . hum_amp_class( 'header-search', 'active', 'searchActive' ) . '>' . get_search_form( [ 'echo' => false ] ) . '</div>';
 }
 add_action( 'tha_header_bottom', 'hum_site_header', 11 );
 
@@ -55,9 +55,9 @@ add_filter( 'wp_nav_menu_items', 'hum_nav_extras', 10, 2 );
  */
 function hum_search_toggle() {
 
-	$output = '<button' . hum_amp_class( 'search-toggle', 'active', 'searchActive' ) . hum_amp_toggle( 'searchActive', array( 'menuActive', 'mobileFollow' ) ) . '>';
-		$output .= hum_get_icon( array( 'icon' => 'search', 'size' => 24, 'class' => 'open' ) );
-		$output .= hum_get_icon( array( 'icon' => 'close', 'size' => 24, 'class' => 'close' ) );
+	$output = '<button' . hum_amp_class( 'search-toggle', 'active', 'searchActive' ) . hum_amp_toggle( 'searchActive', [ 'menuActive', 'mobileFollow' ] ) . '>';
+		$output .= hum_get_icon( [ 'icon' => 'search', 'size' => 24, 'class' => 'open' ] );
+		$output .= hum_get_icon( [ 'icon' => 'close', 'size' => 24, 'class' => 'close' ] );
 		$output .= '<span class="screen-reader-text">Search</span>';
 	$output .= '</button>';
 
@@ -72,9 +72,9 @@ function hum_search_toggle() {
  */
 function hum_mobile_menu_toggle() {
 
-	$output = '<button' . hum_amp_class( 'menu-toggle', 'active', 'menuActive' ) . hum_amp_toggle( 'menuActive', array( 'searchActive', 'mobileFollow' ) ) . '>';
-		$output .= hum_get_icon( array( 'icon' => 'menu', 'size' => 24, 'class' => 'open' ) );
-		$output .= hum_get_icon( array( 'icon' => 'close', 'size' => 24, 'class' => 'close' ) );
+	$output = '<button' . hum_amp_class( 'menu-toggle', 'active', 'menuActive' ) . hum_amp_toggle( 'menuActive', [ 'searchActive', 'mobileFollow' ] ) . '>';
+		$output .= hum_get_icon( [ 'icon' => 'menu', 'size' => 24, 'class' => 'open' ] );
+		$output .= hum_get_icon( [ 'icon' => 'close', 'size' => 24, 'class' => 'close' ] );
 		$output .= '<span class="screen-reader-text">Menu</span>';
 	$output .= '</button>';
 
@@ -101,7 +101,7 @@ function hum_nav_add_dropdown_icons( $output, $item, $depth, $args ) {
 	if ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
 
 		// Add SVG icon to parent items.
-		$icon = hum_get_icon( array( 'icon' => 'navigate-down', 'size' => 8, 'title' => 'Submenu Dropdown' ) );
+		$icon = hum_get_icon( [ 'icon' => 'navigate-down', 'size' => 8, 'title' => 'Submenu Dropdown' ] );
 
 		$output .= sprintf(
 			'<button' . hum_amp_nav_dropdown( $args->theme_location, $depth ) . ' tabindex="-1">%s</button>',

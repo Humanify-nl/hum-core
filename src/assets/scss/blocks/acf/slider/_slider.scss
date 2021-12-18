@@ -6,7 +6,7 @@
   img {
     object-fit: cover;
     width: 100%;
-    min-height: var(--global--featured-img);
+    min-height: var(--featured-img);
     max-height: 460px;
   }
 
@@ -30,6 +30,7 @@
     height: 100%;
     width: 100%;
 
+
     .slider-title {
       color: var(--color--white);
     }
@@ -40,9 +41,12 @@
 
   .slider-text-wrap {
     box-sizing: border-box;
-    width: 100%;
-    @include bp-max($small){
-      padding: 1em;
+    width: calc( 100% - #{$margin_site_s * 2});
+    > *:last-child {
+      margin-bottom: 0;
+    }
+    @include bp-max($medium){
+      padding: 1em 0;
     }
   }
 
@@ -54,10 +58,11 @@
 
     &::after {
       color: inherit;
-      font-size: 1.75em;
-      opacity: 0.3;
-      @include bp-max($small){
-        font-size: 1.5rem;
+      font-size: 1.5em;
+      opacity: 0.5;
+      @include bp-min($medium){
+        font-size: 1.75rem;
+        opacity: 0.3;
       }
     }
     &:hover {
@@ -78,10 +83,16 @@
   }
 
   .swiper-button-prev {
-    left: 2px;
+    left: 0;
+    @include bp-min($medium){
+      left: 2px;
+    }
   }
   .swiper-button-next {
-    right: 2px;
+    right: 0;
+    @include bp-min($medium){
+      right: 2px;
+    }
   }
 
   .swiper-pagination-bullet {

@@ -2,17 +2,17 @@
 /**
  * Register acf blocks
  *
- * @package hum-gutenberg
+ * @package hum-core
  */
+
 
 include_once( get_template_directory() . '/inc/acf/blocks/block-spacer.php' );
 include_once( get_template_directory() . '/inc/acf/blocks/block-post-query.php' );
 include_once( get_template_directory() . '/inc/acf/blocks/block-pages.php' );
 include_once( get_template_directory() . '/inc/acf/blocks/block-slider.php' );
 include_once( get_template_directory() . '/inc/acf/blocks/block-tabs.php' );
-include_once( get_template_directory() . '/inc/acf/blocks/block-icon-svg.php' );
 include_once( get_template_directory() . '/inc/acf/blocks/block-icon-wrap.php' );
-
+include_once( get_template_directory() . '/inc/acf/blocks/block-svg.php' );
 
 function hum_acf_init_block_types() {
 
@@ -40,7 +40,7 @@ function hum_acf_init_block_types() {
     );
 
     acf_register_block_type(
-      register_icon_block()
+      register_svg_block()
     );
 
     acf_register_block_type(

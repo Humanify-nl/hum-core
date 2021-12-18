@@ -4,9 +4,9 @@ function register_tabs_block() {
   $register_icon = [
     'name'              => 'tabs',
     'title'             => __('Tabs'),
-    'description'       => __('A custom tabs block.'),
+    'description'       => __('Display content inside tabs.'),
     'render_callback'   => 'hum_render_tabs_block',
-    'category'          => 'media',
+    'category'          => 'design',
     'icon'              => 'index-card',
     'keywords'          => [ 'tabs', 'tab' ],
     'mode'              => 'preview',

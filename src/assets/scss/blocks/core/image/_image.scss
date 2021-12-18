@@ -13,12 +13,12 @@ img {
 
 	&.alignleft {
 		float: left;
-		margin: 0 var(--global--text-margin) var(--global--text-margin) 0;
+		margin: 0 var(--text-margin) var(--text-margin) 0;
 	}
 
 	&.alignright {
 		float: right;
-		margin: 0 0 var(--global--text-margin) var(--global--text-margin);
+		margin: 0 0 var(--text-margin) var(--text-margin);
 	}
 
 	&.aligncenter {
@@ -28,17 +28,19 @@ img {
 
 }
 
-.wp-block-image figcaption {
-	display: none;
-	color: var(--color--grey-text);
-	text-align: left;
-	font-size: 14px;
-	font-style: normal;
-	margin-bottom: 0;
-}
+.wp-block-image {
+	margin-bottom: var(--text-margin);
 
-.wp-block-gallery {
-	.blocks-gallery-grid {
-		margin-bottom: -1em;
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	figcaption {
+		display: none;
+		color: var(--color--grey-text);
+		text-align: left;
+		font-size: 14px;
+		font-style: normal;
+		margin-bottom: 0;
 	}
 }

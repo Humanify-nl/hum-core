@@ -5,6 +5,7 @@
  * @package hum-core
  */
 
+
 // index post
 function hum_queries( $query ) {
 

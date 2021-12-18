@@ -14,17 +14,17 @@
  * @author Bill Erickson
  *
  */
-// echo hum_get_icon( array( 'icon' => 'arrow-left', 'group' => 'bootstrap', 'size' => 24, 'class' => 'arrow-left' ) );
+// echo hum_get_icon( [ icon' => 'arrow-left', 'group' => 'bootstrap', 'size' => 24, 'class' => 'arrow-left' ] );
 
-function hum_get_icon( $atts = array() ) {
+function hum_get_icon( $atts = [] ) {
 
-	$atts = shortcode_atts( array(
+	$atts = shortcode_atts( [
 		'icon'	=> false,
 		'group'	=> 'utility',
 		'size'	=> 16,
 		'class'	=> false,
 		'label'	=> false,
-	), $atts );
+	], $atts );
 
 	if( empty( $atts['icon'] ) ) {
 		return;
@@ -34,6 +34,7 @@ function hum_get_icon( $atts = array() ) {
 	if( ! file_exists( $icon_path ) ) {
 		return;
 	}
+
   // get icon
 	$icon = file_get_contents( $icon_path );
 
@@ -42,6 +43,7 @@ function hum_get_icon( $atts = array() ) {
 	if( !empty( $atts['class'] ) ) {
 		$class .= ' ' . esc_attr( $atts['class'] );
 	}
+
   // set size
 	if( false !== $atts['size'] ) {
 		$replace = sprintf( '<svg class="' . $class . '" width="%d" height="%d" aria-hidden="true" role="img" focusable="false" ', $atts['size'], $atts['size'] );
@@ -49,6 +51,7 @@ function hum_get_icon( $atts = array() ) {
 	} else {
 		$svg = preg_replace( '/^<svg /', '<svg class="' . $class . '"', trim( $icon ) );
 	}
+
   // clean
 	$svg  = preg_replace( "/([\n\t]+)/", ' ', $svg ); // Remove newlines & tabs.
 	$svg  = preg_replace( '/>\s*</', '><', $svg ); // Remove white space between SVG tags.

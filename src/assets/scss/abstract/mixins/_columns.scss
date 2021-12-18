@@ -45,7 +45,7 @@
 
 @mixin columns-tablet-up( $columns, $grid_item_element: '.preview', $gap: null ) {
 
-	@include bp-min($small) {
+	@include bp-min($medium) {
 		@include columns( $columns, $grid_item_element, $gap );
 	}
 
@@ -55,7 +55,7 @@
 
 @mixin columns-desktop( $columns, $grid_item_element: '.preview', $gap: null ) {
 
-  @include bp-min($medium) {
+  @include bp-min($large) {
 		@include columns( $columns, $grid_item_element, $gap );
 	}
 
