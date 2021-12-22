@@ -10,8 +10,7 @@ function register_slider_block() {
     'icon'              => 'leftright',
     'keywords'          => [ 'slider', 'swiper' ],
     'post_types'        => [ 'post', 'page' ],
-    'mode'              => 'preview',  // preview, auto, edit
-    //'enqueue_style'     => get_template_directory_uri() . '/template-parts/acf/blocks/post-query.css',
+    'mode'              => 'preview',
     'enqueue_script'    => get_template_directory_uri() . '/assets/js/swiper.js',
     'supports'          => [
       'align'             => [ 'wide', 'full' ],
