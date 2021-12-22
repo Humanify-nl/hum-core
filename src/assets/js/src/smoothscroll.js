@@ -1,3 +1,10 @@
+/**
+ * Smoothscroll & fixed header auto-offset
+ *
+ * @package hum-core
+ */
+
+
 jQuery(function($){
 
 	// Smooth Scroll
@@ -37,7 +44,7 @@ jQuery(function($){
 	if( window.location.hash ) {
 		hum_scroll( window.location.hash );
 	}
-	
+
 	// -- Smooth scroll on click
 	$('a[href*="#"]:not([href="#"]):not(.no-scroll)').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname) {

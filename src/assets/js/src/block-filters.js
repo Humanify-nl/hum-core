@@ -4,6 +4,7 @@
  * @package hum-core
  */
 
+
 // change alignment options for pullquote
 
 wp.hooks.addFilter(

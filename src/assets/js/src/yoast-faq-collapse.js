@@ -1,3 +1,10 @@
+/**
+ * Collapsible yoast faq
+ *
+ * @package hum-core
+ */
+
+
 jQuery(document).ready(function($) {
 
   $('.wp-block-yoast-faq-block .schema-faq-question').on('click', function() {

@@ -1,3 +1,10 @@
+/**
+ * Mobile menu toggle & search
+ *
+ * @package hum-core
+ */
+
+
 jQuery(function($){
 
 	// Mobile Menu

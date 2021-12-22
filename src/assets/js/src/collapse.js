@@ -4,6 +4,7 @@
  * @package hum-core
  */
 
+
 jQuery(document).ready(function($) {
 
   $(".collapse__item").click(function() {

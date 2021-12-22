@@ -4,6 +4,7 @@
  * @package hum-core
  */
 
+
 wp.domReady(() => {
 
   /*
