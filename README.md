@@ -1,6 +1,4 @@
-# Hum-core
-
-Humanify core Gutenberg theme
+# Hum-core Gutenberg Theme
 
 - Gutenberg ready (wp 5.8)
 - Center, Wide & Full page-width
@@ -8,6 +6,22 @@ Humanify core Gutenberg theme
 - Adds some essential ACF blocks.
 - Supports Yoast Faq (+ collapse), How-to & Breadcrumb blocks.
 - NPM package with webpack to handle all assets & copy template files.
+
+*Please note: This theme is built with Advanced Custom Fields Pro*
+
+
+### Philosophy
+One of the challenges of working with the Block editor as a freelancer or agency, is giving the client too much control.
+
+Which is bad because:
+- It creates cognitive overload & dissonance.
+- Extra learning curve, blank page syndrome.
+- Thinking about styling distracts from writing content.
+
+A website user is not (and should never be) a designer, ux-er, or developer in professional contexts. Unless they specifically ask for it.
+
+Yet, they definately should be in complete control over their websites *content*, within the boundaries of the design.
+
 
 ## Block editor
 
@@ -50,6 +64,14 @@ Humanify core Gutenberg theme
 - Archives are shown in a grid with a couple preview types (preview = post-summary, image, title, excerpt, link).
 - Grids and previews can be customized with global options (acf options fields).
 - Custom post types can be added with minimal effort, and will show Archive & Singles out of the box.
+
+
+#### Supported plug-ins
+- Advanced Custom Fields Pro
+- Yoast SEO
+- AMP
+- JVM rich text icons (optional)
+- Forminator (optional)
 
 
 ## How to use
