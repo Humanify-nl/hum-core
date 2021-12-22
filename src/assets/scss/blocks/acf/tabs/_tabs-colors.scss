@@ -1,0 +1,28 @@
+
+.block-tabs {
+
+  .tab-1 {
+    background-color: #f3f3f3;
+    .tab-card.is-active {
+      background-color: #f3f3f3;
+    }
+  }
+  .tab-2 {
+    background-color: #eee;
+    .tab-card.is-active {
+      background-color: #eee;
+    }
+  }
+  .tab-3 {
+    background-color: #e6e6e6;
+    .tab-card.is-active {
+      background-color: #e6e6e6;
+    }
+  }
+  .tab-4 {
+    background-color: #ddd;
+    .tab-card.is-active {
+      background-color: #ddd;
+    }
+  }
+}

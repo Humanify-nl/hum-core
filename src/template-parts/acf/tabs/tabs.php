@@ -45,7 +45,7 @@ if ( have_rows( 'tab_repeater' ) ) {
                 <?php
                 if ( $tab_link ) {
                   echo '<div class="tab-footer">';
-                    echo '<a class="tab-link button" href="'.esc_url($tab_link).'">';
+                    echo '<a class="tab-link" href="'.esc_url($tab_link).'">';
                       echo esc_html($link_title);
                     echo '</a>';
                   echo '</div>';
