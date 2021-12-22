@@ -1,8 +1,7 @@
 
-// Main styles
+// Root variables. Not enqueued, use for testing & reference!
 
 @use "sass:math";
 
 @import "abstract/vars";
-//@import "abstract/mixins";
-@import "theme/color-options";
+@import "theme/colors-options";

@@ -12,14 +12,14 @@ module.exports = {
   context: path.join(sourcePath, assetPath),
   mode: 'development',
   entry: {
-     bundle: '/js' + '/bundle.js',
-     swiper: '/js' + '/swiper.js',
-     tabs: '/js' + '/tabs.js',
-     main: '/scss' + '/main.scss',
-     editor: '/scss' + '/editor.scss',
-     layout: '/scss' + '/layout.scss',
-     admin: '/scss' + '/admin.scss',
-     root: '/scss' + '/root.scss',
+    'bundle': '/js' + '/bundle.js',
+    'gutenberg': '/js' + '/gutenberg.js',
+    'swiper': '/js' + '/swiper.js',
+    'tabs': '/js' + '/tabs.js',
+    'main': '/scss' + '/main.scss',
+    'editor': '/scss' + '/editor.scss',
+    'editor-layout': '/scss' + '/editor-layout.scss',
+    'admin': '/scss' + '/admin.scss',
    },
   plugins: [
     // generates a new index.html
@@ -64,10 +64,13 @@ module.exports = {
     filename: 'js/[name].js',
     path: path.resolve(__dirname, outputPath + '/' + assetPath),
     clean: {
-      keep: /acf-json/,
+      keep(asset) {
+        return asset.includes('acf-json');
+      },
     },
     assetModuleFilename: '[path][name][ext]'
   },
+
   /*
    * https://webpack.js.org/guides/code-splitting/
    *
@@ -77,6 +80,7 @@ module.exports = {
     },
   },
   */
+
   /*
    * module type: https://webpack.js.org/guides/asset-modules/
    * sass https://webpack.js.org/guides/entry-advanced/

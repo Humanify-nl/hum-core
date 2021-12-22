@@ -14,13 +14,14 @@ module.exports = {
   context: path.join(sourcePath, assetPath),
   mode: 'production',
   entry: {
-    bundle: '/js' + '/bundle.js',
-    main: '/scss' + '/main.scss',
-    swiper: '/js' + '/swiper.js',
-    tabs: '/js' + '/tabs.js',
-    editor: '/scss' + '/editor.scss',
-    layout: '/scss' + '/layout.scss',
-    admin: '/scss' + '/admin.scss',
+    'bundle': '/js' + '/bundle.js',
+    'gutenberg': '/js' + '/gutenberg.js',
+    'swiper': '/js' + '/swiper.js',
+    'tabs': '/js' + '/tabs.js',
+    'main': '/scss' + '/main.scss',
+    'editor': '/scss' + '/editor.scss',
+    'editor-layout': '/scss' + '/editor-layout.scss',
+    'admin': '/scss' + '/admin.scss',
   },
   devtool: 'source-map',
   plugins: [
@@ -31,7 +32,6 @@ module.exports = {
       title: 'Production',
       template: 'index.html'
     }),
-
     // remove empty .js for css entry points
     new RemoveEmptyScriptsPlugin(),
     // extract and write css
@@ -77,7 +77,9 @@ module.exports = {
     filename: 'js/[name].js',
     path: path.join(outputPath, assetPath),
     clean: {
-      keep: /acf-json/,
+      keep(asset) {
+        return asset.includes('acf-json');
+      },
     },
     assetModuleFilename: '[path][name][ext]'
   },
