@@ -41,6 +41,17 @@
 		}
 	}
 
+	.menu-item-has-children {
+
+	  a {
+		  padding-right: 1.5em;
+		}
+
+		.submenu-expand {
+			margin-right: 0.5em;
+		}
+	}
+
 	.submenu-expand {
 		@include button-reset;
 		position: absolute;
