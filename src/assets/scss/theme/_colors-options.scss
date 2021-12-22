@@ -17,7 +17,6 @@
 }
 
 
-
 // Background colors dictate color
 .has-grey-light-background-color,
 .has-white-background-color {
@@ -39,24 +38,24 @@
 .wp-block-button__link {
 
 	// default text color
-	color: white;
+	color: var(--color--white);
 
 	&:hover {
-		color: white;
+		color: var(--color--white);
 	}
 
 
 	// default background color
 	&:not(.has-background) {
-		$default: nth( nth( $color-picker, 1 ), 2 ); // first color in $colors array
-		background-color: $default;
+		$default-color: c(primary);
+		background-color: $default-color;
 
 		&:hover,
 		&:focus {
-			background-color: darken( $default, 10% );
+			background-color: darken( $default-color, 10% );
 		}
 		&:active {
-			background-color: darken( $default, 18% );
+			background-color: darken( $default-color, 18% );
 		}
 	}
 
@@ -82,6 +81,7 @@
 	}
 
 }
+
 
 // block styles
 .wp-block-button {
