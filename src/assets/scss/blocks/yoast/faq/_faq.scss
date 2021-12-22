@@ -1,0 +1,65 @@
+
+/* Yoast faq block
+--------------------------------------------- */
+
+.wp-block-yoast-faq-block {
+
+  .schema-faq-section {
+    border-bottom: 1px solid var(--theme--border);
+
+    &:hover {
+    }
+  }
+
+  .schema-faq-question {
+    cursor: pointer;
+    display: block;
+    font-weight: normal;
+    user-select: none;
+    position: relative;
+
+    font-size: var(--font-size-h4);
+    line-height: var(--line-height-heading);
+    padding: var(--padding-inner);
+
+    &:hover {
+      background-color: var(--color--grey-light);
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      background-image: url('../icons/bs-chevron-down.svg');
+      background-size: 1em 1em;
+      height: 1em;
+      width: 1em;
+
+      position: absolute;
+      top: calc( 50% - 0.5em );
+      right: var(--padding-inner);
+      @include trans-ea( 0.2, transform );
+    }
+
+    &.faq-q-open {
+      border: none;
+
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  p.schema-faq-answer {
+    display: none;
+    padding: var(--padding-inner) var(--padding-inner) var(--padding) var(--padding-inner);
+
+    .icon {
+      top: 0;
+      margin-right: 0.5em;
+    }
+
+    img {
+      margin-top: var(--padding-inner);
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import "faq";
+
+/* Yoast faq block [editor]
+--------------------------------------------- */
+
+.wp-block[data-type="yoast/faq-block"] {
+
+  .schema-faq-section {
+    border: unset;
+    padding: 0;
+    //padding: var(--padding-inner) var(--padding-inner) 0 var(--padding-inner);
+  }
+
+  .schema-faq-question {
+    border-bottom: 1px solid var(--theme--border);
+
+    &:hover {
+      background-color: unset;
+    }
+  }
+
+  p.schema-faq-answer {
+    display: block;
+    margin: 0;
+  }
+}

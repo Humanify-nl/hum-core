@@ -1,0 +1,33 @@
+
+/* How-to
+--------------------------------------------- */
+
+.wp-block-yoast-how-to-block {
+
+  .schema-how-to-description {
+    font-size: var(--font-size-small);
+  }
+
+  .schema-how-to-steps {
+    padding-left: 1.25em;
+  }
+
+  li.schema-how-to-step {
+    margin-bottom: var(--padding-inner);
+
+    .schema-how-to-step-name {
+      font-size: var(--font-size-h4);
+      font-weight: 400;
+      line-height: var(--line-height-heading);
+    }
+
+    .schema-how-to-step-text {
+      padding: var(--padding-inner) var(--padding-inner) var(--padding-inner) 0;
+
+      img {
+        margin-top: var(--padding-inner);
+      }
+    }
+
+  }
+}

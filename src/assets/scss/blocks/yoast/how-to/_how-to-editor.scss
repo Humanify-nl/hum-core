@@ -1,0 +1,23 @@
+@import "how-to";
+
+.wp-block-yoast-how-to-block {
+
+  .schema-how-to-description,
+  .schema-how-to-duration {
+    margin-bottom: var(--text-margin);
+  }
+
+  .schema-how-to-step-number {
+    left: -0.4375em;
+  }
+
+  .schema-how-to-steps {
+    padding-left: 0;
+  }
+
+  .schema-how-to-step {
+    border: unset;
+    padding-left: 1.25em;
+  }
+
+}

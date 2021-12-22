@@ -62,6 +62,9 @@ function hum_post_blocks_array( $post_type = false ) {
     'acf/icon-wrap',
     'acf/svg',
     'forminator/forms',
+    'yoast-seo/faq-block',
+    'yoast-seo/how-to-block',
+    //'yoast-seo/breadcrumbs',
   ];
 
   $block_types_post = [
@@ -275,7 +278,7 @@ function hum_filter_allowed_block_types( $allowed_block_types, $editor_context )
   return $allowed_block_types;
 }
 
-add_filter( 'allowed_block_types_all', 'hum_filter_allowed_block_types', 10, 2 );
+//add_filter( 'allowed_block_types_all', 'hum_filter_allowed_block_types', 10, 2 );
 
 
 // remove dropcap

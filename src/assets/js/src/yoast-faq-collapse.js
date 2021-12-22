@@ -9,12 +9,12 @@ jQuery(document).ready(function($) {
     if ($(this).siblings('.schema-faq-answer').is(':visible')) {
 
       $(this).removeClass('faq-q-open');
-      $(this).siblings('.schema-faq-answer').removeClass('faq-a-open').slideUp('fast');
+      $(this).siblings('.schema-faq-answer').addClass('faq-a-open').slideUp('fast');
 
     } else {
 
       $(this).addClass('faq-q-open');
-      $(this).siblings('.schema-faq-answer').addClass('faq-a-open').slideDown('fast');
+      $(this).siblings('.schema-faq-answer').removeClass('faq-a-open').slideDown('fast');
 
     }
 
