@@ -7,17 +7,6 @@
 
 
 /**
- * Custom function to change default template name in menu
- *
- */
-add_filter('default_page_template_title', function() {
-
-  return __('Default', 'hum-core');
-
-});
-
-
-/**
  * Reusable Blocks accessible in backend
  * @link https://www.billerickson.net/reusable-blocks-accessible-in-wordpress-admin-area
  *
@@ -81,23 +70,29 @@ function hum_admin_footer_text() {
 add_filter( 'admin_footer_text', 'hum_admin_footer_text' );
 
 
-/*
- * Remove the additional css section, introduced in 4.7, from the customizer.
+/**
+ * Admin Humanify dashboard box
  *
  */
-function hum_remove_css_section($wp_customize) {
-  $wp_customize->remove_section('custom_css');
+
+function hum_custom_dashboard_widgets() {
+
+  global $wp_meta_boxes;
+  wp_add_dashboard_widget( 'custom_help_widget', 'Een Humanify custom website thema', 'hum_custom_dashboard_box', '', '', 'normal', 'high' );
+
 }
 
-add_action( 'customize_register', 'hum_remove_css_section', 15 );
+function hum_custom_dashboard_box() {
 
+    echo '<a href="https://humanify.nl" target="_blank">';
+        echo '<img style="width: 180px; padding: 10px 0;" src="' . get_template_directory_uri() . '/assets/images/logo-humanify.png" alt="Humanify websites"/>';
+    echo '</a>';
+    echo '<div>';
+      _e('Welkom op het dashboard van ' . get_bloginfo('title') . '.<br/><br/> Vragen of problemen? Aarzel niet om contact op te nemen via:<br/> <a href="mailto:rob@humanify.nl">rob@humanify.nl</a> of <a href="tel:+31630024662">+31 6 300 24 662</a>.</p>', 'hum-core' );
+    echo '</div>';
+}
 
-/*
- * Remove welcome dashboard panel
- *
- */
-remove_action( 'welcome_panel', 'wp_welcome_panel' );
-
+add_action( 'wp_dashboard_setup', 'hum_custom_dashboard_widgets' );
 
 
 /**
