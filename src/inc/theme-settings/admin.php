@@ -30,7 +30,7 @@ function hum_saved_blocks_admin_menu() {
       'edit_posts',
       'edit.php?post_type=wp_block',
       '',
-      'dashicons-screenoptions',
+      'dashicons-open-folder',
       20
     );
 }

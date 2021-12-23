@@ -7,7 +7,7 @@ function register_slider_block() {
     'description'       => __('Display multiple slides with text in a slider.'),
     'render_callback'   => 'hum_render_slider_block',
     'category'          => 'media',
-    'icon'              => 'leftright',
+    'icon'              => 'slides',
     'keywords'          => [ 'slider', 'swiper' ],
     'post_types'        => [ 'post', 'page' ],
     'mode'              => 'preview',

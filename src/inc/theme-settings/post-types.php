@@ -49,7 +49,7 @@ function hum_post_type_testimonial() {
       'query_var'           => true,
       'can_export'          => true,
       'rewrite'             => [ 'slug' => $post_type, 'with_front' => false ],
-      'menu_icon'           => 'dashicons-groups', // https://developer.wordpress.org/resource/dashicons/
+      'menu_icon'           => 'dashicons-testimonial', // https://developer.wordpress.org/resource/dashicons/
     ];
 
     register_post_type( $post_type, $args );
