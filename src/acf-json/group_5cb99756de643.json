@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_5f1598efd2dc1",
-            "label": "Het Humanify menu",
+            "label": "Site options",
             "name": "",
             "type": "message",
             "instructions": "",
@@ -15,13 +15,13 @@
                 "class": "",
                 "id": ""
             },
-            "message": "In dit menu kun je de globale instellingen & setup voor de website uitvoeren.\r\n\r\n\r\nVersie: hum-v7",
+            "message": "In the site options menu you can set up all global settings for your website. \r\n\r\nYou can set up how posts and pages are displayed in grids, like how many columns or what types of previews.",
             "new_lines": "wpautop",
             "esc_html": 0
         },
         {
             "key": "field_5f1599ef05717",
-            "label": "Bij vragen of problemen:",
+            "label": "For any questions, please contact me:",
             "name": "",
             "type": "message",
             "instructions": "",
@@ -54,5 +54,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Main options menu",
-    "modified": 1634050339
+    "show_in_rest": 0,
+    "modified": 1640258872
 }

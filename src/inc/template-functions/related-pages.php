@@ -31,7 +31,7 @@ function hum_pages_related() {
 
         <?php
         $section_title = get_field( 'page-siblings-title' , 'option');
-        $preview_select = get_field( 'preview_page_opt', 'option' );
+        $preview_select = get_field( 'preview_type_page', 'option' );
         $preview_type = !empty($preview_select) ? $preview_select : 'preview-list';
 
         if ( $section_title ) { echo '<h2 class="section-title">' .$section_title. '</h2>'; }

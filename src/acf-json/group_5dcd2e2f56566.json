@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_603131669ad0e",
-            "label": "Pagina groepen",
+            "label": "Page groups",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -20,7 +20,7 @@
         },
         {
             "key": "field_603139799416e",
-            "label": "Pagina groepen",
+            "label": "Page groups",
             "name": "",
             "type": "message",
             "instructions": "",
@@ -31,13 +31,13 @@
                 "class": "",
                 "id": ""
             },
-            "message": "Pagina worden onderdeel van een 'groep' zodra er een 'parent' toegewezen is. Zo snapt WordPress dat deze pagina's verwant zijn.\r\n\r\nDoor de groepsrelatie is het mogelijk om 'groepen' verwante pagina's elders op de site te tonen. Dit helpt je bezoeker navigeren.",
+            "message": "Pages that are assigned the same parent, form a 'page-group' within WordPress. These pages become each others siblings, and are children of their parent.\r\n\r\nThis makes it possible to display related pages on the bottom of each page that has siblings, or display children on a parent page.",
             "new_lines": "wpautop",
             "esc_html": 0
         },
         {
             "key": "field_5dd67f9a2372e",
-            "label": "Globale titel siblings",
+            "label": "Title for siblings",
             "name": "page_siblings_title",
             "type": "text",
             "instructions": "",
@@ -48,11 +48,28 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Gerelateerd",
+            "default_value": "Related pages",
             "placeholder": "",
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_61c452408fac7",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "66.6666",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
         },
         {
             "key": "field_6000271b734f7",
@@ -68,12 +85,13 @@
                 "id": ""
             },
             "choices": {
-                "button": "Button",
-                "button-wired": "Wired button",
-                "button-white": "White button",
-                "preview__link": "Default link"
+                "has-background has-primary-background-color": "Button primary",
+                "has-background has-secondary-background-color": "Button secondary",
+                "has-background has-tertiary-background-color": "Button tertiary",
+                "has-background has-white-background-color": "Button white",
+                "is-link": "Link"
             },
-            "default_value": "link",
+            "default_value": "is-link",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -83,7 +101,7 @@
         },
         {
             "key": "field_600156bca618c",
-            "label": "Globale Link titel",
+            "label": "Link title",
             "name": "page_links_title",
             "type": "text",
             "instructions": "",
@@ -94,11 +112,28 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Lees meer",
+            "default_value": "Read more",
             "placeholder": "",
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_61c45272b58cf",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.3333",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
         },
         {
             "key": "field_614b1e716cdff",
@@ -119,7 +154,7 @@
                 "grid-50": "2 per row",
                 "grid-100": "1 per row"
             },
-            "default_value": false,
+            "default_value": "grid-100",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -130,23 +165,23 @@
         {
             "key": "field_61b320436806a",
             "label": "Page preview type",
-            "name": "preview_page_opt",
+            "name": "preview_type_page",
             "type": "select",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "66.6666",
+                "width": "33.3333",
                 "class": "",
                 "id": ""
             },
             "choices": {
-                "preview-post": "Default (img, title, excerpt)",
+                "preview": "Default (img, title, excerpt)",
                 "preview-icon": "Icon (icon, title)",
-                "preview-list": "List (img left, title & excerpt right)",
-                "preview-link": "Link (title-link only)"
+                "preview-link": "Link (title-link only)",
+                "preview-list": "List (img left, title & excerpt right)"
             },
-            "default_value": false,
+            "default_value": "preview-list",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -193,6 +228,23 @@
             "max_height": 1920,
             "max_size": "",
             "mime_types": "jpg, png"
+        },
+        {
+            "key": "field_61c452a816b93",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "When no featured image is added, this default image is used.",
+            "new_lines": "wpautop",
+            "esc_html": 0
         }
     ],
     "location": [
@@ -212,5 +264,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Setup all page types",
-    "modified": 1639129186
+    "show_in_rest": 0,
+    "modified": 1640258626
 }

@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_6031320708bd4",
-            "label": "Post archief",
+            "label": "Post archive",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -20,7 +20,7 @@
         },
         {
             "key": "field_603135aab62b3",
-            "label": "Post archief",
+            "label": "Post archive",
             "name": "",
             "type": "message",
             "instructions": "",
@@ -31,13 +31,13 @@
                 "class": "",
                 "id": ""
             },
-            "message": "Het post archief toont alle posts in een grid-layout. Hier stel je de titel, het grid en uiterlijke kenmerken in.",
+            "message": "The post archive displays all published posts in a customizable grid. Set it up here.",
             "new_lines": "wpautop",
             "esc_html": 0
         },
         {
             "key": "field_5cb99b130eefd",
-            "label": "Archief titel",
+            "label": "Post archive title",
             "name": "post_archive_title",
             "type": "text",
             "instructions": "",
@@ -48,11 +48,28 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Alle posts",
+            "default_value": "Post archive",
             "placeholder": "",
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_61c45346b99fa",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "66.6666",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
         },
         {
             "key": "field_5dcc14bea03c1",
@@ -68,12 +85,13 @@
                 "id": ""
             },
             "choices": {
-                "button": "Button",
-                "button--wired": "Wired button",
-                "button--white": "White button",
-                "preview__link": "Default link"
+                "has-background has-primary-background-color": "Button primary",
+                "has-background has-secondary-background-color": "Button secondary",
+                "has-background has-tertiary-background-color": "Button tertiary",
+                "has-background has-white-background-color": "Button white",
+                "is-link": "Link"
             },
-            "default_value": "link",
+            "default_value": "is-link",
             "allow_null": 0,
             "multiple": 0,
             "ui": 1,
@@ -83,7 +101,7 @@
         },
         {
             "key": "field_6001575af4bb2",
-            "label": "Button titel",
+            "label": "Button title",
             "name": "post_links_title",
             "type": "text",
             "instructions": "",
@@ -94,11 +112,28 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Lees meer",
+            "default_value": "Read more",
             "placeholder": "",
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_61c45384b99fb",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.3333",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
         },
         {
             "key": "field_602bacd24ce89",
@@ -114,12 +149,12 @@
                 "id": ""
             },
             "choices": {
-                "grid--25": "4 per row",
+                "grid-25": "4 per row",
                 "grid-33": "3 per row",
-                "grid--50": "2 per row",
-                "grid--100": "1 per row"
+                "grid-50": "2 per row",
+                "grid-100": "1 per row"
             },
-            "default_value": false,
+            "default_value": "grid-100",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -128,24 +163,26 @@
             "placeholder": ""
         },
         {
-            "key": "field_61a4c10956b52",
-            "label": "Preview type 'posts'",
+            "key": "field_61c457e215514",
+            "label": "Preview type",
             "name": "preview_type_posts",
             "type": "select",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "66.6666",
+                "width": "33.3333",
                 "class": "",
                 "id": ""
             },
             "choices": {
-                "preview-post": "With image (img, title, excerpt)",
-                "preview-excerpt": "No image (title, excerpt)",
-                "preview-list": "List (img left, title & excerpt right)",
-                "preview-list-circle": "List circle (img circle left, title & excerpt right)",
-                "preview-circle": "Circle (img circle, title, excerpt)"
+                "preview": "Default (img, title, excerpt)",
+                "preview-excerpt": "Excerpt (title, excerpt)",
+                "preview-more": "Excerpt more tag (img, title, excerpt)",
+                "preview-link": "Link (title-link only)",
+                "preview-calendar": "Calendar (date, title)",
+                "preview-slide": "Slider (img, title, excerpt)",
+                "preview-list": "List (img left, title & excerpt right)"
             },
             "default_value": false,
             "allow_null": 0,
@@ -184,13 +221,33 @@
                 "class": "",
                 "id": ""
             },
-            "message": "'Related posts' toont een grid met verwante posts. Hier stel je de titel, het grid en uiterlijke kenmerken in.",
+            "message": "Displays related posts in the bottom of each single post in a customizable grid.",
             "new_lines": "wpautop",
             "esc_html": 0
         },
         {
+            "key": "field_5ba106df2bbaa",
+            "label": "Max amount to show",
+            "name": "related_posts_amount",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 3,
+            "min": 0,
+            "max": 15,
+            "step": 3,
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_5bf19f35d3db1",
-            "label": "Titel 'related posts'",
+            "label": "Related posts title",
             "name": "related_posts_title",
             "type": "text",
             "instructions": "",
@@ -201,11 +258,28 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Gerelateerde posts",
+            "default_value": "Related posts",
             "placeholder": "",
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_61c453c96c700",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "66.6666",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
         },
         {
             "key": "field_5dcc072e42512",
@@ -221,10 +295,11 @@
                 "id": ""
             },
             "choices": {
-                "button": "Button",
-                "button--wired": "Wired button",
-                "button--white": "White button",
-                "preview__link": "Default link"
+                "has-background has-primary-background-color": "Button primary",
+                "has-background has-secondary-background-color": "Button secondary",
+                "has-background has-tertiary-background-color": "Button tertiary",
+                "has-background has-white-background-color": "Button white",
+                "is-link": "Link"
             },
             "default_value": "link",
             "allow_null": 0,
@@ -235,24 +310,21 @@
             "placeholder": ""
         },
         {
-            "key": "field_5ba106df2bbaa",
-            "label": "Max aantal 'related posts'",
-            "name": "related_posts_amount",
-            "type": "range",
+            "key": "field_61c457532fc9c",
+            "label": "Button title",
+            "name": "",
+            "type": "message",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33.3333",
+                "width": "66.6666",
                 "class": "",
                 "id": ""
             },
-            "default_value": 6,
-            "min": 0,
-            "max": 15,
-            "step": 1,
-            "prepend": "",
-            "append": ""
+            "message": "Use setting from 'posts'",
+            "new_lines": "wpautop",
+            "esc_html": 0
         },
         {
             "key": "field_6027b1caa7014",
@@ -268,12 +340,12 @@
                 "id": ""
             },
             "choices": {
-                "grid--25": "4 per row",
+                "grid-25": "4 per row",
                 "grid-33": "3 per row",
-                "grid--50": "2 per row",
-                "grid--100": "1 per row"
+                "grid-50": "2 per row",
+                "grid-100": "1 per row"
             },
-            "default_value": "grid-1",
+            "default_value": "grid-100",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -282,24 +354,26 @@
             "placeholder": ""
         },
         {
-            "key": "field_61a4c0d256b51",
-            "label": "Preview type 'related posts'",
+            "key": "field_61c4579b15513",
+            "label": "Preview type",
             "name": "preview_type_rel",
             "type": "select",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "66.6666",
+                "width": "33.3333",
                 "class": "",
                 "id": ""
             },
             "choices": {
-                "preview-post": "With image (img, title, excerpt)",
-                "preview-excerpt": "No image (title, excerpt)",
-                "preview-list": "List (img left, title & excerpt right)",
-                "preview-list-circle": "List circle (img circle left, title & excerpt right)",
-                "preview-circle": "Circle (img circle, title, excerpt)"
+                "preview": "Default (img, title, excerpt)",
+                "preview-excerpt": "Excerpt (title, excerpt)",
+                "preview-more": "Excerpt more tag (img, title, excerpt)",
+                "preview-link": "Link (title-link only)",
+                "preview-calendar": "Calendar (date, title)",
+                "preview-slide": "Slider (img, title, excerpt)",
+                "preview-list": "List (img left, title & excerpt right)"
             },
             "default_value": false,
             "allow_null": 0,
@@ -367,5 +441,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Setup all post types",
-    "modified": 1638200515
+    "show_in_rest": 0,
+    "modified": 1640257990
 }

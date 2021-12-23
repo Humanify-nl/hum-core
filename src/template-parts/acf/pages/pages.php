@@ -49,7 +49,7 @@ if ( !$is_select && $pages_relation == 'parent') {
 
 if ( !empty( $selected_pages ) ) {
 
-  $preview_select = get_field( 'preview_page_select' );
+  $preview_select = get_field( 'preview_type_page_select' );
   $preview_type = !empty($preview_select) ? $preview_select : 'preview';
 	?>
 

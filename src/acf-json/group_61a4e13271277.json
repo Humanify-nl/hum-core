@@ -19,6 +19,23 @@
             "endpoint": 0
         },
         {
+            "key": "field_61c459d50b650",
+            "label": "Testimonials (other posts)",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Single testimonials display all other testimonials sorted by latest publish date.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
             "key": "field_61a4e226dc9ac",
             "label": "Grid related posts",
             "name": "grid_preview_testimonial_rel",
@@ -32,12 +49,12 @@
                 "id": ""
             },
             "choices": {
-                "grid--25": "4 per row",
+                "grid-25": "4 per row",
                 "grid-33": "3 per row",
-                "grid--50": "2 per row",
-                "grid--100": "1 per row"
+                "grid-50": "2 per row",
+                "grid-100": "1 per row"
             },
-            "default_value": false,
+            "default_value": "grid-100",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -59,13 +76,15 @@
                 "id": ""
             },
             "choices": {
-                "preview-post": "With image (img, title, excerpt)",
-                "preview-excerpt": "No image (title, excerpt)",
-                "preview-list": "List (img left, title & excerpt right)",
-                "preview-list-circle": "List circle (img circle left, title & excerpt right)",
-                "preview-circle": "Circle (img circle, title, excerpt)"
+                "preview": "Default (img, title, excerpt)",
+                "preview-excerpt": "Excerpt (title, excerpt)",
+                "preview-more": "Excerpt more tag (img, title, excerpt)",
+                "preview-link": "Link (title-link only)",
+                "preview-calendar": "Calendar (date, title)",
+                "preview-slide": "Slider (img, title, excerpt)",
+                "preview-list": "List (img left, title & excerpt right)"
             },
-            "default_value": false,
+            "default_value": "preview-list",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -90,8 +109,25 @@
             "endpoint": 0
         },
         {
+            "key": "field_61c45a320b651",
+            "label": "Testimonial archive",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "The archive displays all published testimonials in a customizable grid. Set it up here.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
             "key": "field_61a4e0b58167d",
-            "label": "Grid type archief",
+            "label": "Grid type archive",
             "name": "grid_preview_testimonial",
             "type": "select",
             "instructions": "",
@@ -103,12 +139,42 @@
                 "id": ""
             },
             "choices": {
-                "grid--25": "4 per row",
+                "grid-25": "4 per row",
                 "grid-33": "3 per row",
-                "grid--50": "2 per row",
-                "grid--100": "1 per row"
+                "grid-50": "2 per row",
+                "grid-100": "1 per row"
             },
-            "default_value": false,
+            "default_value": "grid-100",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_61c45938ec816",
+            "label": "Preview type",
+            "name": "preview_type_testimonial",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.3333",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "preview": "Default (img, title, excerpt)",
+                "preview-excerpt": "Excerpt (title, excerpt)",
+                "preview-more": "Excerpt more tag (img, title, excerpt)",
+                "preview-link": "Link (title-link only)",
+                "preview-calendar": "Calendar (date, title)",
+                "preview-slide": "Slider (img, title, excerpt)",
+                "preview-list": "List (img left, title & excerpt right)"
+            },
+            "default_value": "preview-list",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -134,5 +200,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1638201457
+    "show_in_rest": 0,
+    "modified": 1640258149
 }

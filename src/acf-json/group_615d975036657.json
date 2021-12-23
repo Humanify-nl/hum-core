@@ -82,6 +82,7 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
-    "description": "acf\/blocks\/block-post-query",
-    "modified": 1634292133
+    "description": "inc\/acf\/blocks\/block-post-query",
+    "show_in_rest": 0,
+    "modified": 1640259228
 }

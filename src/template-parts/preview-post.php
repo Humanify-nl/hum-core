@@ -6,7 +6,7 @@
  */
 ?>
 
-<article class="preview preview-post">
+<article class="preview preview-post <?php echo get_field( 'preview_type_posts', 'option' ); ?>">
 
   <?php
   hum_preview_image();

@@ -5,7 +5,7 @@
         {
             "key": "field_61b1fbd40f092",
             "label": "Preview type",
-            "name": "preview_page_select",
+            "name": "preview_type_page_select",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -46,6 +46,7 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": false,
-    "description": "",
-    "modified": 1639410312
+    "description": "inc\/acf\/acf-preview-type-select",
+    "show_in_rest": 0,
+    "modified": 1640258351
 }
