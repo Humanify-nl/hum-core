@@ -78,8 +78,7 @@ add_filter( 'admin_footer_text', 'hum_admin_footer_text' );
 function hum_custom_dashboard_widgets() {
 
   global $wp_meta_boxes;
-  wp_add_dashboard_widget( 'custom_help_widget', 'Een Humanify custom website thema', 'hum_custom_dashboard_box', '', '', 'normal', 'high' );
-
+  wp_add_dashboard_widget( 'custom_help_widget', 'Humanify WordPress', 'hum_custom_dashboard_box', '', '', 'normal', 'high' );
 }
 
 function hum_custom_dashboard_box() {
