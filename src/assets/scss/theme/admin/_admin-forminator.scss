@@ -1,0 +1,29 @@
+// change blurry forminator icon to dashicon
+
+#adminmenu #toplevel_page_forminator {
+
+  .wp-menu-image {
+    background-image: unset !important;
+    &:before {
+      content: "\f175";
+      font-family: dashicons;
+      display: inline-block;
+      line-height: 1;
+      font-weight: 400;
+      font-style: normal;
+      speak: never;
+      text-decoration: inherit;
+      text-transform: none;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      width: 20px;
+      height: 20px;
+      font-size: 20px;
+      vertical-align: top;
+      text-align: center;
+      transition: color .1s ease-in;
+    }
+  }
+
+}
