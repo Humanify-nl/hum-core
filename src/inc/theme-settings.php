@@ -16,4 +16,5 @@ include_once( get_template_directory() . '/inc/theme-settings/customizer.php' );
 include_once( get_template_directory() . '/inc/theme-settings/preset-queries.php');
 include_once( get_template_directory() . '/inc/theme-settings/post-types.php');
 include_once( get_template_directory() . '/inc/theme-settings/taxonomies.php');
+include_once( get_template_directory() . '/inc/theme-settings/remove-comments.php');
 include_once( get_template_directory() . '/inc/theme-settings/block-areas.php');
