@@ -14,9 +14,9 @@ function hum_editor_layout_style() {
 
 	wp_enqueue_style(
 		'hum-editor-layout',
-		get_stylesheet_directory_uri() . '/assets/css/layout.css',
+		get_stylesheet_directory_uri() . '/assets/css/editor-layout.css',
 		[],
-		filemtime( get_stylesheet_directory() . '/assets/css/layout.css' )
+		filemtime( get_stylesheet_directory() . '/assets/css/editor-layout.css' )
 	);
 }
 add_action( 'enqueue_block_editor_assets', 'hum_editor_layout_style' );
