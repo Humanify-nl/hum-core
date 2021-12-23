@@ -27,8 +27,6 @@ function register_slider_block() {
         'label'           => __( 'Button outside', 'hum-core'),
       ]
     ],
-
-
   ];
 
   return $register_icon;
