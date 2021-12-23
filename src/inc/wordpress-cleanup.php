@@ -149,7 +149,6 @@ function hum_archive_title_remove_prefix( $title ) {
 add_filter( 'get_the_archive_title', 'hum_archive_title_remove_prefix' );
 
 
-
 /**
  * Remove avatars from comment list
  *
