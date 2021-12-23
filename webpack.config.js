@@ -41,13 +41,16 @@ module.exports = {
         {
           from: 'icons/*.svg',
         },
+        {
+          from: 'images/*.png',
+        },
         // template files
         {
           from: sourcePath,
           to: outputPath,
           globOptions: {
            ignore: [
-             // Ignore all files in assets dir
+             // Ignore all files in assets dir (because these are imported above)
              '**/assets/**',
            ],
          },
