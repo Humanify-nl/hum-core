@@ -35,6 +35,17 @@ function hum_yoast_tobottom() {
 add_filter( 'wpseo_metabox_prio', 'hum_yoast_tobottom' );
 
 
+/**
+ * Remove Yoast dashboard box
+ *
+ */
+function hum_remove_wpseo_dashboard_overview() {
+  // In some cases, you may need to replace 'side' with 'normal' or 'advanced'.
+  remove_meta_box( 'wpseo-dashboard-overview', 'dashboard', 'side' );
+}
+add_action( 'wp_dashboard_setup', 'hum_remove_wpseo_dashboard_overview' );
+
+
 
 /**
  * Fix content analysis for ACF fields
