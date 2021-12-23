@@ -181,5 +181,50 @@ function hum_excerpt_more() {
 add_filter( 'excerpt_more', 'hum_excerpt_more' );
 
 
-// Remove inline CSS for emoji
+/*
+ * Remove inline emoji
+ *
+ */
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
+
+/*
+ * Remove the additional css section, introduced in 4.7, from the customizer.
+ *
+ */
+function hum_remove_css_section($wp_customize) {
+  $wp_customize->remove_section('custom_css');
+}
+
+add_action( 'customize_register', 'hum_remove_css_section', 15 );
+
+
+/*
+ * Remove welcome dashboard panel
+ *
+ */
+remove_action( 'welcome_panel', 'wp_welcome_panel' );
+
+
+/**
+ * Custom function to change default template name in menu
+ *
+ */
+add_filter('default_page_template_title', function() {
+
+  return __('Default', 'hum-core');
+
+});
+
+
+/**
+ * Remove WP admin dashboard widgets
+ *
+ */
+function hum_disable_dashboard_widgets() {
+    //remove_meta_box('dashboard_right_now', 'dashboard', 'normal'); // Remove "At a Glance"
+    //remove_meta_box('dashboard_activity', 'dashboard', 'normal'); // Remove "Activity" which includes "Recent Comments"
+    remove_meta_box('dashboard_quick_press', 'dashboard', 'side'); // Remove Quick Draft
+    remove_meta_box('dashboard_primary', 'dashboard', 'core'); // Remove WordPress Events and News
+}
+add_action( 'admin_menu', 'hum_disable_dashboard_widgets' );
