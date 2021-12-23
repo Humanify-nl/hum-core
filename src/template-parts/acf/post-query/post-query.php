@@ -2,7 +2,7 @@
 /**
  * Query posts
  *
- * @package hum-core-acf
+ * @package hum-core
  */
 
 
