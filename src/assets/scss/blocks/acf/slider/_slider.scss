@@ -132,6 +132,16 @@
       opacity: 1;
     }
 
+    &:hover {
+      .swiper-button-prev,
+      .swiper-button-next {
+        &::after {
+          opacity: 1;
+          color: var(--color--grey);
+        }
+      }
+    }
+
   }
 
 }
