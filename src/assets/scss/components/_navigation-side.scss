@@ -23,10 +23,12 @@
 		max-width: 100%;
 		@include bp-min($large) {
 			width: $sidemenu-width;
-		}
+    }
+
 	}
 
 	.nav-primary {
+		width: 100%;
 		background: var(--theme--mobmenu--bg);
 		border-left: 1px solid var(--theme--border);
 		height: 100%;
