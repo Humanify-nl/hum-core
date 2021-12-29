@@ -44,6 +44,9 @@ function hum_render_post_query_block( $block, $content = '', $is_preview = false
   if( !empty($block['align']) ) {
       $className .= ' align' . $block['align'];
   }
+  if( !empty($block['align_text']) ) {
+      $className .= ' has-text-align-' . $block['align_text'];
+  }
 
   ?>
   <div class="<?php echo esc_attr($className); ?>">
