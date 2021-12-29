@@ -1,207 +1,36 @@
 
 /* Navigation -side
  - permanent mobile menu
- - do not import along with navigation.scss
- - if -side, also choose import site-header-side
+ - do not import along with navigation-desktop
 --------------------------------------------- */
 
 .nav-menu {
-
-	& > * {
-		line-height: 0;
-	}
-
-	ul {
-		clear: both;
-		line-height: 1;
-		margin: 0;
-		width: 100%;
-	}
-
-	.menu-item {
-		list-style: none;
-		position: relative;
-
-		a {
-			border: none;
-			color: var(--theme--menu--link);
-			display: block;
-			font-size: var(--menu--font-size);
-			font-weight: var(--menu--font-weight);
-			line-height: var(--menu--line-height);
-			padding: 13px 18px;
-			position: relative;
-			text-decoration: none;
-		}
-
-		&:hover > a {
-			background: var(--theme--submenu--bg);
-		}
-
-		&.current-menu-item > a,
-		&.current-menu-ancestor > a {
-			color: var(--theme--menu--mark);
-		}
-	}
-
-	.sub-menu > .menu-item a {
-		font-size: var(--menu--font-size-sub-menu);
-		padding: 8px 18px;
-	}
-
-	.submenu-expand {
-		@include button-reset;
-		position: absolute;
-		line-height: 0;
-		top: 57%;
-		transform: translateY(-50%);
-		right: 5px;
-
-		svg {
-			fill: var(--theme--submenu--expand);
-		}
-	}
-
-	.nav-secondary {
-
-		.menu-item.search {
-			@include bp-max($small) {
-				padding: 4px 16px 16px;
-			}
-			@include bp-min($large) {
-				margin: 5px 0 0 8px;
-
-				.search-field {
-					padding-top: 8px;
-					padding-bottom: 8px;
-					width: 268px;
-				}
-			}
-		}
-	}
-
-	.nav-primary {
-
-		.menu-item.search {
-			line-height: 0;
-
-			button {
-				padding: 12px;
-			}
-
-			display: none;
-		}
-	}
-
-
-	$sidemenu-width: 300px;
 	display: block;
-	height: calc(100vh - calc( var(--admin-bar--height) + #{$static_header_desktop}) );
 	max-width: $sidemenu-width;
 	margin-left: auto;
 	margin-right: 0;
 	width: 0;
+	height: calc(100vh - #{$menu-height-mobile});
+	@include trans-collapse(0.2, width);
 
-	@include bp-max($base){
-		max-width: $base;
-		height: calc(100vh - #{$menu-height-mobile});
+	@include bp-min($medium){
+		@include trans-collapse(0.3, width);
+		height: calc(100vh - calc( var(--admin-bar--height) + #{$static_header_desktop}) );
+	}
+
+	&.active {
+		width: 100%;
+		max-width: 100%;
+		@include bp-min($large) {
+			width: $sidemenu-width;
+		}
 	}
 
 	.nav-primary {
-		@include trans-collapse(0.3, right);
 		background: var(--theme--mobmenu--bg);
 		border-left: 1px solid var(--theme--border);
 		height: 100%;
-		position: relative;
-		right: -$sidemenu-width;
-
-		@include bp-max($base){
-			@include trans-collapse(0.2, right);
-		  right: -$base;
-		}
-	}
-
-	&.active {
-		width: auto;
-
-		.nav-primary {
-			right: 0;
-		}
-	}
-
-	.menu > .menu-item > a {
-		padding: 11px 18px;
-	}
-
-	.submenu-expand {
-		display: none;
-	}
-
-	.sub-menu {
-	//	display: none;
-		padding-left: 12px;
-	}
-
-}
-
-/* Toggles
---------------------------------------------- */
-
-.search-toggle,
-.menu-toggle {
-
-	@include button-reset;
-	line-height: 0;
-	text-align: center;
-
-	.close {
-		display: none;
-	}
-
-	&:hover,
-	&.active {
-		background: var(--theme--menu--bg-alt);
-	}
-
-	&:focus {
-		background: none;
-	}
-
-	&.active {
-
-		.close {
-			display: inline;
-		}
-
-		.open {
-			display: none;
-		}
-	}
-}
-
-
-.site-header {
-
-	.title-area {
-		max-width: calc(100% - #{$menu-toggle-size * 2});
-	}
-
-
-	& > .menu-toggle,
-	& > .search-toggle {
-		position: absolute;
-		top: 0;
-		width: $menu-toggle-size;
-		height: $menu-toggle-size;
-
-		//display: none;
-	}
-
-	& > .menu-toggle {
 		right: 0;
-	}
-
-	& > .search-toggle {
-		right: $menu-toggle-size;
+		position: relative;
 	}
 }

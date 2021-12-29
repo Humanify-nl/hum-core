@@ -1,0 +1,142 @@
+
+/* Navigation - desktop only
+--------------------------------------------- */
+
+@include bp-min($menu-collapse-bp) {
+
+	.site-header {
+		display: flex;
+	}
+
+	.nav-menu {
+		float: right;
+		width: calc( 100% - 300px );
+		display: flex;
+		justify-content: right;
+
+		&.active {
+			display: block;
+		}
+
+		.nav-primary {
+			margin: 0;
+		}
+
+		.nav-primary,
+		.nav-secondary {
+			display: flex;
+			justify-content: flex-end;
+		}
+
+		.nav-primary + .nav-secondary {
+			margin-bottom: 16px;
+		}
+
+		.menu {
+			display: inline-block;
+			width: auto;
+		}
+
+		.menu-item {
+			float: left;
+
+			> a {
+				padding: 13px var(--menu--item-pad-hor-large);
+			}
+
+			&:hover {
+
+				& > .sub-menu {
+					left: auto;
+					opacity: 1;
+				}
+			}
+		}
+
+		.menu-item-has-children {
+
+			a {
+				padding-right: calc(var(--menu--item-pad-hor-large) + #{8px + 4px});
+			}
+
+			.submenu-expand {
+				right: var(--menu--item-pad-hor-large);
+			}
+		}
+
+		.submenu-expand {
+			@include button-reset;
+			display: block;
+			position: absolute;
+			line-height: 0;
+			top: 57%;
+			transform: translateY(-50%);
+
+			svg {
+				fill: var(--theme--submenu--expand);
+			}
+		}
+
+		.sub-menu {
+			background: var(--theme--submenu--bg);
+			left: -9999px;
+			padding-left: 0;
+			opacity: 0;
+			position: absolute;
+			width: var(--menu--submenu-width);
+			z-index: 99;
+
+			.menu-item {
+				float: none;
+
+				a {
+					font-size: var(--menu--font-size-sub-menu);
+				}
+
+				&:hover > a {
+					background: var(--theme--submenu--bg-h);
+				}
+			}
+
+			.sub-menu {
+				margin: -48px 0 0 215px;
+			}
+		}
+
+
+		.nav-secondary {
+
+			.menu-item.search {
+				margin: 5px 0 0 8px;
+
+				.search-field {
+					padding-top: 8px;
+					padding-bottom: 8px;
+					width: 268px;
+				}
+			}
+		}
+
+		.nav-primary {
+
+			.menu-item.search {
+				display: block;
+				line-height: 0;
+
+				button {
+					padding: 12px;
+				}
+			}
+		}
+	}
+
+	/* Toggles
+	--------------------------------------------- */
+
+	.site-header {
+		& > .menu-toggle,
+		& > .search-toggle {
+			display: none;
+		}
+	}
+}

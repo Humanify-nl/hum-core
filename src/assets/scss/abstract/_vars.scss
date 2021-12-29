@@ -23,8 +23,10 @@ $logo_width_rem: 18.75rem;
 $menu_width: $logo_width_rem + $grid-gap;
 $menu-height-mobile: 48px;
 $menu-toggle-size: 48px;
-$static_header_mobile: 49px; // 49px or false
-$static_header_desktop: 49px; // 49px or false
+$static_header_desktop: 49px;
+$static_header_mobile: 49px;
+$sidemenu-width: 300px;
+$menu-collapse-bp: $large;
 
 // Various
 $filter_white: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);

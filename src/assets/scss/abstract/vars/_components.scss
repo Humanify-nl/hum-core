@@ -19,6 +19,9 @@ $map-components: (
 		font-weight: normal,
 		font-weight-button: 500,
 		line-height: 22px,
+		submenu-width: 215px,
+		item-pad-hor: 18px,
+		item-pad-hor-large: 20px,
 	),
 	pagination: (
 		font-family: var(--font-secondary),
