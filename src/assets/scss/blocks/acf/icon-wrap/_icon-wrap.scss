@@ -3,23 +3,66 @@
 --------------------------------------------- */
 .block-icon-wrap {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  position: relative;
 
-  > * {
-    margin-bottom: 0;
+  .wp-block-buttons {
+    width: 100%;
+  }
+
+  > *:not(.block-icon-svg__wrap) {
+
+    @include bp-min($base) {
+      margin-left: var(--icon-size-outer);
+      padding-left: var(--padding);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    // adjust first block to line up with icon and take full width
+    &:nth-child(2) {
+      width: 100%;
+      @include bp-min($base) {
+        margin-top: 0.5em;
+      }
+      @include bp-min($small) {
+        margin-top: 0.25em;
+      }
+      @include bp-min($medium) {
+        margin-top: 0.125em;
+      }
+    }
   }
 
   .block-icon-svg__wrap {
     background: var(--color--primary);
+    border-radius: 50%;
     display: flex;
-    align-items: top;
-    margin-right: var(--padding-inner);
-    margin-top: calc( 0.5 * var(--padding-inner) );
+    margin-bottom: var(--padding-inner);
+
+    padding: var(--icon-padding);
+    height: var(--icon-size-outer);
+    width: var(--icon-size-outer);
 
     svg {
       fill: var(--color--white);
       height: var(--icon-size);
       width: var(--icon-size);
+    }
+
+    @include bp-min($base) {
+      margin-right: var(--padding-inner);
+      margin-bottom: 0;
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  &.has-background {
+    .block-icon-svg__wrap {
+      margin-left: var(--padding);
     }
   }
 
