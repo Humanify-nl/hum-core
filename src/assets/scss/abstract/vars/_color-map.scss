@@ -34,22 +34,22 @@ $map-colors: (
     light: lighten(c(tertiary), 10),
     dark: darken(c(tertiary), 10),
   ),
+  grey: (
+    base: #C2C2C2,
+    light: c(grey-light),
+    dark: #757575,
+  ),
+  black: (
+    base: c(black),
+    light: #222,
+    dark: #111,
+  ),
   white: (
     base: c(white),
     flash: #f1f2f4,
     grey: #eee,
     true: #fff,
     50: rgba( #fff, 0.5),
-  ),
-  grey: (
-    base: #C2C2C2,
-    light: c(grey-light),
-    text: #757575,
-  ),
-  black: (
-    base: c(black),
-    light: #222,
-    dark: #111,
   ),
 );
 

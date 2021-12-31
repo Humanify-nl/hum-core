@@ -22,7 +22,7 @@ textarea {
 	width: 100%;
 }
 
-@include placeholder-color( var(--color--grey-text));
+@include placeholder-color( var(--color--grey-dark));
 
 /* Search Form
 --------------------------------------------- */
@@ -55,7 +55,7 @@ textarea {
 		right: 0;
 
 		svg {
-			fill: var(--color--grey-text);
+			fill: var(--color--grey-dark);
 			@include icon-position( 20px );
 
 			&:hover {
