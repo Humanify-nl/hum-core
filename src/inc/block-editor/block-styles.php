@@ -27,14 +27,6 @@ function hum_register_block_styles() {
   );
 
   register_block_style(
-    'core/columns',
-      [
-        'name'         => 'icon-side',
-        'label'        => 'Icon side',
-      ]
-  );
-
-  register_block_style(
     'core/cover',
       [
          'name'         => 'shape',
