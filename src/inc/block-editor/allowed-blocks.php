@@ -278,7 +278,7 @@ function hum_filter_allowed_block_types( $allowed_block_types, $editor_context )
   return $allowed_block_types;
 }
 
-//add_filter( 'allowed_block_types_all', 'hum_filter_allowed_block_types', 10, 2 );
+add_filter( 'allowed_block_types_all', 'hum_filter_allowed_block_types', 10, 2 );
 
 
 // remove dropcap
