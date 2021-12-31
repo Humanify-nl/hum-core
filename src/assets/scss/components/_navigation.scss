@@ -2,12 +2,15 @@
 /* Navigation
 --------------------------------------------- */
 
+.nav-menu-top {
+	display: none;
+}
+
 .nav-menu {
 	display: none;
 
 	&.active {
 		background: var(--theme--mobmenu--bg);
-		border-top: 1px solid var(--theme--menu--border);
 		display: flex;
 		height: calc(100vh - #{$menu-height-mobile});
 		width: 100%;

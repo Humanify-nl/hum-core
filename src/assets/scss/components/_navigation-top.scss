@@ -1,0 +1,74 @@
+
+/* Navigation-top (paired with side/mobile menu)
+--------------------------------------------- */
+
+.nav-menu-top {
+  float: left;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  width: calc( 100% - #{300px * 2} );
+
+  .sub-menu {
+    display: none;
+  }
+
+  & > * {
+    line-height: 0;
+  }
+
+  ul {
+    clear: both;
+    line-height: 1;
+    margin: 0;
+    width: 100%;
+  }
+
+  .menu {
+    display: inline-block;
+    width: auto;
+  }
+
+  .menu-item {
+    float: left;
+    list-style: none;
+		position: relative;
+
+		a {
+			border: none;
+			color: var(--theme--menu--link);
+			display: block;
+			font-size: var(--menu--font-size);
+			font-weight: var(--menu--font-weight);
+			line-height: var(--menu--line-height);
+			padding: 11px var(--menu--item-pad-hor);
+			position: relative;
+			text-decoration: none;
+		}
+
+		&:hover > a {
+			background: var(--theme--submenu--bg);
+		}
+
+		&.current-menu-item > a,
+		&.current-menu-ancestor > a {
+			color: var(--theme--menu--mark);
+		}
+
+    > a {
+      padding: 13px var(--menu--item-pad-hor-large);
+    }
+
+    &:hover {
+
+      & > .sub-menu {
+        left: auto;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.nav-menu-top + .nav-menu {
+  margin-top: $menu-toggle-size;
+}

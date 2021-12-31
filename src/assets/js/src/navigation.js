@@ -11,7 +11,7 @@ jQuery(function($){
 	$('.menu-toggle').click(function(){
 
 		$('.search-toggle, .header-search').removeClass('active');
-		$('.menu-toggle, .nav-menu').toggleClass('active');
+		$('.menu-toggle, .nav-menu:not(.nav-menu-top)').toggleClass('active');
 
 	});
 

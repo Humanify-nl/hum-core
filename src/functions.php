@@ -33,6 +33,7 @@ if ( ! function_exists( 'hum_core_setup' ) ) {
 		register_nav_menus(	[
 			'primary' => esc_html__( 'Primary Menu', 'hum-core' ),
 			'secondary' => esc_html__( 'Secondary Menu', 'hum-core' ),
+			'top-menu' => esc_html__( 'Top Menu', 'hum-core' ),
 		] );
 
 		// Editor style

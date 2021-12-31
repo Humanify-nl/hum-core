@@ -5,9 +5,8 @@
 .site-header {
 	background: var(--theme--header--bg);
 	color: var(--theme--header--text);
-	border-bottom: 1px solid var(--theme--header--border);
 	position: relative;
-	height: 49px;
+	height: $static_header_mobile;
 }
 
 .custom-logo {
@@ -17,6 +16,7 @@
 }
 
 .title-area {
+	float: left;
 	display: flex;
 	width: 100%;
 	min-height: $menu-toggle-size;
@@ -102,8 +102,6 @@
 		}
 	}
 }
-
-
 
 
 /* Header Search

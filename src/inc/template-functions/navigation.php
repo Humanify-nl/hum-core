@@ -14,6 +14,15 @@ function hum_site_header() {
 	echo hum_mobile_menu_toggle();
 	echo hum_search_toggle();
 
+	// top menu
+	if( has_nav_menu( 'top-menu' ) ) {
+		echo '<nav class="nav-menu-top" role="navigation">';
+		//echo '<nav' . hum_amp_class( 'nav-menu nav-menu-top', 'active', 'menuActive' ) . ' role="navigation">';
+		wp_nav_menu( [ 'theme_location' => 'top-menu', 'menu_id' => 'top-menu', 'container_class' => 'nav-top' ] );
+		echo '</nav>';
+	}
+
+	// main menu
 	echo '<nav' . hum_amp_class( 'nav-menu', 'active', 'menuActive' ) . ' role="navigation">';
 
 		if( has_nav_menu( 'primary' ) ) {
