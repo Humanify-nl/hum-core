@@ -16,3 +16,8 @@
 .block-editor-contrast-checker {
 	display: none;
 }
+
+// remove underline from acf image buttons
+.acf-icon.dark {
+  text-decoration: none;
+}
