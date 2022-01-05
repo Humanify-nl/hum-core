@@ -6,9 +6,9 @@
   overflow: hidden;
 
   // slide
-  $trans_up_s: (fontsize_rem(h3, small) * $line_height_preview_title) + ($pad * 2);
-  $trans_up_m: (fontsize_rem(h3, medium) * $line_height_preview_title) + ($pad * 2);
-  $trans_up_l: (fontsize_rem(h3, large) * $line_height_preview_title) + ($pad * 2);
+  $trans_up_s: (fontsize_rem(h3, base) * $line_height_preview_title) + ( v($map-spacing, padding, base) * 2 );
+  $trans_up_m: (fontsize_rem(h3, medium) * $line_height_preview_title) + ( v($map-spacing, padding, medium) * 2 );
+  $trans_up_l: (fontsize_rem(h3, large) * $line_height_preview_title) + ( v($map-spacing, padding, large) * 2 );
 
   .preview__img {
     width: 100%;

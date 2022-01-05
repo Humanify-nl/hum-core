@@ -7,7 +7,6 @@ $spacing-unit: 1rem;
 $map-spacing: (
 	// blocks
 	block-gap: 2 * $spacing-unit, 					// between blocks (horizontal)
-	block-pad: 1 * $spacing-unit,
 	block-inner-gap: $spacing-unit,					// inside blocks
 	// between blocks (vertical)
 	block-margin: (
@@ -62,7 +61,7 @@ $map-spacing: (
 	grid-gap: 4 * $spacing-unit,						// between previews (horizontal)
 	grid-gutter-factor: 0.5, 				          // multiplier for gap
 	// text
-	text-margin: 1.5 * $spacing-unit,
+	text-margin: 2 * $spacing-unit,
 	line-height: 1.5,
 	line-height-heading: 1.2,
 	elevation: 1px 1px 3px 0 rgba(0, 0, 0, 0.2),
@@ -109,6 +108,8 @@ $line_height_preview_title: 1.2;
 $list_text_indent: 1.3125em;
 $list_padding: 0.25em;
 $list_padding_left: 1.5em;
+
+
 
 // Root variables
 

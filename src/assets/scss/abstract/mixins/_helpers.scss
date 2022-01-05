@@ -1,7 +1,9 @@
-/**
- * Button Reset
- *
- */
+
+// Helpers
+// --------------------------------------------- /
+
+// Button Reset
+
 @mixin button-reset() {
 	background: transparent;
 	border: none;
@@ -13,10 +15,9 @@
 }
 
 
-/**
- * Margin, No Edge
- * Removes left margin from first item, right margin from last item
- */
+// Margin, No Edge
+// Removes left margin from first item, right margin from last item
+
 @mixin margin-no-edge( $margin ) {
   margin: $margin;
 
@@ -30,10 +31,9 @@
 
 }
 
-/**
- * Icon Position
- *
- */
+
+// Icon Position
+
 @mixin icon-position( $icon_size, $container_size: null ) {
 	width: $icon_size;
 	height: $icon_size;
@@ -43,10 +43,9 @@
     }
 }
 
-/**
- * Block Cover
- * Creates a block that covers the full width/height of parent div. Typically used on a :before pseudo element
- */
+// Creates a block that covers the full width/height of parent div.
+// Typically used on a :before pseudo element
+
 @mixin block-cover() {
   content: '';
   display: block;
@@ -58,10 +57,9 @@
   z-index: 1;
 }
 
-/**
- * Placeholder Color
- *
- */
+
+// Placeholder Color
+
 @mixin placeholder-color( $color ) {
 
   ::-moz-placeholder {
@@ -88,10 +86,9 @@
 
 }
 
-/**
- * Clearfix
- *
- */
+
+// Clearfix
+
 @mixin clearfix() {
 	&:after {
 		content: "";

@@ -13,7 +13,7 @@
   }
 
   > * {
-    margin-bottom: $pad_inner;
+    margin-bottom: var(--block-margin);
   }
 
   > *:last-child {
