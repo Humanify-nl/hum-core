@@ -1,6 +1,6 @@
 // spacer icon
 @mixin spacer_icon( $top: false ) {
-  $width_icon_collapse: v($map-spacing, block-margin, small);
+  $width_icon_collapse: v($map-spacing, block-margin, base);
   content: "";
   position: absolute;
   fill: #ebebeb;

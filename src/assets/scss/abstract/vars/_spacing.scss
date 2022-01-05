@@ -11,56 +11,56 @@ $map-spacing: (
 	block-inner-gap: $spacing-unit,					// inside blocks
 	// between blocks (vertical)
 	block-margin: (
-		small: 1.5 * $spacing-unit,
+		base: 1.5 * $spacing-unit,
 	  medium: 2 * $spacing-unit,
 		large: 2 * $spacing-unit,
 	),
 	// spacing
 	spacing-horizontal: (
-		small: 1 * $spacing-unit,
+		base: 1 * $spacing-unit,
 		medium: 2 * $spacing-unit,
 		large: 2 * $spacing-unit,
 	),
 	spacing-vertical-sm: (
-		small: 1.5 * $spacing-unit,
+		base: 1.5 * $spacing-unit,
 		medium: 2 * $spacing-unit,
-		large: 3 * $spacing-unit,
+		large: 2 * $spacing-unit,
 	),
 	spacing-vertical: (
-	  small: 2 * $spacing-unit,
+	  base: 3 * $spacing-unit,
 		medium: 4 * $spacing-unit,
-	  large: 5 * $spacing-unit,
+	  large: 6 * $spacing-unit,
 	),
 	spacing-vertical-lg: (
-		small: 4 * $spacing-unit,
-		medium: 6 * $spacing-unit,
-		large: 8 * $spacing-unit,
+		base: 5 * $spacing-unit,
+		medium: 7 * $spacing-unit,
+		large: 9 * $spacing-unit,
 	),
 	// padding
 	padding: (
-		small: 1 * $spacing-unit,
+		base: 1 * $spacing-unit,
 		medium: 1.5 * $spacing-unit,
 		large: 2 * $spacing-unit,
 	),
 	padding-inner: (
-		small: 0.5 * $spacing-unit,
+		base: 0.5 * $spacing-unit,
 		medium: 0.75 * $spacing-unit,
 		large: 1 * $spacing-unit,
 	),
 	featured-img: (
-		small: 15 * $spacing-unit, // 240px
-		medium: 18 * $spacing-unit, // 288px
-		large: 20 * $spacing-unit, // 320px
+	  base: 12 * $spacing-unit, // 192px
+		small: 18 * $spacing-unit, // 256px
+		medium: 24 * $spacing-unit, // 384px
+		large: 26 * $spacing-unit, // 416px
 	),
 	gallery-gap: (
-	small: 0.25em,
-	medium: 0.5em,
-	large: 0.75em,
+		base: 0.25em,
+		medium: 0.5em,
+		large: 0.75em,
 	),
 	// grid
 	grid-gap: 4 * $spacing-unit,						// between previews (horizontal)
 	grid-gutter-factor: 0.5, 				          // multiplier for gap
-  // gallery
 	// text
 	text-margin: 1.5 * $spacing-unit,
 	line-height: 1.5,
@@ -123,7 +123,20 @@ $spacing-prefix: '--';
 	}
 }
 
-@media only screen and (max-width: #{$medium}) {
+
+:root {
+  @each $selector, $breakpoints in $map-spacing {
+    @each $breakpoint-name, $value in $breakpoints {
+
+      @if $breakpoint-name == base {
+        #{$spacing-prefix + $selector}: $value;
+      }
+    }
+  }
+}
+
+
+@media only screen and (min-width: #{$small}) {
 
   :root {
     @each $selector, $breakpoints in $map-spacing {
