@@ -22,7 +22,7 @@ function hum_preview_title( $link = true, $heading = 'h3') {
 
 	// title tag
 	$title_tag_size = get_field( 'heading_size' );
-	$title_tag = $title_tag_size ? $title_tag_size : $heading;
+	$title_tag = $title_tag_size ?: $heading;
 
 
 	// build html
@@ -152,12 +152,12 @@ function hum_preview_button( $link = true, $link_title = 'Read more' ) {
 	}
 
 	$post_type = get_post_type( get_the_id() );
-	$preview_type = $post_type ? $post_type : 'post';
+	$preview_type = $post_type ?: 'post';
 
 	// link
 	$link_url = get_permalink();
 	$link_title_opt = is_page() ? get_field( 'page_links_title' , 'option') : get_field( 'post_links_title' , 'option');
-  $link_title = $link_title_opt ? $link_title_opt : 'Read more';
+  $link_title = $link_title_opt ?: 'Read more';
 
 	echo '<div class="wp-block-button">';
 	if ( $link ) {

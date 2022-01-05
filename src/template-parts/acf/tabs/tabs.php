@@ -24,7 +24,7 @@ if ( have_rows( 'tab_repeater' ) ) {
       $tab_text = get_sub_field( 'tab_text' );
       $tab_link = get_sub_field( 'tab_link' );
       $tab_link_title = get_sub_field( 'tab_link_title' );
-      $link_title = $tab_link_title ? $tab_link_title : 'Lees meer';
+      $link_title = $tab_link_title ?: 'Lees meer';
 
       // build html
       if ( $tab_title ) {

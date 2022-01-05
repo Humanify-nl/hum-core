@@ -22,7 +22,7 @@ $query_posts = new WP_query ( $args );
 if ( $query_posts->have_posts() ) {
 
   $preview_select = get_field( 'preview_type_select' );
-  $preview_type = !empty($preview_select) ? $preview_select : 'preview';
+  $preview_type = $preview_select) ?: 'preview';
   ?>
 
   <div class="<?php echo hum_grid_class_preview( 'grid-'.$preview_type );?>">

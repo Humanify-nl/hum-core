@@ -38,7 +38,7 @@ function hum_posts_related() {
           $option_field = get_field( 'preview_type_rel', 'option' );
           $section_title = get_field( 'related_posts_title', 'option' );
         }
-        $preview_type = $option_field ? $option_field : 'preview-list';
+        $preview_type = $option_field ?: 'preview-list';
 
         // build grid
         if ( $section_title ) { echo '<h2 class="section-title">' .$section_title. '</h2>'; }
