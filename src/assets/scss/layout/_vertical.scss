@@ -42,7 +42,8 @@ section.block-content {
 }
 
 .related {
-  margin-bottom: var(--spacing-vertical);
+  margin-top: var(--spacing-vertical-lg);
+  margin-bottom: var(--spacing-vertical-lg);
 
   .section-title {
     margin-bottom: var(--block-margin);
