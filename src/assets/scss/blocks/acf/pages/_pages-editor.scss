@@ -1,1 +1,7 @@
 @import "pages";
+
+.has-background {
+  .acf-block.pages {
+    margin-bottom: 0;
+  }
+}
