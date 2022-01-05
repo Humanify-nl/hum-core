@@ -55,7 +55,7 @@ function hum_block_pattern_names() {
 
 /**
  * Get post ID to use inside an ACF block
- *
+ * usecase: loading query arguments in a block
  */
 function hum_acf_post_id() {
 	if ( is_admin() && function_exists( 'acf_maybe_get_POST' ) ) {
@@ -98,27 +98,6 @@ function hum_has_action( $hook ) {
 	return !empty( $render );
 
 }
-
-
-/**
- * Yoast breadcrumbs
- *
- */
-function hum_breadcrumbs() {
-
-	if ( function_exists('yoast_breadcrumb') ) {
-
-		if ( has_post_parent() ) {
-
-			echo '<div class="yoast">';
-
-			yoast_breadcrumb( '<p class="breadcrumbs">','</p>' );
-
-			echo '</div>';
-		}
-	}
-}
-
 
 
 /**

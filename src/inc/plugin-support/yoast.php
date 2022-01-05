@@ -7,6 +7,32 @@
 
 
 /**
+ * Yoast breadcrumbs
+ *
+ */
+function hum_breadcrumbs() {
+
+	if ( function_exists('yoast_breadcrumb') ) {
+
+		// posts
+		if ( is_single() ) {
+
+			echo '<div class="yoast">';
+				yoast_breadcrumb( '<p class="breadcrumbs">','</p>' );
+			echo '</div>';
+
+		// pages with parents
+		} elseif ( has_post_parent() ) {
+
+			echo '<div class="yoast">';
+				yoast_breadcrumb( '<p class="breadcrumbs">','</p>' );
+			echo '</div>';
+		}
+	}
+}
+
+
+/**
  * Remove post title from breadcrumbs tail
  *
  */
