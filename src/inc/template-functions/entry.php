@@ -20,7 +20,8 @@ function hum_entry_title() {
  *
  */
 function hum_entry_image_id() {
-	return has_post_thumbnail() ? get_post_thumbnail_id() : get_option( 'options_default_image' );
+	$default_img = get_option( 'options_default_image' );
+	return has_post_thumbnail() ? get_post_thumbnail_id() : $default_img;
 }
 
 

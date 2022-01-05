@@ -2,12 +2,23 @@
 /* Post featured image
 --------------------------------------------- */
 
+//.size-featured,
 .wp-block-post-featured-image {
 
   img {
     object-fit: cover;
     width: 100%;
-    min-height: var(--featured-img);
-    max-height: 460px;
+    height: var(--featured-img);
+    //max-height: var(--featured-img);
+  }
+}
+
+
+.block-image {
+
+  .size-featured {
+    object-fit: cover;
+    height: var(--featured-img);
+    width: 100%;
   }
 }

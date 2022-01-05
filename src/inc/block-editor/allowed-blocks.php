@@ -19,8 +19,8 @@ function hum_post_blocks_array( $post_type = false ) {
     'core/preformatted',
     'core/pullquote',
     // --> media
-    'core/media-text',
-    'core/image',
+    //'core/media-text',
+    //'core/image',
     'core/gallery',
     'core/cover',
     'core/file',
@@ -52,15 +52,16 @@ function hum_post_blocks_array( $post_type = false ) {
     'core/post-featured-image',
     // --> embed
     'core/embed',
+    // --> acf
     'acf/spacer',
     'acf/post-query',
-    'acf/post-query-related',
     'acf/pages',
-    'acf/icon',
     'acf/slider',
     'acf/tabs',
     'acf/icon-wrap',
     'acf/svg',
+    'acf/image',
+    // --> vendor
     'forminator/forms',
     'yoast-seo/faq-block',
     'yoast-seo/how-to-block',
@@ -78,7 +79,7 @@ function hum_post_blocks_array( $post_type = false ) {
     'core/preformatted',
     'core/pullquote',
     // --> media
-    'core/image',
+    //'core/image',
     'core/gallery',
     'core/cover',
     'core/file',
@@ -89,13 +90,13 @@ function hum_post_blocks_array( $post_type = false ) {
     'core/columns',
     'core/group',
     'core/more',
-    'core/pagebreak',
-    'core/separator',
+    //'core/pagebreak',
+    //'core/separator',
     //'core/spacer',
     'core/post-terms',
     // --> widgets
     'core/shortcode',
-    'core/calendar',
+    //'core/calendar',
     'core/social-icons',
     // --> theme
     'core/post-title',
@@ -105,11 +106,17 @@ function hum_post_blocks_array( $post_type = false ) {
     'core/post-featured-image',
     // --> embed
     'core/embed',
+    // --> acf
     'acf/spacer',
-    'acf/post-query-related',
-    'acf/pages',
     'acf/slider',
+    'acf/tabs',
+    'acf/icon-wrap',
+    'acf/svg',
+    'acf/image',
+    // --> vendor
     'forminator/forms',
+    'yoast-seo/faq-block',
+    'yoast-seo/how-to-block',
   ];
 
   $block_types_page = [
@@ -123,7 +130,7 @@ function hum_post_blocks_array( $post_type = false ) {
     //'core/preformatted',
     //'core/pullquote',
     // --> media
-    'core/image',
+    //'core/image',
     'core/gallery',
     'core/cover',
     'core/file',
@@ -134,68 +141,33 @@ function hum_post_blocks_array( $post_type = false ) {
     'core/columns',
     'core/group',
     //'core/more',
-    'core/pagebreak',
-    'core/separator',
+    //'core/pagebreak',
+    //'core/separator',
     //'core/spacer',
     // --> widgets
     'core/shortcode',
-    'core/calendar',
+    //'core/calendar',
     'core/social-icons',
-    'core/latest-posts',
+    //'core/latest-posts',
     'core/categories',
     // --> theme
     'core/post-title',
     'core/post-featured-image',
     // --> embed
     'core/embed',
+    // --> acf
     'acf/spacer',
     'acf/post-query',
     'acf/pages',
-    'acf/icon',
     'acf/slider',
+    'acf/tabs',
+    'acf/icon-wrap',
+    'acf/svg',
+    'acf/image',
+    // --> vendor
     'forminator/forms',
-  ];
-
-  $block_types_block_area = [
-    // --> text
-    'core/paragraph',
-    'core/heading',
-    'core/list',
-    'core/quote',
-    //'core/code',
-    'core/preformatted',
-    'core/pullquote',
-    // --> media
-    'core/image',
-    'core/gallery',
-    'core/cover',
-    'core/file',
-    'core/video',
-    // --> design
-    'core/buttons',
-    'core/button',
-    'core/columns',
-    'core/group',
-    'core/site-title',
-    'core/site-logo',
-    // 'core/spacer',
-    'core/post-terms',
-    // --> widgets
-    'core/shortcode',
-    'core/social-icons',
-    // --> theme
-    'core/post-title',
-    'core/post-content',
-    'core/post-date',
-    'core/post-excerpt',
-    'core/post-featured-image',
-    // --> embed
-    'core/embed',
-    'acf/spacer',
-    'acf/post-query-related',
-    'acf/icon',
-    'acf/slider',
-    'forminator/forms',
+    'yoast-seo/faq-block',
+    'yoast-seo/how-to-block',
   ];
 
   $block_types_testimonial = [
@@ -206,12 +178,13 @@ function hum_post_blocks_array( $post_type = false ) {
     'core/quote',
     'core/columns',
     'core/group',
-    'core/separator',
+    //'core/separator',
     'core/post-title',
     'core/post-featured-image',
     'acf/spacer',
     'acf/post-query-related',
     'acf/slider',
+    'acf/image',
   ];
 
   switch($post_type) {
@@ -229,7 +202,7 @@ function hum_post_blocks_array( $post_type = false ) {
       break;
 
     case 'block_area':
-      $block_array = $block_types_block_area;
+      $block_array = $block_types_global;
       break;
 
     default:

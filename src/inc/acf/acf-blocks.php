@@ -13,6 +13,8 @@ include_once( get_template_directory() . '/inc/acf/blocks/block-slider.php' );
 include_once( get_template_directory() . '/inc/acf/blocks/block-tabs.php' );
 include_once( get_template_directory() . '/inc/acf/blocks/block-icon-wrap.php' );
 include_once( get_template_directory() . '/inc/acf/blocks/block-svg.php' );
+include_once( get_template_directory() . '/inc/acf/blocks/block-image.php' );
+
 
 function hum_acf_init_block_types() {
 
@@ -45,6 +47,10 @@ function hum_acf_init_block_types() {
 
     acf_register_block_type(
       register_icon_wrap_block()
+    );
+
+    acf_register_block_type(
+      register_image_block()
     );
 
   }
