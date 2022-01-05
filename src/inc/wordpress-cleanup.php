@@ -45,12 +45,27 @@ add_filter( 'body_class', 'hum_singular_body_class' );
 
 
 /**
+ * No customize support body class
+ * https://developer.wordpress.org/reference/functions/wp_customize_support_script/
+ *
+ */
+/*
+function hum_no_customize_support_class( $classes ) {
+	$classes[] = 'no-customize-support';
+	return $classes;
+}
+add_filter( 'body_class', 'hum_no_customize_support_class' );
+*/
+
+
+/**
  * Clean body classes
  *
  */
 function hum_clean_body_class( $classes ) {
 
 	$allowed_classes = [
+		'blog',
 		'singular',
 		'single',
 		'page',
@@ -61,6 +76,7 @@ function hum_clean_body_class( $classes ) {
 		'content-center',
 		'search',
 		'page-template-page-group',
+		'wp-embed-responsive',
 	];
 
 	$custom_post_types = hum_registered_post_types();
