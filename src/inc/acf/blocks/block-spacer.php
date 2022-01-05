@@ -31,11 +31,8 @@ function register_spacer_block() {
 
 function hum_render_spacer_block( $block, $content = '', $is_preview = false ) {
 
-  // Debug
-  // hum_print_arr($block);
-
   // Front-end output
-  $vspacerSize = get_field('vertical-spacer');
+  $vspacerSize = get_field( 'vertical-spacer' );
   if ( $vspacerSize ) {
     echo '<div class="acf-block block-spacer vs-h-'. $vspacerSize['value'] .'"';
       echo 'data-title="Vertical space ' . $vspacerSize['label'] .'">';
