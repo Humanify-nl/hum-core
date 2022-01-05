@@ -30,7 +30,7 @@ function hum_pages_related() {
       <div class="wrap">
 
         <?php
-        $section_title = get_field( 'page-siblings-title' , 'option');
+        $section_title = get_field( 'page_siblings_title', 'option');
         $preview_select = get_field( 'preview_type_page', 'option' );
         $preview_type = !empty($preview_select) ? $preview_select : 'preview-list';
 
