@@ -6,7 +6,7 @@ function register_icon_wrap_block() {
     'title'             => __('Icon wrap'),
     'description'       => __('Add an icon that stays left of any new blocks you add.'),
     'render_callback'   => 'hum_render_icon_wrap_block',
-    'category'          => 'media',
+    'category'          => 'design',
     'icon'              => 'excerpt-view',
     'keywords'          => [ 'icon', 'svg' ],
     'align'             => 'left',
