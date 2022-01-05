@@ -3,3 +3,10 @@
 .wp-block-columns {
   margin-bottom: var(--block-margin);
 }
+
+
+.wp-block-column.has-background {
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
