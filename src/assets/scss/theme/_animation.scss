@@ -1,0 +1,21 @@
+
+/* Animation
+--------------------------------------------- */
+
+.site-main {
+  * {
+    animation: 0.3s ease 0s 1 appearOnce;
+  }
+
+  @keyframes appearOnce {
+    0% {
+      opacity: 0;
+    }
+    75% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
