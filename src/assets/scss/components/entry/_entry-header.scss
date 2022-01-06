@@ -12,11 +12,12 @@
     width: 100%;
   }
 
-  > * {
-    margin-bottom: var(--block-margin);
+  .header-wrap > * {
+    margin-bottom: var(--block-inner-gap);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
-  > *:last-child {
-    margin-bottom: 0;
-  }
 }
