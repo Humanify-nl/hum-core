@@ -38,8 +38,13 @@
 
 	> .wp-block-button {
 		margin-bottom: calc( 0.25 * var(--block-margin));
-		&:last-child {
-			margin-bottom: 0;
+	}
+
+	&.is-vertical {
+		> .wp-block-button {
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 	}
 }
