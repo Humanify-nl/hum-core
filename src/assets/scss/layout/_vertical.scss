@@ -20,6 +20,10 @@
     }
   }
 
+  > .wp-block-cover + .alignfull.has-background {
+    margin-top: 0;
+  }
+
 }
 
 // elsewhere
