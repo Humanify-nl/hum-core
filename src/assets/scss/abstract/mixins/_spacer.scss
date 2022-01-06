@@ -5,31 +5,31 @@
   position: absolute;
   fill: #ebebeb;
   height: $width_icon_collapse;
-  width: $width_icon_collapse;
+  width: $width_icon_collapse - 0.5rem;
   background-size: contain;
   left: calc(50% - #{$width_icon_collapse * 0.5});
   opacity: 0.1;
   transform: scale(1.75);
 	@if ( $top == false ) {
-    background: url(../icons/bs-arrow-up.svg) no-repeat center;
-		bottom: - #{$width_icon_collapse};
-	} @else {
     background: url(../icons/bs-arrow-down.svg) no-repeat center;
-		top: - #{$width_icon_collapse};
+		bottom: 0;//- #{$width_icon_collapse};
+	} @else {
+    background: url(../icons/bs-arrow-up.svg) no-repeat center;
+		top: 0;// - #{$width_icon_collapse};
 	}
 
   // medium bp
   @include bp-min($small) {
     $width_icon_collapse: v($map-spacing, block-margin, medium);
     height: $width_icon_collapse;
-    width: $width_icon_collapse;
+    width: $width_icon_collapse - 0.5rem;
 
     @if ( $top == false ) {
-      background: url(../icons/bs-arrow-up.svg) no-repeat center;
-      bottom: - #{$width_icon_collapse};
-    } @else {
       background: url(../icons/bs-arrow-down.svg) no-repeat center;
-      top: - #{$width_icon_collapse};
+      bottom: 0;// - #{$width_icon_collapse};
+    } @else {
+      background: url(../icons/bs-arrow-up.svg) no-repeat center;
+      top: 0;// - #{$width_icon_collapse};
     }
   }
 
@@ -37,14 +37,14 @@
   @include bp-min($medium) {
     $width_icon_collapse: v($map-spacing, block-margin, large);
     height: $width_icon_collapse;
-    width: $width_icon_collapse;
+    width: $width_icon_collapse - 0.5rem;
 
     @if ( $top == false ) {
-      background: url(../icons/bs-arrow-up.svg) no-repeat center;
-      bottom: - #{$width_icon_collapse};
-    } @else {
       background: url(../icons/bs-arrow-down.svg) no-repeat center;
-      top: - #{$width_icon_collapse};
+      bottom: 0;//- #{$width_icon_collapse};
+    } @else {
+      background: url(../icons/bs-arrow-up.svg) no-repeat center;
+      top: 0;//- #{$width_icon_collapse};
     }
   }
 }
