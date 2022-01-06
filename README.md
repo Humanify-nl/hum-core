@@ -54,6 +54,7 @@ Yet, they definately should be in complete control over their websites *content*
 
 #### Variables
 - The theme is customized with several sass maps (spacing, colors, fonts, etc.)
+- Breakpoints are in line with WP opionated styles. But are fully customizable to Bootstrap bp's for example.
 - The vars are compiled in the root, not unlike the current WP variable system (& naming).
 - The vars are accessible with the usual css: ```color: 'var(--color--primary)';```.
 - For mixins and other internal use, a sass function ```color: v(primary, light);``` is used.
