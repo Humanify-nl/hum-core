@@ -4,7 +4,6 @@
 
 .grid {
   grid-auto-rows: 1fr;
-  width: 100%;
 
   &.grid-100 {
     @include columns-mobile(1);
