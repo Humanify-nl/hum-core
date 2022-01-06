@@ -15,4 +15,5 @@ function hum_font_google(){
   <?php
 
 }
-add_action( 'wp_head', 'hum_font_google' );
+// add_action( 'wp_head', 'hum_font_google' );
+// disabled as we use local fonts
