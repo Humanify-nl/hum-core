@@ -21,19 +21,19 @@ $map-spacing: (
 		large: 2 * $spacing-unit,
 	),
 	spacing-vertical-sm: (
-		base: 1.5 * $spacing-unit,
-		medium: 2 * $spacing-unit,
-		large: 2 * $spacing-unit,
+		base: 3 * $spacing-unit,
+		medium: 4 * $spacing-unit,
+		large: 4 * $spacing-unit,
 	),
 	spacing-vertical: (
-	  base: 3 * $spacing-unit,
-		medium: 4 * $spacing-unit,
-	  large: 6 * $spacing-unit,
+	  base: 5 * $spacing-unit,
+		medium: 6 * $spacing-unit,
+	  large: 8 * $spacing-unit,
 	),
 	spacing-vertical-lg: (
-		base: 5 * $spacing-unit,
-		medium: 7 * $spacing-unit,
-		large: 9 * $spacing-unit,
+		base: 7 * $spacing-unit,
+		medium: 9 * $spacing-unit,
+		large: 10 * $spacing-unit,
 	),
 	// padding
 	padding: (
