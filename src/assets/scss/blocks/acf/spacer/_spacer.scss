@@ -22,17 +22,17 @@ $vs-props: (
 // breakpoints zijn toe te voegen
 $vs-sizes: (
     sm: (
-        base: v($map-spacing, spacing-vertical-sm, small),
+        base: v($map-spacing, spacing-vertical-sm, base),
         small: v($map-spacing, spacing-vertical-sm, medium),
         medium:  v($map-spacing, spacing-vertical-sm, large)
     ),
     md: (
-      base: v($map-spacing, spacing-vertical, small),
+      base: v($map-spacing, spacing-vertical, base),
       small: v($map-spacing, spacing-vertical, medium),
       medium:  v($map-spacing, spacing-vertical, large)
     ),
     lg: (
-      base: v($map-spacing, spacing-vertical-lg, small),
+      base: v($map-spacing, spacing-vertical-lg, base),
       small: v($map-spacing, spacing-vertical-lg, medium),
       medium:  v($map-spacing, spacing-vertical-lg, large)
     )
