@@ -3,4 +3,20 @@
 --------------------------------------------- */
 
 .block-image {
+  margin-bottom: var(--block-margin);
+
+  .fit-cover {
+    width: 100%;
+    object-fit: cover;
+  }
+
+
+  // alignments
+
+  &.aligncenter {
+    img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }

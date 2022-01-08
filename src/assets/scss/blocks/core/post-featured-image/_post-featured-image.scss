@@ -9,7 +9,6 @@
     object-fit: cover;
     width: 100%;
     height: var(--featured-img);
-    //max-height: var(--featured-img);
   }
 }
 
@@ -18,7 +17,7 @@
 
   .size-featured {
     object-fit: cover;
-    height: var(--featured-img);
     width: 100%;
+    height: var(--featured-img);
   }
 }
