@@ -57,6 +57,23 @@
 		&:active {
 			background-color: darken( $default-color, 18% );
 		}
+
+		.is-style-outline & {
+			color: $default-color;
+			border-color: $default-color;
+
+			&:hover,
+			&:focus {
+				background-color: $default-color;
+				border-color: $default-color;
+				color: var(--color--white);
+			}
+			&:active {
+				background-color: darken( $default-color, 18% );
+				border-color: darken( $default-color, 18% );
+				color: var(--color--white);
+			}
+		}
 	}
 
 
@@ -86,16 +103,18 @@
 // block styles
 .wp-block-button {
 
+	// default outline colors
 	&.is-style-outline {
 		background-color: transparent !important;
 
 		.wp-block-button__link {
 			border: 1px solid;
-			background-color: transparent !important;
+			background-color: transparent;
 
 			@each $name, $color in $color-picker {
 
 				&#{ '.has-' + $name + '-background-color'} {
+					background-color: transparent !important;
 					border-color: $color;
 					color: $color;
 				}
@@ -117,6 +136,14 @@
 			&.has-grey-light-background-color,
 			&.has-white-background-color {
 				color: var(--color--white);
+
+				&:hover,
+				&:focus {
+					color: var(--color--base);
+				}
+				&:active {
+					color: var(--color--base);
+				}
 			}
 		}
 	}
