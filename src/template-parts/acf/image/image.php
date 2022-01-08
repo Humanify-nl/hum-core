@@ -21,7 +21,7 @@ if ( !empty( $image ) ) {
   $img_id = $image['id'];
   $img_alt = $image['alt'];
   $img_caption = $image['caption'];
-  $img_cover = $image_cover ? ' cover' : '';
+  $img_cover = $image_cover ? ' fit-cover' : '';
 
   $class_arr = [
     'class' => 'attachment-'. $image_size . ' size-' . $image_size . $img_cover,
