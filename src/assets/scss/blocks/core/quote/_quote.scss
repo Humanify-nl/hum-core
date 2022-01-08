@@ -3,6 +3,7 @@
 --------------------------------------------- */
 
 .wp-block-quote {
+	margin-bottom: var(--block-margin);
 
 	p {
 		font-size: var(--font-size-large);
@@ -16,9 +17,8 @@
 
 	cite {
 		display: block;
-		font-size: 13px;
-		margin-top: 12px;
-		margin-bottom: 8px;
+		font-size: var(--font-size-small);
+		margin-top: var(--block-inner-gap);
 		text-transform: uppercase;
 	}
 

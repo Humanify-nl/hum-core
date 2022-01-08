@@ -2,6 +2,7 @@
 /* Gallery
 --------------------------------------------- */
 .wp-block-gallery {
+  margin-bottom: var(--block-margin);
 
   .blocks-gallery-grid {
     gap: var(--gallery-gap);
@@ -10,6 +11,7 @@
   // override WP margins
   .blocks-gallery-item {
     margin: 0 !important;
+    
     /*
     figcaption,
     .blocks-gallery-item__caption {

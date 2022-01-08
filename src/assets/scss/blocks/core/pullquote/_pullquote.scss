@@ -5,45 +5,39 @@
   text-align: left;
   border-top: 2px solid var(--color--primary);
   border-bottom: 2px solid var(--color--primary);
-  padding-top: var(--block-margin);
-  padding-bottom: var(--block-margin);
-
-  .wp-block-group & {
-    margin-bottom: 0;
-  }
+  margin-bottom: var(--block-margin);
+  padding: var(--padding);
 
   blockquote {
     margin: 0;
 
     p + cite {
       display: block;
-      margin-top: var(--padding);
+      margin-top: var(--block-margin);
+    }
+    p {
+      font-size: var(--font-size-h3);
+      line-height: 1.4;
     }
   }
 
-  p {
-    font-size: var(--font-size-h3);
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
 
   .wp-block-pullquote__citation {
 		display: block;
-		font-size: 13px;
-		margin-top: 12px;
-		margin-bottom: 8px;
+		font-size: var(--font-size-small);
+		margin-top: var(--block-margin);
+		margin-bottom: 0;
 		text-transform: uppercase;
   }
+
+
+  // block styles
 
   &.is-style-solid-color {
     border: none;
 
     blockquote {
       max-width: unset;
-      p {
-        font-size: var(--font-size-h3);
-      }
     }
   }
 }

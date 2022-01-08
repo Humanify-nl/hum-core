@@ -42,8 +42,8 @@ code {
 
 pre {
 	display: block;
-	margin: 0 0 10px;
-	line-height: 18px;
+	margin: 0 0 var(--block-margin) 0;
+	line-height: 1.5em;
 	word-break: break-all;
 	word-wrap: break-word;
 	white-space: pre;
