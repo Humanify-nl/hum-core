@@ -10,7 +10,7 @@
   }
 
   .wp-block-cover__inner-container {
-    *:last-child {
+    > *:last-child {
       margin-bottom: 0;
     }
   }
