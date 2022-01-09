@@ -22,8 +22,8 @@ function hum_page_layout_options() {
 
   $layouts = [
     'content-center',
-    'content-sidebar',
     'content-wide',
+    //'content-sidebar',
   ];
   return $layouts;
 }
@@ -189,6 +189,8 @@ function hum_return_content_center() {
 function hum_return_content_wide() {
 	return 'content-wide';
 }
+/*
 function hum_return_content_sidebar() {
 	return 'content-sidebar';
 }
+*/
