@@ -23,7 +23,7 @@ function register_tabs_block() {
     'styles'            => [
       [
         'name'            => 'unwrap',
-        'label'           => __( 'Fullwidth background', 'hum-core'),
+        'label'           => __( 'Fullwidth', 'hum-core'),
       ]
     ],
   ];
