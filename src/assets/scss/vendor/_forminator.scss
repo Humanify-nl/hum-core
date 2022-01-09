@@ -17,6 +17,7 @@
     .forminator-input {
       padding: 0.875em;
     }
+
     .forminator-button {
       background-color: var(--color--primary) !important;
       font-size: var(--button--font-size) !important;
@@ -29,10 +30,22 @@
         background-color: var(--color--primary-dark) !important;
       }
     }
+
+    .forminator-button-upload {
+      padding: calc( 0.5 * var(--button--padding-ver) ) var(--button--padding-hor );
+    }
+
     .forminator-row {
       margin-bottom: var(--block-inner-gap);
       .forminator-row:last-child {
         margin-bottom: 0;
+      }
+    }
+
+    .forminator-select {
+      .select2-selection__rendered {
+        padding-top: 0.84375em !important;
+        padding-bottom: 0.84375em !important;
       }
     }
   }
