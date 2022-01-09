@@ -66,3 +66,28 @@ body {
 .acf-block-preview {
 	display: flex;
 }
+
+
+// inner container of groups etc
+.block-editor-block-list__block {
+	.block-list-appender {
+		margin: 0;
+	}
+}
+
+// fix block-list-appender adding last child
+.has-child-selected,
+.is-selected {
+
+	.wp-block-cover__inner-container,
+	.wp-block-group__inner-container {
+
+		> *:nth-last-child(2) {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.block-editor-default-block-appender__content {
+	margin-bottom: 0;
+}
