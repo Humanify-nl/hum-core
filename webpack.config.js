@@ -3,9 +3,9 @@ const sourcePath = path.join(__dirname, '/src');
 const outputPath = path.join(__dirname, '/dist');
 const assetPath = 'assets';
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
-const CopyPlugin = require("copy-webpack-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
 const ProgressPlugin = require('cli-progress-webpack-plugin');
 
 module.exports = {

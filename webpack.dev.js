@@ -5,9 +5,9 @@ const outputPath = path.join(localPath, '/dist');
 const assetPath = 'assets';
 const localProxy = 'http://humgutenberg.local/';
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
-const CopyPlugin = require("copy-webpack-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 const ProgressPlugin = require('cli-progress-webpack-plugin');
 
