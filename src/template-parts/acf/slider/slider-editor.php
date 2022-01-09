@@ -8,12 +8,13 @@
  */
 
 
-$slide_size = get_field( 'image_size_select' );
-$slide_text_align = get_field( 'text_align_select' );
 
 if ( have_rows( 'swiper_slides' ) ) {
 
-  ?>
+  $slide_size = get_field( 'image_size_select' );
+  $slide_text_align = get_field( 'text_align_select' );
+
+  ?>  
   <div class="swiper slider">
 
     <div class="swiper-wrapper">
