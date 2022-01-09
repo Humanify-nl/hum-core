@@ -7,7 +7,7 @@
 	.wp-block-group__inner-container {
 		@include clearfix;
 
-		& > *:last-child {
+		> *:last-child {
 			margin-bottom: 0;
 		}
 	}
@@ -22,8 +22,8 @@
 
 		&.alignwide,
 		&.alignfull {
-			padding-top: var(--spacing-vertical);
-			padding-bottom: var(--spacing-vertical);
+			padding-top: var(--spacing-vertical-md);
+			padding-bottom: var(--spacing-vertical-md);
 		}
 	}
 

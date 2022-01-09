@@ -18,8 +18,8 @@
 	> .wp-block-group {
 
 		&.is-style-extra-spacing {
-      padding-top: var(--spacing-vertical);
-  		padding-bottom: var(--spacing-vertical);
+      padding-top: var(--spacing-vertical-md);
+  		padding-bottom: var(--spacing-vertical-md);
 		}
 	}
 
@@ -34,8 +34,8 @@
     > .wp-block-group {
 
       &.is-style-extra-spacing {
-        padding-top: var(--spacing-vertical);
-        padding-bottom: var(--spacing-vertical);
+        padding-top: var(--spacing-vertical-md);
+        padding-bottom: var(--spacing-vertical-md);
       }
     }
 	}
@@ -50,8 +50,8 @@
     > .wp-block-group {
 
       &.is-style-extra-spacing {
-        padding-top: var(--spacing-vertical);
-        padding-bottom: var(--spacing-vertical);
+        padding-top: var(--spacing-vertical-md);
+        padding-bottom: var(--spacing-vertical-md);
       }
     }
   }

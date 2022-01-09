@@ -1,14 +1,12 @@
 @import "spacer";
 
 .block-spacer {
-  margin-top: calc(-1 * var(--block-margin));
-  margin-bottom: calc(-1 * var(--block-margin));
   position: relative;
 
   &::before {
-    @include spacer_icon( $top: true);
+    //@include spacer_icon( $top: true);
   }
   &::after {
-    @include spacer_icon();
+    //@include spacer_icon();
   }
 }
