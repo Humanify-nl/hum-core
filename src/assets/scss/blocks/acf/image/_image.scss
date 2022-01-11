@@ -20,3 +20,20 @@
     }
   }
 }
+
+.block-content {
+
+  > .block-image.alignfull {
+    margin-bottom: 0;
+
+    + .wp-block-group.alignfull.is-style-section {
+      margin-top: 0;
+    }
+  }
+
+  > .wp-block-group.alignfull.is-style-section {
+    + .block-image.alignfull {
+      margin-top: 0;
+    }
+  }
+}

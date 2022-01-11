@@ -4,9 +4,14 @@
 
 .wp-block-cover {
   padding: var(--padding);
+  margin-bottom: var(--block-margin);
 
-  &.alignfull:first-child {
-    margin-top: 0;
+  &.alignfull {
+    margin-bottom: 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 
   .wp-block-cover__inner-container {
@@ -31,6 +36,17 @@
       position: absolute;
       width: 100%;
       z-index: 1;
+    }
+  }
+
+  // margin collapse
+  &.alignfull {
+
+    + .wp-block-cover.alignfull,
+    + .block-slider.alignfull,
+    + .alignfull.is-style-section,
+    + .alignfull.has-background {
+      margin-top: 0
     }
   }
 }
