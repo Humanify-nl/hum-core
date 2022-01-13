@@ -11,7 +11,7 @@
 	display: grid;
 	grid-column-gap: $gap;
 	grid-row-gap: $gap * $grid-gutter-factor;
-	grid-template-columns: repeat( $columns, 1fr );
+	grid-template-columns: repeat( $columns, minmax(0, 1fr) );
 
 	& > #{$grid_item_element} {
 		margin-left: 0;
@@ -24,7 +24,7 @@
 
 @mixin columns-mobile( $columns, $grid_item_element: '.preview', $gap: null ) {
 
-	@include bp-max($small) {
+	@include bp-min-max($base, $medium) {
 		@include columns( $columns,$grid_item_element, $gap );
 		grid-row-gap: 0.5 * $grid-gap;
 	}
@@ -35,7 +35,7 @@
 
 @mixin columns-tablet( $columns, $grid_item_element: '.preview', $gap: null ) {
 
-	@include bp-min-max($small, $medium) {
+	@include bp-min-max($medium, $large) {
 		@include columns( $columns, $grid_item_element, $gap );
 	}
 
@@ -45,7 +45,7 @@
 
 @mixin columns-tablet-up( $columns, $grid_item_element: '.preview', $gap: null ) {
 
-	@include bp-min($medium) {
+	@include bp-min($large) {
 		@include columns( $columns, $grid_item_element, $gap );
 	}
 
@@ -55,7 +55,7 @@
 
 @mixin columns-desktop( $columns, $grid_item_element: '.preview', $gap: null ) {
 
-  @include bp-min($large) {
+  @include bp-min($wide) {
 		@include columns( $columns, $grid_item_element, $gap );
 	}
 

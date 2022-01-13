@@ -3,31 +3,20 @@
 --------------------------------------------- */
 
 .grid {
-  grid-auto-rows: 1fr;
-
-  &.grid-100 {
-    @include columns-mobile(1);
-    @include columns-tablet-up(1);
-  }
+  @include columns(1);
 
   &.grid-50 {
-    @include columns-mobile(1);
     @include columns-tablet-up(2);
   }
 
   &.grid-33 {
-    @include columns-mobile(1);
+    @include columns-mobile(2);
     @include columns-tablet-up(3);
   }
 
   &.grid-25 {
     @include columns-mobile(2);
+    @include columns-tablet(3);
     @include columns-tablet-up(4);
   }
-}
-
-
-.grid-search {
-  @include columns-mobile(1);
-  @include columns-tablet-up(1);
 }

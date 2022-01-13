@@ -8,6 +8,11 @@
   // override wp margins
   .wp-block-column {
     margin: 0 !important;
+
+    > *:last-child {
+      margin-bottom: 0;
+    }
+
   }
 
   .wp-block-columns {
