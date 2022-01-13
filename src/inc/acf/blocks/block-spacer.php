@@ -9,7 +9,6 @@ function register_spacer_block() {
     'category'          => 'design',
     'icon'              => 'image-flip-vertical',
     'keywords'          => [ 'icon', 'svg' ],
-    'post_types'        => [ 'post', 'page' ],
     'align'             => false,
     'align_text'        => false,
     'mode'              => 'preview',

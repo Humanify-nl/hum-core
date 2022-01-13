@@ -10,7 +10,6 @@ function register_post_query_block() {
     'category'          => 'design',
     'icon'              => 'screenoptions',
     'keywords'          => [ 'query', 'post' ],
-    'post_types'        => [ 'post', 'page' ],
     'mode'              => 'preview',
     'supports'          => [
       'align'             => [ 'wide', 'full' ],

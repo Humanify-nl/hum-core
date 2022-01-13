@@ -9,7 +9,6 @@ function register_svg_block() {
     'category'          => 'media',
     'icon'              => 'heart',
     'keywords'          => [ 'icon', 'svg' ],
-    'post_types'        => [ 'post', 'page' ],
     'align'             => 'left',
     'align_text'        => 'left',
     'mode'              => 'preview',

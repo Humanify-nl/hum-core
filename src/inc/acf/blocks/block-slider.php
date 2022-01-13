@@ -9,7 +9,6 @@ function register_slider_block() {
     'category'          => 'media',
     'icon'              => 'leftright',
     'keywords'          => [ 'slider', 'swiper' ],
-    'post_types'        => [ 'post', 'page' ],
     'mode'              => 'preview',
     'enqueue_script'    => get_template_directory_uri() . '/assets/js/swiper.js',
     'supports'          => [
