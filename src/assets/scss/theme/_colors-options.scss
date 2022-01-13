@@ -1,19 +1,17 @@
 
 /* Color Options
 --------------------------------------------- */
-:root {
 
-	// Generate selector class & values for colors
-	@each $color-name, $color-hex in $color-picker {
+// Generate selector class & values for colors
+@each $color-name, $color-hex in $color-picker {
 
-		#{'.has-' + $color-name + '-color'} {
-			color: var(#{'--color--' + $color-name});
-		}
-		#{'.has-' + $color-name + '-background-color'} {
-			background-color: var(#{'--color--' + $color-name});
-		}
-
+	#{'.has-' + $color-name + '-color'} {
+		color: var(#{'--color--' + $color-name});
 	}
+	#{'.has-' + $color-name + '-background-color'} {
+		background-color: var(#{'--color--' + $color-name});
+	}
+
 }
 
 
@@ -22,6 +20,7 @@
 .has-white-background-color {
 	color: var(--color--base);
 }
+
 
 .has-tertiary-background-color,
 .has-secondary-background-color,
