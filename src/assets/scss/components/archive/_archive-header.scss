@@ -22,6 +22,7 @@
 
 	.search-form {
 		max-width: var(--aligncenter);
+		width: calc(100% - #{$margin_site_s * 2});
 		margin: 0 auto;
 	}
 
