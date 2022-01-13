@@ -4,6 +4,7 @@
 
 //.size-featured,
 .wp-block-post-featured-image {
+  margin-bottom: var(--block-margin);
 
   img {
     object-fit: cover;

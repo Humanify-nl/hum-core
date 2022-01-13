@@ -4,6 +4,10 @@ $swiper_icon_h: 32px;
 
 .wp-block-acf-slider {
 
+  .block-slider {
+    margin-bottom: 0;
+  }
+
   .swiper {
     position: relative;
   }
