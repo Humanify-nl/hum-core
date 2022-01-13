@@ -34,17 +34,47 @@
 }
 
 .wp-block-buttons {
-	margin-top: calc( 0.25 * var(--block-margin));
-	margin-bottom: calc( -0.25 * var(--block-margin)); 
 
 	> .wp-block-button {
 		margin-bottom: calc( 0.25 * var(--block-margin));
 	}
 
+	&:not(.is-vertical) {
+		margin-top: calc( 0.25 * var(--block-margin));
+		margin-bottom: calc( -0.25 * var(--block-margin));
+	}
+
 	&.is-vertical {
+
 		> .wp-block-button {
 			&:last-child {
 				margin-bottom: 0;
+			}
+		}
+		.has-custom-width {
+			.wp-block-button__link{
+				text-align: left;
+			}
+		}
+
+		.wp-block-button__width-100 {
+			width: 100%;
+			.wp-block-button__link {
+				width: 100%;
+			}
+		}
+
+		.wp-block-button__width-75 {
+			width: 75%;
+			.wp-block-button__link {
+				width: 100%;
+			}
+		}
+
+		.wp-block-button__width-50 {
+			width: 50%;
+			.wp-block-button__link {
+				width: 100%;
 			}
 		}
 	}
