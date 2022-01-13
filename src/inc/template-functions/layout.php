@@ -135,7 +135,7 @@ function hum_widget_area_args( $args = [] ) {
 		'name'          => '',
 		'id'            => '',
 		'description'   => '',
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'before_widget' => '<section id="%1$s" class="block-content widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',

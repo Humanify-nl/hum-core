@@ -15,7 +15,7 @@ tha_content_before();
 		tha_content_wrap_before();
 		?>
 
-		<main class="site-main" role="main">
+		<main class="site-main" id="main-content" role="main">
 
 			<?php
 			tha_content_top();

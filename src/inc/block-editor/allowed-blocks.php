@@ -247,6 +247,10 @@ function hum_filter_allowed_block_types( $allowed_block_types, $editor_context )
 
     }
 
+  } else {
+
+    return hum_post_blocks_array( 'global' );
+
   }
   return $allowed_block_types;
 }

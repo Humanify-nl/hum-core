@@ -3,63 +3,55 @@
 --------------------------------------------- */
 
 .site-footer {
-	background: var(--theme--footer--bg);
 	font-size: var(--footer--font-size);
 
-	.wrap > *:last-child {
-		margin-bottom: 0;
+	.block-content {
+		display: flex;
 	}
 
-	a {
-		color: var(--theme--footer--link);
+	.footer-bottom {
+		background: var(--theme--footer--bg);
+		color: var(--color--white);
+		display: flex;
+		align-items: center;
+		padding: 0.5rem $margin_site_s;
+		position: relative;
 
-		&:hover {
-			color: var(--theme--footer--link-h);
-		}
-		&:active {
-			color: var(--theme--footer--link-a);
-		}
-	}
-
-	.footer-links a + a {
-		margin-left: 12px;
-	}
-
-	.backtotop {
-		background: rgba( clr(black), .75 );
-		border-radius: 3px;
-		display: inline-block;
-		line-height: 20px;
-		padding: 10px;
-		text-decoration: none;
-		@include bp-min($small) {
-			float: right;
+		.footer-links a {
+			margin-left: 12px;
 		}
 
-		svg {
-			fill: clr(white);
-			margin-left: 4px;
-			vertical-align: middle;
+		a {
+			color: var(--theme--footer--link);
+			&:hover  { color: var(--theme--footer--link-h); }
+			&:active { color: var(--theme--footer--link-a); }
 		}
 
-		&:hover {
-			background: rgba( clr(black), 1 );
-		}
-	}
-
-	@include bp-min($small) {
-		.footer-left {
-			float: left;
-
-			& > *:last-child {
-				margin-bottom: 0;
-			}
+		p {
+			margin: 0.5rem 0;
 		}
 
-		.copyright,
-		.footer-links {
+		.backtotop {
+			background: var(--color--black-dark);
+			border-radius: 3px;
 			display: inline-block;
-			margin-right: 20px;
+			line-height: 20px;
+			padding: 10px;
+			text-decoration: none;
+
+			position: absolute;
+			right: $margin_site_s;
+
+			svg {
+				fill: clr(white);
+				vertical-align: middle;
+				width: 20px;
+				height: 20px;
+			}
+
+			&:hover {
+				background: var(--color--black-light);
+			}
 		}
 	}
 

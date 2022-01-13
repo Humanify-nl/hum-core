@@ -1,0 +1,33 @@
+
+/* Widgets area
+--------------------------------------------- */
+.edit-widgets-main-block-list {
+
+  > .wp-block {
+    max-width: var(--alignfull);
+
+    &:first-child {
+      margin-top: var(--block-margin);
+    }
+
+    .wp-block-widget-area__panel-body-content {
+      background: #fafafa;
+      padding-top: calc( 2 * var(--block-margin) );
+      padding-bottom: calc( 0.5  * var(--block-margin) );
+    }
+
+    .wp-block-widget-area__inner-blocks {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    [data-widget-area-id="primary-sidebar"] {
+      max-width: $width-sidebar;
+    }
+    [data-widget-area-id="footer"] {
+      max-width: 100%;
+      padding-left: calc( 0.5  * var(--block-margin) );
+      padding-right: calc( 0.5  * var(--block-margin) );
+    }
+  }
+}

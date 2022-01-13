@@ -4,6 +4,4 @@
  *
  * @package hum-core
  */
-
-hum_block_area()->show('site-footer');
 ?>
