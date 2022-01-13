@@ -41,8 +41,8 @@ $map-colors: (
   ),
   black: (
     base: c(black),
-    light: #222,
-    dark: #111,
+    light: lighten(c(black), 3),
+    dark: darken(c(black), 3),
   ),
   white: (
     base: c(white),
