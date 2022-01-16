@@ -20,12 +20,6 @@ function register_post_query_block() {
       'customClassName'	  => true,
       'jsx' 			        => true,
     ],
-    'styles'            => [
-      [
-        'name'            => 'preview-bg',
-        'label'           => __( 'Preview background', 'hum-core'),
-      ]
-    ],
 
   ];
 
