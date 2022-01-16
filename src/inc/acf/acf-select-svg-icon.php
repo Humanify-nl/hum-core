@@ -60,20 +60,8 @@ function hum_shape_library() {
 
   $shapes = [
     [
-      'name' => 'wave',
+      'name' => 'wave-001',
       'title' => 'Wave',
-    ],
-    [
-      'name' => 'wave-2',
-      'title' => 'Wave 2',
-    ],
-    [
-      'name' => 'wave-layered',
-      'title' => 'Wave layered',
-    ],
-    [
-      'name' => 'peaks',
-      'title' => 'Peaks',
     ],
   ];
 
