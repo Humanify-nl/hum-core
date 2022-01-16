@@ -9,6 +9,7 @@
 
 // Breadcrumbs
 add_action( 'tha_entry_top', 'hum_breadcrumbs', 8 );
+
 // Related posts
 add_action( 'tha_content_bottom', 'hum_pages_related' );
 
