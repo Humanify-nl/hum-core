@@ -11,7 +11,19 @@
     width: 100%;
     height: var(--featured-img);
   }
+
+  &.alignfull {
+    margin-bottom: 0;
+
+    + .alignfull.wp-block-cover,
+    + .alignfull.block-slider,
+    + .alignfull.block-image,
+    + .alignfull.is-style-section {
+      margin-top: 0;
+    }
+  }
 }
+
 
 
 .block-image {
