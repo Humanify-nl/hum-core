@@ -2,28 +2,28 @@
 /* Preview--calendar
 --------------------------------------------- */
 
-.preview-calendar {
+.preview-type-calendar {
   flex-flow: row nowrap;
   flex-direction: row;
   padding: var(--padding-inner);
 
-  .preview__content {
+  .preview-content {
     padding: var(--padding-inner);
     width: calc(100% - 10px - 54px);
   }
 
-  .preview__title {
+  .preview-title {
     margin: 0;
     position: relative;
 
-    .preview__link {
+    .preview-link {
       display: block;
     }
   }
 
-  .preview__date {
+  .preview-date {
 
-    .date--square {
+    .date-square {
       background-color: var(--color--grey-light);
       align-items: center;
       display: flex;

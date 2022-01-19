@@ -10,7 +10,7 @@ if ( !function_exists( 'hum_button_class_preview' ) ) {
 
   function hum_button_class_preview( $preview_type = false ) {
 
-    $button_class = [ 'preview__btn', 'btn' ];
+    $button_class = [ 'preview-btn', 'btn' ];
 
     switch ( $preview_type ) {
 
@@ -62,30 +62,3 @@ return $field;
 add_filter('acf/load_field/name=post_links', 'acf_load_button_class_preview_choices');
 add_filter('acf/load_field/name=page_links', 'acf_load_button_class_preview_choices');
 add_filter('acf/load_field/name=rel_links', 'acf_load_button_class_preview_choices');
-
-
-
-/* ACF populate select field
-*
-* https://www.advancedcustomfields.com/resources/dynamically-populate-a-select-fields-choices/
-* fieldname = cat_link_select, tag_link_select
-*/
-
-function acf_load_button_class_all_choices( $field ) {
-
-// reset choices
-$field['choices'] = [
-'button' => 'Button',
-'button-wired' => 'Wired button',
-'button-white' => 'White button',
-'preview__link' => 'Default link',
-];
-
-// return the field
-return $field;
-
-}
-
-// preload choices for these fields:
-add_filter('acf/load_field/name=cat_link_select', 'acf_load_button_class_all_choices');
-add_filter('acf/load_field/name=tag_link_select', 'acf_load_button_class_all_choices');

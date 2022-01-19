@@ -2,41 +2,41 @@
 /* Preview--list
 --------------------------------------------- */
 
-.preview-list {
+.preview-type-list {
   flex-wrap: nowrap;
   flex-direction: row;
 
-  .preview__content {
+  .preview-content {
     flex-direction: column;
   }
 
-  .preview__title,
-  .preview__text p {
+  .preview-title,
+  .preview-text p {
     min-height: auto;
   }
 
-  .preview__img + .preview__content {
+  .preview-img + .preview-content {
     margin-top: 0;
     width: 75%;
   }
 
-  .preview__img {
+  .preview-img {
     width: 25%;
     img {
       height: auto;
     }
   }
 
-  .preview__content {
+  .preview-content {
     margin-left: var(--block-gap);
-    .preview__footer {
+    .preview-footer {
       margin-top: auto;
     }
   }
 
   @include bp-max($base){
 
-    .preview__text {
+    .preview-text {
       font-size: 0.8125rem;
     }
   }

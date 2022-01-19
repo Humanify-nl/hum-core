@@ -26,10 +26,10 @@ function hum_preview_title( $link = true, $heading = 'h3') {
 
 
 	// build html
-	echo '<' .$title_tag. ' class="preview__title">';
+	echo '<' .$title_tag. ' class="preview-title">';
 
 	if ( $link ) {
-		echo '<a class="preview__link" href="' . $url . '">' . $title . '</a>';
+		echo '<a class="preview-link" href="' . $url . '">' . $title . '</a>';
 	} else {
 		echo $title;
 	}
@@ -51,13 +51,11 @@ function hum_preview_category( $link = true ) {
 	$term = hum_terms_first();
 	if( !empty( $term ) && ! is_wp_error( $term ) ) {
 
-		echo '<div class="preview__category">';
 		if ( $link ) {
-			echo ' <a href="' . get_term_link( $term, 'category' ) . '">' . $term->name . '</a>';
+			echo ' <a class="preview-category" href="' . get_term_link( $term, 'category' ) . '">' . $term->name . '</a>';
 		} else {
 			echo $term->name;
 		}
-		echo '</div>';
 	}
 }
 
@@ -84,9 +82,9 @@ function hum_preview_image( $size = 'medium',  $link = true ) {
 	if ( $image ) {
 
 		if ( $link ) {
-			echo '<a class="preview__img preview__img--link" href="' . $url . '" tabindex="-1" aria-hidden="true">' . $image . '</a>';
+			echo '<a class="preview-img preview-img__link" href="' . $url . '" tabindex="-1" aria-hidden="true">' . $image . '</a>';
 		} else {
-			echo '<div class="preview__img" tabindex="-1" aria-hidden="true">' . $image . '</div>';
+			echo '<div class="preview-img" tabindex="-1" aria-hidden="true">' . $image . '</div>';
 		}
 	} else {
 		return;
@@ -100,7 +98,7 @@ function hum_preview_image( $size = 'medium',  $link = true ) {
  */
 function hum_preview_excerpt( $class = false ) {
 
-	$classes[] = 'preview__excerpt';
+	$classes[] = 'preview-excerpt';
 
 	if ( $class ) {
 		$classes[] = $class;
@@ -175,7 +173,7 @@ function hum_preview_button( $link = true, $link_title = 'Read more' ) {
  */
 function hum_preview_footer( $link = true, $link_title = 'Read more' ) {
 
-  echo '<div class="preview__footer">';
+  echo '<div class="preview-footer">';
     hum_preview_button( $link, $link_title );
   echo '</div>';
 }
@@ -191,8 +189,8 @@ function hum_preview_date_square() {
 	$date_start_month = date_i18n( "M", strtotime( get_the_date() ) );
 
 	if ( $date_start_day ) {
-		echo '<div class="preview__date">';
-			echo '<div class="date--square">';
+		echo '<div class="preview-date">';
+			echo '<div class="date-square">';
 				echo '<div class="date__day">'.$date_start_day.'</div>';
 				echo '<div class="date__month">'.$date_start_month.'</div>';
 			echo '</div>';

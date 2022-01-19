@@ -6,7 +6,7 @@
  */
 ?>
 
-<article class="preview preview-more">
+<article class="preview preview-more <?php echo hum_acf_background_color(); ?>">
 
   <?php
 	hum_preview_image();

@@ -6,7 +6,7 @@
  */
 ?>
 
-<article class="preview preview-post">
+<article class="preview preview-type-search">
 
   <?php
   hum_preview_category();

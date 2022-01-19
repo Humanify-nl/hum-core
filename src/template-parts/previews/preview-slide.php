@@ -6,7 +6,7 @@
  */
 ?>
 
-<article class="preview preview-slide">
+<article class="preview preview-slide <?php echo hum_acf_background_color(); ?>">
 
   <?php
 	hum_preview_image( 'medium', $link = false );
