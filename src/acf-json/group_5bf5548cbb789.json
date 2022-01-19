@@ -177,14 +177,14 @@
             },
             "choices": {
                 "preview": "Default (img, title, excerpt)",
-                "preview-excerpt": "Excerpt (title, excerpt)",
-                "preview-more": "Excerpt more tag (img, title, excerpt)",
-                "preview-link": "Link (title-link only)",
-                "preview-calendar": "Calendar (date, title)",
-                "preview-slide": "Slider (img, title, excerpt)",
-                "preview-list": "List (img left, title & excerpt right)"
+                "preview-type-excerpt": "Excerpt (title, excerpt)",
+                "preview-type-more": "Excerpt more tag (img, title, excerpt)",
+                "preview-type-link": "Link (title-link only)",
+                "preview-type-calendar": "Calendar (date, title)",
+                "preview-type-slide": "Slider (img, title, excerpt)",
+                "preview-type-list": "List (img left, title & excerpt right)"
             },
-            "default_value": false,
+            "default_value": "preview-type-list",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -368,14 +368,14 @@
             },
             "choices": {
                 "preview": "Default (img, title, excerpt)",
-                "preview-excerpt": "Excerpt (title, excerpt)",
-                "preview-more": "Excerpt more tag (img, title, excerpt)",
-                "preview-link": "Link (title-link only)",
-                "preview-calendar": "Calendar (date, title)",
-                "preview-slide": "Slider (img, title, excerpt)",
-                "preview-list": "List (img left, title & excerpt right)"
+                "preview-type-excerpt": "Excerpt (title, excerpt)",
+                "preview-type-more": "Excerpt more tag (img, title, excerpt)",
+                "preview-type-link": "Link (title-link only)",
+                "preview-type-calendar": "Calendar (date, title)",
+                "preview-type-slide": "Slider (img, title, excerpt)",
+                "preview-type-list": "List (img left, title & excerpt right)"
             },
-            "default_value": false,
+            "default_value": "preview-type-list",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -442,5 +442,5 @@
     "active": true,
     "description": "Setup all post types",
     "show_in_rest": 0,
-    "modified": 1640257990
+    "modified": 1642588301
 }

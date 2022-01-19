@@ -1,0 +1,53 @@
+{
+    "key": "group_61e6e9000c396",
+    "title": "Mod > Background-color picker",
+    "fields": [
+        {
+            "key": "field_61e6e90016e63",
+            "label": "Background color",
+            "name": "color_picker_bg",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "primary": "Primary",
+                "secondary": "Secondary",
+                "tertiary": "Tertiary",
+                "grey-light": "Grey light",
+                "white": "White",
+                "black": "Black"
+            },
+            "allow_null": 1,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 5,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "inc\/acf\/acf-color-picker",
+    "show_in_rest": 0,
+    "modified": 1642522904
+}

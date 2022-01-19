@@ -64,6 +64,27 @@
             "layout": "block",
             "prefix_label": 0,
             "prefix_name": 0
+        },
+        {
+            "key": "field_61e43b833e224",
+            "label": "Clone",
+            "name": "clone",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_61e6e9000c396"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         }
     ],
     "location": [
@@ -84,5 +105,5 @@
     "active": true,
     "description": "inc\/acf\/blocks\/block-post-query",
     "show_in_rest": 0,
-    "modified": 1640259228
+    "modified": 1642523093
 }

@@ -177,11 +177,11 @@
             },
             "choices": {
                 "preview": "Default (img, title, excerpt)",
-                "preview-icon": "Icon (icon, title)",
-                "preview-link": "Link (title-link only)",
-                "preview-list": "List (img left, title & excerpt right)"
+                "preview-type-icon": "Icon (icon, title)",
+                "preview-type-link": "Link (title-link only)",
+                "preview-type-list": "List (img left, title & excerpt right)"
             },
-            "default_value": "preview-list",
+            "default_value": "preview-type-list",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -218,7 +218,7 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "id",
+            "return_format": "array",
             "preview_size": "admin",
             "library": "all",
             "min_width": "",
@@ -265,5 +265,5 @@
     "active": true,
     "description": "Setup all page types",
     "show_in_rest": 0,
-    "modified": 1640258626
+    "modified": 1642588252
 }

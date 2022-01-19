@@ -36,6 +36,25 @@
             "esc_html": 0
         },
         {
+            "key": "field_61cb1386f64c6",
+            "label": "Other testimonials title",
+            "name": "related_testimonials_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_61a4e226dc9ac",
             "label": "Grid related posts",
             "name": "grid_preview_testimonial_rel",
@@ -77,14 +96,14 @@
             },
             "choices": {
                 "preview": "Default (img, title, excerpt)",
-                "preview-excerpt": "Excerpt (title, excerpt)",
-                "preview-more": "Excerpt more tag (img, title, excerpt)",
-                "preview-link": "Link (title-link only)",
-                "preview-calendar": "Calendar (date, title)",
-                "preview-slide": "Slider (img, title, excerpt)",
-                "preview-list": "List (img left, title & excerpt right)"
+                "preview-type-excerpt": "Excerpt (title, excerpt)",
+                "preview-type-more": "Excerpt more tag (img, title, excerpt)",
+                "preview-type-link": "Link (title-link only)",
+                "preview-type-calendar": "Calendar (date, title)",
+                "preview-type-slide": "Slider (img, title, excerpt)",
+                "preview-type-list": "List (img left, title & excerpt right)"
             },
-            "default_value": "preview-list",
+            "default_value": "preview-type-list",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -167,14 +186,14 @@
             },
             "choices": {
                 "preview": "Default (img, title, excerpt)",
-                "preview-excerpt": "Excerpt (title, excerpt)",
-                "preview-more": "Excerpt more tag (img, title, excerpt)",
-                "preview-link": "Link (title-link only)",
-                "preview-calendar": "Calendar (date, title)",
-                "preview-slide": "Slider (img, title, excerpt)",
-                "preview-list": "List (img left, title & excerpt right)"
+                "preview-type-excerpt": "Excerpt (title, excerpt)",
+                "preview-type-more": "Excerpt more tag (img, title, excerpt)",
+                "preview-type-link": "Link (title-link only)",
+                "preview-type-calendar": "Calendar (date, title)",
+                "preview-type-slide": "Slider (img, title, excerpt)",
+                "preview-type-list": "List (img left, title & excerpt right)"
             },
-            "default_value": "preview-list",
+            "default_value": "preview-type-list",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -201,5 +220,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1640258149
+    "modified": 1642588326
 }
