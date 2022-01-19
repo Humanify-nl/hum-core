@@ -6,7 +6,7 @@
  */
 ?>
 
-<article class="preview preview-calendar <?php echo hum_acf_background_color(); ?>">
+<article class="preview preview-type-calendar <?php echo hum_acf_background_color(); ?>">
 
   <?php
 	hum_preview_date_square();

@@ -6,7 +6,7 @@
  */
 ?>
 
-<article class="preview preview-circle center <?php echo hum_acf_background_color(); ?>">
+<article class="preview preview-type-circle center <?php echo hum_acf_background_color(); ?>">
 
   <?php
 	hum_preview_image( 'small' );

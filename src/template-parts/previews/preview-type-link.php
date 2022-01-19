@@ -6,7 +6,7 @@
  */
 ?>
 
-<article class="preview preview-link <?php echo hum_acf_background_color(); ?>">
+<article class="preview preview-type-link <?php echo hum_acf_background_color(); ?>">
 
   <?php
 	hum_preview_title( $link = true );
