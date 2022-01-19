@@ -11,7 +11,7 @@
   <?php
   hum_preview_image();
 
-  echo '<div class="preview__content">';
+  echo '<div class="preview-content">';
     hum_preview_category();
     hum_preview_title();
     hum_preview_excerpt();
