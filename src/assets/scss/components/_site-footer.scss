@@ -7,6 +7,9 @@
 
 	.block-content {
 		display: flex;
+		> * {
+			max-width: 100%;
+		}
 	}
 
 	.footer-bottom {
@@ -40,7 +43,7 @@
 			text-decoration: none;
 
 			position: absolute;
-			right: $margin_site_s;
+			right: var(--margin-site);
 
 			svg {
 				fill: clr(white);

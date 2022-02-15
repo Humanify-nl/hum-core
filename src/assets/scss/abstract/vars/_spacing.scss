@@ -37,9 +37,9 @@ $map-spacing: (
 	),
 	// padding
 	padding: (
-		base: 1 * $spacing-unit,
+		base: 1.25 * $spacing-unit,
 		medium: 1.5 * $spacing-unit,
-		large: 2 * $spacing-unit,
+		large: 1.75 * $spacing-unit,
 	),
 	padding-inner: (
 		base: 0.5 * $spacing-unit,
@@ -57,9 +57,19 @@ $map-spacing: (
 		medium: 0.5em,
 		large: 0.75em,
 	),
+	gallery-block--gutter-size: (
+		base: 0.25em,
+		medium: 0.5em,
+		large: 0.75em,
+	),
+	margin-site: (
+		base: 1.25rem,
+		medium: 2rem,
+		large: 2rem,
+	),
 	// grid
-	grid-gap: 4 * $spacing-unit,						// between previews (horizontal)
-	grid-gutter-factor: 0.5, 				          // multiplier for gap
+	grid-gap: 2 * $spacing-unit,						// between previews (horizontal)
+	grid-gutter-factor: 1, 				          // multiplier for gap
 	// text
 	text-margin: 2 * $spacing-unit,
 	line-height: 1.5,
@@ -151,7 +161,7 @@ $spacing-prefix: '--';
   }
 }
 
-@media only screen and (min-width: #{$medium}) {
+@media only screen and (min-width: #{$large}) {
   :root {
     @each $selector, $breakpoints in $map-spacing {
       @each $breakpoint-name, $value in $breakpoints {
@@ -164,7 +174,7 @@ $spacing-prefix: '--';
   }
 }
 
-@media only screen and (min-width: #{$large}) {
+@media only screen and (min-width: #{$wide}) {
   :root {
     @each $selector, $breakpoints in $map-spacing {
       @each $breakpoint-name, $value in $breakpoints {

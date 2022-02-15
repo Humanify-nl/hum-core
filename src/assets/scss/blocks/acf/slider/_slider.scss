@@ -42,7 +42,7 @@
 
   .slider-text-wrap {
     box-sizing: border-box;
-    width: calc( 100% - #{$margin_site_s * 2});
+    width: calc( 100% - calc( 2 * var(--margin-site) ) );
     > *:last-child {
       margin-bottom: 0;
     }

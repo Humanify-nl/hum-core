@@ -31,7 +31,7 @@ tha_body_top();
 
 	<?php
 	tha_header_before();
-	get_template_part( 'template-parts/site/site', 'header' );
+	get_template_part( 'template-parts/header' );
 	tha_header_after();
 	?>
 

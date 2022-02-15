@@ -7,7 +7,7 @@
   > * {
     margin-left: auto;
     margin-right: auto;
-    width: calc(100% - #{$margin_site_s * 2});
+    width: calc( 100% - calc( 2 * var(--margin-site) ) );
   }
 }
 
@@ -16,7 +16,7 @@
   > * {
     margin-left: auto;
     margin-right: auto;
-    width: calc(100% - #{$margin_site_s * 2});
+    width: calc( 100% - calc( 2 * var(--margin-site) ) );
   }
 
   // .has-background has hor-padding of sitemargin
@@ -24,7 +24,7 @@
     .wp-block-group__inner-container {
       margin-left: auto;
       margin-right: auto;
-      width: calc(100% - #{$margin_site_s * 2});
+      width: calc( 100% - calc( 2 * var(--margin-site) ) );
     }
   }
 
@@ -32,7 +32,7 @@
     .wp-block-cover__inner-container {
       margin-left: auto;
       margin-right: auto;
-      width: calc(100% - #{$margin_site_s * 2});
+      width: calc( 100% - calc( 2 * var(--margin-site) ) );
     }
   }
 }
@@ -44,8 +44,19 @@
 
 .content-center {
 
-  .wrap > * {
-    max-width: var(--aligncenter);
+  .wrap {
+
+    > * {
+      max-width: var(--aligncenter);
+
+    }
+
+    &.alignfull {
+      > * {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
   }
 
   .block-content {
@@ -115,8 +126,18 @@
 
 .content-wide {
 
-  .wrap > * {
-    max-width: var(--alignwide);
+  .wrap {
+
+    > * {
+      max-width: var(--alignwide);
+    }
+
+    &.alignfull {
+      > * {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
   }
 
   .block-content {

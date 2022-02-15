@@ -27,8 +27,8 @@ tha_content_before();
 
 		<?php
 		get_sidebar();
-		tha_content_wrap_after();
 
+		tha_content_wrap_after();
 
 	echo '</div>';
 

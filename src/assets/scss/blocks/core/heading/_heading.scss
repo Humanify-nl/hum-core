@@ -10,10 +10,10 @@ h6 {
 	font-family: var(--font-primary);
 	font-weight: 400;
 	line-height: var(--line-height-heading);
-	margin: 0 0 var(--text-margin);
+	margin: 0 0 var(--block-margin);
 
-	a {
-		color: inherit;
+	> a {
+		color: inherit !important;
 
 		&:hover {
 			text-decoration: none;
@@ -26,19 +26,18 @@ h6 {
 }
 
 h1 {
-  font-size: var(--font-size-h1);
-	text-indent: -2px;
+  font-size: var(--font-size--h1);
 }
 
 h2 {
-	font-size: var(--font-size-h2);
-	text-indent: -2px;
+	font-size: var(--font-size--h2);
 }
 
 h3 {
-	font-size: var(--font-size-h3);
+	font-size: var(--font-size--h3);
 }
 
 h4, h5, h6 {
-	font-size: var(--font-size-h4);
+	font-size: var(--font-size--h4);
+	margin: 0 0 var(--text-margin);
 }

@@ -13,15 +13,18 @@ p {
 }
 
 .has-normal-font-size {
-	font-size: var(--font-size-normal);
+	font-size: var(--font-size--normal);
+	--wp--preset--font-size--normal: var(--font-size--normal);
 }
 
 .has-large-font-size,
 .large {
-	font-size: var(--font-size-large);
+	font-size: var(--font-size--large);
+	--wp--preset--font-size--large: var(--font-size--large);
 }
 
 .has-small-font-size,
 .small {
-	font-size: var(--font-size-small);
+	font-size: var(--font-size--small);
+	--wp--preset--font-size--small: var(--font-size--small);
 }

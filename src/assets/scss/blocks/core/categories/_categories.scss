@@ -1,0 +1,27 @@
+
+/* Categories
+--------------------------------------------- */
+
+.wp-block-categories {
+  text-transform: uppercase;
+  font-family: var(--font-primary);
+  font-size: var(--font-size--h4);
+
+  a {
+    color: var(--color--black);
+  }
+
+  &.is-style-horizontal {
+
+    @include bp-min($small){
+
+      li {
+        display: inline-block;
+        margin-right: 0.5em;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

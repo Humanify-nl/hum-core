@@ -1,0 +1,239 @@
+{
+    "key": "group_61e17852b3285",
+    "title": "Option > Portfolio",
+    "fields": [
+        {
+            "key": "field_61e17852b9445",
+            "label": "Single",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_61e17852bcedb",
+            "label": "Portfolio (other posts)",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Single portfolio items display all other portfolio items sorted by latest publish date.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_61e2db518ede2",
+            "label": "Related title",
+            "name": "related_portfolio_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.3333",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_61e2dbd031710",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "66.6666",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_61e17852c0bea",
+            "label": "Grid related posts",
+            "name": "grid_preview_portfolio_rel",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.3333",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "grid-flex": "Flex",
+                "grid-25": "4 per row",
+                "grid-33": "3 per row",
+                "grid-50": "2 per row",
+                "grid-100": "1 per row"
+            },
+            "default_value": "grid-33",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_61e17852c4848",
+            "label": "Preview type related",
+            "name": "preview_type_portfolio_rel",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.3333",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "preview": "Default (img, title, excerpt)",
+                "preview-image": "Image (img only)",
+                "preview-icon": "Icon (img + title)",
+                "preview-link": "Link (title-link only)",
+                "preview-list": "List (img left, title & excerpt right)"
+            },
+            "default_value": "preview-image",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_61e17852c8518",
+            "label": "Archive",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_61e17852cbfa3",
+            "label": "Portfolio archive",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "The archive displays all published portfolio items in a customizable grid. Set it up here.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_61e17852cf9ec",
+            "label": "Grid type archive",
+            "name": "grid_preview_portfolio",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.3333",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "grid-flex": "Flex",
+                "grid-25": "4 per row",
+                "grid-33": "3 per row",
+                "grid-50": "2 per row",
+                "grid-100": "1 per row"
+            },
+            "default_value": "grid-25",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_61e17852d34bb",
+            "label": "Preview type",
+            "name": "preview_type_portfolio",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.3333",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "preview": "Default (img, title, excerpt)",
+                "preview-image": "Image (img only)",
+                "preview-icon": "Icon (img + title)",
+                "preview-link": "Link (title-link only)",
+                "preview-list": "List (img left, title & excerpt right)"
+            },
+            "default_value": "preview-image",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-site-options"
+            }
+        ]
+    ],
+    "menu_order": 50,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1642257379
+}

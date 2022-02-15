@@ -128,7 +128,11 @@
 				}
 			}
 		}
-
+		.editor-post-title__input {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: var(--alignwide);
+		}
 
 	}
 }
@@ -226,6 +230,12 @@
 					max-width: var(--aligncenter);
 				}
 			}
+		}
+		
+		.editor-post-title__input {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: var(--aligncenter);
 		}
 	}
 }

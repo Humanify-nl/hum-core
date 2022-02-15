@@ -5,7 +5,6 @@
 .entry-header {
   padding-top: var(--padding);
   padding-bottom: var(--padding);
-  border-bottom: 1px solid var(--color--grey-light);
 
   @include bp-min($small) {
     overflow: hidden;

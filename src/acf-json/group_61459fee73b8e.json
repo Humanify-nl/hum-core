@@ -1,6 +1,6 @@
 {
     "key": "group_61459fee73b8e",
-    "title": "Mod > Grid class ( preview )",
+    "title": "Mod > Grid class",
     "fields": [
         {
             "key": "field_6145a00b23140",
@@ -47,5 +47,6 @@
     "hide_on_screen": "",
     "active": false,
     "description": "inc\/acf\/acf-grid-class-preview",
-    "modified": 1639410300
+    "show_in_rest": 0,
+    "modified": 1644421709
 }

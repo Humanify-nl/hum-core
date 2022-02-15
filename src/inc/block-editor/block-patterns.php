@@ -46,7 +46,7 @@ function hum_get_pattern_template( $pattern_name ) {
 	// open output buffer
 	ob_start();
 	// get pattern template-part
-	get_template_part( 'template-parts/patterns/' . $pattern_name );
+	get_template_part( 'inc/block-editor/patterns/' . $pattern_name );
 	// save contents in var
 	$pattern_template = ob_get_contents();
 	// close output buffer

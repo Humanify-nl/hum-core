@@ -4,19 +4,9 @@
  *
  * @package hum-core
  */
-?>
 
-<article class="preview preview-type-page <?php echo get_field( 'preview_type_page', 'option' ); ?>">
 
-  <?php
-  hum_preview_image();
+// get post type option field or fallback
+$preview_type = get_field( 'preview_type_page', 'option' ) ?: 'preview';
 
-  echo '<div class="preview-content">';
-    hum_preview_category();
-    hum_preview_title();
-    hum_preview_excerpt();
-    hum_preview_footer();
-  echo '</div>';
-  ?>
-
-</article>
+get_template_part( 'template-parts/preview-types/'.$preview_type );

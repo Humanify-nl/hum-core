@@ -3,4 +3,27 @@
 --------------------------------------------- */
 
 .single {
+
+  /*
+  .entry-header {
+
+    .header.col-2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--block-gap);
+
+      @include bp-min($small){
+        flex-direction: row;
+
+        .header-wrap {
+          width: 50%;
+        }
+        .wp-post-image {
+          width: 50%;
+        }
+      }
+    }
+  }
+  */
 }

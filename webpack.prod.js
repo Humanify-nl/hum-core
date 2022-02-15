@@ -22,6 +22,7 @@ module.exports = {
     'editor': '/scss' + '/editor.scss',
     'editor-layout': '/scss' + '/editor-layout.scss',
     'admin': '/scss' + '/admin.scss',
+    //'blocks': '../acf-blocks' + '/blocks.scss',
   },
   devtool: 'source-map',
   plugins: [

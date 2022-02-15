@@ -13,7 +13,7 @@ function hum_block_editor_scripts() {
   wp_enqueue_script(
     'hum-editor',
     get_template_directory_uri() . '/assets/js/gutenberg.js',
-    [ 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' ],
+    [ 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' , 'wp-edit-widgets'],
     '1.0',
     true
   );

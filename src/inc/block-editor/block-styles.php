@@ -9,6 +9,14 @@
 function hum_register_block_styles() {
 
   register_block_style(
+    'core/categories',
+      [
+         'name'         => 'horizontal',
+         'label'        => 'Horizontal',
+      ]
+  );
+
+  register_block_style(
     'core/group',
       [
          'name'         => 'section',
@@ -19,10 +27,34 @@ function hum_register_block_styles() {
   );
 
   register_block_style(
+    'core/group',
+      [
+         'name'         => 'pull-up',
+         'label'        => 'Pull blocks up',
+      ]
+  );
+
+  register_block_style(
+    'core/group',
+      [
+         'name'         => 'pull-up-over',
+         'label'        => 'Pull blocks up over',
+      ]
+  );
+
+  register_block_style(
     'core/columns',
       [
          'name'         => 'space-between',
          'label'        => 'Space between',
+      ]
+  );
+
+  register_block_style(
+    'core/column',
+      [
+         'name'         => 'center-mobile',
+         'label'        => 'Center mobile',
       ]
   );
 
@@ -55,6 +87,14 @@ function hum_register_block_styles() {
       [
          'name'         => 'fa-icon',
          'label'        => 'Icon FA',
+      ],
+  );
+
+  register_block_style(
+    'core/list',
+      [
+         'name'         => 'horizontal',
+         'label'        => 'Horizontal',
       ],
   );
 

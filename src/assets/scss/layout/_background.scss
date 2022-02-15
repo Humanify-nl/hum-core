@@ -6,7 +6,7 @@
   padding: var(--padding);
 
   &.alignfull {
-    padding: var(--padding) $margin_site_s;
+    padding: var(--padding) var(--margin-site);
   }
 
   &.alignwide {

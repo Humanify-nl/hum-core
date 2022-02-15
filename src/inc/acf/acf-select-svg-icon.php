@@ -27,6 +27,10 @@ function hum_icon_library() {
       'title' => 'House',
     ],
     [
+      'name' => 'euro',
+      'title' => 'Euro',
+    ],
+    [
       'name' => 'heart',
       'title' => 'Heart',
     ],
@@ -119,43 +123,3 @@ function acf_load_svg_shape_choices( $field ) {
 }
 
 add_filter('acf/load_field/name=select_svg_shape', 'acf_load_svg_shape_choices');
-
-
-
-function acf_load_svg_icon_size_choices( $field ) {
-
-  // rest choices
-  $field['choices'] = [
-    'icon' => 'Icon',
-    'shape' => 'Shape',
-  ];
-
-  // return the field
-  return $field;
-
-}
-
-add_filter('acf/load_field/name=svg_icon_type', 'acf_load_svg_icon_size_choices');
-
-
-/**
- * Render icon from chosen select field
- *
- */
-
-function hum_svg_select() {
-
-	$selected_icon = get_field( 'select_svg_icon' );
-  $selected_shape = get_field( 'select_svg_shape' );
-  $svg_switch_shape = get_field( 'select_svg_type' );
-
-  if ( $svg_switch_shape ) {
-    $svg_return = hum_get_shape( [ 'name' => $selected_shape, 'class' => $selected_shape ] );
-  } else {
-    $svg_return = hum_get_icon( [ 'icon' => $selected_icon, 'group' => 'bs', 'size' => 32, 'class' => $selected_icon ] );
-  }
-  if ( $svg_return ) {
-    return $svg_return;
-  }
-
-}

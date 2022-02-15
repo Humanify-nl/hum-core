@@ -10,7 +10,7 @@
     width: 100%;
   }
 
-  > *:not(.block-icon-svg__wrap) {
+  > *:not(.block-icon-wrap__svg) {
 
     @include bp-min($base) {
       margin-left: var(--icon-size-outer);
@@ -36,7 +36,7 @@
     }
   }
 
-  .block-icon-svg__wrap {
+  .block-icon-wrap__svg {
     background: var(--color--primary);
     border-radius: 50%;
     display: flex;
@@ -61,7 +61,7 @@
   }
 
   &.has-background {
-    .block-icon-svg__wrap {
+    .block-icon-wrap__svg {
       margin-left: var(--padding);
     }
   }

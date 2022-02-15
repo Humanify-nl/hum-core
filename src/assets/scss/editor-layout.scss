@@ -5,7 +5,7 @@
 
 // cap height of block-style previews
 .block-editor-block-styles__item-preview {
-  max-height: 80px;
+  //max-height: 80px;
 }
 
 // remove contrast msgs (we have our own system)
@@ -16,4 +16,12 @@
 // remove underline from acf image buttons
 .acf-icon.dark {
   text-decoration: none;
+}
+
+.components-base-control {
+
+  .components-select-control {
+    height: auto;
+  }
+
 }

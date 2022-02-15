@@ -9,6 +9,7 @@
 function hum_post_blocks_array( $post_type = false ) {
 
   $block_types_global = [
+    'core/block',
     // --> text
     'core/paragraph',
     'core/heading',
@@ -55,6 +56,7 @@ function hum_post_blocks_array( $post_type = false ) {
     // --> acf
     'acf/spacer',
     'acf/post-query',
+    'acf/post-single',
     'acf/pages',
     'acf/slider',
     'acf/tabs',
@@ -69,6 +71,7 @@ function hum_post_blocks_array( $post_type = false ) {
   ];
 
   $block_types_post = [
+    'core/block',
     // --> text
     'core/paragraph',
     'core/heading',
@@ -107,6 +110,7 @@ function hum_post_blocks_array( $post_type = false ) {
     // --> embed
     'core/embed',
     // --> acf
+    'acf/post-single',
     'acf/spacer',
     'acf/slider',
     'acf/tabs',
@@ -120,6 +124,7 @@ function hum_post_blocks_array( $post_type = false ) {
   ];
 
   $block_types_page = [
+    'core/block',
     // --> text
     'core/paragraph',
     'core/heading',
@@ -158,6 +163,7 @@ function hum_post_blocks_array( $post_type = false ) {
     // --> acf
     'acf/spacer',
     'acf/post-query',
+    'acf/post-single',
     'acf/pages',
     'acf/slider',
     'acf/tabs',
@@ -171,6 +177,7 @@ function hum_post_blocks_array( $post_type = false ) {
   ];
 
   $block_types_testimonial = [
+    'core/block',
     // --> text
     'core/paragraph',
     'core/heading',

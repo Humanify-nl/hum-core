@@ -81,7 +81,6 @@ function hum_render_new_block( $block, $content = '', $is_preview = false ) {
   // Backend preview (editor)
 
   // needs example[atrributes[data['is_preview' => true]]] in register block
-
   if ( isset( $block['data']['is_preview'])) {
 
     echo '<div class="editor-preview '. esc_attr($className) .'">';

@@ -28,6 +28,7 @@ $base: map-get($breakpoints, base);
 $small: map-get($breakpoints, small);
 $medium: map-get($breakpoints, medium);
 $large: map-get($breakpoints, large);
+$wide: map-get($breakpoints, wide);
 
 // Site width
 $width-site-m: 768px;

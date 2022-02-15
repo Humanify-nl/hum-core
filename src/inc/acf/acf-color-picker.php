@@ -28,3 +28,15 @@ function hum_acf_dynamic_colors_load( $field ) {
 }
 
 add_filter('acf/load_field/name=color_picker', 'hum_acf_dynamic_colors_load');
+add_filter('acf/load_field/name=color_picker_bg', 'hum_acf_dynamic_colors_load');
+
+
+// preview background
+function hum_acf_background_color( $className = false) {
+
+  $colorFill = get_field( 'color_picker_bg' );
+  if ( $colorFill ) {
+    $className .= ' has-background has-' . $colorFill . '-background-color';
+  }
+  return $className;
+}

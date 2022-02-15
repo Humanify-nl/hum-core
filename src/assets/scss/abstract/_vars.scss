@@ -12,19 +12,17 @@
 @import "vars/blocks";
 
 // Fonts
-$serif: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
-$sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 $icon_size: 1.5rem;
 $icon_size_social: 2rem;
 
 // Site Header
 $logo_width: 300px;
-$logo_width_rem: 18.75rem;
+$logo_width_rem: 37.5rem;
 $menu_width: $logo_width_rem + $grid-gap;
-$menu-height-mobile: 48px;
-$menu-toggle-size: 48px;
-$static_header_desktop: 48px;
-$static_header_mobile: 48px;
+$menu-height-mobile: 64px;
+$menu-toggle-size: 64px;
+$static_header_desktop: 64px;
+$static_header_mobile: 64px;
 $sidemenu-width: 300px;
 $menu-collapse-bp: $large;
 

@@ -22,8 +22,8 @@ function post_blocks_template() {
 
   $post_types = [
      'page',
-     'post',
-     'testimonial'
+     //'post',
+     //'testimonial'
    ];
 
   foreach( $post_types as $post_type ) {

@@ -42,7 +42,7 @@ function hum_pages_related() {
           foreach ( $selected_pages as $post ) {
 
             setup_postdata( $post );
-            include( locate_template( 'template-parts/previews/'.$preview_type.'.php' ) );
+            include( locate_template( 'template-parts/preview-types/'.$preview_type.'.php' ) );
           }
 
           wp_reset_postdata();

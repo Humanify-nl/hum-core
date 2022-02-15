@@ -28,6 +28,8 @@ if ( !function_exists( 'hum_grid_class_preview' ) ) {
       // single post - use related option
       if ( get_post_type( get_the_id() ) == 'testimonial' ) {
         $grid_classes[] = get_field( 'grid_preview_testimonial_rel', 'option');
+      } elseif ( get_post_type( get_the_id() ) == 'portfolio' ) {
+        $grid_classes[] = get_field( 'grid_preview_portfolio_rel', 'option');
       } else {
         $grid_classes[] = get_field( 'grid_preview_rel', 'option');
       }
@@ -40,6 +42,8 @@ if ( !function_exists( 'hum_grid_class_preview' ) ) {
       // not set - use default post grid (archives)
       if ( get_post_type( get_the_id() ) == 'testimonial' ) {
         $grid_classes[] = get_field( 'grid_preview_testimonial', 'option');
+      } elseif ( get_post_type( get_the_id() ) == 'portfolio' ) {
+        $grid_classes[] = get_field( 'grid_preview_portfolio', 'option');
       } else {
         $grid_classes[] = get_field( 'grid_preview_post', 'option');
       }
@@ -82,3 +86,5 @@ add_filter('acf/load_field/name=grid_preview_rel', 'acf_load_grid_preview_classe
 add_filter('acf/load_field/name=grid_preview_page', 'acf_load_grid_preview_classes');
 add_filter('acf/load_field/name=grid_preview_testimonial', 'acf_load_grid_preview_classes');
 add_filter('acf/load_field/name=grid_preview_testimonial_rel', 'acf_load_grid_preview_classes');
+add_filter('acf/load_field/name=grid_preview_portfolio', 'acf_load_grid_preview_classes');
+add_filter('acf/load_field/name=grid_preview_portfolio_rel', 'acf_load_grid_preview_classes');

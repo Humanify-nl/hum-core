@@ -4,14 +4,29 @@
 .wp-block-gallery {
   margin-bottom: var(--block-margin);
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &.has-nested-images figure.wp-block-image {
+    @include bp-min($medium){
+      flex-grow: 0;
+    }
+    &:not(#individual-image) {
+      @include bp-max($small){
+        width: 100%;
+      }
+    }
+  }
+
   .blocks-gallery-grid {
-    gap: var(--gallery-gap);
+    gap: var(--gallery-block--gutter-size);
   }
 
   // override WP margins
   .blocks-gallery-item {
     margin: 0 !important;
-    
+
     /*
     figcaption,
     .blocks-gallery-item__caption {

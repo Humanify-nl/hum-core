@@ -6,10 +6,22 @@
   display: flex;
   align-items: center;
   margin-bottom: var(--block-margin);
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  a {
+    cursor: pointer;
+    color: var(--color--black);
+    font-family: var(--font-primary);
+    font-size: var(--font-size--h4);
+    text-transform: uppercase;
+  }
 
   @include bp-max($base){
     flex-wrap: wrap;
     justify-content: space-between;
+
     a {
       margin-top: 0.25em;
       margin-bottom: 0.25em;

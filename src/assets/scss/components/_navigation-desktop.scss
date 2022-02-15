@@ -6,12 +6,19 @@
 
 	.site-header {
 		display: flex;
+		flex-wrap: nowrap;
+		width: 100%;
+		margin: 0;
+	}
+
+	.title-area {
+		flex: 1 0 auto;
 	}
 
 	.nav-menu {
-		float: right;
-		width: calc( 100% - 300px );
 		display: flex;
+		flex-direction: row;
+		flex: 1 0 auto;
 		justify-content: right;
 
 		&.active {
@@ -37,7 +44,7 @@
 			float: left;
 
 			> a {
-				padding: 13px var(--menu--item-pad-hor-large);
+				padding: 21px var(--menu--item-pad-hor-large);
 			}
 
 			&:hover {
@@ -120,7 +127,7 @@
 				line-height: 0;
 
 				button {
-					padding: 12px;
+					padding: 20px;
 				}
 			}
 		}

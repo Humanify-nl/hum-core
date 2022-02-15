@@ -5,7 +5,7 @@
 
 .wp-block-post-excerpt {
 	border-bottom: 1px dashed var(--color--grey);
-	font-size: var(--font-size-small);
+	font-size: var(--font-size--small);
 	&:before {
 		content: "Not rendered";
 		color: var(--color--grey);

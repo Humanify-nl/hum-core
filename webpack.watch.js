@@ -1,9 +1,11 @@
 const path = require('path');
 const localPath = path.join('C:\\', 'users\\humanify\\LOCALS~2\\humgutenberg\\app\\public\\wp-content\\themes');
+//const localPath = path.join('C:\\', 'users\\humanify\\LOCALS~2\\humcorefse\\app\\public\\wp-content\\themes');
 const sourcePath = path.join(__dirname, '/src');
 const outputPath = path.join(localPath, '/dist');
 const assetPath = 'assets';
 const localProxy = 'http://humgutenberg.local/';
+//const localProxy = 'http://humcorefse.local/';
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');

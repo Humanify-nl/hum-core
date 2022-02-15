@@ -11,9 +11,9 @@ $map-components: (
 	),
 	menu:(
 		font-family: var(--font-primary),
-		font-size: var(--font-size-normal),
-		font-size-sub-menu: var(--font-size-small),
-		font-size-button: var(--font-size-small),
+		font-size: var(--font-size--normal),
+		font-size-sub-menu: var(--font-size--small),
+		font-size-button: var(--font-size--small),
 		font-style: normal,
 		font-style-sub-menu-mobile: normal,
 		font-weight: normal,
@@ -25,15 +25,15 @@ $map-components: (
 	),
 	pagination: (
 		font-family: var(--font-secondary),
-		font-size: var(--font-size-normal),
+		font-size: var(--font-size--normal),
 		font-weight: 600,
 	),
 	footer: (
 		font-family: var(--font-primary),
-		font-size: var(--font-size-small),
+		font-size: var(--font-size--small),
 	),
 	button: (
-		font-size: var(--font-size-normal),
+		font-size: var(--font-size--normal),
 		font-family: var(--font-primary),
 		border-width: 1px,
 		border-radius: 0,

@@ -26,6 +26,7 @@
 
 	@include bp-min-max($base, $medium) {
 		@include columns( $columns,$grid_item_element, $gap );
+		grid-column-gap: 0.5 * $grid-gap;
 		grid-row-gap: 0.5 * $grid-gap;
 	}
 

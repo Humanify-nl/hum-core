@@ -3,6 +3,7 @@
 --------------------------------------------- */
 
 @import "core/button/button";
+@import "core/categories/categories";
 @import "core/code/code";
 @import "core/columns/columns";
 @import "core/cover/cover";
@@ -27,6 +28,7 @@
 @import "acf/acf-block";
 @import "acf/spacer/spacer";
 @import "acf/post-query/post-query";
+@import "acf/post-single/post-single";
 @import "acf/pages/pages";
 @import "acf/slider/slider";
 @import "acf/tabs/tabs";
@@ -35,3 +37,12 @@
 @import "acf/image/image";
 @import "yoast/faq/faq";
 @import "yoast/how-to/how-to";
+
+
+.wp-block-categories,
+.wp-block-post-terms {
+  margin-bottom: var(--block-margin);
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

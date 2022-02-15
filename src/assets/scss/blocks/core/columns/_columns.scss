@@ -45,3 +45,26 @@
   }
 
 }
+
+
+.wp-block-column {
+
+  &.is-style-center-mobile {
+    @include bp-max($large){
+      display: flex;
+      justify-content: center;
+
+      .wp-block-social-links {
+        justify-content: center;
+      }
+    }
+
+    ul, ol {
+      &.is-style-horizontal {
+        text-align: center;
+        @include bp-max($large){
+          display: inline-block;
+        }
+      }
+    }
+  }

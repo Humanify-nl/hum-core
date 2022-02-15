@@ -7,35 +7,80 @@
 	color: var(--theme--header--text);
 	position: relative;
 	height: $static_header_mobile;
-}
+  z-index: 1;
 
-.custom-logo {
-	height: $menu-toggle-size;
-	padding: 4px;
-	width: auto;
-}
+	.title-area {
+		padding-left: var(--margin-site);
+	}
+	.nav-menu {
+		padding-right: calc( var(--margin-site) - var(--menu--item-pad-hor-large));
+	}
 
-.title-area {
-	float: left;
-	display: flex;
-	width: 100%;
-	min-height: $menu-toggle-size;
-	text-align: left;
-	margin: 0 auto 0 0;
+	.title-area {
+		position: relative;
+		display: flex;
+		min-height: $menu-toggle-size;
+		text-align: left;
+		flex-wrap: nowrap;
+		align-content: center;
 
-	h1.site-title,
-	p.site-title {
+		@include bp-max($small){
+			flex-wrap: wrap;
+			width: calc( 100% - calc( #{$menu-toggle-size} + var(--margin-site) ) );
+		}
+		@include bp-min($menu-collapse-bp){
+			background-color: var(--theme--header--bg);
+			z-index: 1;
+		}
+	}
+
+	.title-wrap {
+		display: flex;
+		align-items: center;
+		@include bp-max($small){
+			align-items: flex-start;
+			width: 100%;
+		}
+	}
+
+	.site-description {
+		font-family: var(--font-primary);
+		font-weight: 500;
+		font-size: var(--menu--font-size);
+		margin-left: 16px;
+		@include bp-max($small){
+			margin-left: 0;
+		}
+	}
+
+	.site-title {
 		color: var(--theme--header--branding);
 		margin: 0;
 		font-size: var(--site-title--font-size-mobile);
 		text-transform: var(--site-title--text-transform);
-		line-height: 30px;
-		padding: 8px;
 		@include bp-min($small){
 			font-size: var(--site-title--font-size);
 		}
 	}
+
+	.custom-logo-link {
+		display: flex;
+	}
+
+	.custom-logo {
+		height: auto;
+		max-height: $menu-toggle-size;
+		object-fit: contain;
+		width: 100%;
+		max-width: 320px - $menu-toggle-size;
+		@include bp-min($small){
+			max-width: 360px;
+		}
+	}
 }
+
+
+
 
 
 /* Admin Bar
@@ -73,6 +118,13 @@
 	}
 }
 
+@include bp-min-max($medium, $menu-collapse-bp){
+	.site-header {
+		top: var(--wp-admin--admin-bar--height);
+	}
+}
+
+/*
 @include bp-min($menu-collapse-bp) {
 
 	.site-container {
@@ -88,27 +140,15 @@
 		height: $static_header_desktop;
 	}
 }
+*/
 
-// no admin bar under bp medium
-@include bp-min($medium) {
-	.admin-bar {
-
-		.site-container {
-			padding-top: calc(var(--admin-bar--height) + #{$static_header_desktop});
-		}
-
-		.site-header {
-			top: var(--admin-bar--height);
-		}
-	}
-}
 
 
 /* Header Search
 --------------------------------------------- */
 
 .header-search {
-	background: var(--theme--menu--bg-alt);
+	background: var(--theme--menu--bg);
 	overflow: hidden;
 	padding: 16px;
 	width: 100%;

@@ -16,7 +16,7 @@
       margin-top: var(--block-margin);
     }
     p {
-      font-size: var(--font-size-h3);
+      font-size: var(--font-size--h3);
       line-height: 1.4;
     }
   }
@@ -24,7 +24,7 @@
 
   .wp-block-pullquote__citation {
 		display: block;
-		font-size: var(--font-size-small);
+		font-size: var(--font-size--small);
 		margin-top: var(--block-margin);
 		margin-bottom: 0;
 		text-transform: uppercase;

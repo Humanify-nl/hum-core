@@ -60,6 +60,44 @@ function hum_preview_category( $link = true ) {
 }
 
 
+/**
+ * Preview category list
+ *
+ */
+function hum_preview_categories( $tax = 'category', $link = true ) {
+
+	if ( is_admin() ) {
+		$link = false;
+	}
+
+  $get_post_terms = get_the_terms( get_the_id(), $tax );
+
+  if ( !empty( $get_post_terms ) && !is_wp_error( $get_post_terms ) ) {
+
+		echo '<div class="preview-categories">';
+
+			$tag_array = [];
+
+			foreach ( $get_post_terms as $post_term ) {
+
+				$term_name = $post_term->name;
+				$term_slug = $post_term->slug;
+				$term_link = get_term_link( $post_term, $tax );
+
+				if ( $link ) {
+					$tag_array[] = '<a class="preview-category category-'.$term_slug.'" href="'.$term_link.'" rel="nofollow">'.$term_name.'</a>';
+				} else {
+					$tag_array[] = '<span class="preview-category category-'.$term_slug.'">'.$term_name.'</span>';
+				}
+
+			}
+			print_r (implode(' / ', $tag_array ));
+
+		echo '</div>';
+
+	}
+}
+
 
 /**
  * Preview image

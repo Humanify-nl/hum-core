@@ -11,6 +11,7 @@
 
   &.grid-33 {
     @include columns-mobile(2);
+    @include columns-tablet(3);
     @include columns-tablet-up(3);
   }
 

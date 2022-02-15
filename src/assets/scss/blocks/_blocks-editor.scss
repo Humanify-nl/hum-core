@@ -3,6 +3,7 @@
 --------------------------------------------- */
 
 @import "core/button/button-editor";
+@import "core/categories/categories-editor";
 @import "core/code/code-editor";
 @import "core/columns/columns-editor";
 @import "core/cover/cover-editor";
@@ -27,6 +28,7 @@
 @import "acf/acf-block";
 @import "acf/spacer/spacer-editor";
 @import "acf/post-query/post-query-editor";
+@import "acf/post-single/post-single-editor";
 @import "acf/pages/pages-editor";
 @import "acf/slider/slider-editor";
 @import "acf/tabs/tabs-editor";
@@ -49,15 +51,16 @@ body {
 
 
 /* Post title width */
-.editor-post-title__block.wp-block {
-	margin-top: 8px;
-	margin-bottom: 16px;
+.edit-post-visual-editor__post-title-wrapper {
+	margin-top: 0;
+	margin-bottom: 0;
 
 	/* Post title styling */
 	.editor-post-title__input {
-		//font-family: var(--font-primary);
 		font-weight: 400;
-		font-size: var(--font-size-h3);
+		font-size: var(--font-size--h3);
+		margin-top: 16px;
+		margin-bottom: 16px;
 		padding: 0;
 	}
 }

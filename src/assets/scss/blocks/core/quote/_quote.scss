@@ -6,7 +6,7 @@
 	margin-bottom: var(--block-margin);
 
 	p {
-		font-size: var(--font-size-large);
+		font-size: var(--font-size--large);
 		font-style: normal;
 		font-weight: 400;
 
@@ -17,7 +17,7 @@
 
 	cite {
 		display: block;
-		font-size: var(--font-size-small);
+		font-size: var(--font-size--small);
 		margin-top: var(--block-inner-gap);
 		text-transform: uppercase;
 	}

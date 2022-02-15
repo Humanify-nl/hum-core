@@ -9,7 +9,7 @@
 add_image_size( 'small', 360, 360 ); // Unlimited height, hard crop
 add_image_size( 'admin', 100, 80 ); // Unlimited height, hard crop
 add_image_size( 'featured', 1920, 416, [ 'top' ] ); // Unlimited height, soft crop
-//add_image_size( 'featured-sq', 640, 640, true ); // Unlimited height, hard crop
+add_image_size( 'portfolio', 640, 640, true ); // Unlimited height, hard crop
 
 
 /**
@@ -19,6 +19,7 @@ function hum_custom_sizes( $sizes ) {
 
   return array_merge( $sizes, [
       'small' => __( 'Small' ),
+      'portfolio' => __( 'Portfolio' ),
       'featured' => __( 'Featured' ),
   ] );
 

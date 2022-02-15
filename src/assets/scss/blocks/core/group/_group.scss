@@ -27,6 +27,25 @@
 		}
 	}
 
+	&.is-style-pull-up {
+		margin-top: var(--spacing-vertical-md) !important;
+
+		.wp-block-group__inner-container {
+			transform: translateY(calc( -1 * var(--spacing-vertical-md)));
+			margin-bottom: calc( -1 * calc(var(--spacing-vertical-md) - var(--grid-gap)));
+		}
+	}
+
+	&.is-style-pull-up-over {
+
+		.wp-block-group__inner-container {
+			transform: translateY(calc( -1 * var(--spacing-vertical-md)));
+			margin-bottom: calc( -1 * calc(var(--spacing-vertical-md)));
+			position: relative;
+			z-index: 1;
+		}
+	}
+
 	// margin collapse
 	&.alignfull {
 
@@ -34,6 +53,8 @@
 		+ .alignfull.wp-block-cover,
 		+ .alignfull.block-slider,
 		+ .alignfull.block-image,
+
+		&.has-background + .alignfull.has-background,
 		&.is-style-section + .alignfull.has-background {
 			margin-top: 0;
 		}

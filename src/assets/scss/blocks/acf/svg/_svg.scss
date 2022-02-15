@@ -16,6 +16,16 @@
       display: flex;
     }
 
+    &.is-absolute {
+      position: relative;
+      z-index: 2;
+      .block-svg__wrap {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+    }
+
     &.is-flipped {
       margin-top: 0;
       transform: scale(-1);

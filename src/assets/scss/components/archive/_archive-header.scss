@@ -22,7 +22,7 @@
 
 	.search-form {
 		max-width: var(--aligncenter);
-		width: calc(100% - #{$margin_site_s * 2});
+		width: calc(100% - calc( 2 * var(--margin-site) ) );
 		margin: 0 auto;
 	}
 
@@ -48,7 +48,7 @@
 }
 
 .author-title {
-	font-size: var(--font-size-h4);
+	font-size: var(--font-size--h4);
 	font-weight: 700;
 	text-transform: uppercase;
 }

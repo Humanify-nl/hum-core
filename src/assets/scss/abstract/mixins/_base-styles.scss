@@ -4,9 +4,8 @@
 
 @mixin base-style {
 	font-family: var(--font-primary);
-	font-size: var(--font-size-normal);
+	font-size: var(--font-size--normal);
 	line-height: var(--line-height);
-	letter-spacing: 1px;
 
 	@media print {
 		font-family: sans-serif;

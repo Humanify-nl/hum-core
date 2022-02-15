@@ -40,8 +40,8 @@ function hum_entry_image_testimonial() {
  */
 function hum_entry_image() {
 	if ( has_post_thumbnail() ) {
-		if ( get_post_type( get_the_id() ) == 'testimonial' ) {
-			echo the_post_thumbnail( 'featured-sq' );
+		if ( get_post_type( get_the_id() ) == 'portfolio' ) {
+			echo the_post_thumbnail( 'portfolio' );
 		} else {
 			echo the_post_thumbnail( 'featured' );
 		}
@@ -73,12 +73,43 @@ function hum_entry_category( $args = ['taxonomy' => 'category'] ) {
 
 
 /**
+ * Entry Categories
+ *
+ */
+function hum_entry_categories() {
+
+  $get_post_terms = get_the_terms( get_the_ID(), 'category' );
+
+	if ( !empty( $get_post_terms ) && !is_wp_error( $get_post_terms ) ) {
+
+		echo '<div class="entry-categories">';
+
+			$terms_array = [];
+
+			foreach ( $get_post_terms as $post_term ) {
+
+				$term_name = $post_term->name;
+				$term_slug = $post_term->slug;
+				$term_link = get_term_link( $post_term, $tax );
+
+				$terms_array[] = '<a class="entry-category category-'.$term_slug.'" href="'.$term_link.'" rel="nofollow">'.$term_name.'</a>';
+			}
+
+			echo (implode(' / ', $terms_array ));
+
+		echo '</div>';
+
+	}
+}
+
+
+/**
  * Preview excerpt
  *
  */
 function hum_entry_excerpt( $page = false, $class = false ) {
 
-	$classes[] = 'entry__excerpt';
+	$classes[] = 'entry-excerpt';
 
 	if ( $class ) {
 		$classes[] = $class;
