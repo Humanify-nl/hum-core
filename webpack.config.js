@@ -15,6 +15,7 @@ module.exports = {
     'bundle': '/js' + '/bundle.js',
     'gutenberg': '/js' + '/gutenberg.js',
     'swiper': '/js' + '/swiper.js',
+    'swiper-post': '/js' + '/swiper-post.js',
     'tabs': '/js' + '/tabs.js',
     'main': '/scss' + '/main.scss',
     'editor': '/scss' + '/editor.scss',

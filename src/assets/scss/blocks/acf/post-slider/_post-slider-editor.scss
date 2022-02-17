@@ -1,0 +1,39 @@
+@import "post-slider";
+
+$swiper_icon_h: 40px;
+
+.wp-block-acf-post-slider {
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    height: $swiper_icon_h;
+    top: calc(50% - #{$swiper_icon_h * 0.5});
+  }
+
+  .swiper-button-prev {
+    left: -28px;
+    @include bp-min($large){
+      left: -36px;
+    }
+  }
+
+  .swiper-button-next {
+    right: -28px;
+    @include bp-min($large){
+      right: -36px;
+    }
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    .swiper-slide {
+      width: calc(50% - 16px);
+      &:first-child {
+        margin-right: 32px;
+      }
+    }
+  }
+
+}

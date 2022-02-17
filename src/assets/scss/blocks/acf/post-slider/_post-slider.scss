@@ -1,0 +1,45 @@
+
+/* Post slider block
+--------------------------------------------- */
+.post-slider {
+  display: block;
+  position: relative;
+  margin-bottom: var(--block-margin);
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .swiper-slide {
+    .preview {
+      width: 100%;
+    }
+  }
+
+  .swiper-post {
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+
+    .swiper-slide {
+      height: auto;
+
+      .preview {
+        height: 100%;
+      }
+    }
+  }
+
+  .swiper-button-next {
+    right: -28px;
+    @include bp-min($large){
+      right: -48px;
+    }
+  }
+  .swiper-button-prev {
+    left: -28px;
+    @include bp-min($large){
+      left: -48px;
+    }
+  }
+}

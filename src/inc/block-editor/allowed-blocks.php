@@ -57,6 +57,7 @@ function hum_post_blocks_array( $post_type = false ) {
     'acf/spacer',
     'acf/post-query',
     'acf/post-single',
+    'acf/post-slider',
     'acf/pages',
     'acf/slider',
     'acf/tabs',
@@ -111,6 +112,7 @@ function hum_post_blocks_array( $post_type = false ) {
     'core/embed',
     // --> acf
     'acf/post-single',
+    'acf/post-slider',
     'acf/spacer',
     'acf/slider',
     'acf/tabs',
@@ -166,6 +168,7 @@ function hum_post_blocks_array( $post_type = false ) {
     'acf/post-single',
     'acf/pages',
     'acf/slider',
+    'acf/post-slider',
     'acf/tabs',
     'acf/icon-wrap',
     'acf/svg',

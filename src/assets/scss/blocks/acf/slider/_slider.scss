@@ -3,7 +3,10 @@
 --------------------------------------------- */
 .block-slider {
   margin-bottom: var(--block-margin);
-
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
   img {
     object-fit: cover;
     width: 100%;
@@ -31,7 +34,6 @@
     height: 100%;
     width: 100%;
 
-
     .slider-title {
       color: var(--color--white);
     }
@@ -46,65 +48,12 @@
     > *:last-child {
       margin-bottom: 0;
     }
-    @include bp-max($medium){
+    @include bp-max($large){
       padding: 1em 0;
     }
   }
 
-  // swiper modifications
-
-  .swiper-button-prev,
-  .swiper-button-next {
-    color: var(--swiper--button-color);
-
-    &::after {
-      color: inherit;
-      font-size: 1.5em;
-      opacity: 0.5;
-      @include bp-min($medium){
-        font-size: 1.75rem;
-        opacity: 0.3;
-      }
-    }
-    &:hover {
-      color: var(--swiper--button-color-h);
-      &::after {
-        color: inherit;
-        opacity: 1;
-      }
-    }
-    &:active,
-    &:focus {
-      &::after {
-        color: inherit;
-        opacity: 0.5;
-      }
-    }
-  }
-
-  .swiper-button-prev {
-    left: 0;
-    @include bp-min($medium){
-      left: 2px;
-    }
-  }
-  .swiper-button-next {
-    right: 0;
-    @include bp-min($medium){
-      right: 2px;
-    }
-  }
-
-  .swiper-pagination-bullet {
-    opacity: 0.5;
-    background-color: var(--swiper--button-color);
-
-    &-active {
-      background-color: var(--swiper--button-color-h);
-      opacity: 1;
-    }
-  }
-
+  // show buttons when block is hovered
   &:hover {
     .swiper-button-prev,
     .swiper-button-next {
@@ -117,7 +66,6 @@
 
 
   // swiper buttons outside
-
   &.is-style-buttons-outside:not(.alignfull) {
 
     .swiper {

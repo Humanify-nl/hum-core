@@ -24,24 +24,40 @@ import 'swiper/css/effect-fade';
 
 jQuery(document).ready(function($) {
 
-  // init Swiper
-  const swiper = new Swiper('.swiper', {
-    modules: [ Navigation, Pagination, Autoplay, EffectFade ],
+  const swiperPost = new Swiper('.swiper-post', {
+    modules: [ Navigation, Pagination, Autoplay ],
     direction: 'horizontal',
     loop: true,
     effect: 'fade',
     autoplay: {
       delay: 5000,
     },
-    speed: 600,
+    speed: 400,
     pagination: {
-      el: '.swiper-pagination',
+      el: '.swiper-post-pagination',
       type: 'bullets',
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-post-button-next',
+      prevEl: '.swiper-post-button-prev',
     },
+    breakpoints: {
+      // when window width is >= 320
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      },
+      // when window width is >= 768
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 16
+      },
+      // when window width is >= 992
+      960: {
+        slidesPerView: 2,
+        spaceBetween: 32
+      }
+    }
   });
 
 } );

@@ -1,0 +1,56 @@
+
+/* Swiper slider
+--------------------------------------------- */
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--swiper--button-color);
+
+  &::after {
+    color: inherit;
+    font-size: 2rem;
+    opacity: 0.75;
+    @include bp-min($large){
+      font-size: 2.5rem;
+      opacity: 0.5;
+    }
+  }
+  &:hover {
+    color: var(--swiper--button-color-h);
+    &::after {
+      color: inherit;
+      opacity: 1;
+    }
+  }
+  &:active,
+  &:focus {
+    &::after {
+      color: inherit;
+      opacity: 0.5;
+    }
+  }
+}
+
+// buttons inside
+.swiper-button-prev {
+  left: 4px;
+  @include bp-min($large){
+    left: 2px;
+  }
+}
+.swiper-button-next {
+  right: 4px;
+  @include bp-min($large){
+    right: 2px;
+  }
+}
+
+.swiper-pagination-bullet {
+  opacity: 0.5;
+  background-color: var(--swiper--button-color);
+
+  &-active {
+    background-color: var(--swiper--button-color-h);
+    opacity: 1;
+  }
+}
