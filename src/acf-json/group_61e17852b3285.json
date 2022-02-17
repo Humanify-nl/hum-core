@@ -85,13 +85,12 @@
                 "id": ""
             },
             "choices": {
-                "grid-flex": "Flex",
                 "grid-25": "4 per row",
                 "grid-33": "3 per row",
                 "grid-50": "2 per row",
                 "grid-100": "1 per row"
             },
-            "default_value": "grid-33",
+            "default_value": "grid-100",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -114,12 +113,15 @@
             },
             "choices": {
                 "preview": "Default (img, title, excerpt)",
-                "preview-image": "Image (img only)",
-                "preview-icon": "Icon (img + title)",
-                "preview-link": "Link (title-link only)",
-                "preview-list": "List (img left, title & excerpt right)"
+                "preview-type-image": "Image (img, title)",
+                "preview-type-excerpt": "Excerpt (title, excerpt)",
+                "preview-type-more": "Excerpt more tag (img, title, excerpt)",
+                "preview-type-link": "Link (title-link only)",
+                "preview-type-calendar": "Calendar (date, title)",
+                "preview-type-slide": "Slider (img, title, excerpt)",
+                "preview-type-list": "List (img left, title & excerpt right)"
             },
-            "default_value": "preview-image",
+            "default_value": "preview-type-list",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -174,7 +176,6 @@
                 "id": ""
             },
             "choices": {
-                "grid-flex": "Flex",
                 "grid-25": "4 per row",
                 "grid-33": "3 per row",
                 "grid-50": "2 per row",
@@ -203,10 +204,13 @@
             },
             "choices": {
                 "preview": "Default (img, title, excerpt)",
-                "preview-image": "Image (img only)",
-                "preview-icon": "Icon (img + title)",
-                "preview-link": "Link (title-link only)",
-                "preview-list": "List (img left, title & excerpt right)"
+                "preview-type-image": "Image (img, title)",
+                "preview-type-excerpt": "Excerpt (title, excerpt)",
+                "preview-type-more": "Excerpt more tag (img, title, excerpt)",
+                "preview-type-link": "Link (title-link only)",
+                "preview-type-calendar": "Calendar (date, title)",
+                "preview-type-slide": "Slider (img, title, excerpt)",
+                "preview-type-list": "List (img left, title & excerpt right)"
             },
             "default_value": "preview-image",
             "allow_null": 0,
@@ -235,5 +239,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1642257379
+    "modified": 1644926005
 }

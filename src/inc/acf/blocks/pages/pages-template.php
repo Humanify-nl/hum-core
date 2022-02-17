@@ -59,7 +59,7 @@ if ( !empty( $selected_pages ) ) {
 	  foreach ( $selected_pages as $post ) {
 
 		  setup_postdata( $post );
-      include( locate_template( 'template-parts/preview-types/'.$preview_type.'.php' ) );
+      get_template_part( 'template-parts/preview-types/'.$preview_type );
 
 		}
 
